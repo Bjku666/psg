@@ -1,0 +1,74 @@
+{
+  "entities": 24880,
+  "entities_with_supplied_candidate": 14076,
+  "selection_categories": {
+    "balanced_oracle_only": 2983,
+    "both": 7338,
+    "neither": 12668,
+    "score_topk_only": 1891
+  },
+  "score_degree_spearman": {
+    "rho": 0.3934900584200302,
+    "pvalue": 0.0
+  },
+  "rescue_by_relation_degree": {
+    "0": {
+      "entities": 10409,
+      "score_dropped": 8352,
+      "balanced_oracle_rescued": 923,
+      "rescue_rate_among_score_dropped": 0.1105124521072797
+    },
+    "1": {
+      "entities": 7383,
+      "score_dropped": 4366,
+      "balanced_oracle_rescued": 998,
+      "rescue_rate_among_score_dropped": 0.22858451672010993
+    },
+    "2": {
+      "entities": 3772,
+      "score_dropped": 1756,
+      "balanced_oracle_rescued": 545,
+      "rescue_rate_among_score_dropped": 0.3103644646924829
+    },
+    "3": {
+      "entities": 1845,
+      "score_dropped": 722,
+      "balanced_oracle_rescued": 286,
+      "rescue_rate_among_score_dropped": 0.3961218836565097
+    },
+    "4+": {
+      "entities": 1471,
+      "score_dropped": 455,
+      "balanced_oracle_rescued": 231,
+      "rescue_rate_among_score_dropped": 0.5076923076923077
+    }
+  },
+  "rescue_by_thing_or_stuff": {
+    "stuff": {
+      "entities": 8971,
+      "score_dropped": 5916,
+      "balanced_oracle_rescued": 1100,
+      "rescue_rate_among_score_dropped": 0.18593644354293443
+    },
+    "thing": {
+      "entities": 15909,
+      "score_dropped": 9735,
+      "balanced_oracle_rescued": 1883,
+      "rescue_rate_among_score_dropped": 0.19342578325629173
+    }
+  },
+  "rescue_by_rare_predicate": {
+    "not_rare": {
+      "entities": 24475,
+      "score_dropped": 15526,
+      "balanced_oracle_rescued": 2944,
+      "rescue_rate_among_score_dropped": 0.189617415947443
+    },
+    "rare": {
+      "entities": 405,
+      "score_dropped": 125,
+      "balanced_oracle_rescued": 39,
+      "rescue_rate_among_score_dropped": 0.312
+    }
+  }
+}

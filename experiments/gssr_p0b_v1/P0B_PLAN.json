@@ -1,0 +1,35 @@
+{
+  "version": "gssr_p0b_v1",
+  "registered_at": "2026-09-12T20:00:00+08:00",
+  "inherits_frozen_evidence": "gssr_p0_v1",
+  "learner_allowed": false,
+  "population": {
+    "point_estimate": "official OpenPSG relation-containing scene rows",
+    "bootstrap_sampling_unit": "physical image grouped by file_name"
+  },
+  "primary_metric": "predicate_balanced_endpoint_support",
+  "primary_budget_ratio": 0.5,
+  "budget_ratios": [0.25, 0.5, 0.75, 1.0],
+  "matching": {
+    "formal": "class-compatible mask IoU > 0.5",
+    "box": "diagnostic regression only",
+    "deduplication": "single_mpo"
+  },
+  "selection_arms": [
+    "score_topk",
+    "diversity_topk",
+    "gt_nodewise",
+    "gt_set_oracle_micro",
+    "gt_set_oracle_balanced"
+  ],
+  "optional_score_arms": {
+    "mask_quality_topk": "run only when mask_quality is explicitly exported",
+    "joint_score_topk": "class_score * mask_quality"
+  },
+  "continue_gate": {
+    "balanced_oracle_minus_score_at_50pct_mask_iou": 0.04,
+    "raw_query_native_admission_gap_required": true,
+    "node_oracle_must_be_material_vs_pair_oracle": true
+  }
+}
+

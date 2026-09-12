@@ -1,0 +1,22 @@
+{
+  "line": "gssr_p0b_v1",
+  "status": "formal_mask_iou_gate_passed",
+  "updated_at": "2026-09-12T20:22:00+08:00",
+  "completed_runs": [
+    "identity_contract_fulltest",
+    "smoke8_box",
+    "fulltest_r4_box_balanced",
+    "smoke8_mask2former_swin_large_mask_iou",
+    "fulltest_mask2former_swin_large_mask_iou"
+  ],
+  "active_run": null,
+  "blocked_items": [],
+  "formal_mask_gate": {
+    "budget": 0.5,
+    "balanced_oracle_minus_score": 0.19324194851442567,
+    "ci95": [0.16947753754034717, 0.21988558346022166],
+    "threshold": 0.04,
+    "passed": true
+  },
+  "learner_authorized": false
+}

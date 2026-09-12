@@ -6,12 +6,18 @@ panoptic scene graph generation**.  The first qualification question is:
 > Under the same candidate pool and the same node budget K, how much relation
 > support is lost before pair proposal because the wrong entities are admitted?
 
-The active line is `gssr_p0_v1`.  P0 is diagnostic only: no learned repair model
-is allowed until the registered node-vs-pair and oracle-headroom gates pass.
+The frozen first diagnostic is `gssr_p0_v1`; active qualification work is in
+`gssr_p0b_v1` (formal matching/contracts) and `gssr_p0c_v1` (raw-query entity
+admission). No learned repair model is allowed until the mask, raw-admission,
+and node-vs-pair gates pass.
 
 ## Layout
 
 - `models/gssr_p0_v1/`: evaluator, exact fixed-K oracle, tests, and launchers.
+- `models/gssr_p0b_v1/`: balanced oracle, mask matcher, identity audit, supply
+  decomposition, criticality export, and formal runner.
+- `models/gssr_p0c_v1/`: raw-query exporter/schema, native admission audit, and
+  compute-equivalent node-vs-pair oracle.
 - `experiments/gssr_p0_v1/`: frozen hypothesis, run matrix, gates, and costs.
 - `results/gssr_p0_v1/`: immutable run outputs and status metadata.
 - `records/YYYYMMDD/`: commands, deviations, and decisions.
@@ -37,3 +43,16 @@ python models/gssr_p0_v1/run_budget_audit.py \
 
 See `experiments/gssr_p0_v1/protocol.md` before launching evidence runs.
 
+P0B/P0C entry points:
+
+```bash
+python models/gssr_p0b_v1/audit_identity_contract.py --help
+python models/gssr_p0b_v1/prepare_panoptic_gt.py --help
+python models/gssr_p0b_v1/run_formal_audit.py --help
+python models/gssr_p0c_v1/export_raw_mask_queries.py --help
+python models/gssr_p0c_v1/raw_query_audit.py --help
+python models/gssr_p0c_v1/node_pair_budget_oracle.py --help
+```
+
+Use `/data2/liuhaoran/venvs/fair_psg_p0/bin/python` for the raw-query exporter;
+the base environment has an incompatible Transformers/Accelerate combination.

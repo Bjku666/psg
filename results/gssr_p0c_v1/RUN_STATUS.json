@@ -1,0 +1,28 @@
+{
+  "line": "gssr_p0c_v1",
+  "status": "raw_query_mask_iou_gate_passed_entity_pair_nonmaterial",
+  "updated_at": "2026-09-12T21:20:00+08:00",
+  "completed_runs": [
+    "external: /data2/liuhaoran/psg_data/raw_queries/mask2former_swin_large/smoke1_r2",
+    "node_pair_smoke8_box",
+    "node_pair_fulltest_r4_box",
+    "node_pair_fulltest_mask2former_swin_large_mask_iou",
+    "external: /data2/liuhaoran/psg_data/raw_queries/mask2former_swin_large/smoke8_benchmark_v1",
+    "fulltest_raw_query_export_merged",
+    "fulltest_raw_query_mask_iou_audit"
+  ],
+  "active_run": null,
+  "blocked_items": [],
+  "raw_query_gate": {
+    "budget": 0.5,
+    "native_budget_mean_queries": 9.367018833256775,
+    "native_balanced_oracle_minus_native": 0.15207185606297424,
+    "native_balanced_oracle_ci95": [0.12964864097929954, 0.17373727021235566],
+    "native_gate_threshold": 0.04,
+    "native_gate_passed": true,
+    "pair_oracle_minus_entity_oracle_at_native_pair_budget": 0.004242992232784348,
+    "pair_oracle_ci95": [0.0026991871713990118, 0.005961897551331971],
+    "pair_gate_interpretation": "non_material_on_raw_query_mask_iou"
+  },
+  "learner_authorized": false
+}

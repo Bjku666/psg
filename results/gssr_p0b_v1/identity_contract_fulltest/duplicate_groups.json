@@ -1,0 +1,306 @@
+[
+  {
+    "file_name": "val2017/000000042276.jpg",
+    "row_count": 2,
+    "image_ids": [
+      "150323",
+      "2327041"
+    ],
+    "relations_per_row": [
+      6,
+      7
+    ],
+    "annotations_per_row": [
+      7,
+      7
+    ],
+    "identical_annotations": true,
+    "identical_relations": false,
+    "identical_panoptic_file": true
+  },
+  {
+    "file_name": "val2017/000000047819.jpg",
+    "row_count": 2,
+    "image_ids": [
+      "1593095",
+      "2408184"
+    ],
+    "relations_per_row": [
+      8,
+      6
+    ],
+    "annotations_per_row": [
+      6,
+      6
+    ],
+    "identical_annotations": true,
+    "identical_relations": false,
+    "identical_panoptic_file": true
+  },
+  {
+    "file_name": "val2017/000000051738.jpg",
+    "row_count": 2,
+    "image_ids": [
+      "1159785",
+      "2401635"
+    ],
+    "relations_per_row": [
+      5,
+      6
+    ],
+    "annotations_per_row": [
+      9,
+      9
+    ],
+    "identical_annotations": true,
+    "identical_relations": false,
+    "identical_panoptic_file": true
+  },
+  {
+    "file_name": "val2017/000000222299.jpg",
+    "row_count": 2,
+    "image_ids": [
+      "2411362",
+      "498089"
+    ],
+    "relations_per_row": [
+      6,
+      8
+    ],
+    "annotations_per_row": [
+      9,
+      9
+    ],
+    "identical_annotations": true,
+    "identical_relations": false,
+    "identical_panoptic_file": true
+  },
+  {
+    "file_name": "val2017/000000234607.jpg",
+    "row_count": 2,
+    "image_ids": [
+      "2356680",
+      "498117"
+    ],
+    "relations_per_row": [
+      6,
+      5
+    ],
+    "annotations_per_row": [
+      7,
+      7
+    ],
+    "identical_annotations": true,
+    "identical_relations": false,
+    "identical_panoptic_file": true
+  },
+  {
+    "file_name": "val2017/000000293071.jpg",
+    "row_count": 2,
+    "image_ids": [
+      "1591847",
+      "2320355"
+    ],
+    "relations_per_row": [
+      9,
+      7
+    ],
+    "annotations_per_row": [
+      6,
+      6
+    ],
+    "identical_annotations": true,
+    "identical_relations": false,
+    "identical_panoptic_file": true
+  },
+  {
+    "file_name": "val2017/000000319935.jpg",
+    "row_count": 2,
+    "image_ids": [
+      "1593263",
+      "2388061"
+    ],
+    "relations_per_row": [
+      5,
+      7
+    ],
+    "annotations_per_row": [
+      28,
+      28
+    ],
+    "identical_annotations": true,
+    "identical_relations": false,
+    "identical_panoptic_file": true
+  },
+  {
+    "file_name": "val2017/000000343561.jpg",
+    "row_count": 2,
+    "image_ids": [
+      "1159713",
+      "2400390"
+    ],
+    "relations_per_row": [
+      5,
+      5
+    ],
+    "annotations_per_row": [
+      35,
+      35
+    ],
+    "identical_annotations": true,
+    "identical_relations": false,
+    "identical_panoptic_file": true
+  },
+  {
+    "file_name": "val2017/000000384661.jpg",
+    "row_count": 2,
+    "image_ids": [
+      "1592722",
+      "2376560"
+    ],
+    "relations_per_row": [
+      7,
+      6
+    ],
+    "annotations_per_row": [
+      13,
+      13
+    ],
+    "identical_annotations": true,
+    "identical_relations": false,
+    "identical_panoptic_file": true
+  },
+  {
+    "file_name": "val2017/000000404484.jpg",
+    "row_count": 2,
+    "image_ids": [
+      "1592560",
+      "2397343"
+    ],
+    "relations_per_row": [
+      8,
+      13
+    ],
+    "annotations_per_row": [
+      11,
+      11
+    ],
+    "identical_annotations": true,
+    "identical_relations": false,
+    "identical_panoptic_file": true
+  },
+  {
+    "file_name": "val2017/000000405249.jpg",
+    "row_count": 2,
+    "image_ids": [
+      "2334350",
+      "712981"
+    ],
+    "relations_per_row": [
+      7,
+      7
+    ],
+    "annotations_per_row": [
+      19,
+      19
+    ],
+    "identical_annotations": true,
+    "identical_relations": false,
+    "identical_panoptic_file": true
+  },
+  {
+    "file_name": "val2017/000000447088.jpg",
+    "row_count": 2,
+    "image_ids": [
+      "2340476",
+      "285732"
+    ],
+    "relations_per_row": [
+      8,
+      10
+    ],
+    "annotations_per_row": [
+      7,
+      7
+    ],
+    "identical_annotations": true,
+    "identical_relations": false,
+    "identical_panoptic_file": true
+  },
+  {
+    "file_name": "val2017/000000454067.jpg",
+    "row_count": 2,
+    "image_ids": [
+      "1592952",
+      "2402632"
+    ],
+    "relations_per_row": [
+      6,
+      6
+    ],
+    "annotations_per_row": [
+      14,
+      14
+    ],
+    "identical_annotations": true,
+    "identical_relations": false,
+    "identical_panoptic_file": true
+  },
+  {
+    "file_name": "val2017/000000459195.jpg",
+    "row_count": 2,
+    "image_ids": [
+      "2398229",
+      "713567"
+    ],
+    "relations_per_row": [
+      5,
+      5
+    ],
+    "annotations_per_row": [
+      9,
+      9
+    ],
+    "identical_annotations": true,
+    "identical_relations": false,
+    "identical_panoptic_file": true
+  },
+  {
+    "file_name": "val2017/000000524850.jpg",
+    "row_count": 2,
+    "image_ids": [
+      "2392983",
+      "712970"
+    ],
+    "relations_per_row": [
+      7,
+      8
+    ],
+    "annotations_per_row": [
+      41,
+      41
+    ],
+    "identical_annotations": true,
+    "identical_relations": false,
+    "identical_panoptic_file": true
+  },
+  {
+    "file_name": "val2017/000000539962.jpg",
+    "row_count": 2,
+    "image_ids": [
+      "1593185",
+      "2365990"
+    ],
+    "relations_per_row": [
+      5,
+      5
+    ],
+    "annotations_per_row": [
+      27,
+      27
+    ],
+    "identical_annotations": true,
+    "identical_relations": false,
+    "identical_panoptic_file": true
+  }
+]

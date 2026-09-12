@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "split": "test",
+  "relations_only": true,
+  "scene_rows": 2177,
+  "unique_filenames": 2161,
+  "duplicate_filename_groups": 16,
+  "rows_in_duplicate_groups": 32,
+  "extra_scene_rows_from_duplicate_filenames": 16,
+  "duplicate_groups_have_identical_annotations": true,
+  "duplicate_groups_have_distinct_relations": true,
+  "candidate_rows": 2170,
+  "candidate_unique_filenames": 2170,
+  "candidate_duplicate_filename_groups": 0,
+  "missing_candidate_filenames": [],
+  "evaluation_population": "scene_row",
+  "bootstrap_sampling_unit": "physical_image_file_name"
+}

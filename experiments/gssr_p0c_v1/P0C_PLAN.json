@@ -1,0 +1,33 @@
+{
+  "version": "gssr_p0c_v1",
+  "registered_at": "2026-09-12T20:00:00+08:00",
+  "learner_allowed": false,
+  "candidate_pool": "all raw Mask2Former decoder queries",
+  "native_admission": "official confidence/no-object/pixel-competition/overlap checks",
+  "required_query_fields": [
+    "class_logits",
+    "predicted_class",
+    "class_score",
+    "mask_logits",
+    "mask_quality",
+    "joint_score",
+    "compressed_binary_mask",
+    "bbox",
+    "decoder_query_feature",
+    "pixel_pooled_feature",
+    "official_keep_flag",
+    "official_panoptic_segment_id"
+  ],
+  "failure_stages": [
+    "supply_failure",
+    "entity_admission_failure",
+    "pair_admission_failure",
+    "predicate_failure"
+  ],
+  "current_implemented_scope": "supply and entity admission; later stages require frozen relation outputs",
+  "node_pair_compute_contract": {
+    "entity_oracle": "K nodes, all K(K-1) ordered pairs",
+    "pair_oracle": "M nodes, at most K(K-1) selected ordered pairs"
+  }
+}
+
