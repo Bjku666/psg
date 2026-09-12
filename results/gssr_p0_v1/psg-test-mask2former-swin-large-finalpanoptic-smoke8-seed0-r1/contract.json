@@ -1,0 +1,18 @@
+{
+  "run_id": "psg-test-mask2former-swin-large-finalpanoptic-smoke8-seed0-r1",
+  "started_at": "2026-09-12T17:03:00+08:00",
+  "stage": "segmentation_candidate_export",
+  "seed": 0,
+  "gpu": 0,
+  "image_population": "8 fixed PSG test images with relations",
+  "image_dir": "/data2/liuhaoran/psg_data/openpsg/coco/psg_test_smoke8",
+  "annotation": "/data2/liuhaoran/psg_data/openpsg/psg/psg.json",
+  "annotation_sha256": "d4a8c6df10198fa2a22f56d4c2039aa2b20bdc002db5c0be8ee34a36a06817c1",
+  "model": "/data2/liuhaoran/psg_data/models/mask2former-swin-large-coco-panoptic",
+  "model_sha256": "2bdb3d36704e79e70a009e39bce41e8d887a9962259b08c959aa0ddf8ffe5d3b",
+  "fair_psg_revision": "2497be40bd8bd0ca6c2ad25be1522ebf42e6623b",
+  "environment": "/data2/liuhaoran/venvs/fair_psg_p0",
+  "output": "/data2/liuhaoran/psg_data/inferred_masks/mask2former_swin_large/psg-test-mask2former-swin-large-finalpanoptic-smoke8-seed0-r1",
+  "command": "CUDA_VISIBLE_DEVICES=0 /data2/liuhaoran/venvs/fair_psg_p0/bin/python scripts/infer_segmasks.py /data2/liuhaoran/psg_data/openpsg/coco/psg_test_smoke8 /data2/liuhaoran/psg_data/inferred_masks/mask2former_swin_large/psg-test-mask2former-swin-large-finalpanoptic-smoke8-seed0-r1 /data2/liuhaoran/psg_data/openpsg/psg/psg.json --model /data2/liuhaoran/psg_data/models/mask2former-swin-large-coco-panoptic --workers 2"
+}
+

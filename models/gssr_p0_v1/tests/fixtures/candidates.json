@@ -1,0 +1,14 @@
+{
+  "data": [
+    {
+      "image_id": 1,
+      "annotations": [
+        {"bbox": [0, 0, 10, 10], "category_id": 0, "score": 0.99},
+        {"bbox": [0, 0, 9, 10], "category_id": 0, "score": 0.98},
+        {"bbox": [20, 0, 30, 10], "category_id": 0, "score": 0.60},
+        {"bbox": [40, 0, 50, 10], "category_id": 0, "score": 0.50}
+      ]
+    }
+  ]
+}
+

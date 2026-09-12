@@ -1,0 +1,18 @@
+{
+  "annotation_path": "/data2/liuhaoran/psg_data/openpsg/psg/psg.json",
+  "annotation_sha256": "d4a8c6df10198fa2a22f56d4c2039aa2b20bdc002db5c0be8ee34a36a06817c1",
+  "source": "https://huggingface.co/datasets/HarborYuan/OpenPSG/resolve/main/psg.json",
+  "data_rows": 48749,
+  "test_ids": 2186,
+  "test_rows": 2186,
+  "test_image_prefix": "val2017",
+  "test_panoptic_prefix": "panoptic_val2017",
+  "test_entities": 24910,
+  "test_relations": 13705,
+  "test_images_with_zero_relations": 9,
+  "thing_classes": 80,
+  "stuff_classes": 53,
+  "predicate_classes": 56,
+  "verified_at": "2026-09-12T00:00:00+08:00"
+}
+

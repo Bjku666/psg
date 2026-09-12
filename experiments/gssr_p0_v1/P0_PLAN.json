@@ -1,0 +1,34 @@
+{
+  "version": "gssr_p0_v1",
+  "registered_at": "2026-09-12T00:00:00+08:00",
+  "seed": 0,
+  "split": "test",
+  "primary_metric": "predicate_balanced_endpoint_support",
+  "primary_budget_ratio": 0.5,
+  "budget_ratios": [0.25, 0.5, 0.75],
+  "matching": {
+    "geometry": "box_iou_initial_mask_iou_formal",
+    "threshold": 0.5,
+    "comparison": ">",
+    "class_compatible": true,
+    "deduplication": "single_mpo"
+  },
+  "selection_arms": [
+    "score_topk",
+    "mask_quality_topk",
+    "diversity_topk",
+    "gt_nodewise",
+    "gt_set_oracle"
+  ],
+  "continue_gate": {
+    "oracle_minus_score_primary_metric": 0.04,
+    "node_oracle_must_be_material_vs_pair_oracle": true
+  },
+  "carriers": [
+    "facebook/mask2former-swin-large-coco-panoptic",
+    "shi-labs/oneformer_coco_swin_large"
+  ],
+  "downstream_evaluation": "Fair PSG SingleMPO with --dedup fail",
+  "learner_allowed_before_gate": false
+}
+

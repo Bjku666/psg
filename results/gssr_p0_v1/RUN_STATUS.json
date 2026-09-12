@@ -1,0 +1,16 @@
+{
+  "line": "gssr_p0_v1",
+  "status": "p0_box_audit_complete",
+  "updated_at": "2026-09-12T18:49:00+08:00",
+  "completed_evidence_runs": [
+    "psg-test-mask2former-swin-large-finalpanoptic-smoke8-seed0-r3",
+    "psg-test-mask2former-swin-large-finalpanoptic-fulltest-seed0-r4",
+    "fulltest_r4_box"
+  ],
+  "active_run": null,
+  "blocked_items": [
+    "official DSFormer checkpoint is not published in the upstream repository",
+    "panoptic ground-truth mask archive download is bandwidth-limited; mask-IoU audit pending"
+  ],
+  "learner_authorized": false
+}

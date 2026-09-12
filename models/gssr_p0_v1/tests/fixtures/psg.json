@@ -1,0 +1,19 @@
+{
+  "thing_classes": ["object"],
+  "stuff_classes": [],
+  "predicate_classes": ["rel-a", "rel-b"],
+  "test_image_ids": [1],
+  "data": [
+    {
+      "image_id": 1,
+      "file_name": "val2017/000000000001.jpg",
+      "annotations": [
+        {"bbox": [0, 0, 10, 10], "category_id": 0},
+        {"bbox": [20, 0, 30, 10], "category_id": 0},
+        {"bbox": [40, 0, 50, 10], "category_id": 0}
+      ],
+      "relations": [[0, 1, 0], [0, 2, 1]]
+    }
+  ]
+}
+
