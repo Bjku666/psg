@@ -1,0 +1,19 @@
+{
+  "version": "gssr_p1_v1",
+  "registered_at": "2026-09-13T00:00:00+08:00",
+  "phase": "P1A_actionability",
+  "learner_authorized": false,
+  "official_test_usage": "forbidden_for_model_selection",
+  "split": {"source": "official_train", "group_key": "physical_file_name", "fit": 0.8, "dev": 0.1, "confirm": 0.1},
+  "replay_contract": {"input": "all raw decoder queries", "selection": "query ids", "backend": "frozen official panoptic postprocessor", "size_invariant": true},
+  "gates": {"native_sanity": "exact segmentation and segment records", "delta_replay_min": 0.06, "actionable_fraction_min": 0.4},
+  "learner_ladder": [
+    {"name": "L0_score", "input": ["class_score", "mask_quality", "joint_score"]},
+    {"name": "L1_local_utility_mlp", "input": ["decoder_query_feature", "class_score", "mask_quality", "area", "bbox", "predicted_class", "pixel_pooled_feature"]},
+    {"name": "L2_predicted_relation_degree", "input": ["query_features", "relative_center", "relative_scale", "box_iou", "mask_iou", "containment", "direction"]},
+    {"name": "L3_gssr_one_swap", "input": ["candidate", "current_set", "pair_context"], "supervision": "swap_pairwise_ranking"}
+  ],
+  "learner_kill_gate": {"all_dev_beats": ["native", "joint_score", "local_utility_mlp", "predicted_relation_degree"], "endpoint_support_gain_min": 0.03, "endpoint_support_gain_target": 0.05},
+  "next_phases": ["P1B_L0_L1_L2_learnability", "P1B_GSSR_one_swap"],
+  "status": "registered_pending_replay"
+}
