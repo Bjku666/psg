@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
-"""Replay native and counterfactual query admissions from a P0C artifact.
+"""Historical v1 restricted replay driver.
+
+The v1 contract is invalidated for evidence because restricting the pool before
+pixel competition changes the causal population. Use ``models.gssr_p1_v2`` for
+new fixed-competition entity-admission runs.
 
 This is the executable P1A hook.  It reuses the exact frozen native admission
 implementation and therefore applies confidence filtering, pixel competition,

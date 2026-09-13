@@ -7,6 +7,60 @@ import torch
 import torch.nn.functional as functional
 
 
+def pre_admission_state(
+    class_logits: torch.Tensor,
+    mask_logits: torch.Tensor,
+    target_size: tuple[int, int],
+    threshold: float = 0.5,
+    mask_threshold: float = 0.5,
+    overlap_mask_area_threshold: float = 0.8,
+) -> dict:
+    """Compute the fixed full-pool pixel competition state.
+
+    The returned ``winner_map`` contains decoder query ids (``-1`` means no
+    semantically eligible query won the pixel).  Candidate records are the
+    queries with non-empty winning support.  This is the causal boundary used
+    by P1 v2: selectors may change entity admission after this function, but
+    never the competition itself.
+    """
+    if class_logits.ndim != 2 or mask_logits.ndim != 3:
+        raise ValueError("expected class logits [Q,C+1] and mask logits [Q,H,W]")
+    if len(class_logits) != len(mask_logits):
+        raise ValueError("class/mask query counts differ")
+    probabilities = upsampled_query_probabilities(mask_logits, target_size)
+    scores, labels = class_logits.softmax(dim=-1).max(dim=-1)
+    num_labels = class_logits.shape[-1] - 1
+    keep = labels.ne(num_labels) & scores.gt(threshold)
+    eligible_ids = torch.arange(len(labels), device=labels.device)[keep]
+    eligible_probabilities = probabilities[keep]
+    eligible_scores = scores[keep]
+    eligible_labels = labels[keep]
+    winner_map = torch.full(target_size, -1, dtype=torch.int32, device=mask_logits.device)
+    candidates: list[dict] = []
+    if len(eligible_probabilities):
+        weighted = eligible_probabilities * eligible_scores[:, None, None]
+        winner_index = weighted.argmax(dim=0)
+        winner_map = eligible_ids[winner_index].to(torch.int32)
+        for index in range(len(eligible_labels)):
+            pixels = winner_index == index
+            won_area = int(pixels.sum().item())
+            if won_area <= 0:
+                continue
+            original_area = int((weighted[index] >= mask_threshold).sum().item())
+            area_ratio = (won_area / original_area) if original_area else 0.0
+            candidates.append({
+                "query_id": int(eligible_ids[index].item()),
+                "label_id": int(eligible_labels[index].item()),
+                "score": float(eligible_scores[index].item()),
+                "won_area": won_area,
+                "original_area": original_area,
+                "area_ratio": area_ratio,
+                "native_keep": bool(area_ratio > overlap_mask_area_threshold),
+                "winning_mask": pixels.cpu().numpy(),
+            })
+    return {"winner_map": winner_map.cpu().numpy(), "candidates": candidates}
+
+
 def upsampled_query_probabilities(
     mask_logits: torch.Tensor, target_size: tuple[int, int]
 ) -> torch.Tensor:
@@ -39,42 +93,23 @@ def native_panoptic_admission(
     ``official_keep_flag`` therefore means the query survived confidence,
     no-object, pixel competition, and overlap-area checks.
     """
-    if class_logits.ndim != 2 or mask_logits.ndim != 3:
-        raise ValueError("expected class logits [Q,C+1] and mask logits [Q,H,W]")
-    probabilities = upsampled_query_probabilities(mask_logits, target_size)
-    scores, labels = class_logits.softmax(dim=-1).max(dim=-1)
-    num_labels = class_logits.shape[-1] - 1
-    keep = labels.ne(num_labels) & scores.gt(threshold)
-    query_ids = torch.arange(len(labels), device=labels.device)[keep]
-    probabilities = probabilities[keep]
-    scores = scores[keep]
-    labels = labels[keep]
-    segmentation = torch.zeros(target_size, dtype=torch.int32, device=mask_logits.device)
-    if not len(probabilities):
-        return segmentation.cpu().numpy(), []
-
-    weighted = probabilities * scores[:, None, None]
-    winning_query = weighted.argmax(dim=0)
+    state = pre_admission_state(class_logits, mask_logits, target_size, threshold,
+                                mask_threshold, overlap_mask_area_threshold)
+    winner_map = state["winner_map"]
+    candidates = state["candidates"]
+    segmentation = np.zeros(target_size, dtype=np.int32)
     segments: list[dict] = []
     segment_id = 0
-    for kept_index in range(len(labels)):
-        pixels = winning_query == kept_index
-        won_area = pixels.sum()
-        original_area = (weighted[kept_index] >= mask_threshold).sum()
-        exists = won_area > 0 and original_area > 0
-        if exists:
-            area_ratio = won_area / original_area
-            exists = bool(area_ratio.item() > overlap_mask_area_threshold)
-        if not exists:
+    for candidate in candidates:
+        if not candidate["native_keep"]:
             continue
         segment_id += 1
-        segmentation[pixels] = segment_id
+        segmentation[candidate["winning_mask"]] = segment_id
         segments.append({
             "id": segment_id,
-            "query_id": int(query_ids[kept_index].item()),
-            "label_id": int(labels[kept_index].item()),
-            "score": round(float(scores[kept_index].item()), 6),
+            "query_id": candidate["query_id"],
+            "label_id": candidate["label_id"],
+            "score": round(candidate["score"], 6),
             "was_fused": False,
         })
-    return segmentation.cpu().numpy(), segments
-
+    return segmentation, segments

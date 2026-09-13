@@ -1,9 +1,9 @@
 {
   "line": "gssr_p1_v1",
-  "status": "registered_pending_replay",
+  "status": "replay_contract_invalidated_before_evidence",
   "learner_authorized": false,
   "active_run": null,
   "completed_runs": [],
-  "blocked_items": ["re-export lossless float32 logits; wire official postprocessor; build fit/dev/confirm split"],
-  "gates": {"native_sanity_passed": false, "delta_replay": null, "actionable_fraction": null, "smoke_observation": "float16 replay matched segment records but not pixel-identical segmentation"}
+  "blocked_items": ["pre-competition restricted replay changes pixel-competition population; superseded by gssr_p1_v2"],
+  "gates": {"native_sanity_passed": false, "delta_replay": null, "actionable_fraction": null, "smoke_observation": "float16 replay matched segment records but not pixel-identical segmentation; fidelity was confounded by invalid intervention location"}
 }

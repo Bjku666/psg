@@ -1,0 +1,18 @@
+{
+  "version": "gssr_p1_v2",
+  "phase": "P1A_actionability",
+  "registered_at": "2026-09-13T00:00:00+08:00",
+  "learner_authorized": false,
+  "official_test_usage": "forbidden_for_model_selection",
+  "split": {"source": "official_train", "group_key": "physical_file_name", "fit": 0.8, "dev": 0.1, "confirm": 0.1},
+  "replay_contract": {
+    "intervention": "after full-pool pixel competition and before overlap/entity admission",
+    "candidate_pool": "queries with non-empty mutually-exclusive winning masks",
+    "selection": "fixed-K candidate query ids",
+    "assembly": "stored winning masks; no selector-dependent pixel competition",
+    "size_invariant": true
+  },
+  "gates": {"native_sanity": "exact segmentation, segments_info, and segment query provenance", "delta_replay_min": 0.06, "actionable_fraction_min": 0.4},
+  "learner_ladder": ["L0_score", "L1_local_utility_mlp", "L2_predicted_relation_degree", "L3_gssr_one_swap"],
+  "status": "registered_pending_replay"
+}

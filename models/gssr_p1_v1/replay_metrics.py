@@ -34,9 +34,11 @@ def compare_replays(
     oracle: ReplayResult,
     score_fn: Callable[[ReplayResult], float],
     *,
-    raw_oracle_gap: float = 0.15207185606297424,
+    raw_oracle_gap: float | None = None,
 ) -> dict[str, float]:
     """Compare replay scores and report the fraction of raw oracle gap recovered."""
+    if raw_oracle_gap is None:
+        raise ValueError("raw_oracle_gap must be supplied for the same split; no test-gap default")
     if raw_oracle_gap < 0 or not np.isfinite(raw_oracle_gap):
         raise ValueError("raw_oracle_gap must be finite and non-negative")
     native_score, oracle_score = float(score_fn(native)), float(score_fn(oracle))

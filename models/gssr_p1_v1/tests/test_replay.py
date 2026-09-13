@@ -24,7 +24,7 @@ def test_native_sanity_and_metrics():
     a = replay_queries(pool, [0, 1], backend)
     b = replay_queries(pool, [0, 1], backend)
     assert validate_native_replay(a, b)["segmentation_equal"]
-    assert compare_replays(a, b, lambda r: r.segment_count)["delta_replay"] == 0
+    assert compare_replays(a, b, lambda r: r.segment_count, raw_oracle_gap=1.0)["delta_replay"] == 0
 
 def test_missing_query_rejected():
     with pytest.raises(KeyError):

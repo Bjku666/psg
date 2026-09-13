@@ -1,0 +1,18 @@
+{
+  "line": "gssr_p1_v2",
+  "status": "registered_pending_replay",
+  "learner_authorized": false,
+  "active_run": null,
+  "completed_runs": [],
+  "blocked_items": [
+    "export official-train pre-admission artifacts",
+    "build grouped fit/dev/confirm manifest",
+    "run native assembly sanity before actionability oracle"
+  ],
+  "gates": {
+    "native_sanity_passed": false,
+    "delta_actionable": null,
+    "actionable_fraction": null,
+    "official_test_used_for_model_selection": false
+  }
+}

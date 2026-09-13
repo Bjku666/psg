@@ -24,6 +24,7 @@ if __package__ in (None, ""):
 
 from models.gssr_p0c_v1.native_admission import (
     native_panoptic_admission,
+    pre_admission_state,
     upsampled_query_probabilities,
 )
 from models.gssr_p0c_v1.raw_query_schema import (
@@ -50,6 +51,10 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--model", required=True)
     parser.add_argument("--output", required=True, type=Path)
     parser.add_argument("--max-images", type=int)
+    parser.add_argument("--split", choices=("train", "test", "all"), default="test",
+                        help="PSG image split to export (P1 uses train)")
+    parser.add_argument("--file-list", type=Path,
+                        help="optional newline-delimited image basenames; overrides split")
     parser.add_argument("--num-shards", type=int, default=1)
     parser.add_argument("--shard-index", type=int, default=0)
     parser.add_argument("--progress-every", type=int, default=25)
@@ -80,21 +85,29 @@ def main() -> None:
         raise FileExistsError(f"refusing to overwrite output directory: {args.output}")
     with args.psg.open() as stream:
         psg = json.load(stream)
-    test_ids = {str(value) for value in psg["test_image_ids"]}
-    test_files = {
-        str(row["file_name"]).split("/", 1)[-1]
-        for row in psg["data"]
-        if str(row["image_id"]) in test_ids
-    }
-    image_paths = sorted(path for path in args.images.glob("*.jpg") if path.name in test_files)
+    test_ids = {str(value) for value in psg.get("test_image_ids", [])}
+    if args.file_list:
+        wanted_files = {line.strip().split("/", 1)[-1] for line in args.file_list.read_text().splitlines()
+                        if line.strip()}
+    else:
+        if args.split == "test":
+            wanted_ids = test_ids
+        elif args.split == "train":
+            wanted_ids = {str(row["image_id"]) for row in psg.get("data", [])
+                          if str(row["image_id"]) not in test_ids}
+        else:
+            wanted_ids = {str(row["image_id"]) for row in psg.get("data", [])}
+        wanted_files = {str(row["file_name"]).split("/", 1)[-1] for row in psg.get("data", [])
+                        if str(row["image_id"]) in wanted_ids}
+    image_paths = sorted(path for path in args.images.glob("*.jpg") if path.name in wanted_files)
     if args.num_shards <= 0 or not 0 <= args.shard_index < args.num_shards:
         raise ValueError("require num_shards > 0 and 0 <= shard_index < num_shards")
-    total_test_images = len(image_paths)
+    total_selected_images = len(image_paths)
     image_paths = image_paths[args.shard_index::args.num_shards]
     if args.max_images is not None:
         image_paths = image_paths[:args.max_images]
     if not image_paths:
-        raise ValueError("no PSG test images found under --images")
+        raise ValueError(f"no PSG {args.split} images found under --images")
 
     shard_image_count = len(image_paths)
     manifest_path = args.output / "manifest.jsonl"
@@ -160,6 +173,10 @@ def main() -> None:
                     args.mask_threshold,
                     args.overlap_mask_area_threshold,
                 )
+                admission_state = pre_admission_state(
+                    class_logits, mask_logits, target_size, args.threshold,
+                    args.mask_threshold, args.overlap_mask_area_threshold,
+                )
                 official = processor.post_process_panoptic_segmentation(
                     outputs,
                     threshold=args.threshold,
@@ -181,15 +198,36 @@ def main() -> None:
                     int(segment["query_id"]): int(segment["id"])
                     for segment in native_segments
                 }
+                # Derive query provenance independently from the official map
+                # and the frozen full-pool winner map (never from native output).
+                official_segment_query_ids = []
+                winner_map = admission_state["winner_map"]
+                for segment in official["segments_info"]:
+                    segment_id = int(segment["id"])
+                    winners = winner_map[official_segmentation == segment_id]
+                    winners = winners[winners >= 0]
+                    unique = np.unique(winners)
+                    if len(unique) != 1:
+                        raise AssertionError("official segment is not explained by one winning query")
+                    official_segment_query_ids.append(int(unique[0]))
 
                 artifact_name = f"{image_path.stem}.npz"
                 np.savez_compressed(
                     artifact_dir / artifact_name,
-                    class_logits=class_logits.half().cpu().numpy(),
+                    class_logits=class_logits.float().cpu().numpy(),
                     mask_logits=mask_logits.half().cpu().numpy(),
                     decoder_query_feature=decoder_features.half().cpu().numpy(),
                     pixel_pooled_feature=pooled_features.half().cpu().numpy(),
                     native_panoptic_segmentation=native_segmentation.astype(np.int32),
+                    pre_admission_winner_map=admission_state["winner_map"].astype(np.int16),
+                    pre_admission_query_ids=np.asarray(
+                        [c["query_id"] for c in admission_state["candidates"]], dtype=np.int16),
+                    pre_admission_won_area=np.asarray(
+                        [c["won_area"] for c in admission_state["candidates"]], dtype=np.int32),
+                    pre_admission_original_area=np.asarray(
+                        [c["original_area"] for c in admission_state["candidates"]], dtype=np.int32),
+                    pre_admission_area_ratio=np.asarray(
+                        [c["area_ratio"] for c in admission_state["candidates"]], dtype=np.float32),
                 )
                 queries = []
                 for query_id in range(len(class_logits)):
@@ -213,6 +251,10 @@ def main() -> None:
                     "width": image.width,
                     "artifact_file": f"artifacts/{artifact_name}",
                     "native_processor_verified": True,
+                    "official_panoptic_segmentation": official_segmentation.astype(np.int32).tolist(),
+                    "official_segments_info": official["segments_info"],
+                    "official_segment_query_ids": official_segment_query_ids,
+                    "pre_admission_candidate_query_ids": [int(c["query_id"]) for c in admission_state["candidates"]],
                     "queries": queries,
                 }
                 validate_image_record(record)
@@ -238,15 +280,24 @@ def main() -> None:
         if Path(args.model).is_dir() else None,
         "psg": {"path": str(args.psg.resolve()), "sha256": sha256(args.psg)},
         "images": str(args.images.resolve()),
-        "total_test_images": total_test_images,
+        "total_selected_images": total_selected_images,
         "exported_images": shard_image_count,
         "resumed_from_images": len(completed_files),
         "num_shards": args.num_shards,
         "shard_index": args.shard_index,
+        "split": args.split,
         "score_definitions": {
             "class_score": "max softmax probability over foreground classes",
             "mask_quality": "mean sigmoid(mask_logit) over pixels > 0.5",
             "joint_score": "class_score * mask_quality",
+        },
+        "artifact_dtypes": {
+            "class_logits": "float32",
+            "mask_logits": "float16 (learner feature only; not used by v2 replay)",
+            "decoder_query_feature": "float16",
+            "pixel_pooled_feature": "float16",
+            "pre_admission_winner_map": "int16",
+            "native_panoptic_segmentation": "int32",
         },
         "native_admission": {
             "threshold": args.threshold,
