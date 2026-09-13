@@ -47,7 +47,11 @@ def pre_admission_state(
             if won_area <= 0:
                 continue
             original_area = int((weighted[index] >= mask_threshold).sum().item())
-            area_ratio = (won_area / original_area) if original_area else 0.0
+            # Match torch's float32 comparison in the official processor;
+            # boundary cases such as 48/60 can be represented just above .8.
+            area_ratio = (float(torch.tensor(won_area, dtype=torch.float32)
+                                / torch.tensor(original_area, dtype=torch.float32))
+                          if original_area else 0.0)
             candidates.append({
                 "query_id": int(eligible_ids[index].item()),
                 "label_id": int(eligible_labels[index].item()),
@@ -97,7 +101,10 @@ def native_panoptic_admission(
                                 mask_threshold, overlap_mask_area_threshold)
     winner_map = state["winner_map"]
     candidates = state["candidates"]
-    segmentation = np.zeros(target_size, dtype=np.int32)
+    # The official processor emits an all-`-1` map when no query survives
+    # semantic eligibility; otherwise its initialized void label is zero.
+    segmentation = (np.full(target_size, -1, dtype=np.int32)
+                    if not candidates else np.zeros(target_size, dtype=np.int32))
     segments: list[dict] = []
     segment_id = 0
     for candidate in candidates:

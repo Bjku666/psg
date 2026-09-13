@@ -14,5 +14,5 @@
   },
   "gates": {"native_sanity": "exact segmentation, segments_info, and segment query provenance", "delta_replay_min": 0.06, "actionable_fraction_min": 0.4},
   "learner_ladder": ["L0_score", "L1_local_utility_mlp", "L2_predicted_relation_degree", "L3_gssr_one_swap"],
-  "status": "registered_pending_replay"
+  "status": "p1a_dev_gate_failed"
 }

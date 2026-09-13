@@ -51,3 +51,9 @@ def test_native_assembly_checks_independent_metadata():
     assert all(result.values())
     with pytest.raises(AssertionError):
         validate_native_assembly(np.zeros((2, 3), dtype=np.int32), info, [0, 1, 2], s, [0, 1, 2])
+
+
+def test_empty_candidate_pool_reproduces_official_minus_one_sentinel():
+    empty = {"winner_map": np.full((2, 3), -1, dtype=np.int16), "candidates": []}
+    replay = replay_entity_admission(empty, [])
+    assert np.array_equal(replay.segmentation, np.full((2, 3), -1, dtype=np.int32))

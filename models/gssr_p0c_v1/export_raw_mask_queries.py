@@ -28,6 +28,7 @@ from models.gssr_p0c_v1.native_admission import (
     upsampled_query_probabilities,
 )
 from models.gssr_p0c_v1.raw_query_schema import (
+    P1_COMPACT_SCHEMA_VERSION,
     SCHEMA_VERSION,
     encode_binary_mask,
     mask_bbox,
@@ -63,6 +64,10 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--threshold", type=float, default=0.5)
     parser.add_argument("--mask-threshold", type=float, default=0.5)
     parser.add_argument("--overlap-mask-area-threshold", type=float, default=0.8)
+    parser.add_argument(
+        "--artifact-profile", choices=("p0c_full", "p1_v2"), default="p0c_full",
+        help="p1_v2 stores only fixed-competition replay and learner features",
+    )
     return parser.parse_args()
 
 
@@ -187,7 +192,11 @@ def main() -> None:
                 )[0]
                 official_segmentation = official["segmentation"].cpu().numpy()
                 if not np.array_equal(native_segmentation, official_segmentation):
-                    raise AssertionError("query-aware native admission differs from official segmentation")
+                    diff = int(np.count_nonzero(native_segmentation != official_segmentation))
+                    raise AssertionError(
+                        f"query-aware native admission differs from official segmentation "
+                        f"for {image_path.name} (pixels={diff})"
+                    )
                 native_without_query = [
                     {key: value for key, value in segment.items() if key != "query_id"}
                     for segment in native_segments
@@ -212,51 +221,62 @@ def main() -> None:
                     official_segment_query_ids.append(int(unique[0]))
 
                 artifact_name = f"{image_path.stem}.npz"
-                np.savez_compressed(
-                    artifact_dir / artifact_name,
-                    class_logits=class_logits.float().cpu().numpy(),
-                    mask_logits=mask_logits.half().cpu().numpy(),
-                    decoder_query_feature=decoder_features.half().cpu().numpy(),
-                    pixel_pooled_feature=pooled_features.half().cpu().numpy(),
-                    native_panoptic_segmentation=native_segmentation.astype(np.int32),
-                    pre_admission_winner_map=admission_state["winner_map"].astype(np.int16),
-                    pre_admission_query_ids=np.asarray(
+                artifact = {
+                    "class_logits": class_logits.float().cpu().numpy(),
+                    "decoder_query_feature": decoder_features.half().cpu().numpy(),
+                    "pixel_pooled_feature": pooled_features.half().cpu().numpy(),
+                    "pre_admission_winner_map": admission_state["winner_map"].astype(np.int16),
+                    "pre_admission_query_ids": np.asarray(
                         [c["query_id"] for c in admission_state["candidates"]], dtype=np.int16),
-                    pre_admission_won_area=np.asarray(
+                    "pre_admission_won_area": np.asarray(
                         [c["won_area"] for c in admission_state["candidates"]], dtype=np.int32),
-                    pre_admission_original_area=np.asarray(
+                    "pre_admission_original_area": np.asarray(
                         [c["original_area"] for c in admission_state["candidates"]], dtype=np.int32),
-                    pre_admission_area_ratio=np.asarray(
+                    "pre_admission_area_ratio": np.asarray(
                         [c["area_ratio"] for c in admission_state["candidates"]], dtype=np.float32),
-                )
+                }
+                if args.artifact_profile == "p0c_full":
+                    artifact.update({
+                        "mask_logits": mask_logits.half().cpu().numpy(),
+                        "native_panoptic_segmentation": native_segmentation.astype(np.int32),
+                    })
+                else:
+                    artifact["official_panoptic_segmentation"] = official_segmentation.astype(np.int32)
+                np.savez_compressed(artifact_dir / artifact_name, **artifact)
                 queries = []
                 for query_id in range(len(class_logits)):
                     binary = binary_masks[query_id].cpu().numpy()
-                    queries.append({
+                    query = {
                         "query_id": query_id,
                         "predicted_class": int(score_values["predicted_class"][query_id]),
                         "class_score": float(score_values["class_score"][query_id]),
                         "mask_quality": float(score_values["mask_quality"][query_id]),
                         "joint_score": float(score_values["joint_score"][query_id]),
                         "bbox": mask_bbox(binary),
-                        "mask_rle": encode_binary_mask(binary),
                         "official_keep_flag": query_id in native_by_query,
                         "official_panoptic_segment_id": native_by_query.get(query_id),
-                    })
+                    }
+                    if args.artifact_profile == "p0c_full":
+                        query["mask_rle"] = encode_binary_mask(binary)
+                    queries.append(query)
                 record = {
-                    "schema_version": SCHEMA_VERSION,
+                    "schema_version": (SCHEMA_VERSION if args.artifact_profile == "p0c_full"
+                                       else P1_COMPACT_SCHEMA_VERSION),
                     "image_id": int(image_path.stem),
                     "file_name": f"{image_path.parent.name}/{image_path.name}",
                     "height": image.height,
                     "width": image.width,
                     "artifact_file": f"artifacts/{artifact_name}",
                     "native_processor_verified": True,
-                    "official_panoptic_segmentation": official_segmentation.astype(np.int32).tolist(),
                     "official_segments_info": official["segments_info"],
                     "official_segment_query_ids": official_segment_query_ids,
                     "pre_admission_candidate_query_ids": [int(c["query_id"]) for c in admission_state["candidates"]],
                     "queries": queries,
                 }
+                if args.artifact_profile == "p0c_full":
+                    record["official_panoptic_segmentation"] = official_segmentation.astype(np.int32).tolist()
+                else:
+                    record["official_panoptic_segmentation_key"] = "official_panoptic_segmentation"
                 validate_image_record(record)
                 manifest.write(json.dumps(record, separators=(",", ":")) + "\n")
                 manifest.flush()
@@ -272,7 +292,8 @@ def main() -> None:
                     )
 
     contract = {
-        "schema_version": SCHEMA_VERSION,
+        "schema_version": (SCHEMA_VERSION if args.artifact_profile == "p0c_full"
+                           else P1_COMPACT_SCHEMA_VERSION),
         "created_at": datetime.now(timezone.utc).isoformat(),
         "command": sys.argv,
         "model": args.model,
@@ -286,6 +307,7 @@ def main() -> None:
         "num_shards": args.num_shards,
         "shard_index": args.shard_index,
         "split": args.split,
+        "artifact_profile": args.artifact_profile,
         "score_definitions": {
             "class_score": "max softmax probability over foreground classes",
             "mask_quality": "mean sigmoid(mask_logit) over pixels > 0.5",
@@ -293,11 +315,12 @@ def main() -> None:
         },
         "artifact_dtypes": {
             "class_logits": "float32",
-            "mask_logits": "float16 (learner feature only; not used by v2 replay)",
+            "mask_logits": ("float16" if args.artifact_profile == "p0c_full" else "omitted"),
             "decoder_query_feature": "float16",
             "pixel_pooled_feature": "float16",
             "pre_admission_winner_map": "int16",
             "native_panoptic_segmentation": "int32",
+            "official_panoptic_segmentation": ("int32" if args.artifact_profile == "p1_v2" else "JSON record"),
         },
         "native_admission": {
             "threshold": args.threshold,

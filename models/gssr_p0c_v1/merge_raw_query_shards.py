@@ -19,17 +19,18 @@ def main() -> None:
     parser.add_argument("--psg", required=True, type=Path)
     parser.add_argument("--shards", required=True, nargs="+", type=Path)
     parser.add_argument("--output", required=True, type=Path)
+    parser.add_argument("--split", choices=("train", "test", "all"), default="test")
     args = parser.parse_args()
     if args.output.exists():
         raise FileExistsError(f"refusing to overwrite output: {args.output}")
     with args.psg.open() as stream:
         psg = json.load(stream)
     test_ids = {str(value) for value in psg["test_image_ids"]}
-    expected_files = {
-        str(row["file_name"])
-        for row in psg["data"]
-        if str(row["image_id"]) in test_ids
-    }
+    expected_files = set()
+    for row in psg["data"]:
+        is_test = str(row["image_id"]) in test_ids
+        if args.split == "all" or (args.split == "test" and is_test) or (args.split == "train" and not is_test):
+            expected_files.add(str(row["file_name"]))
     records: dict[str, dict] = {}
     contracts = []
     for shard in args.shards:
@@ -58,22 +59,27 @@ def main() -> None:
     declared_shards = {int(contract["num_shards"]) for contract in contracts}
     if declared_shards != {len(args.shards)} or shard_indices != list(range(len(args.shards))):
         raise ValueError("contracts do not form one complete shard set")
-    invariant_keys = ("model", "model_config_sha256", "score_definitions", "native_admission")
+    invariant_keys = ("model", "model_config_sha256", "score_definitions", "native_admission",
+                      "split", "artifact_profile")
     for key in invariant_keys:
-        if len({json.dumps(contract[key], sort_keys=True) for contract in contracts}) != 1:
+        values = {json.dumps(contract.get(key, "p0c_full" if key == "artifact_profile" else None),
+                             sort_keys=True) for contract in contracts}
+        if len(values) != 1:
             raise ValueError(f"shard contract mismatch for {key}")
     args.output.mkdir(parents=True)
     with (args.output / "manifest.jsonl").open("w") as stream:
         for filename in sorted(records):
             stream.write(json.dumps(records[filename], separators=(",", ":")) + "\n")
     merged_contract = {
-        "schema_version": 1,
+        "schema_version": contracts[0]["schema_version"],
         "kind": "merged_raw_query_manifest",
         "images": len(records),
         "model": contracts[0]["model"],
         "model_config_sha256": contracts[0]["model_config_sha256"],
         "score_definitions": contracts[0]["score_definitions"],
         "native_admission": contracts[0]["native_admission"],
+        "split": args.split,
+        "artifact_profile": contracts[0].get("artifact_profile", "p0c_full"),
         "shards": [str(path.resolve()) for path in args.shards],
     }
     (args.output / "contract.json").write_text(json.dumps(merged_contract, indent=2) + "\n")

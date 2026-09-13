@@ -8,6 +8,7 @@ import numpy as np
 
 
 SCHEMA_VERSION = 1
+P1_COMPACT_SCHEMA_VERSION = 2
 REQUIRED_QUERY_FIELDS = {
     "query_id",
     "predicted_class",
@@ -104,18 +105,29 @@ def validate_image_record(record: dict) -> None:
     missing = required.difference(record)
     if missing:
         raise ValueError(f"image record lacks fields: {sorted(missing)}")
-    if int(record["schema_version"]) != SCHEMA_VERSION:
+    schema_version = int(record["schema_version"])
+    if schema_version not in (SCHEMA_VERSION, P1_COMPACT_SCHEMA_VERSION):
         raise ValueError(f"unsupported schema version: {record['schema_version']}")
     query_ids = []
     for query in record["queries"]:
-        missing_query = REQUIRED_QUERY_FIELDS.difference(query)
+        required_query_fields = (REQUIRED_QUERY_FIELDS if schema_version == SCHEMA_VERSION
+                                 else REQUIRED_QUERY_FIELDS.difference({"mask_rle"}))
+        missing_query = required_query_fields.difference(query)
         if missing_query:
             raise ValueError(f"query lacks fields: {sorted(missing_query)}")
         query_ids.append(int(query["query_id"]))
         expected_joint = float(query["class_score"]) * float(query["mask_quality"])
         if not np.isclose(float(query["joint_score"]), expected_joint, rtol=1e-5, atol=1e-7):
             raise ValueError("joint_score is not class_score * mask_quality")
-        if list(query["mask_rle"]["size"]) != [int(record["height"]), int(record["width"])]:
+        if "mask_rle" in query and list(query["mask_rle"]["size"]) != [int(record["height"]), int(record["width"])]:
             raise ValueError("query RLE dimensions do not match the image")
     if query_ids != list(range(len(query_ids))):
         raise ValueError("query_id must be contiguous and preserve decoder order")
+    if schema_version == P1_COMPACT_SCHEMA_VERSION:
+        required = {
+            "official_segments_info", "official_segment_query_ids",
+            "pre_admission_candidate_query_ids", "official_panoptic_segmentation_key",
+        }
+        missing = required.difference(record)
+        if missing:
+            raise ValueError(f"compact P1 record lacks fields: {sorted(missing)}")

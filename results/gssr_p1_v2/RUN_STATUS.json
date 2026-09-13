@@ -1,18 +1,28 @@
 {
   "line": "gssr_p1_v2",
-  "status": "registered_pending_replay",
+  "status": "p1a_dev_gate_failed",
   "learner_authorized": false,
   "active_run": null,
-  "completed_runs": [],
+  "completed_runs": ["train-smoke64-fixed-competition-seed0", "dev-fixed-competition-balanced-oracle-merged"],
   "blocked_items": [
-    "export official-train pre-admission artifacts",
+    "P1B learner is not authorized after the dev actionability gate failed",
+    "raw-query fixed-K denominator was not computed because compact artifacts omit raw-mask RLE",
+    "confirm partition is not opened after the dev gate failure"
+  ],
+  "completed_items": [
     "build grouped fit/dev/confirm manifest",
+    "export official-train compact pre-admission artifacts (4 shards)",
+    "prepare official train panoptic GT archive",
+    "merge compact shards and run native assembly sanity after export",
     "run native assembly sanity before actionability oracle"
   ],
   "gates": {
-    "native_sanity_passed": false,
-    "delta_actionable": null,
+    "native_sanity_passed": true,
+    "native_sanity_images": 4565,
+    "delta_actionable": 0.009987710589602461,
     "actionable_fraction": null,
+    "delta_actionable_gate_passed": false,
+    "actionable_fraction_gate_passed": null,
     "official_test_used_for_model_selection": false
   }
 }

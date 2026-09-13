@@ -78,7 +78,10 @@ def assemble_admitted_entities(
     if missing:
         raise KeyError(f"admitted ids are not entity candidates: {missing[:8]}")
     selected = [c for c in records if int(c["query_id"]) in set(requested)]
-    segmentation = np.zeros(winner_map.shape, dtype=np.int32)
+    # Match the official processor's no-eligible-query sentinel.  With a
+    # non-empty candidate pool, unadmitted pixels remain ordinary void zero.
+    segmentation = (np.full(winner_map.shape, -1, dtype=np.int32)
+                    if not records else np.zeros(winner_map.shape, dtype=np.int32))
     segments: list[dict[str, Any]] = []
     for segment_id, candidate in enumerate(selected, start=1):
         query_id = int(candidate["query_id"])
@@ -129,10 +132,23 @@ def validate_native_assembly(
         {key: value for key, value in segment.items() if key != "query_id"}
         for segment in replay.segments
     )
-    got = tuple(official_info)
+    # JSON records may preserve the official processor's insertion order, but
+    # metadata equality is structural rather than order-sensitive.
+    got = tuple(dict(item) for item in official_info)
+    def metadata_equal(got_item: Mapping[str, Any], expected_item: Mapping[str, Any]) -> bool:
+        if set(got_item) != set(expected_item):
+            return False
+        for key in got_item:
+            if key == "score":
+                if not np.isclose(float(got_item[key]), float(expected_item[key]), rtol=0.0, atol=1e-5):
+                    return False
+            elif got_item[key] != expected_item[key]:
+                return False
+        return True
+
     checks = {
         "segmentation_equal": bool(np.array_equal(np.asarray(official_segmentation), replay.segmentation)),
-        "segments_info_equal": got == expected,
+        "segments_info_equal": all(metadata_equal(dict(g), dict(e)) for g, e in zip(got, expected)) and len(got) == len(expected),
         "segment_query_ids_equal": query_ids == tuple(int(s["query_id"]) for s in replay.segments),
     }
     if not all(checks.values()):
