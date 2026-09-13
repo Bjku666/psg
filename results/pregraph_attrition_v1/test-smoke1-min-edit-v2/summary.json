@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "contract": "fixed-K GT minimum-change relation rescue oracle",
+  "split": "test",
+  "official_test_used_for_model_selection": false,
+  "curve": [
+    {
+      "epsilon": 0.0,
+      "images": 1,
+      "mean_endpoint_support": 0.6,
+      "mean_native_endpoint_support": 0.6,
+      "mean_changed_fraction": 0.0
+    },
+    {
+      "epsilon": 0.005,
+      "images": 1,
+      "mean_endpoint_support": 0.6,
+      "mean_native_endpoint_support": 0.6,
+      "mean_changed_fraction": 0.0
+    }
+  ],
+  "note": "GT-guided qualification oracle; no selector or learner is trained."
+}

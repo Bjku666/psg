@@ -14,5 +14,10 @@
   },
   "gates": {"native_sanity": "exact segmentation, segments_info, and segment query provenance", "delta_replay_min": 0.06, "actionable_fraction_min": 0.4},
   "learner_ladder": ["L0_score", "L1_local_utility_mlp", "L2_predicted_relation_degree", "L3_gssr_one_swap"],
-  "status": "p1a_dev_gate_failed"
+  "status": "closed_as_postcompetition_actionability_failure",
+  "closure": {
+    "reason": "fixed-competition candidate oracle adds only 0.00999 balanced endpoint support on dev; post-competition admission is not the material bottleneck",
+    "learner_ladder": "frozen_without_execution",
+    "next_line": "pregraph_attrition_v1"
+  }
 }

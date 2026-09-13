@@ -1,0 +1,23 @@
+{
+  "version": "pregraph_attrition_v1",
+  "phase": "qualification",
+  "registered_at": "2026-09-13T00:00:00+08:00",
+  "hypothesis": "relation-critical entity hypotheses disappear before graph construction, during semantic eligibility or pixel competition",
+  "frozen_inputs": ["gssr_p0_v1", "gssr_p0b_v1", "gssr_p0c_v1", "gssr_p1_v1", "gssr_p1_v2"],
+  "population": {"source": "official_train", "exploration_partition": "fit", "smoke_partition": "test", "group_key": "physical_file_name"},
+  "stages": ["raw_query", "semantic_eligibility", "full_pool_pixel_competition", "native_admission"],
+  "primary_metrics": ["predicate_balanced_fixed_k_endpoint_support", "endpoint_death_stage", "changed_pixel_fraction"],
+  "experiments": [
+    {"id": "stage_audit", "budget": "500 fit images", "decision": "locate largest attrition transition"},
+    {"id": "near_miss", "budget": "same stage-audit images", "decision": "quantify deficit and lowest-margin rescue cost"},
+    {"id": "minimum_change_oracle", "budget": "same stage-audit images", "decision": "require material support gain at <=0.5% changed pixels before method work"},
+    {"id": "fixed_k_rescue", "budget": "only if previous gate passes", "decision": "authorize learned competition-aware set repair"}
+  ],
+  "gates": {
+    "competition_loss_min": 0.03,
+    "rescue_changed_fraction_max": 0.005,
+    "learner_authorized": false
+  },
+  "official_test_usage": "smoke_only_never_model_selection",
+  "status": "registered_pending_fit_artifacts"
+}

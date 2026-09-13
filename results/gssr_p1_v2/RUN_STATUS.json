@@ -1,13 +1,14 @@
 {
   "line": "gssr_p1_v2",
-  "status": "p1a_dev_gate_failed",
+  "status": "closed_as_postcompetition_actionability_failure",
   "learner_authorized": false,
   "active_run": null,
   "completed_runs": ["train-smoke64-fixed-competition-seed0", "dev-fixed-competition-balanced-oracle-merged"],
   "blocked_items": [
-    "P1B learner is not authorized after the dev actionability gate failed",
+    "P1B learner is permanently unauthorized after the dev actionability gate failed",
     "raw-query fixed-K denominator was not computed because compact artifacts omit raw-mask RLE",
-    "confirm partition is not opened after the dev gate failure"
+    "confirm partition is not opened after the dev gate failure",
+    "pregraph_attrition_v1 fit evidence requires train2017 images or a full-artifact one-pass source"
   ],
   "completed_items": [
     "build grouped fit/dev/confirm manifest",
@@ -24,5 +25,6 @@
     "delta_actionable_gate_passed": false,
     "actionable_fraction_gate_passed": null,
     "official_test_used_for_model_selection": false
-  }
+  },
+  "next_line": "experiments/pregraph_attrition_v1/PREGRAPH_PLAN.json"
 }

@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "contract": "semantic-matched relation endpoint -> competition/admission near miss",
+  "source": "/data2/liuhaoran/project/cv/psg/results/pregraph_attrition_v1/test-smoke2-stage-decomposition-v2/per_image.jsonl",
+  "all": {
+    "semantic_matched_queries": 3,
+    "relation_critical_queries": 1,
+    "relation_critical_with_mask_support": 1,
+    "competition_candidates": 1,
+    "zero_support": 0,
+    "area_ratio": {
+      "mean": 0.33707012319729085,
+      "median": 0.33707012319729085,
+      "under_0.8": 1
+    },
+    "deficit_pixels": {
+      "mean": 7929.0,
+      "median": 7929.0,
+      "p90": 7929.0
+    },
+    "rescue_cost": {
+      "mean": 1488.322509765625,
+      "median": 1488.322509765625,
+      "p90": 1488.322509765625
+    },
+    "near_miss_le_0.5pct_area": 0
+  },
+  "relation_critical": {
+    "semantic_matched_queries": 1,
+    "relation_critical_queries": 1,
+    "relation_critical_with_mask_support": 1,
+    "competition_candidates": 1,
+    "zero_support": 0,
+    "area_ratio": {
+      "mean": 0.33707012319729085,
+      "median": 0.33707012319729085,
+      "under_0.8": 1
+    },
+    "deficit_pixels": {
+      "mean": 7929.0,
+      "median": 7929.0,
+      "p90": 7929.0
+    },
+    "rescue_cost": {
+      "mean": 1488.322509765625,
+      "median": 1488.322509765625,
+      "p90": 1488.322509765625
+    },
+    "near_miss_le_0.5pct_area": 0
+  }
+}

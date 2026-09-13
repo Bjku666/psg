@@ -10,9 +10,11 @@ The frozen first diagnostic is `gssr_p0_v1`; qualification work is in
 `gssr_p0b_v1` (formal matching/contracts) and `gssr_p0c_v1` (raw-query entity
 admission). P0 is frozen. The original `gssr_p1_v1` restricted replay is
 invalidated before evidence because it intervened before pixel competition.
-The corrected next stage is `gssr_p1_v2`: fixed-competition entity admission,
-followed by P1B learnability ladders. The learner remains explicitly
-unauthorized until replay gates pass.
+The corrected `gssr_p1_v2` line is now closed as a post-competition
+actionability failure: its dev fixed-competition oracle gained only 0.00999.
+The next qualification line is `pregraph_attrition_v1`, which locates where
+relation-critical endpoints disappear before graph construction. No learner is
+authorized by this registration.
 
 ## Layout
 
@@ -24,6 +26,8 @@ unauthorized until replay gates pass.
 - `models/gssr_p1_v1/`: historical restricted-query replay adapter, metrics,
   and grouped split utilities; its pre-competition replay is not evidence.
 - `models/gssr_p1_v2/`: fixed winning-mask entity-admission replay primitives.
+- `models/pregraph_attrition_v1/`: raw-to-admission endpoint lifecycle,
+  near-miss margin audit, and GT minimum-change rescue oracle.
 - `experiments/gssr_p0_v1/`: frozen hypothesis, run matrix, gates, and costs.
 - `results/gssr_p0_v1/`: immutable run outputs and status metadata.
 - `records/YYYYMMDD/`: commands, deviations, and decisions.
@@ -60,11 +64,15 @@ python models/gssr_p0c_v1/raw_query_audit.py --help
 python models/gssr_p0c_v1/node_pair_budget_oracle.py --help
 
 python models/gssr_p1_v2/run_actionability_oracle.py --help
+python models/pregraph_attrition_v1/run_stage_decomposition.py --help
+python models/pregraph_attrition_v1/near_miss_audit.py --help
+python models/pregraph_attrition_v1/min_edit_oracle.py --help
 
 python -m pytest -q models/gssr_p1_v1/tests models/gssr_p1_v2/tests
 
-P1 v2 evidence is registered in `experiments/gssr_p1_v2/` and tracked by
-`results/gssr_p1_v2/RUN_STATUS.json`; no learner is authorized yet.
+P1 v2 evidence is closed and tracked by `results/gssr_p1_v2/RUN_STATUS.json`.
+The pre-graph qualification plan is in `experiments/pregraph_attrition_v1/`;
+no learner is authorized yet.
 ```
 
 Use `/data2/liuhaoran/venvs/fair_psg_p0/bin/python` for the raw-query exporter;
