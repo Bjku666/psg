@@ -12,9 +12,11 @@ admission). P0 is frozen. The original `gssr_p1_v1` restricted replay is
 invalidated before evidence because it intervened before pixel competition.
 The corrected `gssr_p1_v2` line is now closed as a post-competition
 actionability failure: its dev fixed-competition oracle gained only 0.00999.
-The next qualification line is `pregraph_attrition_v1`, which locates where
-relation-critical endpoints disappear before graph construction. No learner is
-authorized by this registration.
+The `pregraph_attrition_v1` fit-500 qualification is complete. It locates
+material losses at semantic eligibility and pixel competition, but its
+per-image 0.5% minimum-change oracle gains only 0.01192 balanced endpoint
+support. The small-edit gate failed, so this method line is closed without a
+learner.
 
 ## Layout
 
@@ -67,13 +69,15 @@ python models/gssr_p1_v2/run_actionability_oracle.py --help
 python models/pregraph_attrition_v1/run_stage_decomposition.py --help
 python models/pregraph_attrition_v1/near_miss_audit.py --help
 python models/pregraph_attrition_v1/min_edit_oracle.py --help
+python models/pregraph_attrition_v1/analyze_min_edit.py --help
 
 python -m pytest -q models/gssr_p1_v1/tests models/gssr_p1_v2/tests
+```
 
 P1 v2 evidence is closed and tracked by `results/gssr_p1_v2/RUN_STATUS.json`.
-The pre-graph qualification plan is in `experiments/pregraph_attrition_v1/`;
-no learner is authorized yet.
-```
+The completed pre-graph decision and artifact paths are in
+`experiments/pregraph_attrition_v1/PREGRAPH_PLAN.json`; no pre-graph learner is
+authorized.
 
 Use `/data2/liuhaoran/venvs/fair_psg_p0/bin/python` for the raw-query exporter;
 the base environment has an incompatible Transformers/Accelerate combination.

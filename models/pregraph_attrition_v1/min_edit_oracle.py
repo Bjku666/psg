@@ -52,16 +52,22 @@ def minimum_change_curve(
         gt_mask, native_masks, gt_labels, native_labels, iou_threshold
     )
     native_count = image_counts(len(gt_labels), relations, np.arange(len(native_ids)), native_mapping, len(predicate_weights))
-    native_support = float(
+    native_micro_support = float(
         native_count["supported_gt_relations"] / native_count["num_gt_relations"]
         if native_count["num_gt_relations"] else 0.0
     )
+    observed_predicates = int(np.count_nonzero(np.asarray(predicate_weights) > 0))
+    native_balanced = float(np.dot(native_count["hit_per_predicate"], predicate_weights) / observed_predicates
+                            if observed_predicates else 0.0)
     native_set = set(int(value) for value in native_ids)
     rows = []
     height, width = winner_map.shape
     for epsilon in epsilons:
         max_pixels = int(np.floor(float(epsilon) * height * width))
-        best = {"endpoint_support": native_support, "changed_pixels": 0, "swap": None}
+        best = {"endpoint_support": native_balanced, "micro_endpoint_support": native_micro_support,
+                "changed_pixels": 0, "swap": None,
+                "hit_per_predicate": np.asarray(native_count["hit_per_predicate"], dtype=int).tolist(),
+                "gt_per_predicate": np.asarray(native_count["gt_per_predicate"], dtype=int).tolist()}
         for local_q, query_id in enumerate(np.asarray(semantic_ids, dtype=int)):
             if int(query_id) in native_set:
                 continue
@@ -105,13 +111,19 @@ def minimum_change_curve(
                 mapping = single_mpo_binary_mask_mapping(gt_mask, masks, gt_labels, labels, iou_threshold)
                 selected = np.arange(len(masks), dtype=int)
                 count = image_counts(len(gt_labels), relations, selected, mapping, len(predicate_weights))
-                support = float(count["supported_gt_relations"] / count["num_gt_relations"] if count["num_gt_relations"] else 0.0)
+                micro_support = float(count["supported_gt_relations"] / count["num_gt_relations"] if count["num_gt_relations"] else 0.0)
+                support = float(np.dot(count["hit_per_predicate"], predicate_weights) / observed_predicates
+                                if observed_predicates else 0.0)
                 if support > best["endpoint_support"] or (
                     support == best["endpoint_support"] and changed < best["changed_pixels"]
                 ):
                     best = {"endpoint_support": support, "changed_pixels": changed,
+                            "micro_endpoint_support": micro_support,
+                            "hit_per_predicate": np.asarray(count["hit_per_predicate"], dtype=int).tolist(),
+                            "gt_per_predicate": np.asarray(count["gt_per_predicate"], dtype=int).tolist(),
                             "swap": {"drop_query_id": int(drop_id), "add_query_id": int(query_id)}}
-        best.update({"epsilon": float(epsilon), "native_endpoint_support": native_support,
+        best.update({"epsilon": float(epsilon), "native_endpoint_support": native_balanced,
+                     "native_micro_endpoint_support": native_micro_support,
                      "changed_fraction": float(best["changed_pixels"] / (height * width))})
         rows.append(best)
     return rows
@@ -124,6 +136,8 @@ def main() -> None:
     parser.add_argument("--gt-seg-root", required=True, type=Path)
     parser.add_argument("--output", required=True, type=Path)
     parser.add_argument("--split", choices=("all", "train", "test"), default="train")
+    parser.add_argument("--population-manifest", type=Path,
+                        help="frozen image population manifest; supersedes --split/--max-images selection")
     parser.add_argument("--max-images", type=int)
     parser.add_argument("--iou-threshold", type=float, default=0.5)
     parser.add_argument("--threshold", type=float, default=0.5)
@@ -144,8 +158,15 @@ def main() -> None:
     items = [item for item in psg["data"] if item.get("relations") and (
         args.split == "all" or (args.split == "test") == (str(item["image_id"]) in test_ids)
     )]
+    if args.population_manifest:
+        population = json.loads(args.population_manifest.read_text())
+        allowed_ids = {str(value) for value in population.get("image_ids", [])}
+        allowed_files = {str(value) for value in population.get("file_names", [])}
+        if not allowed_ids and not allowed_files:
+            raise ValueError("population manifest has no image_ids or file_names")
+        items = [item for item in items if str(item["image_id"]) in allowed_ids or str(item["file_name"]) in allowed_files]
     items.sort(key=lambda item: str(item["image_id"]))
-    if args.max_images is not None:
+    if args.max_images is not None and not args.population_manifest:
         items = items[:args.max_images]
     weights = inverse_predicate_weights(predicate_counts([np.asarray(item["relations"]) for item in items], len(psg["predicate_classes"])))
     rows = []
@@ -168,11 +189,14 @@ def main() -> None:
         native_ids = np.asarray([int(c["query_id"]) for c in candidates if c["native_keep"]], dtype=int)
         native_labels = np.asarray([int(labels[q]) for q in native_ids], dtype=int)
         target_size = (int(record["height"]), int(record["width"]))
-        weighted_probs = upsampled_query_probabilities(torch.tensor(mask_logits), target_size).numpy() * scores[:, None, None]
+        mask_probabilities = upsampled_query_probabilities(torch.tensor(mask_logits), target_size).numpy()
+        weighted_probs = mask_probabilities * scores[:, None, None]
         gt_mask = load_index_mask(args.gt_seg_root / item["pan_seg_file_name"], item["segments_info"])
         gt_labels = np.asarray([row["category_id"] for row in item["annotations"]], dtype=int)
         curves = minimum_change_curve(
             np.asarray(state["winner_map"]), weighted_probs,
+            # Mask2Former's panoptic overlap-area test thresholds the
+            # class-weighted mask probabilities after pixel competition.
             weighted_probs[semantic_ids] >= args.mask_threshold, semantic_ids,
             labels[semantic_ids], native_ids, native_labels, gt_mask, gt_labels,
             np.asarray(item["relations"], dtype=int), weights, tuple(args.epsilons),
@@ -184,10 +208,16 @@ def main() -> None:
     aggregate = []
     for index, epsilon in enumerate(args.epsilons):
         points = [row["curve"][index] for row in rows]
+        hit = np.sum([np.asarray(p["hit_per_predicate"], dtype=np.int64) for p in points], axis=0) if points else np.zeros(len(weights), dtype=np.int64)
+        gt = np.sum([np.asarray(p["gt_per_predicate"], dtype=np.int64) for p in points], axis=0) if points else np.zeros(len(weights), dtype=np.int64)
+        valid = gt > 0
+        balanced = float(np.mean(np.divide(hit[valid], gt[valid], where=valid[valid], out=np.zeros(np.count_nonzero(valid), dtype=float)))) if valid.any() else 0.0
         aggregate.append({"epsilon": float(epsilon), "images": len(points),
-                          "mean_endpoint_support": float(np.mean([p["endpoint_support"] for p in points])) if points else None,
+                          "predicate_balanced_endpoint_support": balanced,
+                          "mean_endpoint_support_contribution": float(np.mean([p["endpoint_support"] for p in points])) if points else None,
                           "mean_native_endpoint_support": float(np.mean([p["native_endpoint_support"] for p in points])) if points else None,
-                          "mean_changed_fraction": float(np.mean([p["changed_fraction"] for p in points])) if points else None})
+                          "mean_changed_fraction": float(np.mean([p["changed_fraction"] for p in points])) if points else None,
+                          "hit_per_predicate": hit.tolist(), "gt_per_predicate": gt.tolist()})
     document = {"schema_version": 1, "contract": "fixed-K GT minimum-change relation rescue oracle", "split": args.split,
                 "official_test_used_for_model_selection": False, "curve": aggregate,
                 "note": "GT-guided qualification oracle; no selector or learner is trained."}

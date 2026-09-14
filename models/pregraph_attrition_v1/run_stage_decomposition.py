@@ -44,6 +44,8 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--split", choices=("all", "train", "test"), default="train")
     parser.add_argument("--split-manifest", type=Path)
     parser.add_argument("--partition", choices=("fit", "dev", "confirm"))
+    parser.add_argument("--population-manifest", type=Path,
+                        help="frozen image population manifest (supersedes split-manifest/partition)")
     parser.add_argument("--max-images", type=int)
     parser.add_argument("--iou-threshold", type=float, default=0.5)
     parser.add_argument("--threshold", type=float, default=0.5)
@@ -64,9 +66,18 @@ def _select_items(psg: dict, args: argparse.Namespace) -> list[dict]:
             continue
         if item.get("relations"):
             items.append(item)
+    if args.population_manifest and (args.split_manifest or args.partition):
+        raise ValueError("--population-manifest cannot be combined with --split-manifest/--partition")
     if bool(args.split_manifest) != bool(args.partition):
         raise ValueError("--split-manifest and --partition must be supplied together")
-    if args.partition:
+    if args.population_manifest:
+        document = json.loads(args.population_manifest.read_text())
+        allowed_ids = {str(value) for value in document.get("image_ids", [])}
+        allowed_files = {str(value) for value in document.get("file_names", [])}
+        if not allowed_ids and not allowed_files:
+            raise ValueError("population manifest has no image_ids or file_names")
+        items = [item for item in items if str(item["image_id"]) in allowed_ids or str(item["file_name"]) in allowed_files]
+    elif args.partition:
         document = json.loads(args.split_manifest.read_text())
         allowed = {str(value) for value in document[args.partition]}
         items = [item for item in items if str(item["image_id"]) in allowed]
@@ -74,6 +85,49 @@ def _select_items(psg: dict, args: argparse.Namespace) -> list[dict]:
     if args.max_images is not None:
         items = items[:args.max_images]
     return items
+
+
+def _bootstrap_deltas(stage_rows: dict[str, list[dict]], num_predicates: int,
+                      seed: int = 0, replicates: int = 2000) -> dict:
+    """Paired bootstrap over physical files for adjacent-stage losses."""
+    grouped: dict[str, dict[str, list[dict]]] = {}
+    for stage, rows in stage_rows.items():
+        for row in rows:
+            grouped.setdefault(str(row["bootstrap_group"]), {}).setdefault(stage, []).append(row)
+    groups = [grouped[key] for key in sorted(grouped)]
+    if not groups:
+        return {"unit": "physical_file_name", "replicates": 0, "deltas": {}}
+
+    def metric(sample: list[dict], stage: str) -> float:
+        rows = [row for group in sample for row in group.get(stage, [])]
+        return float(aggregate_counts(rows, num_predicates)["predicate_balanced_endpoint_support"])
+
+    full = {stage: metric(groups, stage) for stage in ("raw", "semantic", "competition", "admission")}
+    rng = np.random.default_rng(seed)
+    draws = {"semantic_loss": [], "competition_loss": [], "admission_loss": []}
+    for _ in range(int(replicates)):
+        sample = [groups[int(index)] for index in rng.integers(0, len(groups), size=len(groups))]
+        values = {stage: metric(sample, stage) for stage in ("raw", "semantic", "competition", "admission")}
+        draws["semantic_loss"].append(values["raw"] - values["semantic"])
+        draws["competition_loss"].append(values["semantic"] - values["competition"])
+        draws["admission_loss"].append(values["competition"] - values["admission"])
+    result = {"unit": "physical_file_name", "groups": len(groups), "replicates": int(replicates),
+              "point": {"raw": full["raw"], "semantic": full["semantic"],
+                        "competition": full["competition"], "admission": full["admission"]},
+              "deltas": {}}
+    point_deltas = {
+        "semantic_loss": full["raw"] - full["semantic"],
+        "competition_loss": full["semantic"] - full["competition"],
+        "admission_loss": full["competition"] - full["admission"],
+    }
+    for name, values in draws.items():
+        array = np.asarray(values, dtype=float)
+        result["deltas"][name] = {
+            "estimate": float(point_deltas[name]),
+            "bootstrap_mean": float(np.mean(array)),
+            "ci95": [float(np.quantile(array, 0.025)), float(np.quantile(array, 0.975))],
+        }
+    return result
 
 
 def _softmax(values: np.ndarray) -> np.ndarray:
@@ -253,7 +307,9 @@ def main() -> None:
         for query_id, gt_index in semantic_match_by_query.items():
             if query_id in native_id_set:
                 continue
-            confident = probabilities[query_id] >= args.mask_threshold
+            # Match Mask2Former's check_segment_validity: compute_segments
+            # multiplies mask probabilities by class scores before this test.
+            confident = weighted[query_id] >= args.mask_threshold
             original_area = int(confident.sum())
             won_area = int((winner_map == query_id).sum())
             deficit = max(
@@ -333,12 +389,16 @@ def main() -> None:
     with (args.output / "per_image.jsonl").open("w") as stream:
         for row in output_rows:
             stream.write(json.dumps(row, separators=(",", ":")) + "\n")
+    bootstrap_rows = {stage: oracle_rows[stage] for stage in ("raw", "semantic", "competition")}
+    bootstrap_rows["admission"] = stage_rows["admission"]
+    bootstrap = _bootstrap_deltas(bootstrap_rows, num_predicates)
     document = {
         "schema_version": 1,
         "contract": "raw -> semantic eligibility -> full-pool pixel competition -> native admission",
         "split": args.split, "partition": args.partition, "images": len(items),
         "native": summaries["admission"], "stage_native_projection": summaries,
         "stage_fixed_k_oracle": oracle_summaries, "endpoint_transitions": transitions,
+        "paired_bootstrap": bootstrap,
         "matching": {"class_compatible_iou_gt": args.iou_threshold},
         "native_k": "per-image final native entity count",
         "official_test_rows_present": args.split == "test",

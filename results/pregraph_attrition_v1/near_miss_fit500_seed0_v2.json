@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "contract": "semantic-matched relation endpoint -> competition/admission near miss",
+  "source": "/data2/liuhaoran/project/cv/psg/results/pregraph_attrition_v1/stage_audit_fit500_seed0/per_image.jsonl",
+  "all": {
+    "semantic_matched_queries": 351,
+    "relation_critical_queries": 209,
+    "relation_critical_with_mask_support": 351,
+    "competition_candidates": 255,
+    "zero_support": 0,
+    "area_ratio": {
+      "mean": 0.2082395002196401,
+      "median": 0.062266978580305575,
+      "under_0.8": 351
+    },
+    "deficit_pixels": {
+      "mean": 14415.794871794871,
+      "median": 2236.0,
+      "p90": 44014.0
+    },
+    "rescue_cost": {
+      "mean": 2087.14718766693,
+      "median": 252.64605712890625,
+      "p90": 5726.85400390625
+    },
+    "near_miss_le_0.5pct_area": 0
+  },
+  "relation_critical": {
+    "semantic_matched_queries": 209,
+    "relation_critical_queries": 209,
+    "relation_critical_with_mask_support": 209,
+    "competition_candidates": 143,
+    "zero_support": 0,
+    "area_ratio": {
+      "mean": 0.1707870214825751,
+      "median": 0.03558045047532642,
+      "under_0.8": 209
+    },
+    "deficit_pixels": {
+      "mean": 20814.37799043062,
+      "median": 5063.0,
+      "p90": 65801.00000000009
+    },
+    "rescue_cost": {
+      "mean": 3066.6939327925015,
+      "median": 595.623046875,
+      "p90": 9492.622265625005
+    },
+    "near_miss_le_0.5pct_area": 0
+  }
+}

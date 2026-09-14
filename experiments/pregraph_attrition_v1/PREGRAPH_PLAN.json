@@ -1,23 +1,42 @@
 {
   "version": "pregraph_attrition_v1",
-  "phase": "qualification",
+  "phase": "qualification_complete",
   "registered_at": "2026-09-13T00:00:00+08:00",
   "hypothesis": "relation-critical entity hypotheses disappear before graph construction, during semantic eligibility or pixel competition",
   "frozen_inputs": ["gssr_p0_v1", "gssr_p0b_v1", "gssr_p0c_v1", "gssr_p1_v1", "gssr_p1_v2"],
-  "population": {"source": "official_train", "exploration_partition": "fit", "smoke_partition": "test", "group_key": "physical_file_name"},
+  "population": {"source": "official_train", "exploration_partition": "fit", "manifest": "fit500_seed0.json", "sampling": "sha256(seed:physical_file_name)", "rows": 500, "groups": 499, "smoke_partition": "test", "group_key": "physical_file_name"},
   "stages": ["raw_query", "semantic_eligibility", "full_pool_pixel_competition", "native_admission"],
   "primary_metrics": ["predicate_balanced_fixed_k_endpoint_support", "endpoint_death_stage", "changed_pixel_fraction"],
   "experiments": [
-    {"id": "stage_audit", "budget": "500 fit images", "decision": "locate largest attrition transition"},
-    {"id": "near_miss", "budget": "same stage-audit images", "decision": "quantify deficit and lowest-margin rescue cost"},
-    {"id": "minimum_change_oracle", "budget": "same stage-audit images", "decision": "require material support gain at <=0.5% changed pixels before method work"},
-    {"id": "fixed_k_rescue", "budget": "only if previous gate passes", "decision": "authorize learned competition-aware set repair"}
+    {"id": "stage_audit", "status": "complete", "budget": "500 fit images", "decision": "semantic and competition attrition are both material"},
+    {"id": "near_miss", "status": "complete", "budget": "same stage-audit images", "decision": "relation-critical suppressed queries are not narrow-loss near misses"},
+    {"id": "minimum_change_oracle", "status": "complete", "budget": "same stage-audit images", "decision": "small-edit support gain is below the proposal's paper-level materiality range"},
+    {"id": "fixed_k_rescue", "status": "not_authorized", "budget": "only if previous gate passes", "decision": "do not train a competition-aware set-repair learner"}
   ],
+  "official_test_usage": "smoke_only_never_model_selection",
+  "completed_at": "2026-09-13T22:20:00+08:00",
+  "results": {
+    "stage_support": {"raw": 0.8760475210021612, "semantic": 0.8044820884763518, "competition": 0.7247916557134696, "admission": 0.7194094185735077},
+    "competition_loss_point": 0.07969043276288224,
+    "competition_loss_ci95": [0.030349427421593182, 0.09617770596551573],
+    "min_edit_epsilon_0.005_gain": 0.011920979084335093,
+    "min_edit_epsilon_0.005_ci95": [0.004543927151297547, 0.023164479298160085],
+    "min_edit_images_with_gain": 15,
+    "near_miss_relation_median_deficit_fraction": 0.7635473956648334,
+    "near_miss_non_relation_median_deficit_fraction": 0.6624280825314949,
+    "artifacts": {
+      "stage_audit": "results/pregraph_attrition_v1/stage_audit_fit500_seed0_v3/summary.json",
+      "near_miss": "results/pregraph_attrition_v1/near_miss_fit500_seed0_v4.json",
+      "minimum_change": "results/pregraph_attrition_v1/min_edit_fit500_seed0_v2/analysis.json"
+    }
+  },
   "gates": {
     "competition_loss_min": 0.03,
+    "competition_loss_passed": true,
     "rescue_changed_fraction_max": 0.005,
-    "learner_authorized": false
+    "small_edit_rescue_passed": false,
+    "learner_authorized": false,
+    "decision_note": "No learner is authorized: the <=0.5% minimum-change oracle gain is only +0.01192, below the registered qualitative materiality target described in protocol.md."
   },
-  "official_test_usage": "smoke_only_never_model_selection",
-  "status": "registered_pending_fit_artifacts"
+  "status": "closed_as_minimum_change_actionability_failure"
 }

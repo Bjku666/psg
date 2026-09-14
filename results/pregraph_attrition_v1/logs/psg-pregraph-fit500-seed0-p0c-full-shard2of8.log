@@ -1,0 +1,78 @@
+/home/user5/anaconda3/envs/deimv2/lib/python3.11/site-packages/transformers/utils/deprecation.py:165: UserWarning: The following named arguments are not valid for `Mask2FormerImageProcessor.__init__` and were ignored: '_max_size'
+  return func(*args, **kwargs)
+progress=10/63 seconds_per_image=0.59 eta_seconds=31
+progress=20/63 seconds_per_image=0.55 eta_seconds=24
+progress=30/63 seconds_per_image=0.53 eta_seconds=18
+progress=40/63 seconds_per_image=0.53 eta_seconds=12
+progress=50/63 seconds_per_image=0.52 eta_seconds=7
+progress=60/63 seconds_per_image=0.51 eta_seconds=2
+progress=63/63 seconds_per_image=0.51 eta_seconds=0
+{
+  "schema_version": 1,
+  "created_at": "2026-09-13T13:06:38.728348+00:00",
+  "command": [
+    "models/gssr_p0c_v1/export_raw_mask_queries.py",
+    "--images",
+    "/data2/iwin/datasets/ECCV/COCO/images/train2017",
+    "--psg",
+    "/data2/liuhaoran/psg_data/openpsg/psg/psg.json",
+    "--model",
+    "/data2/liuhaoran/psg_data/models/mask2former-swin-large-coco-panoptic",
+    "--output",
+    "/data2/liuhaoran/psg_data/raw_queries/mask2former_swin_large/psg-pregraph-fit500-seed0-p0c-full-shard2of8",
+    "--split",
+    "train",
+    "--file-list",
+    "experiments/pregraph_attrition_v1/fit500_seed0.files.txt",
+    "--num-shards",
+    "8",
+    "--shard-index",
+    "2",
+    "--progress-every",
+    "10",
+    "--artifact-profile",
+    "p0c_full",
+    "--device",
+    "cuda"
+  ],
+  "model": "/data2/liuhaoran/psg_data/models/mask2former-swin-large-coco-panoptic",
+  "model_config_sha256": "0cc3ca6861aca083052b77f0fd05dc80e31e56b723395ffeb0753c72878c1ce3",
+  "psg": {
+    "path": "/data2/liuhaoran/psg_data/openpsg/psg/psg.json",
+    "sha256": "d4a8c6df10198fa2a22f56d4c2039aa2b20bdc002db5c0be8ee34a36a06817c1"
+  },
+  "images": "/data2/iwin/datasets/ECCV/COCO/images/train2017",
+  "total_selected_images": 499,
+  "exported_images": 63,
+  "resumed_from_images": 0,
+  "num_shards": 8,
+  "shard_index": 2,
+  "split": "train",
+  "artifact_profile": "p0c_full",
+  "score_definitions": {
+    "class_score": "max softmax probability over foreground classes",
+    "mask_quality": "mean sigmoid(mask_logit) over pixels > 0.5",
+    "joint_score": "class_score * mask_quality"
+  },
+  "artifact_dtypes": {
+    "class_logits": "float32",
+    "mask_logits": "float16",
+    "decoder_query_feature": "float16",
+    "pixel_pooled_feature": "float16",
+    "pre_admission_winner_map": "int16",
+    "native_panoptic_segmentation": "int32",
+    "official_panoptic_segmentation": "JSON record"
+  },
+  "native_admission": {
+    "threshold": 0.5,
+    "mask_threshold": 0.5,
+    "overlap_mask_area_threshold": 0.8,
+    "stuff_fusion": false
+  },
+  "python": "3.11.13 (main, Jun  5 2025, 13:12:00) [GCC 11.2.0]",
+  "platform": "Linux-5.15.0-143-generic-x86_64-with-glibc2.35",
+  "device": "cuda",
+  "environment": {
+    "CUDA_VISIBLE_DEVICES": "2"
+  }
+}

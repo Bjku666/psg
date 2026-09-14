@@ -20,6 +20,8 @@ def main() -> None:
     parser.add_argument("--shards", required=True, nargs="+", type=Path)
     parser.add_argument("--output", required=True, type=Path)
     parser.add_argument("--split", choices=("train", "test", "all"), default="test")
+    parser.add_argument("--population-manifest", type=Path,
+                        help="restrict expected coverage to a frozen population manifest")
     args = parser.parse_args()
     if args.output.exists():
         raise FileExistsError(f"refusing to overwrite output: {args.output}")
@@ -31,6 +33,12 @@ def main() -> None:
         is_test = str(row["image_id"]) in test_ids
         if args.split == "all" or (args.split == "test" and is_test) or (args.split == "train" and not is_test):
             expected_files.add(str(row["file_name"]))
+    if args.population_manifest:
+        population = json.loads(args.population_manifest.read_text())
+        population_files = {str(value) for value in population.get("file_names", [])}
+        if not population_files:
+            raise ValueError("population manifest has no file_names")
+        expected_files &= population_files
     records: dict[str, dict] = {}
     contracts = []
     for shard in args.shards:
