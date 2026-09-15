@@ -1,0 +1,15 @@
+{
+  "version": "endpoint_survival_v1",
+  "hypothesis": "relation-critical endpoint survival is lower than matched visual controls and can be recovered by bounded semantic/competition margins",
+  "frozen_inputs": ["gssr_p0c_v1", "pregraph_attrition_v1"],
+  "population": {"source": "official_train", "manifest": "experiments/pregraph_attrition_v1/fit500_seed0.json", "unit": "physical_file_name"},
+  "experiments": [
+    {"id": "E0_visual_difficulty_control", "status": "implemented", "decision": "estimate residual graph-criticality survival effect"},
+    {"id": "E1_semantic_margin_oracle", "margins": [0.1, 0.25, 0.5, 1.0, 2.0], "status": "implemented"},
+    {"id": "E2_competition_margin_oracle", "margins": [0.1, 0.25, 0.5, 1.0, 2.0], "status": "implemented"},
+    {"id": "E3_pq_support_frontier", "status": "derived by aggregating E1/E2 summaries"}
+  ],
+  "gates": {"endpoint_support_delta_min": 0.03, "pq_delta_min": -1.0, "learned_method_authorized_only_if_all_qualifiers_pass": true},
+  "metrics": ["predicate_balanced_endpoint_support", "pq", "pq_th", "pq_st", "r@20", "r@50", "mr@20", "mr@50"],
+  "note": "Relation R@K/mR@K are endpoint-support proxies until a frozen DSFormer prediction artifact is supplied. No relation module is modified."
+}

@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "contract": "structured oracle PQ-vs-endpoint-support Pareto frontier",
+  "baseline": {
+    "endpoint_support": 0.0,
+    "predicate_balanced_endpoint_support": 0.0,
+    "pq": 0.0
+  },
+  "points": [
+    {
+      "mode": "semantic",
+      "margin": 0.5,
+      "endpoint_support": 0.3333333333333333,
+      "predicate_balanced_endpoint_support": 0.5,
+      "pq": 0.31589210266370166,
+      "pq_th": 0.3551977295114043,
+      "pq_st": 0.13410357849307677,
+      "r@20": 0.3333333333333333,
+      "r@50": 0.3333333333333333,
+      "mr@20": 0.5,
+      "mr@50": 0.5,
+      "source": "results/endpoint_survival_v1/smoke_semantic3/summary.json",
+      "delta_endpoint_support": 0.3333333333333333,
+      "delta_predicate_balanced_support": 0.5,
+      "delta_pq": 0.31589210266370166,
+      "support_gate_passed": true,
+      "pq_gate_passed": true
+    }
+  ],
+  "best_support_point": {
+    "mode": "semantic",
+    "margin": 0.5,
+    "endpoint_support": 0.3333333333333333,
+    "predicate_balanced_endpoint_support": 0.5,
+    "pq": 0.31589210266370166,
+    "pq_th": 0.3551977295114043,
+    "pq_st": 0.13410357849307677,
+    "r@20": 0.3333333333333333,
+    "r@50": 0.3333333333333333,
+    "mr@20": 0.5,
+    "mr@50": 0.5,
+    "source": "results/endpoint_survival_v1/smoke_semantic3/summary.json",
+    "delta_endpoint_support": 0.3333333333333333,
+    "delta_predicate_balanced_support": 0.5,
+    "delta_pq": 0.31589210266370166,
+    "support_gate_passed": true,
+    "pq_gate_passed": true
+  },
+  "gates": {
+    "endpoint_support_delta_min": 0.03,
+    "pq_delta_min": -0.01,
+    "structured_oracle_passed": true
+  },
+  "note": "PQ is normalized to [0,1], therefore the -0.01 gate corresponds to -1 percentage point."
+}

@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "contract": "bounded semantic-margin oracle -> frozen native pipeline -> PQ + endpoint graph proxy",
+  "mode": "semantic",
+  "margin": 0.5,
+  "images": 1,
+  "metrics": {
+    "predicate_balanced_endpoint_support": 0.5,
+    "endpoint_support": 0.3333333333333333,
+    "pq": 0.31589210266370166,
+    "pq_th": 0.3551977295114043,
+    "pq_st": 0.13410357849307677,
+    "r@20": 0.3333333333333333,
+    "r@50": 0.3333333333333333,
+    "mr@20": 0.5,
+    "mr@50": 0.5
+  },
+  "per_image": [
+    {
+      "image_id": "1159306",
+      "file_name": "train2017/000000178121.jpg",
+      "margin": 0.5,
+      "mode": "semantic",
+      "predicate_balanced_endpoint_support": 0.5,
+      "endpoint_support": 0.3333333333333333,
+      "pq": 0.31589210266370166,
+      "sq": 0.7107572309933288,
+      "rq": 0.4444444444444444,
+      "tp": 10,
+      "fp": 14,
+      "fn": 11,
+      "pq_th": 0.3551977295114043,
+      "pq_st": 0.13410357849307677,
+      "r@20": 0.3333333333333333,
+      "r@50": 0.3333333333333333,
+      "mr@20": 0.5,
+      "mr@50": 0.5,
+      "supported_relations": 1,
+      "total_relations": 3,
+      "critical_gt": 5,
+      "critical_queries": 6,
+      "native_k": 24
+    }
+  ],
+  "relation_metrics_note": "R@K/mR@K are endpoint-support upper-bound proxies unless --relation-predictions is integrated; no relation head is altered."
+}
