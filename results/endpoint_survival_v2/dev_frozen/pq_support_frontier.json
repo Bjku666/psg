@@ -1,0 +1,60 @@
+{
+  "schema_version": 2,
+  "contract": "native-relative official-PQ versus full-population balanced endpoint-support frontier",
+  "baseline_source": "/data2/liuhaoran/project/cv/psg/results/endpoint_survival_v2/dev_frozen/native_0/summary.json",
+  "baseline": {
+    "endpoint_support": 0.659877800407332,
+    "predicate_balanced_endpoint_support": 0.7357164052069984,
+    "pq": 0.5930194659780383,
+    "pq_th": 0.6209889089077999,
+    "pq_st": 0.5508014389142472
+  },
+  "points": [
+    {
+      "mode": "semantic",
+      "margin": 1.0,
+      "source": "/data2/liuhaoran/project/cv/psg/results/endpoint_survival_v2/dev_frozen/semantic_1p0/summary.json",
+      "endpoint_support": 0.6933866195288783,
+      "predicate_balanced_endpoint_support": 0.753896618760636,
+      "pq": 0.6073584989841183,
+      "pq_th": 0.6301167580072929,
+      "pq_st": 0.573006409892534,
+      "changed_pixel_fraction": 0.016107243625119408,
+      "changed_queries": 36446,
+      "semantic_eligibility_flips": 874,
+      "competition_winner_flips": 20358607,
+      "native_segment_count_change": 220,
+      "delta_endpoint_support": 0.03350881912154624,
+      "delta_predicate_balanced_support": 0.018180213553637525,
+      "delta_pq": 0.014339033006079971,
+      "support_gate_passed": false,
+      "pq_gate_passed": true
+    },
+    {
+      "mode": "competition",
+      "margin": 0.25,
+      "source": "/data2/liuhaoran/project/cv/psg/results/endpoint_survival_v2/dev_frozen/competition_0p25/summary.json",
+      "endpoint_support": 0.6904276985743381,
+      "predicate_balanced_endpoint_support": 0.7523674472322641,
+      "pq": 0.6090394215672243,
+      "pq_th": 0.629645569866465,
+      "pq_st": 0.5779358014928989,
+      "changed_pixel_fraction": 0.02309469272209417,
+      "changed_queries": 39112,
+      "semantic_eligibility_flips": 0,
+      "competition_winner_flips": 29190331,
+      "native_segment_count_change": -982,
+      "delta_endpoint_support": 0.03054989816700604,
+      "delta_predicate_balanced_support": 0.016651042025265683,
+      "delta_pq": 0.016019955589186008,
+      "support_gate_passed": false,
+      "pq_gate_passed": true
+    }
+  ],
+  "best_qualified_point": null,
+  "gates": {
+    "endpoint_support_delta_min": 0.03,
+    "pq_delta_min": -0.01,
+    "structured_oracle_passed": false
+  }
+}

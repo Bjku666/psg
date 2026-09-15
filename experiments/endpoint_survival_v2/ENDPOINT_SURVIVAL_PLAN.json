@@ -1,0 +1,17 @@
+{
+  "version": "endpoint_survival_v2",
+  "question": "Under frozen panoptic evidence, can graph-critical endpoint hypotheses be selectively preserved through semantic and competition stages while maintaining official panoptic quality?",
+  "status": "oracle_qualification",
+  "official_pq_reference": "cocodataset/panopticapi@7bb4655548f98f3fedc07bf37e9040a992b054b0",
+  "frozen_inputs": ["pregraph_attrition_v1 fit500_seed0", "Mask2Former Swin-L float32 class and mask logits", "native Mask2Former postprocessing"],
+  "population": {"source": "official_train", "manifest": "experiments/pregraph_attrition_v1/fit500_seed0.json", "unit": "physical_file_name", "rows": 500, "groups": 499},
+  "experiments": [
+    {"id": "E0_visual_difficulty_control", "category_control": "exact match and categorical fixed effect", "query_rank": "descending joint_score rank"},
+    {"id": "E1_semantic_margin_oracle", "margins": [0.1, 0.25, 0.5, 1.0, 2.0]},
+    {"id": "E2_competition_margin_oracle", "margins": [0.1, 0.25, 0.5, 1.0, 2.0]},
+    {"id": "E3_pq_support_frontier", "baseline": "explicit native margin-zero run"}
+  ],
+  "metrics": ["endpoint_support", "predicate_balanced_endpoint_support", "official_pq", "official_pq_th", "official_pq_st", "changed_pixel_fraction", "changed_queries", "semantic_eligibility_flips", "competition_winner_flips", "native_segment_count_change"],
+  "gates": {"endpoint_support_delta_min": 0.03, "pq_delta_min": -0.01, "learned_method_authorized_only_if_one_oracle_point_passes_both": true},
+  "forbidden_before_gate": ["learner training", "semantic-competition joint grid", "claiming endpoint proxies as R@K or mR@K"]
+}

@@ -1,0 +1,124 @@
+{
+  "schema_version": 1,
+  "contract": "paired bootstrap unit is physical file_name; duplicate annotation rows stay within group",
+  "physical_file_groups": 499,
+  "bootstrap_replicates": 2000,
+  "seed": 0,
+  "baseline_support": 0.7194094185735077,
+  "points": [
+    {
+      "source": "results/endpoint_survival_v2/fit500_seed0/semantic_0p1/per_image.jsonl",
+      "observed_support": 0.7203129674199776,
+      "observed_delta": 0.000903548846469926,
+      "paired_bootstrap_delta_ci95": [
+        0.00027112874567718215,
+        0.0018464327488509234
+      ],
+      "probability_delta_at_least_0p03": 0.0
+    },
+    {
+      "source": "results/endpoint_survival_v2/fit500_seed0/semantic_0p25/per_image.jsonl",
+      "observed_support": 0.7218668190517331,
+      "observed_delta": 0.002457400478225402,
+      "paired_bootstrap_delta_ci95": [
+        0.0009214076363377565,
+        0.0051839580685121974
+      ],
+      "probability_delta_at_least_0p03": 0.0
+    },
+    {
+      "source": "results/endpoint_survival_v2/fit500_seed0/semantic_0p5/per_image.jsonl",
+      "observed_support": 0.7302717391797655,
+      "observed_delta": 0.010862320606257803,
+      "paired_bootstrap_delta_ci95": [
+        0.005147285718872394,
+        0.019308528806227663
+      ],
+      "probability_delta_at_least_0p03": 0.001
+    },
+    {
+      "source": "results/endpoint_survival_v2/fit500_seed0/semantic_1p0/per_image.jsonl",
+      "observed_support": 0.7611311820543103,
+      "observed_delta": 0.04172176348080259,
+      "paired_bootstrap_delta_ci95": [
+        0.012946471860375074,
+        0.05246054289497922
+      ],
+      "probability_delta_at_least_0p03": 0.65
+    },
+    {
+      "source": "results/endpoint_survival_v2/fit500_seed0/semantic_2p0/per_image.jsonl",
+      "observed_support": 0.7677199082557439,
+      "observed_delta": 0.04831048968223617,
+      "paired_bootstrap_delta_ci95": [
+        0.01952370624499875,
+        0.05972267889413658
+      ],
+      "probability_delta_at_least_0p03": 0.7425
+    },
+    {
+      "source": "results/endpoint_survival_v2/fit500_seed0/competition_0p1/per_image.jsonl",
+      "observed_support": 0.7489468804056285,
+      "observed_delta": 0.029537461832120804,
+      "paired_bootstrap_delta_ci95": [
+        0.0013573238505573543,
+        0.03834882721220914
+      ],
+      "probability_delta_at_least_0p03": 0.377
+    },
+    {
+      "source": "results/endpoint_survival_v2/fit500_seed0/competition_0p25/per_image.jsonl",
+      "observed_support": 0.7539728962640951,
+      "observed_delta": 0.03456347769058743,
+      "paired_bootstrap_delta_ci95": [
+        0.006198378963384496,
+        0.04481070713026318
+      ],
+      "probability_delta_at_least_0p03": 0.599
+    },
+    {
+      "source": "results/endpoint_survival_v2/fit500_seed0/competition_0p5/per_image.jsonl",
+      "observed_support": 0.7535147618081105,
+      "observed_delta": 0.03410534323460279,
+      "paired_bootstrap_delta_ci95": [
+        0.005241589337518504,
+        0.0449964372525764
+      ],
+      "probability_delta_at_least_0p03": 0.5755
+    },
+    {
+      "source": "results/endpoint_survival_v2/fit500_seed0/competition_1p0/per_image.jsonl",
+      "observed_support": 0.7285975503217511,
+      "observed_delta": 0.0091881317482434,
+      "paired_bootstrap_delta_ci95": [
+        -0.033926936274478445,
+        0.03281418678390736
+      ],
+      "probability_delta_at_least_0p03": 0.05
+    },
+    {
+      "source": "results/endpoint_survival_v2/fit500_seed0/competition_2p0/per_image.jsonl",
+      "observed_support": 0.6758398409652275,
+      "observed_delta": -0.043569577608280174,
+      "paired_bootstrap_delta_ci95": [
+        -0.0951861603162865,
+        -0.016591203076823855
+      ],
+      "probability_delta_at_least_0p03": 0.0
+    }
+  ],
+  "frozen_stage_points": {
+    "semantic": "results/endpoint_survival_v2/fit500_seed0/semantic_1p0/per_image.jsonl",
+    "competition": "results/endpoint_survival_v2/fit500_seed0/competition_0p25/per_image.jsonl"
+  },
+  "rescue_complementarity": {
+    "definition": "positive predicate-balanced hit-mass change per physical-file group",
+    "semantic_positive_groups": 67,
+    "competition_positive_groups": 58,
+    "both_positive_groups": 41,
+    "semantic_only_groups": 26,
+    "competition_only_groups": 17,
+    "union_positive_groups": 84,
+    "positive_group_jaccard": 0.4880952380952381
+  }
+}

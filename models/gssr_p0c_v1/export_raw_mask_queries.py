@@ -65,8 +65,8 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--mask-threshold", type=float, default=0.5)
     parser.add_argument("--overlap-mask-area-threshold", type=float, default=0.8)
     parser.add_argument(
-        "--artifact-profile", choices=("p0c_full", "p1_v2"), default="p0c_full",
-        help="p1_v2 stores only fixed-competition replay and learner features",
+        "--artifact-profile", choices=("p0c_full", "p1_v2", "endpoint_survival_v2"), default="p0c_full",
+        help="endpoint_survival_v2 stores replay-exact float32 mask logits; p1_v2 omits mask logits",
     )
     return parser.parse_args()
 
@@ -240,6 +240,11 @@ def main() -> None:
                         "mask_logits": mask_logits.half().cpu().numpy(),
                         "native_panoptic_segmentation": native_segmentation.astype(np.int32),
                     })
+                elif args.artifact_profile == "endpoint_survival_v2":
+                    artifact.update({
+                        "mask_logits": mask_logits.float().cpu().numpy(),
+                        "official_panoptic_segmentation": official_segmentation.astype(np.int32),
+                    })
                 else:
                     artifact["official_panoptic_segmentation"] = official_segmentation.astype(np.int32)
                 np.savez_compressed(artifact_dir / artifact_name, **artifact)
@@ -315,12 +320,13 @@ def main() -> None:
         },
         "artifact_dtypes": {
             "class_logits": "float32",
-            "mask_logits": ("float16" if args.artifact_profile == "p0c_full" else "omitted"),
+            "mask_logits": ("float16" if args.artifact_profile == "p0c_full" else
+                            "float32" if args.artifact_profile == "endpoint_survival_v2" else "omitted"),
             "decoder_query_feature": "float16",
             "pixel_pooled_feature": "float16",
             "pre_admission_winner_map": "int16",
             "native_panoptic_segmentation": "int32",
-            "official_panoptic_segmentation": ("int32" if args.artifact_profile == "p1_v2" else "JSON record"),
+            "official_panoptic_segmentation": ("JSON record" if args.artifact_profile == "p0c_full" else "int32"),
         },
         "native_admission": {
             "threshold": args.threshold,

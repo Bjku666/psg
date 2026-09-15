@@ -1,0 +1,28 @@
+{
+  "schema_version": 2,
+  "kind": "merged_raw_query_manifest",
+  "images": 499,
+  "model": "/data2/liuhaoran/psg_data/models/mask2former-swin-large-coco-panoptic",
+  "model_config_sha256": "0cc3ca6861aca083052b77f0fd05dc80e31e56b723395ffeb0753c72878c1ce3",
+  "score_definitions": {
+    "class_score": "max softmax probability over foreground classes",
+    "mask_quality": "mean sigmoid(mask_logit) over pixels > 0.5",
+    "joint_score": "class_score * mask_quality"
+  },
+  "native_admission": {
+    "threshold": 0.5,
+    "mask_threshold": 0.5,
+    "overlap_mask_area_threshold": 0.8,
+    "stuff_fusion": false
+  },
+  "split": "train",
+  "artifact_profile": "endpoint_survival_v2",
+  "shards": [
+    "/data2/liuhaoran/psg_data/raw_queries/mask2former_swin_large/psg-endpoint-survival-v2-fit500-float32-shard0of6",
+    "/data2/liuhaoran/psg_data/raw_queries/mask2former_swin_large/psg-endpoint-survival-v2-fit500-float32-shard1of6",
+    "/data2/liuhaoran/psg_data/raw_queries/mask2former_swin_large/psg-endpoint-survival-v2-fit500-float32-shard2of6",
+    "/data2/liuhaoran/psg_data/raw_queries/mask2former_swin_large/psg-endpoint-survival-v2-fit500-float32-shard3of6",
+    "/data2/liuhaoran/psg_data/raw_queries/mask2former_swin_large/psg-endpoint-survival-v2-fit500-float32-shard4of6",
+    "/data2/liuhaoran/psg_data/raw_queries/mask2former_swin_large/psg-endpoint-survival-v2-fit500-float32-shard5of6"
+  ]
+}

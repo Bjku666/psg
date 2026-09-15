@@ -1,0 +1,8 @@
+{
+  "line": "endpoint_survival_v1",
+  "status": "frozen_as_smoke_only",
+  "evidence_authorized": false,
+  "reason": "superseded before fit500 by corrected v2 aggregation, official category-wise PQ, categorical E0 controls, explicit native baseline, and normalized PQ gate",
+  "retained_for": "implementation history and reproducible smoke behavior",
+  "next_line": "experiments/endpoint_survival_v2/ENDPOINT_SURVIVAL_PLAN.json"
+}

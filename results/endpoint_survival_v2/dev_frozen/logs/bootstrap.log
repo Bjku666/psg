@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "contract": "paired bootstrap unit is physical file_name; duplicate annotation rows stay within group",
+  "physical_file_groups": 4545,
+  "bootstrap_replicates": 2000,
+  "seed": 0,
+  "baseline_support": 0.7357164052069984,
+  "points": [
+    {
+      "source": "/data2/liuhaoran/project/cv/psg/results/endpoint_survival_v2/dev_frozen/semantic_1p0/per_image.jsonl",
+      "observed_support": 0.753896618760636,
+      "observed_delta": 0.018180213553637525,
+      "paired_bootstrap_delta_ci95": [
+        0.013303078507346477,
+        0.026993922733022417
+      ],
+      "probability_delta_at_least_0p03": 0.0035
+    },
+    {
+      "source": "/data2/liuhaoran/project/cv/psg/results/endpoint_survival_v2/dev_frozen/competition_0p25/per_image.jsonl",
+      "observed_support": 0.7523674472322642,
+      "observed_delta": 0.016651042025265794,
+      "paired_bootstrap_delta_ci95": [
+        0.004181545319848476,
+        0.031420251855199435
+      ],
+      "probability_delta_at_least_0p03": 0.0385
+    }
+  ],
+  "frozen_stage_points": {
+    "semantic": "/data2/liuhaoran/project/cv/psg/results/endpoint_survival_v2/dev_frozen/semantic_1p0/per_image.jsonl",
+    "competition": "/data2/liuhaoran/project/cv/psg/results/endpoint_survival_v2/dev_frozen/competition_0p25/per_image.jsonl"
+  },
+  "rescue_complementarity": {
+    "definition": "positive predicate-balanced hit-mass change per physical-file group",
+    "semantic_positive_groups": 547,
+    "competition_positive_groups": 529,
+    "both_positive_groups": 337,
+    "semantic_only_groups": 210,
+    "competition_only_groups": 192,
+    "union_positive_groups": 739,
+    "positive_group_jaccard": 0.456021650879567
+  }
+}

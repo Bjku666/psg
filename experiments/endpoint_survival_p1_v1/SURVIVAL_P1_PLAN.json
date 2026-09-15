@@ -1,0 +1,33 @@
+{
+  "version": "endpoint_survival_p1_v1",
+  "status": "closed_without_training_after_v2_dev_gate_failure",
+  "authorization": {"semantic": false, "competition": false, "joint": false, "reason": "frozen dev balanced-support gains were +0.01818 and +0.01665, both below +0.03"},
+  "scientific_claim": "stage-specific marginal graph utility, rather than endpoint identity alone, predicts which frozen visual queries should receive bounded survival calibration",
+  "prerequisites": {
+    "semantic_authorized_only_if_dev": {"margin": 1.0, "balanced_support_delta_min": 0.03, "official_pq_delta_min": -0.01},
+    "competition_authorized_only_if_dev": {"margin": 0.25, "balanced_support_delta_min": 0.03, "official_pq_delta_min": -0.01},
+    "joint_authorized_only_if": "both stages reproduce and rescue populations remain complementary"
+  },
+  "frozen_components": ["Mask2Former backbone and decoder", "native panoptic postprocessing except bounded calibration", "relation carrier during learner qualification"],
+  "teacher": {
+    "population": "fit500_seed0 physical-file groups only for first qualification",
+    "intervention": "singleton query counterfactual at the frozen stage margin",
+    "stored_targets": ["delta_balanced_graph_mass", "changed_pixel_fraction", "semantic_eligibility_flips", "competition_winner_flips", "segment_count_delta", "official_PQ_sufficient_stat_delta"],
+    "forbidden_target": "GT critical endpoint binary label",
+    "ranking_target": "counterfactual graph gain under an explicit visual-cost constraint; retain graph and cost components separately"
+  },
+  "learners": [
+    {"id": "L0_visual_near_miss", "features": ["foreground/no-object margin", "class score", "mask quality", "area ratio", "score rank"], "purpose": "ordinary uncertainty baseline"},
+    {"id": "L1_local_survival_utility", "features": ["L0", "decoder query feature", "pixel-pooled feature", "class embedding"], "purpose": "local actionability prediction"},
+    {"id": "L2_graph_context_utility", "features": ["L1", "pairwise query context", "geometry", "predicted relation-existence context"], "purpose": "test whether relational context adds predictive value"},
+    {"id": "L3_dual_stage_calibration", "condition": "both individual stages and L2-over-L1 pass", "purpose": "cost-aware semantic/competition action selection"}
+  ],
+  "evaluation_order": ["physical-group cross-validation on fit500", "one frozen dev evaluation", "locked confirm only after model selection"],
+  "claims_gate": {
+    "graph_context_claim_requires_L2_over_L1": true,
+    "method_requires_learned_balanced_support_gain": true,
+    "qualification_reports": ["endpoint_support", "balanced_endpoint_support", "official_PQ", "changed_pixel_fraction"],
+    "R@K_mR@K_requires_frozen_relation_carrier": true
+  },
+  "forbidden": ["using official test for selection", "training the visual backbone", "joint margin grid tuning", "calling endpoint support R@K or mR@K"]
+}

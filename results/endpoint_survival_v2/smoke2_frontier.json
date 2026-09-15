@@ -1,0 +1,40 @@
+{
+  "schema_version": 2,
+  "contract": "native-relative official-PQ versus full-population balanced endpoint-support frontier",
+  "baseline_source": "results/endpoint_survival_v2/smoke2_native/summary.json",
+  "baseline": {
+    "endpoint_support": 0.7777777777777778,
+    "predicate_balanced_endpoint_support": 0.9,
+    "pq": 0.49772009298419706,
+    "pq_th": 0.6125104391106879,
+    "pq_st": 0.43394767846947996
+  },
+  "points": [
+    {
+      "mode": "semantic",
+      "margin": 0.5,
+      "source": "results/endpoint_survival_v2/smoke2_semantic_0p5/summary.json",
+      "endpoint_support": 0.7777777777777778,
+      "predicate_balanced_endpoint_support": 0.9,
+      "pq": 0.4978330719082657,
+      "pq_th": 0.6125838535850631,
+      "pq_st": 0.43408263764337834,
+      "changed_pixel_fraction": 0.0007072368421052632,
+      "changed_queries": 16,
+      "semantic_eligibility_flips": 0,
+      "competition_winner_flips": 387,
+      "native_segment_count_change": 0,
+      "delta_endpoint_support": 0.0,
+      "delta_predicate_balanced_support": 0.0,
+      "delta_pq": 0.00011297892406864074,
+      "support_gate_passed": false,
+      "pq_gate_passed": true
+    }
+  ],
+  "best_qualified_point": null,
+  "gates": {
+    "endpoint_support_delta_min": 0.03,
+    "pq_delta_min": -0.01,
+    "structured_oracle_passed": false
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "line": "endpoint_survival_v2",
+  "status": "closed_after_dev_gate_failure",
+  "learner_authorized": false,
+  "active_run": null,
+  "tmux_session": null,
+  "output": "results/endpoint_survival_v2/dev_frozen",
+  "closure_reason": "both frozen stage interventions failed the independent dev +0.03 predicate-balanced support gate despite positive official PQ deltas",
+  "completed_items": [
+    "six corrected evaluator contract tests",
+    "float32 fit500 raw-query export and merge",
+    "two-image pixel-exact native replay sanity",
+    "E0 fit500 exact-category visual control",
+    "fit500 native plus ten single-stage oracle points",
+    "fit500 official-PQ frontier passed",
+    "fit500 paired physical-file bootstrap",
+    "semantic 1.0 and competition 0.25 frozen before dev"
+    ,"full relation-bearing dev float32 export and exact merge"
+    ,"dev native, semantic 1.0 and competition 0.25 evaluation"
+    ,"dev paired physical-file bootstrap and frontier"
+  ],
+  "running_items": [],
+  "gates": {
+    "balanced_endpoint_support_delta_min": 0.03,
+    "official_pq_delta_min": -0.01,
+    "fit500_oracle_passed": true,
+    "dev_native_balanced_support": 0.7357164052069984,
+    "dev_native_official_pq": 0.5930194659780383,
+    "dev_semantic_1p0_delta_balanced_support": 0.018180213553637525,
+    "dev_semantic_1p0_delta_official_pq": 0.014339033006079971,
+    "dev_semantic_1p0_reproduced": false,
+    "semantic_learner_authorized": false,
+    "dev_competition_0p25_delta_balanced_support": 0.016651042025265683,
+    "dev_competition_0p25_delta_official_pq": 0.016019955589186008,
+    "dev_competition_0p25_reproduced": false,
+    "competition_learner_authorized": false,
+    "joint_grid_authorized": false,
+    "learner_authorized": false,
+    "confirm_authorized": false
+  }
+}

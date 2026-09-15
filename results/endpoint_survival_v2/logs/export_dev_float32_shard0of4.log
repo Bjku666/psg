@@ -1,0 +1,95 @@
+Using a slow image processor as `use_fast` is unset and a slow processor was saved with this model. `use_fast=True` will be the default behavior in v4.52, even if the model was saved with a slow processor. This will result in minor differences in outputs. You'll still be able to use a slow processor with `use_fast=False`.
+/home/user5/anaconda3/lib/python3.9/site-packages/transformers/image_processing_base.py:417: UserWarning: The following named arguments are not valid for `Mask2FormerImageProcessor.__init__` and were ignored: '_max_size', 'reduce_labels'
+  image_processor = cls(**image_processor_dict)
+progress=50/1137 seconds_per_image=0.59 eta_seconds=640
+progress=100/1137 seconds_per_image=0.56 eta_seconds=585
+progress=150/1137 seconds_per_image=0.56 eta_seconds=550
+progress=200/1137 seconds_per_image=0.56 eta_seconds=520
+progress=250/1137 seconds_per_image=0.56 eta_seconds=493
+progress=300/1137 seconds_per_image=0.56 eta_seconds=466
+progress=350/1137 seconds_per_image=0.56 eta_seconds=439
+progress=400/1137 seconds_per_image=0.56 eta_seconds=412
+progress=450/1137 seconds_per_image=0.56 eta_seconds=384
+progress=500/1137 seconds_per_image=0.56 eta_seconds=356
+progress=550/1137 seconds_per_image=0.56 eta_seconds=328
+progress=600/1137 seconds_per_image=0.56 eta_seconds=300
+progress=650/1137 seconds_per_image=0.56 eta_seconds=272
+progress=700/1137 seconds_per_image=0.56 eta_seconds=244
+progress=750/1137 seconds_per_image=0.56 eta_seconds=216
+progress=800/1137 seconds_per_image=0.56 eta_seconds=188
+progress=850/1137 seconds_per_image=0.56 eta_seconds=159
+progress=900/1137 seconds_per_image=0.56 eta_seconds=132
+progress=950/1137 seconds_per_image=0.56 eta_seconds=104
+progress=1000/1137 seconds_per_image=0.56 eta_seconds=76
+progress=1050/1137 seconds_per_image=0.56 eta_seconds=48
+progress=1100/1137 seconds_per_image=0.56 eta_seconds=21
+progress=1137/1137 seconds_per_image=0.56 eta_seconds=0
+{
+  "schema_version": 2,
+  "created_at": "2026-09-15T07:02:14.482554+00:00",
+  "command": [
+    "/data2/liuhaoran/project/cv/psg/models/gssr_p0c_v1/export_raw_mask_queries.py",
+    "--images",
+    "/data2/iwin/datasets/ECCV/COCO/images/train2017",
+    "--psg",
+    "/data2/liuhaoran/psg_data/openpsg/psg/psg.json",
+    "--model",
+    "/data2/liuhaoran/psg_data/models/mask2former-swin-large-coco-panoptic",
+    "--output",
+    "/data2/liuhaoran/psg_data/raw_queries/mask2former_swin_large/psg-endpoint-survival-v2-dev-float32-shard0of4",
+    "--split",
+    "train",
+    "--file-list",
+    "/data2/liuhaoran/project/cv/psg/experiments/endpoint_survival_v2/dev_population.files.txt",
+    "--num-shards",
+    "4",
+    "--shard-index",
+    "0",
+    "--progress-every",
+    "50",
+    "--artifact-profile",
+    "endpoint_survival_v2",
+    "--device",
+    "cuda"
+  ],
+  "model": "/data2/liuhaoran/psg_data/models/mask2former-swin-large-coco-panoptic",
+  "model_config_sha256": "0cc3ca6861aca083052b77f0fd05dc80e31e56b723395ffeb0753c72878c1ce3",
+  "psg": {
+    "path": "/data2/liuhaoran/psg_data/openpsg/psg/psg.json",
+    "sha256": "d4a8c6df10198fa2a22f56d4c2039aa2b20bdc002db5c0be8ee34a36a06817c1"
+  },
+  "images": "/data2/iwin/datasets/ECCV/COCO/images/train2017",
+  "total_selected_images": 4545,
+  "exported_images": 1137,
+  "resumed_from_images": 0,
+  "num_shards": 4,
+  "shard_index": 0,
+  "split": "train",
+  "artifact_profile": "endpoint_survival_v2",
+  "score_definitions": {
+    "class_score": "max softmax probability over foreground classes",
+    "mask_quality": "mean sigmoid(mask_logit) over pixels > 0.5",
+    "joint_score": "class_score * mask_quality"
+  },
+  "artifact_dtypes": {
+    "class_logits": "float32",
+    "mask_logits": "float32",
+    "decoder_query_feature": "float16",
+    "pixel_pooled_feature": "float16",
+    "pre_admission_winner_map": "int16",
+    "native_panoptic_segmentation": "int32",
+    "official_panoptic_segmentation": "int32"
+  },
+  "native_admission": {
+    "threshold": 0.5,
+    "mask_threshold": 0.5,
+    "overlap_mask_area_threshold": 0.8,
+    "stuff_fusion": false
+  },
+  "python": "3.9.13 (main, Aug 25 2022, 23:26:10) \n[GCC 11.2.0]",
+  "platform": "Linux-5.15.0-143-generic-x86_64-with-glibc2.35",
+  "device": "cuda",
+  "environment": {
+    "CUDA_VISIBLE_DEVICES": "2"
+  }
+}

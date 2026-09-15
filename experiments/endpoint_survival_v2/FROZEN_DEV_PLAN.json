@@ -1,0 +1,20 @@
+{
+  "version": "endpoint_survival_v2_dev",
+  "frozen_before_dev_evaluation": true,
+  "selection_rule": "for each intervention stage, choose the smallest preregistered margin that passes both fit500 gates",
+  "selected_points": [
+    {"mode": "semantic", "margin": 1.0, "fit500_delta_balanced_support": 0.04172176348080259, "fit500_delta_pq": 0.01485906082875954, "fit500_changed_pixel_fraction": 0.01823588140963428},
+    {"mode": "competition", "margin": 0.25, "fit500_delta_balanced_support": 0.03456347769058732, "fit500_delta_pq": 0.015606621518631902, "fit500_changed_pixel_fraction": 0.02547404514404124}
+  ],
+  "dev_population": {
+    "source": "results/gssr_p1_v2/manifests/official_train_grouped_split_seed0.json",
+    "partition": "dev",
+    "test_rows_excluded": true,
+    "relation_bearing_only": true,
+    "expected_rows": 4565
+  },
+  "runs": ["native margin 0", "semantic margin 1.0", "competition margin 0.25"],
+  "reproduction_gate": {"balanced_endpoint_support_delta_min": 0.03, "official_pq_delta_min": -0.01},
+  "joint_grid": "not authorized until rescue complementarity and independent dev reproduction are both established",
+  "learner": "not started until independent dev reproduction passes"
+}
