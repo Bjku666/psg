@@ -1,0 +1,52 @@
+{
+  "version": "relation_failure_decomp_v1",
+  "registered_at": "2026-09-15T17:45:00+08:00",
+  "status": "carrier_training_pending_train_images",
+  "seed": 0,
+  "carrier": "Fair PSG DSFormer dense full-pair carrier",
+  "source_revision": "third_party/fair_psg@2497be40bd8bd0ca6c2ad25be1522ebf42e6623b",
+  "lineage_sha256": {
+    "training_config": "a02f873242eee6f3132c3c38d5b5f93d5fb0259f6162f92077ef002f94058aa2",
+    "psg_annotation": "d4a8c6df10198fa2a22f56d4c2039aa2b20bdc002db5c0be8ee34a36a06817c1",
+    "mask2former_weight": "2bdb3d36704e79e70a009e39bce41e8d887a9962259b08c959aa0ddf8ffe5d3b",
+    "matched_sgdet_annotation": "0f04f44b157c80d905f6aa71e453db8afd1d833a2d8ba4f4b5a53e391ff510fb"
+  },
+  "population": {
+    "annotation": "/data2/liuhaoran/psg_data/openpsg/psg/psg.json",
+    "training_split": "official train (not test_image_ids)",
+    "evaluation_split": "official test_image_ids",
+    "identity": "class-compatible mask IoU > 0.5, SingleMPO one-to-one"
+  },
+  "stages": [
+    "endpoint_survival",
+    "pair_retention",
+    "predicate_recognition",
+    "final_topk_ranking"
+  ],
+  "failure_buckets": [
+    "endpoint_failure",
+    "pair_failure",
+    "predicate_failure",
+    "ranking_failure",
+    "success"
+  ],
+  "pair_budgets": [20, 50, 100, "all"],
+  "final_budgets": [20, 50],
+  "primary_metrics": ["SingleMPO_R@K", "SingleMPO_mR@K", "conditional_stage_recall"],
+  "conditional_oracles": ["endpoint", "pair", "predicate", "ranking"],
+  "resource_gate": {
+    "pair_failure_balanced_miss_fraction": 0.30,
+    "single_stage_recoverable_mR_delta": 0.03,
+    "decision": "open only one targeted method line after decomposition"
+  },
+  "training": {
+    "config": "third_party/fair_psg/configs/table2/masks-loc-sem.json",
+    "epochs": 40,
+    "batch_size": 32,
+    "rels_per_batch": 128,
+    "workers": 4,
+    "device": "cuda:7",
+    "run_name": "openpsg-dsformer-masks-loc-sem-relation-decomp-seed0"
+  },
+  "learner_authorized": false
+}

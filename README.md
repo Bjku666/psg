@@ -29,6 +29,12 @@ interventions gained only 1.82 pp and 1.67 pp balanced support, respectively.
 The v2 method line and its conditional P1 learner are therefore closed; no
 joint grid, confirm run, or relation-carrier claim is authorized.
 
+The active line is now `relation_failure_decomp_v1`. It trains the pinned Fair
+PSG DSFormer dense relation carrier and then attributes every GT relation to
+endpoint, pair-retention, predicate, final-ranking, or success under the
+corrected SingleMPO mask-identity contract. No pair/predicate/ranking learner
+is authorized until the registered conditional-oracle gate is evaluated.
+
 ## Layout
 
 - `models/gssr_p0_v1/`: evaluator, exact fixed-K oracle, tests, and launchers.
@@ -43,7 +49,10 @@ joint grid, confirm run, or relation-carrier claim is authorized.
   near-miss margin audit, and GT minimum-change rescue oracle.
 - `models/endpoint_survival_v2/`: corrected population metrics, official COCO
   category-wise PQ, E0 controls, and structured-margin qualification.
+- `models/relation_failure_decomp_v1/`: seeded carrier wrapper and four-stage
+  identity-correct decomposition.
 - `experiments/gssr_p0_v1/`: frozen hypothesis, run matrix, gates, and costs.
+- `experiments/relation_failure_decomp_v1/`: frozen R0 plan and launch chain.
 - `results/gssr_p0_v1/`: immutable run outputs and status metadata.
 - `records/YYYYMMDD/`: commands, deviations, and decisions.
 - `reports/YYYYMMDD/`: human-readable result summaries.

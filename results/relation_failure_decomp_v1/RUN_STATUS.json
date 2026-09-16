@@ -1,0 +1,25 @@
+{
+  "line": "relation_failure_decomp_v1",
+  "status": "carrier_training",
+  "active_run": "openpsg-dsformer-masks-loc-sem-relation-decomp-seed0",
+  "tmux_session": "psg_dsformer_relation_decomp_v1_seed0",
+  "stage": "40_epoch_dsformer_carrier_training",
+  "training_device": "cuda:7",
+  "completed_items": [
+    "immutable decomposition registration",
+    "source/config/data/weight/disk/GPU preflight",
+    "one-epoch coverage-complete engineering smoke",
+    "official COCO train2017 retrieval and archive validation",
+    "carrier checkpoint observed through epoch 10"
+  ],
+  "running_items": [
+    "40-epoch DSFormer carrier training on cuda:7 (epoch 11/40 in progress; last checkpoint epoch 10, refreshed 2026-09-16T09:48:11+08:00; estimated completion ~2026-09-17 afternoon CST)"
+  ],
+  "pending_items": [
+    "40-epoch DSFormer carrier training",
+    "full-pair inference export",
+    "SingleMPO stage decomposition",
+    "conditional stage oracles and grouped bootstrap"
+  ],
+  "learner_authorized": false
+}
