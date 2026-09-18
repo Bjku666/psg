@@ -229,6 +229,31 @@ def decompose(
             key: float(np.mean([c[key] / c["total"] for c in pred_counts.values() if c["total"]]))
             for key in keys
         }
+    conditional_oracles = {}
+    for k, pred_counts in final_by_predicate.items():
+        keys = ("endpoint_failure", "pair_failure", "predicate_failure", "ranking_failure", "success")
+        oracle = {}
+        for stage in keys[:-1]:
+            vals = []
+            for c in pred_counts.values():
+                if c["total"]:
+                    vals.append((c["success"] + c[stage]) / c["total"])
+            oracle[stage] = {
+                "predicate_balanced_recall": float(np.mean(vals)) if vals else None,
+                "gain_vs_observed_pp": (float(np.mean(vals)) - balanced_buckets[k]["success"]) * 100 if vals else None,
+            }
+        conditional_oracles[k] = oracle
+    pair_failure_gate = {}
+    for b, pred_counts in pair_by_predicate.items():
+        vals = []
+        for c in pred_counts.values():
+            miss = c["endpoint_failure"] + c["pair_failure"]
+            if miss:
+                vals.append(c["pair_failure"] / miss)
+        pair_failure_gate[b] = {
+            "predicate_balanced_fraction_of_endpoint_or_pair_misses": float(np.mean(vals)) if vals else None,
+            "micro_fraction_of_endpoint_or_pair_misses": pair_stats[b]["pair_failure"] / (pair_stats[b]["endpoint_failure"] + pair_stats[b]["pair_failure"]) if pair_stats[b]["endpoint_failure"] + pair_stats[b]["pair_failure"] else None,
+        }
     return {
         "contract": {"mask_iou": ">0.5", "class_compatible": True, "deduplication": "single_mpo"},
         "n_entries": len(entries),
@@ -240,6 +265,8 @@ def decompose(
             k: {"micro_counts": dict(v), "predicate_balanced_fraction": balanced_buckets[k]}
             for k, v in bucket_stats.items()
         },
+        "conditional_oracles": conditional_oracles,
+        "pair_failure_gate": pair_failure_gate,
         "per_image": rows,
     }
 
