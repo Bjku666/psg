@@ -76,6 +76,7 @@ def main() -> None:
     parser.add_argument("--dev-teacher", required=True, type=Path)
     parser.add_argument("--gt-seg-root", required=True, type=Path)
     parser.add_argument("--output", required=True, type=Path)
+    parser.add_argument("--feature-set", choices=("f0", "f1"), default="f0")
     args = parser.parse_args()
 
     fit_annotation = json.loads(args.fit_psg.read_text())
@@ -90,11 +91,39 @@ def main() -> None:
     dev_support = _load_support(dev_annotation, dev_predictions, args.gt_seg_root)
     dev_entries = {str(item["image_id"]): item for item in dev_annotation["data"] if item.get("relations")}
 
-    output = {"schema_version": 1, "contract": "fit-trained, dev-evaluated once; score features only",
+    output = {"schema_version": 1, "contract": f"fit-trained, dev-evaluated once; {args.feature_set} features",
               "fit_images": len(fit_support), "dev_images": len(dev_support), "budgets": {}}
     for budget in fit_teacher["budgets"]:
         x_fit, y_fit, _ = _labels(fit_teacher, fit_support, int(budget))
         x_dev, y_dev, dev_ids = _labels(dev_teacher, dev_support, int(budget))
+        if args.feature_set == "f1":
+            def augment(x, support, ids):
+                rows = []
+                for image_id, row_id in zip(ids, range(len(x))):
+                    rows.append(x[row_id])
+                return x
+            # The teacher labels are aligned in order with support lookup only
+            # through row ids; rebuild the feature matrices with hidden tokens.
+            def rebuild(teacher, support, base):
+                out = []
+                index = 0
+                for image in teacher["rows"]:
+                    if int(image["budget"]) != int(budget):
+                        continue
+                    image_id = str(image["image_id"])
+                    labels = {}
+                    for item in image["insertion"]:
+                        labels[int(item["row"])] = float(item["insertion_delta_mr"])
+                    for item in image["removal"]:
+                        labels[int(item["row"])] = float(item["removal_delta_mr"])
+                    for row_id in labels:
+                        candidate = support.get(image_id, {}).get(row_id)
+                        if candidate is not None and "pair_features" in candidate:
+                            out.append(np.concatenate([base[index], np.asarray(candidate["pair_features"]).reshape(-1)]))
+                            index += 1
+                return np.stack(out)
+            x_fit = rebuild(fit_teacher, fit_support, x_fit)
+            x_dev = rebuild(dev_teacher, dev_support, x_dev)
         model = _model().fit(x_fit, y_fit)
         label_scores = model.predict(x_dev)
         classifier = _classifier()
@@ -107,10 +136,14 @@ def main() -> None:
         for image_id, candidates_by_row in dev_support.items():
             entry = dev_entries[image_id]
             candidates = list(candidates_by_row.values())
-            scores = model.predict(np.stack([_features(candidate) for candidate in candidates]))
+            scores = model.predict(np.stack([np.concatenate([_features(candidate), np.asarray(candidate["pair_features"]).reshape(-1)])
+                                             if args.feature_set == "f1" else _features(candidate)
+                                             for candidate in candidates]))
             ranked = sorted(zip(scores.tolist(), candidates), key=lambda item: (-item[0], int(item[1]["row"])))
             probe = [dict(candidate) for _, candidate in ranked[: int(budget)]]
-            class_scores = classifier.predict_proba(np.stack([_features(candidate) for candidate in candidates]))[:, 1]
+            class_scores = classifier.predict_proba(np.stack([np.concatenate([_features(candidate), np.asarray(candidate["pair_features"]).reshape(-1)])
+                                                              if args.feature_set == "f1" else _features(candidate)
+                                                              for candidate in candidates]))[:, 1]
             class_ranked = sorted(zip(class_scores.tolist(), candidates), key=lambda item: (-item[0], int(item[1]["row"])))
             class_probe = [dict(candidate) for _, candidate in class_ranked[: int(budget)]]
             common = {"image_id": image_id, "file_name": entry["file_name"],

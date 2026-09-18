@@ -11,5 +11,9 @@
   "diagnostic_only": ["mNgR@20", "mNgR@50"],
   "mask_iou": ">0.5",
   "bootstrap_unit": "physical_file_name",
-  "official_test_is_confirm_only": true
+  "official_test_used_for_qualification": true,
+  "no_further_test_driven_design": true,
+  "learned_method_development": "fit/dev only",
+  "internal_confirm": "grouped train holdout",
+  "official_test": "frozen final reporting only"
 }

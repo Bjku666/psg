@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "contract": "fit-only hidden accessibility audit",
+  "train_images": 48,
+  "holdout_images": 16,
+  "feature_sets": {
+    "f0": {
+      "dimensions": 6,
+      "candidates": 31308,
+      "positive": 212,
+      "models": {
+        "ridge": {
+          "auc": 0.9601861252115059,
+          "top10pct_utility_mass": 0.8735145581925065,
+          "selection@20": {
+            "mR": NaN,
+            "R": 0.3425746434937611
+          },
+          "selection@50": {
+            "mR": NaN,
+            "R": 0.5118872549019609
+          }
+        },
+        "hist_gradient": {
+          "auc": 0.9438547915705277,
+          "top10pct_utility_mass": 0.7645725723883258,
+          "selection@20": {
+            "mR": NaN,
+            "R": 0.31592023172905526
+          },
+          "selection@50": {
+            "mR": NaN,
+            "R": 0.461352495543672
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,125 @@
+/data2/liuhaoran/project/cv/psg/models/relation_decision_regret_v1/official_metric_adapter.py:154: RuntimeWarning: Mean of empty slice
+  result["mR"] = float(np.nanmean(recalls, axis=0).mean())
+/data2/liuhaoran/project/cv/psg/models/relation_decision_regret_v1/official_metric_adapter.py:154: RuntimeWarning: Mean of empty slice
+  result["mR"] = float(np.nanmean(recalls, axis=0).mean())
+/data2/liuhaoran/project/cv/psg/models/relation_decision_regret_v1/official_metric_adapter.py:154: RuntimeWarning: Mean of empty slice
+  result["mR"] = float(np.nanmean(recalls, axis=0).mean())
+/data2/liuhaoran/project/cv/psg/models/relation_decision_regret_v1/official_metric_adapter.py:154: RuntimeWarning: Mean of empty slice
+  result["mR"] = float(np.nanmean(recalls, axis=0).mean())
+/data2/liuhaoran/project/cv/psg/models/relation_decision_regret_v1/official_metric_adapter.py:154: RuntimeWarning: Mean of empty slice
+  result["mR"] = float(np.nanmean(recalls, axis=0).mean())
+/data2/liuhaoran/project/cv/psg/models/relation_decision_regret_v1/official_metric_adapter.py:154: RuntimeWarning: Mean of empty slice
+  result["mR"] = float(np.nanmean(recalls, axis=0).mean())
+/data2/liuhaoran/project/cv/psg/models/relation_decision_regret_v1/official_metric_adapter.py:154: RuntimeWarning: Mean of empty slice
+  result["mR"] = float(np.nanmean(recalls, axis=0).mean())
+/data2/liuhaoran/project/cv/psg/models/relation_decision_regret_v1/official_metric_adapter.py:154: RuntimeWarning: Mean of empty slice
+  result["mR"] = float(np.nanmean(recalls, axis=0).mean())
+/data2/liuhaoran/project/cv/psg/models/relation_decision_regret_v1/official_metric_adapter.py:154: RuntimeWarning: Mean of empty slice
+  result["mR"] = float(np.nanmean(recalls, axis=0).mean())
+/data2/liuhaoran/project/cv/psg/models/relation_decision_regret_v1/official_metric_adapter.py:154: RuntimeWarning: Mean of empty slice
+  result["mR"] = float(np.nanmean(recalls, axis=0).mean())
+/data2/liuhaoran/project/cv/psg/models/relation_decision_regret_v1/official_metric_adapter.py:154: RuntimeWarning: Mean of empty slice
+  result["mR"] = float(np.nanmean(recalls, axis=0).mean())
+/data2/liuhaoran/project/cv/psg/models/relation_decision_regret_v1/official_metric_adapter.py:154: RuntimeWarning: Mean of empty slice
+  result["mR"] = float(np.nanmean(recalls, axis=0).mean())
+{
+  "schema_version": 1,
+  "contract": "fit-only hidden accessibility audit",
+  "train_images": 48,
+  "holdout_images": 16,
+  "feature_sets": {
+    "f0": {
+      "dimensions": 6,
+      "candidates": 31308,
+      "positive": 212,
+      "models": {
+        "ridge": {
+          "auc": 0.9601861252115059,
+          "top10pct_utility_mass": 0.8735145581925065,
+          "selection@20": {
+            "mR": NaN,
+            "R": 0.3425746434937611
+          },
+          "selection@50": {
+            "mR": NaN,
+            "R": 0.5118872549019609
+          }
+        },
+        "hist_gradient": {
+          "auc": 0.9438563297954161,
+          "top10pct_utility_mass": 0.7645725723883258,
+          "selection@20": {
+            "mR": NaN,
+            "R": 0.31592023172905526
+          },
+          "selection@50": {
+            "mR": NaN,
+            "R": 0.461352495543672
+          }
+        }
+      }
+    },
+    "f1": {
+      "dimensions": 390,
+      "candidates": 31308,
+      "positive": 212,
+      "models": {
+        "ridge": {
+          "auc": 0.8466512844177819,
+          "top10pct_utility_mass": 0.6728404293257562,
+          "selection@20": {
+            "mR": NaN,
+            "R": 0.2769830659536542
+          },
+          "selection@50": {
+            "mR": NaN,
+            "R": 0.3737912210338681
+          }
+        },
+        "hist_gradient": {
+          "auc": 0.9558621750499923,
+          "top10pct_utility_mass": 0.782518665086797,
+          "selection@20": {
+            "mR": NaN,
+            "R": 0.3389761586452763
+          },
+          "selection@50": {
+            "mR": NaN,
+            "R": 0.5092691622103387
+          }
+        }
+      }
+    },
+    "f2": {
+      "dimensions": 400,
+      "candidates": 31308,
+      "positive": 212,
+      "models": {
+        "ridge": {
+          "auc": 0.8533687125057683,
+          "top10pct_utility_mass": 0.6100291048811073,
+          "selection@20": {
+            "mR": NaN,
+            "R": 0.2873997326203208
+          },
+          "selection@50": {
+            "mR": NaN,
+            "R": 0.37746769162210336
+          }
+        },
+        "hist_gradient": {
+          "auc": 0.9413859406245193,
+          "top10pct_utility_mass": 0.7595683734627907,
+          "selection@20": {
+            "mR": NaN,
+            "R": 0.3467747326203209
+          },
+          "selection@50": {
+            "mR": NaN,
+            "R": 0.44255793226381457
+          }
+        }
+      }
+    }
+  }
+}

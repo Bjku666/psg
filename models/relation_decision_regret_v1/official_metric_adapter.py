@@ -35,6 +35,11 @@ def mapped_candidates(entry: Mapping, prediction: Mapping, gt_seg_root: Path,
     mapping, quality = single_mpo_mapping(pred_mask, pred_labels, gt_mask, gt_labels, iou_threshold)
     rows = _pair_rows(prediction)
     relation_scores = _as_array(prediction["rel_scores"]).astype(np.float64)
+    pair_features = prediction.get("pair_features")
+    if pair_features is not None:
+        pair_features = _as_array(pair_features)
+        if len(pair_features) != len(rows):
+            raise ValueError("pair_features must align with prediction pairs")
     by_pair: dict[tuple[int, int], dict] = {}
     unmapped: list[dict] = []
     for row in rows:
@@ -43,6 +48,8 @@ def mapped_candidates(entry: Mapping, prediction: Mapping, gt_seg_root: Path,
             if include_unmapped:
                 current = dict(row)
                 current["pred_scores"] = relation_scores[int(row["row"])]
+                if pair_features is not None:
+                    current["pair_features"] = pair_features[int(row["row"])]
                 current["gt_pair"] = None
                 unmapped.append(current)
             continue
@@ -54,6 +61,8 @@ def mapped_candidates(entry: Mapping, prediction: Mapping, gt_seg_root: Path,
         # mapping, while making the decision explicit and deterministic.
         current = dict(row)
         current["pred_scores"] = relation_scores[int(row["row"])]
+        if pair_features is not None:
+            current["pair_features"] = pair_features[int(row["row"])]
         current["gt_pair"] = pair
         current["endpoint_iou"] = float(min(quality.get(a, 0.0), quality.get(b, 0.0)))
         old = by_pair.get(pair)

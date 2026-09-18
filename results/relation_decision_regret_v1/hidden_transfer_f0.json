@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "contract": "fit-trained, dev-evaluated once; f0 features",
+  "fit_images": 500,
+  "dev_images": 500,
+  "budgets": {
+    "20": {
+      "fit_candidates": 215972,
+      "dev_candidates": 114452,
+      "dev_labelled_images": 500,
+      "dev_positive_labels": 1589,
+      "dev_auc": 0.9147042761796776,
+      "dev_top10pct_utility_mass": 0.7551035718747038,
+      "dev_positive_auc": 0.9222065913302542,
+      "dev_positive_top10pct_utility_mass": 0.7574839551217798,
+      "selection": {
+        "baseline": {
+          "R": 0.422778376000243
+        },
+        "fit_tree_probe": {
+          "R": 0.4214821066259685
+        },
+        "fit_classifier_probe": {
+          "R": 0.42289420298371705
+        },
+        "legal_oracle": {
+          "R": 0.9727369048825572
+        }
+      }
+    },
+    "50": {
+      "fit_candidates": 215972,
+      "dev_candidates": 114452,
+      "dev_labelled_images": 500,
+      "dev_positive_labels": 1589,
+      "dev_auc": 0.9145845087937136,
+      "dev_top10pct_utility_mass": 0.7564614880191982,
+      "dev_positive_auc": 0.9223517351943376,
+      "dev_positive_top10pct_utility_mass": 0.7564161985604503,
+      "selection": {
+        "baseline": {
+          "R": 0.4829401989598921
+        },
+        "fit_tree_probe": {
+          "R": 0.48460187894657203
+        },
+        "fit_classifier_probe": {
+          "R": 0.4868214482661414
+        },
+        "legal_oracle": {
+          "R": 0.9729977744477745
+        }
+      }
+    }
+  }
+}
