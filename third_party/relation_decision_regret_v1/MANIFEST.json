@@ -1,0 +1,5 @@
+{
+  "schema_version": 1,
+  "resources": [],
+  "policy": "future downloads require url, downloaded_at, sha256, license, and consumer"
+}

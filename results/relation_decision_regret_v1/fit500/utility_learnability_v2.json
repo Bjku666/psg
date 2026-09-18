@@ -1,0 +1,110 @@
+{
+  "schema_version": 1,
+  "contract": "fit-only utility ranking audit",
+  "images": 500,
+  "train_images": 375,
+  "budgets": {
+    "20": {
+      "candidates": 215972,
+      "positive_labels": 1940,
+      "utility_sum": 258.14655996781,
+      "controls": {
+        "pair_score": {
+          "auc": 0.9326749049568848,
+          "top10pct_utility_mass": 0.7801137342437906
+        },
+        "pred_score": {
+          "auc": 0.8828199719051549,
+          "top10pct_utility_mass": 0.624496478877039
+        },
+        "joint": {
+          "auc": 0.9295640443783721,
+          "top10pct_utility_mass": 0.7625092978769401
+        },
+        "margin": {
+          "auc": 0.8372066822650664,
+          "top10pct_utility_mass": 0.5077615879502793
+        },
+        "entropy": {
+          "auc": 0.12696777830311914,
+          "top10pct_utility_mass": 0.00010760467922269245
+        },
+        "predicate_rank": {
+          "auc": 0.17466249868022432,
+          "top10pct_utility_mass": 0.012462927668542576
+        },
+        "ridge_probe_holdout": {
+          "auc": 0.8943045630907974,
+          "top10pct_utility_mass": 0.7310075718025427,
+          "holdout_images": 125
+        }
+      },
+      "holdout_selection": {
+        "images": 125,
+        "baseline": {
+          "mR": null,
+          "R": 0.35440216788042883
+        },
+        "ridge_probe": {
+          "mR": null,
+          "R": 0.347398789616181
+        },
+        "legal_oracle": {
+          "mR": null,
+          "R": 0.9717466205292292
+        }
+      }
+    },
+    "50": {
+      "candidates": 215972,
+      "positive_labels": 1940,
+      "utility_sum": 258.14655996781,
+      "controls": {
+        "pair_score": {
+          "auc": 0.9326749049568848,
+          "top10pct_utility_mass": 0.7801137342437905
+        },
+        "pred_score": {
+          "auc": 0.8828199719051549,
+          "top10pct_utility_mass": 0.624496478877039
+        },
+        "joint": {
+          "auc": 0.9295640443783721,
+          "top10pct_utility_mass": 0.7625092978769399
+        },
+        "margin": {
+          "auc": 0.8372066822650664,
+          "top10pct_utility_mass": 0.5077615879502793
+        },
+        "entropy": {
+          "auc": 0.12696777830311914,
+          "top10pct_utility_mass": 0.00010760467922269267
+        },
+        "predicate_rank": {
+          "auc": 0.17468618961689128,
+          "top10pct_utility_mass": 0.012462927668542576
+        },
+        "ridge_probe_holdout": {
+          "auc": 0.8943045630907974,
+          "top10pct_utility_mass": 0.7310075718025426,
+          "holdout_images": 125
+        }
+      },
+      "holdout_selection": {
+        "images": 125,
+        "baseline": {
+          "mR": null,
+          "R": 0.44730419532158655
+        },
+        "ridge_probe": {
+          "mR": null,
+          "R": 0.446727923284445
+        },
+        "legal_oracle": {
+          "mR": null,
+          "R": 0.9727900987900988
+        }
+      }
+    }
+  }
+}

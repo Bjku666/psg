@@ -51,12 +51,20 @@ is authorized until the registered conditional-oracle gate is evaluated.
   category-wise PQ, E0 controls, and structured-margin qualification.
 - `models/relation_failure_decomp_v1/`: seeded carrier wrapper and four-stage
   identity-correct decomposition.
+- `models/relation_decision_regret_v1/`: metric-locked predicate-rank audit,
+  legal fixed-K decision oracle, and D0-D7 controls. This is qualification
+  only; CMUD/URSD are gated and not yet implemented.
 - `experiments/gssr_p0_v1/`: frozen hypothesis, run matrix, gates, and costs.
 - `experiments/relation_failure_decomp_v1/`: frozen R0 plan and launch chain.
 - `results/gssr_p0_v1/`: immutable run outputs and status metadata.
 - `records/YYYYMMDD/`: commands, deviations, and decisions.
 - `reports/YYYYMMDD/`: human-readable result summaries.
 - `third_party/fair_psg/`: pinned official Fair PSG / DSFormer source.
+
+Resources downloaded specifically for a new experiment must be stored inside
+the repository (see `experiments/relation_decision_regret_v1/README.md`) and
+recorded with URL, SHA256, and license. Existing dataset/checkpoint paths are
+exceptions only when already registered in a run contract.
 
 Large data and weights remain outside the source tree.  The default data root is
 `/data2/liuhaoran/psg_data/openpsg` because the pre-existing

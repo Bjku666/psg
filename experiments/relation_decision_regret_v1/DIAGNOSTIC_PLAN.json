@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "stages": [
+    {"id": "E0", "name": "official metric parity", "learner": false},
+    {"id": "E1", "name": "predicate rank audit", "learner": false},
+    {"id": "E2", "name": "single-label mR/mNgR", "learner": false},
+    {"id": "E3", "name": "legal oracle", "learner": false},
+    {"id": "E4", "name": "D0-D7 simple controls", "learner": false}
+  ],
+  "evidence_depth": [1, 2, 3, 5, "all"],
+  "gates": {
+    "metric_parity_abs": 1e-8,
+    "recoverable_rank_le3_min": 0.25,
+    "legal_mr50_gain_min_pp": 3.0,
+    "legal_mr50_ci95_lower_min_pp": 1.5,
+    "simple_saturation_kill": 0.8
+  },
+  "learner_authorization": "CMUD prototype authorized on fit/dev only after E0-E4; confirm remains locked",
+  "fit_teacher_followup": {
+    "artifact": "results/relation_decision_regret_v1/fit500/utility_teacher.json",
+    "probe": "HistGradientBoostingRegressor over frozen carrier score features",
+    "holdout": "375/125 physical-file grouped split",
+    "observed_gain_pp": {"R@20": 1.389, "R@50": 0.513},
+    "next_gate": "feature-based CMUD on fit/dev, then one locked confirm evaluation"
+  },
+  "transfer_audit": {
+    "fit_partition_images": 500,
+    "dev_partition_images": 500,
+    "probe": "fit-trained HistGradientBoostingClassifier for positive utility",
+    "dev_gain_pp": {"R@20": 0.079, "R@50": 0.488},
+    "dev_positive_auc": {"R@20": 0.9225, "R@50": 0.9224},
+    "confirm_authorized": false
+  }
+}

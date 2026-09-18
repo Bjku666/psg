@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "dataset": "OpenPSG official psg.json",
+  "evaluator": "third_party/fair_psg/scripts/evaluate.py",
+  "dedup": "fail",
+  "match": "mask",
+  "task": ["SGDet", "PredCls"],
+  "budgets": [20, 50],
+  "primary": ["mR@20", "mR@50"],
+  "guardrail": ["R@20", "R@50"],
+  "diagnostic_only": ["mNgR@20", "mNgR@50"],
+  "mask_iou": ">0.5",
+  "bootstrap_unit": "physical_file_name",
+  "official_test_is_confirm_only": true
+}

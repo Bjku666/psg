@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "name": "legal_decision_oracle",
+  "support": "frozen carrier pairs after strict SingleMPO mask mapping",
+  "objective": "image-wise official mR/R over a legal set of <=K unique directed pairs",
+  "depths": [1, 2, 3, 5, "all"],
+  "selection": "GT-aware deterministic weighted hit maximization; ties by candidate score and row index",
+  "forbidden": ["new masks", "new pairs", "duplicate directed pairs", "success+failure bucket proxy"],
+  "output": ["baseline", "oracle_top1", "oracle_top2", "oracle_top3", "oracle_top5", "oracle_all", "per_image", "bootstrap_group"]
+}

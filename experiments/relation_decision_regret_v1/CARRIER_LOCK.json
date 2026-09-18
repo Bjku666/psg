@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "carrier": "Fair PSG DSFormer",
+  "current_qualification": "Mask2Former",
+  "strong_carrier_followup": "MaskDINO",
+  "prediction_contract": {
+    "pairs": "N x 2 unique directed object-query ids",
+    "rel_scores": "N x (1 + num_predicates), column 0 is NONE",
+    "rel_rank": "optional descending relation ranking score",
+    "mask": "H x W integer query-index map",
+    "box_label": "query object labels"
+  },
+  "history": "relation_failure_decomp_v1 is immutable"
+}

@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "contract": "fit-trained, dev-evaluated once; score features only",
+  "fit_images": 500,
+  "dev_images": 500,
+  "budgets": {
+    "20": {
+      "fit_candidates": 215972,
+      "dev_candidates": 114452,
+      "dev_labelled_images": 500,
+      "dev_positive_labels": 1589,
+      "dev_auc": 0.9147493527450733,
+      "dev_top10pct_utility_mass": 0.7524598956725335,
+      "selection": {
+        "baseline": {
+          "R": 0.422778376000243
+        },
+        "fit_tree_probe": {
+          "R": 0.4228477354415973
+        },
+        "legal_oracle": {
+          "R": 0.9727369048825572
+        }
+      }
+    },
+    "50": {
+      "fit_candidates": 215972,
+      "dev_candidates": 114452,
+      "dev_labelled_images": 500,
+      "dev_positive_labels": 1589,
+      "dev_auc": 0.9152164003845515,
+      "dev_top10pct_utility_mass": 0.7564614880191983,
+      "selection": {
+        "baseline": {
+          "R": 0.4829401989598921
+        },
+        "fit_tree_probe": {
+          "R": 0.48472980102449414
+        },
+        "legal_oracle": {
+          "R": 0.9729977744477745
+        }
+      }
+    }
+  }
+}

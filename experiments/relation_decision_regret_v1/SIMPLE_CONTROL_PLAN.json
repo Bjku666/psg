@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "controls": {
+    "D0": "official rel_rank + argmax predicate",
+    "D1": "pair score times best predicate score",
+    "D2": "temperature-scaled predicate probabilities",
+    "D3": "predicate logit adjustment",
+    "D4": "class-frequency adjustment",
+    "D5": "entropy penalty",
+    "D6": "top1-top2 margin",
+    "D7": "fixed logistic score over D1/D4/D5/D6 features"
+  },
+  "training": "none or fit-only lightweight calibration",
+  "selection": "all controls use the same frozen support and SingleMPO mapping"
+}

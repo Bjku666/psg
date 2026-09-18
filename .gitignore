@@ -10,5 +10,8 @@ results/**/*.pth
 results/**/*.pt
 results/**/*.png
 results/**/*.jsonl
+# Exact marginal-utility teachers are local reproducibility artifacts and can
+# exceed GitHub's file-size limit; keep the compact summaries tracked.
+results/relation_decision_regret_v1/fit500/utility_teacher.json
+results/relation_decision_regret_v1/dev500/utility_teacher.json
 third_party/fair_psg/.venv/
-
