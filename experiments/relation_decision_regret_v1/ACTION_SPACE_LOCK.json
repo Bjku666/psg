@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "name": "p1.3_hypothesis_preserving_action_space",
+  "status": "oracle_qualification_complete_controls_pending_learner_pilot_started",
+  "support": "all frozen carrier pairs (including GT-unmapped false candidates); no new masks or pairs",
+  "action": "(directed physical pair, predicate hypothesis)",
+  "predicate_depths": [2, 3, 5],
+  "budgets": [20, 50],
+  "decomposition": {
+    "A": "baseline pair slots with Top-1 predicate",
+    "B": "oracle pair slots with Top-1 predicate",
+    "C": "baseline pair slots with GT-best Top-L predicate",
+    "D": "oracle pair slots with GT-best Top-L predicate"
+  },
+  "metric": "pinned Fair PSG image-wise mR/R",
+  "bootstrap_unit": "physical_file_name",
+  "development_partitions": "fit500 -> dev500; official test is frozen reporting only",
+  "forbidden": ["MESR", "pairwise swap scorer", "set-context utility", "set decoder", "test-driven learner tuning"]
+}

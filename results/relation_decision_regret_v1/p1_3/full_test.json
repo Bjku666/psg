@@ -1,0 +1,490 @@
+{
+  "budgets": [
+    20,
+    50
+  ],
+  "contract": {
+    "bootstrap_unit": "physical_file_name",
+    "official_test": true,
+    "single_mpo": true,
+    "support": "all frozen carrier pairs; GT mapping is evaluation-only"
+  },
+  "depths": [
+    2,
+    3,
+    5
+  ],
+  "images": 2177,
+  "missing_predictions": [
+    "1592227",
+    "1592271",
+    "2315515",
+    "2321981",
+    "2324442",
+    "2326546",
+    "2326640",
+    "2330610",
+    "2337106",
+    "2338524",
+    "2338572",
+    "2339852",
+    "2340762",
+    "2346561",
+    "2348447",
+    "2350508",
+    "2353564",
+    "2354812",
+    "2354998",
+    "2356724",
+    "2360395",
+    "2360751",
+    "2366934",
+    "2367075",
+    "2367878",
+    "2380733",
+    "2381970",
+    "2384145",
+    "2388116",
+    "2388584",
+    "2388958",
+    "2389333",
+    "2390299",
+    "2392542",
+    "2395023",
+    "2395078",
+    "2396230",
+    "2400275",
+    "2401918",
+    "2404111",
+    "2404509",
+    "2404707",
+    "2405785",
+    "2408491",
+    "2408695",
+    "2408960",
+    "2409496",
+    "2411979",
+    "2413398",
+    "2416340",
+    "2417013",
+    "498120"
+  ],
+  "oracle_2x2": {
+    "L2@20": {
+      "A_baseline_pair_top1": {
+        "R": 0.22685195061542707,
+        "mR": 0.2502229586645855
+      },
+      "B_oracle_slots_top1": {
+        "R": 0.2606096127205857,
+        "mR": 0.2800953396579274
+      },
+      "C_baseline_slots_predicate_topL": {
+        "R": 0.3085761215945766,
+        "mR": 0.33007848685184144
+      },
+      "D_oracle_slots_topL": {
+        "R": 0.36217721305537787,
+        "mR": 0.37100933892384774
+      },
+      "bootstrap": {
+        "B_minus_A": {
+          "bootstrap_mean_pp": 3.0057087121872423,
+          "ci95_pp": [
+            2.0680783075326783,
+            4.017538193859116
+          ],
+          "estimate_pp": 2.9872380993341885,
+          "groups": 2161,
+          "replicates": 100,
+          "unit": "physical_file_name"
+        },
+        "C_minus_A": {
+          "bootstrap_mean_pp": 8.10094140144835,
+          "ci95_pp": [
+            6.741414862605836,
+            9.600789105427799
+          ],
+          "estimate_pp": 7.985552818725594,
+          "groups": 2161,
+          "replicates": 100,
+          "unit": "physical_file_name"
+        },
+        "D_minus_A": {
+          "bootstrap_mean_pp": 12.237969279808388,
+          "ci95_pp": [
+            10.741798096513303,
+            13.911627246875343
+          ],
+          "estimate_pp": 12.078638025926224,
+          "groups": 2161,
+          "replicates": 100,
+          "unit": "physical_file_name"
+        }
+      },
+      "headroom_pp": {
+        "decision_factorization_coupling": 1.1058471078664422,
+        "metric_used": "mR",
+        "predicate_fixed_pairs": 7.985552818725594,
+        "slot_after_predicate": 4.09308520720063,
+        "slot_top1": 2.9872380993341885
+      }
+    },
+    "L2@50": {
+      "A_baseline_pair_top1": {
+        "R": 0.24896120460341326,
+        "mR": 0.27217255049058126
+      },
+      "B_oracle_slots_top1": {
+        "R": 0.2606096127205857,
+        "mR": 0.2800953396579274
+      },
+      "C_baseline_slots_predicate_topL": {
+        "R": 0.34431857116136616,
+        "mR": 0.36052205623508554
+      },
+      "D_oracle_slots_topL": {
+        "R": 0.36217721305537787,
+        "mR": 0.37100933892384774
+      },
+      "bootstrap": {
+        "B_minus_A": {
+          "bootstrap_mean_pp": 0.7818051283685566,
+          "ci95_pp": [
+            0.5317861033483119,
+            1.181325469945187
+          ],
+          "estimate_pp": 0.7922789167346123,
+          "groups": 2161,
+          "replicates": 100,
+          "unit": "physical_file_name"
+        },
+        "C_minus_A": {
+          "bootstrap_mean_pp": 8.978252493858102,
+          "ci95_pp": [
+            7.428106411157884,
+            10.525289425996657
+          ],
+          "estimate_pp": 8.834950574450428,
+          "groups": 2161,
+          "replicates": 100,
+          "unit": "physical_file_name"
+        },
+        "D_minus_A": {
+          "bootstrap_mean_pp": 10.014065695989702,
+          "ci95_pp": [
+            8.649606869720483,
+            11.554838710048863
+          ],
+          "estimate_pp": 9.88367884332665,
+          "groups": 2161,
+          "replicates": 100,
+          "unit": "physical_file_name"
+        }
+      },
+      "headroom_pp": {
+        "decision_factorization_coupling": 0.2564493521416078,
+        "metric_used": "mR",
+        "predicate_fixed_pairs": 8.834950574450428,
+        "slot_after_predicate": 1.04872826887622,
+        "slot_top1": 0.7922789167346123
+      }
+    },
+    "L3@20": {
+      "A_baseline_pair_top1": {
+        "R": 0.22685195061542707,
+        "mR": 0.2502229586645855
+      },
+      "B_oracle_slots_top1": {
+        "R": 0.2606096127205857,
+        "mR": 0.2800953396579274
+      },
+      "C_baseline_slots_predicate_topL": {
+        "R": 0.3508388657406464,
+        "mR": 0.36412531600009385
+      },
+      "D_oracle_slots_topL": {
+        "R": 0.4139250857704477,
+        "mR": 0.4092645652889741
+      },
+      "bootstrap": {
+        "B_minus_A": {
+          "bootstrap_mean_pp": 3.0057087121872423,
+          "ci95_pp": [
+            2.0680783075326783,
+            4.017538193859116
+          ],
+          "estimate_pp": 2.9872380993341885,
+          "groups": 2161,
+          "replicates": 100,
+          "unit": "physical_file_name"
+        },
+        "C_minus_A": {
+          "bootstrap_mean_pp": 11.466723606822413,
+          "ci95_pp": [
+            10.270585479385401,
+            13.257223815520181
+          ],
+          "estimate_pp": 11.390235733550835,
+          "groups": 2161,
+          "replicates": 100,
+          "unit": "physical_file_name"
+        },
+        "D_minus_A": {
+          "bootstrap_mean_pp": 16.02411826727899,
+          "ci95_pp": [
+            14.614543201152001,
+            17.92728513822308
+          ],
+          "estimate_pp": 15.90416066243886,
+          "groups": 2161,
+          "replicates": 100,
+          "unit": "physical_file_name"
+        }
+      },
+      "headroom_pp": {
+        "decision_factorization_coupling": 1.526686829553836,
+        "metric_used": "mR",
+        "predicate_fixed_pairs": 11.390235733550835,
+        "slot_after_predicate": 4.5139249288880245,
+        "slot_top1": 2.9872380993341885
+      }
+    },
+    "L3@50": {
+      "A_baseline_pair_top1": {
+        "R": 0.24896120460341326,
+        "mR": 0.27217255049058126
+      },
+      "B_oracle_slots_top1": {
+        "R": 0.2606096127205857,
+        "mR": 0.2800953396579274
+      },
+      "C_baseline_slots_predicate_topL": {
+        "R": 0.3940992473410263,
+        "mR": 0.3973198270036336
+      },
+      "D_oracle_slots_topL": {
+        "R": 0.4139250857704477,
+        "mR": 0.4092645652889741
+      },
+      "bootstrap": {
+        "B_minus_A": {
+          "bootstrap_mean_pp": 0.7818051283685566,
+          "ci95_pp": [
+            0.5317861033483119,
+            1.181325469945187
+          ],
+          "estimate_pp": 0.7922789167346123,
+          "groups": 2161,
+          "replicates": 100,
+          "unit": "physical_file_name"
+        },
+        "C_minus_A": {
+          "bootstrap_mean_pp": 12.619607064346749,
+          "ci95_pp": [
+            11.395199498876266,
+            14.610351447261815
+          ],
+          "estimate_pp": 12.514727651305236,
+          "groups": 2161,
+          "replicates": 100,
+          "unit": "physical_file_name"
+        },
+        "D_minus_A": {
+          "bootstrap_mean_pp": 13.800214683460307,
+          "ci95_pp": [
+            12.491540239706081,
+            15.693001867211356
+          ],
+          "estimate_pp": 13.709201479839283,
+          "groups": 2161,
+          "replicates": 100,
+          "unit": "physical_file_name"
+        }
+      },
+      "headroom_pp": {
+        "decision_factorization_coupling": 0.4021949117994361,
+        "metric_used": "mR",
+        "predicate_fixed_pairs": 12.514727651305236,
+        "slot_after_predicate": 1.1944738285340484,
+        "slot_top1": 0.7922789167346123
+      }
+    },
+    "L5@20": {
+      "A_baseline_pair_top1": {
+        "R": 0.22685195061542707,
+        "mR": 0.2502229586645855
+      },
+      "B_oracle_slots_top1": {
+        "R": 0.2606096127205857,
+        "mR": 0.2800953396579274
+      },
+      "C_baseline_slots_predicate_topL": {
+        "R": 0.3947184349721571,
+        "mR": 0.3945210664420983
+      },
+      "D_oracle_slots_topL": {
+        "R": 0.4666167814760049,
+        "mR": 0.44392273815719474
+      },
+      "bootstrap": {
+        "B_minus_A": {
+          "bootstrap_mean_pp": 3.0057087121872423,
+          "ci95_pp": [
+            2.0680783075326783,
+            4.017538193859116
+          ],
+          "estimate_pp": 2.9872380993341885,
+          "groups": 2161,
+          "replicates": 100,
+          "unit": "physical_file_name"
+        },
+        "C_minus_A": {
+          "bootstrap_mean_pp": 14.533588303737611,
+          "ci95_pp": [
+            12.951853766046673,
+            16.277430352617507
+          ],
+          "estimate_pp": 14.429810777751278,
+          "groups": 2161,
+          "replicates": 100,
+          "unit": "physical_file_name"
+        },
+        "D_minus_A": {
+          "bootstrap_mean_pp": 19.50926636261676,
+          "ci95_pp": [
+            17.892816897813344,
+            21.39859404445138
+          ],
+          "estimate_pp": 19.369977949260925,
+          "groups": 2161,
+          "replicates": 100,
+          "unit": "physical_file_name"
+        }
+      },
+      "headroom_pp": {
+        "decision_factorization_coupling": 1.9529290721754577,
+        "metric_used": "mR",
+        "predicate_fixed_pairs": 14.429810777751278,
+        "slot_after_predicate": 4.940167171509646,
+        "slot_top1": 2.9872380993341885
+      }
+    },
+    "L5@50": {
+      "A_baseline_pair_top1": {
+        "R": 0.24896120460341326,
+        "mR": 0.27217255049058126
+      },
+      "B_oracle_slots_top1": {
+        "R": 0.2606096127205857,
+        "mR": 0.2800953396579274
+      },
+      "C_baseline_slots_predicate_topL": {
+        "R": 0.44426854710434377,
+        "mR": 0.430577334559601
+      },
+      "D_oracle_slots_topL": {
+        "R": 0.4666167814760049,
+        "mR": 0.44392273815719474
+      },
+      "bootstrap": {
+        "B_minus_A": {
+          "bootstrap_mean_pp": 0.7818051283685566,
+          "ci95_pp": [
+            0.5317861033483119,
+            1.181325469945187
+          ],
+          "estimate_pp": 0.7922789167346123,
+          "groups": 2161,
+          "replicates": 100,
+          "unit": "physical_file_name"
+        },
+        "C_minus_A": {
+          "bootstrap_mean_pp": 15.964794626394848,
+          "ci95_pp": [
+            14.407966442436873,
+            17.83053165290284
+          ],
+          "estimate_pp": 15.840478406901976,
+          "groups": 2161,
+          "replicates": 100,
+          "unit": "physical_file_name"
+        },
+        "D_minus_A": {
+          "bootstrap_mean_pp": 17.285362778798074,
+          "ci95_pp": [
+            15.778428106530724,
+            19.07967503382549
+          ],
+          "estimate_pp": 17.17501876666135,
+          "groups": 2161,
+          "replicates": 100,
+          "unit": "physical_file_name"
+        }
+      },
+      "headroom_pp": {
+        "decision_factorization_coupling": 0.5422614430247608,
+        "metric_used": "mR",
+        "predicate_fixed_pairs": 15.840478406901976,
+        "slot_after_predicate": 1.334540359759373,
+        "slot_top1": 0.7922789167346123
+      }
+    }
+  },
+  "schema_version": 1,
+  "separability": {
+    "max_abs_epsilon_R": 0.0,
+    "max_abs_epsilon_mR": 0.0,
+    "mean_abs_epsilon_R": 0.0,
+    "mean_abs_epsilon_mR": 0.0,
+    "trials": 59
+  },
+  "simple_control_status": {
+    "kind": "fit-free protocol proxies",
+    "reason": "planned L0/L1/L4 require fit-trained calibration and a full 56-predicate dev population",
+    "valid_for_P13_3_gate": false
+  },
+  "split": "test",
+  "top_l_controls": {
+    "L0@20": {
+      "R": 0.22685195061542707,
+      "mR": 0.2502229586645855
+    },
+    "L0@50": {
+      "R": 0.24896120460341326,
+      "mR": 0.27217255049058126
+    },
+    "L1@20": {
+      "R": 0.18895144582240964,
+      "mR": 0.21937078388484074
+    },
+    "L1@50": {
+      "R": 0.21097422603306307,
+      "mR": 0.23683420383242965
+    },
+    "L2@20": {
+      "R": 0.05760023802054119,
+      "mR": 0.1632247843905077
+    },
+    "L2@50": {
+      "R": 0.07821797008177347,
+      "mR": 0.17628144042013857
+    },
+    "L3@20": {
+      "R": 0.22564300797331951,
+      "mR": 0.26052490344380175
+    },
+    "L3@50": {
+      "R": 0.24888932285376394,
+      "mR": 0.2751129383383809
+    },
+    "L4@20": {
+      "R": 0.22656318971573366,
+      "mR": 0.25238181824056083
+    },
+    "L4@50": {
+      "R": 0.2490898948790948,
+      "mR": 0.27239487573279386
+    }
+  }
+}

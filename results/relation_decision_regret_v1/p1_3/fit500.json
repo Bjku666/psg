@@ -1,0 +1,216 @@
+{
+  "budgets": [
+    20,
+    50
+  ],
+  "contract": {
+    "bootstrap_unit": "physical_file_name",
+    "official_test": true,
+    "single_mpo": true,
+    "support": "frozen mapped carrier pairs"
+  },
+  "depths": [
+    2,
+    3,
+    5
+  ],
+  "images": 500,
+  "missing_predictions": [],
+  "oracle_2x2": {
+    "L2@20": {
+      "A_baseline_pair_top1": {
+        "R": 0.3603436438716457,
+        "mR": NaN
+      },
+      "B_oracle_slots_top1": {
+        "R": 0.7082602847019122,
+        "mR": NaN
+      },
+      "C_baseline_slots_predicate_topL": {
+        "R": 0.4738933608213625,
+        "mR": NaN
+      },
+      "D_oracle_slots_topL": {
+        "R": 0.7082602847019122,
+        "mR": NaN
+      },
+      "headroom_pp": {
+        "decision_factorization_coupling": NaN,
+        "predicate_fixed_pairs": NaN,
+        "slot_after_predicate": NaN,
+        "slot_top1": NaN
+      }
+    },
+    "L2@50": {
+      "A_baseline_pair_top1": {
+        "R": 0.44854192586701674,
+        "mR": NaN
+      },
+      "B_oracle_slots_top1": {
+        "R": 0.7083472412236513,
+        "mR": NaN
+      },
+      "C_baseline_slots_predicate_topL": {
+        "R": 0.6034993258341994,
+        "mR": NaN
+      },
+      "D_oracle_slots_topL": {
+        "R": 0.7083472412236513,
+        "mR": NaN
+      },
+      "headroom_pp": {
+        "decision_factorization_coupling": NaN,
+        "predicate_fixed_pairs": NaN,
+        "slot_after_predicate": NaN,
+        "slot_top1": NaN
+      }
+    },
+    "L3@20": {
+      "A_baseline_pair_top1": {
+        "R": 0.3603436438716457,
+        "mR": NaN
+      },
+      "B_oracle_slots_top1": {
+        "R": 0.8103582460027371,
+        "mR": NaN
+      },
+      "C_baseline_slots_predicate_topL": {
+        "R": 0.533288108058989,
+        "mR": NaN
+      },
+      "D_oracle_slots_topL": {
+        "R": 0.8103582460027371,
+        "mR": NaN
+      },
+      "headroom_pp": {
+        "decision_factorization_coupling": NaN,
+        "predicate_fixed_pairs": NaN,
+        "slot_after_predicate": NaN,
+        "slot_top1": NaN
+      }
+    },
+    "L3@50": {
+      "A_baseline_pair_top1": {
+        "R": 0.44854192586701674,
+        "mR": NaN
+      },
+      "B_oracle_slots_top1": {
+        "R": 0.8104452025244763,
+        "mR": NaN
+      },
+      "C_baseline_slots_predicate_topL": {
+        "R": 0.6869706833896125,
+        "mR": NaN
+      },
+      "D_oracle_slots_topL": {
+        "R": 0.8104452025244763,
+        "mR": NaN
+      },
+      "headroom_pp": {
+        "decision_factorization_coupling": NaN,
+        "predicate_fixed_pairs": NaN,
+        "slot_after_predicate": NaN,
+        "slot_top1": NaN
+      }
+    },
+    "L5@20": {
+      "A_baseline_pair_top1": {
+        "R": 0.3603436438716457,
+        "mR": NaN
+      },
+      "B_oracle_slots_top1": {
+        "R": 0.8983989226033982,
+        "mR": NaN
+      },
+      "C_baseline_slots_predicate_topL": {
+        "R": 0.589381319379832,
+        "mR": NaN
+      },
+      "D_oracle_slots_topL": {
+        "R": 0.8983989226033982,
+        "mR": NaN
+      },
+      "headroom_pp": {
+        "decision_factorization_coupling": NaN,
+        "predicate_fixed_pairs": NaN,
+        "slot_after_predicate": NaN,
+        "slot_top1": NaN
+      }
+    },
+    "L5@50": {
+      "A_baseline_pair_top1": {
+        "R": 0.44854192586701674,
+        "mR": NaN
+      },
+      "B_oracle_slots_top1": {
+        "R": 0.8987550302638537,
+        "mR": NaN
+      },
+      "C_baseline_slots_predicate_topL": {
+        "R": 0.759334083671821,
+        "mR": NaN
+      },
+      "D_oracle_slots_topL": {
+        "R": 0.8987550302638537,
+        "mR": NaN
+      },
+      "headroom_pp": {
+        "decision_factorization_coupling": NaN,
+        "predicate_fixed_pairs": NaN,
+        "slot_after_predicate": NaN,
+        "slot_top1": NaN
+      }
+    }
+  },
+  "schema_version": 1,
+  "separability": {
+    "max_abs_epsilon_R": 0.0,
+    "max_abs_epsilon_mR": 0.0,
+    "mean_abs_epsilon_R": 0.0,
+    "mean_abs_epsilon_mR": 0.0,
+    "trials": 111
+  },
+  "split": "test",
+  "top_l_controls": {
+    "L0@20": {
+      "R": 0.3603436438716457,
+      "mR": NaN
+    },
+    "L0@50": {
+      "R": 0.44854192586701674,
+      "mR": NaN
+    },
+    "L1@20": {
+      "R": 0.2790909619791973,
+      "mR": NaN
+    },
+    "L1@50": {
+      "R": 0.38079279970975016,
+      "mR": NaN
+    },
+    "L2@20": {
+      "R": 0.19691329030446678,
+      "mR": NaN
+    },
+    "L2@50": {
+      "R": 0.2635534168445933,
+      "mR": NaN
+    },
+    "L3@20": {
+      "R": 0.3520020008883147,
+      "mR": NaN
+    },
+    "L3@50": {
+      "R": 0.44012260915861334,
+      "mR": NaN
+    },
+    "L4@20": {
+      "R": 0.3598863324064697,
+      "mR": NaN
+    },
+    "L4@50": {
+      "R": 0.4493784984447658,
+      "mR": NaN
+    }
+  }
+}

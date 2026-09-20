@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "artifact": "results/relation_decision_regret_v1/p1_3/full_test.json",
+  "carrier": "DSFormer full-pairs seed0; 2177 test entries, 52 missing carrier predictions",
+  "metric_additivity": {
+    "max_abs_epsilon_mR": 0.0,
+    "max_abs_epsilon_R": 0.0,
+    "decision": "pass; close set/swap utility narrative"
+  },
+  "primary_gate": {
+    "budget": 50,
+    "depth": 3,
+    "A_mR": 0.27217255049058126,
+    "B_mR": 0.2800953396579274,
+    "C_mR": 0.3973198270036336,
+    "D_mR": 0.4092645652889741,
+    "predicate_fixed_pairs_headroom_pp": 12.514727651305236,
+    "slot_after_predicate_headroom_pp": 1.1944738285340484,
+    "decision_factorization_coupling_pp": 0.4021949117994361,
+    "bootstrap_ci95_C_minus_A_pp": [11.395199498876266, 14.610351447261815]
+  },
+  "simple_control_gate": {
+    "status": "pending",
+    "reported_proxy": "best fit-free protocol proxy L3; not the planned fit-trained L3 control",
+    "baseline_mR50": 0.27217255049058126,
+    "proxy_mR50": 0.2751129383383809,
+    "proxy_gain_pp": 0.29403878477996526,
+    "proxy_fraction_of_predicate_headroom": 0.02349542019392633,
+    "decision": "do not apply the formal saturation threshold until fit-trained L0-L4 and a 56-predicate dev carrier are available"
+  },
+  "learner_pilot": {
+    "artifact": "results/relation_decision_regret_v1/p1_3/mpu_hpa_fitdev.json",
+    "scope": "CPU fit500 -> dev500; R-only because subset lacks all 56 predicates",
+    "MPU_R20": 0.48160938520132895,
+    "MPU_R50": 0.5514168067084947,
+    "HPA_R20": 0.4790794677189818,
+    "HPA_R50": 0.5520054477775705,
+    "status": "exploratory R pilot positive; formal mR gate and comparison to fit-trained L0-L4 pending full hidden carrier"
+  }
+}

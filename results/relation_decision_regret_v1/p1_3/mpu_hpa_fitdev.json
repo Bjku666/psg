@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "contract": {
+    "fit_trained_dev_evaluated": true,
+    "official_test_labels_used": false,
+    "frozen_carrier_support": true,
+    "unmapped_carrier_pairs_retained": true,
+    "single_mpo": true
+  },
+  "model_scope": {
+    "MPU": "score/logit calibration-feature gradient-boosting proxy",
+    "HPA": "MPU features plus frozen pair representation; not intra-pair attention"
+  },
+  "fit_images": 500,
+  "dev_images": 500,
+  "depth": 3,
+  "budgets": {
+    "20": {
+      "MPU": {
+        "train_candidates": 120000,
+        "train_positive": 3048,
+        "train_auc": 0.9818370142745597,
+        "dev_images": 500,
+        "dev_R": 0.48160938520132895,
+        "dev_mR": null
+      },
+      "HPA": {
+        "train_candidates": 120000,
+        "train_positive": 3048,
+        "train_auc": 0.988111853412639,
+        "dev_images": 500,
+        "dev_R": 0.4790794677189818,
+        "dev_mR": null
+      }
+    },
+    "50": {
+      "MPU": {
+        "train_candidates": 120000,
+        "train_positive": 3048,
+        "train_auc": 0.9818370142745597,
+        "dev_images": 500,
+        "dev_R": 0.5514168067084947,
+        "dev_mR": null
+      },
+      "HPA": {
+        "train_candidates": 120000,
+        "train_positive": 3048,
+        "train_auc": 0.988111853412639,
+        "dev_images": 500,
+        "dev_R": 0.5520054477775705,
+        "dev_mR": null
+      }
+    }
+  }
+}

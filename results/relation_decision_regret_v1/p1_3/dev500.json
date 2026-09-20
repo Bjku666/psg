@@ -1,0 +1,222 @@
+{
+  "budgets": [
+    20,
+    50
+  ],
+  "contract": {
+    "bootstrap_unit": "physical_file_name",
+    "official_test": true,
+    "single_mpo": true,
+    "support": "frozen mapped carrier pairs"
+  },
+  "depths": [
+    2,
+    3,
+    5
+  ],
+  "images": 500,
+  "missing_predictions": [],
+  "oracle_2x2": {
+    "L2@20": {
+      "A_baseline_pair_top1": {
+        "R": 0.422778376000243,
+        "mR": null
+      },
+      "B_oracle_slots_top1": {
+        "R": 0.6984466229422751,
+        "mR": null
+      },
+      "C_baseline_slots_predicate_topL": {
+        "R": 0.5485733761407675,
+        "mR": null
+      },
+      "D_oracle_slots_topL": {
+        "R": 0.6984466229422751,
+        "mR": null
+      },
+      "headroom_pp": {
+        "decision_factorization_coupling": -12.579500014052453,
+        "metric_used": "R",
+        "predicate_fixed_pairs": 12.579500014052453,
+        "slot_after_predicate": 14.98732468015076,
+        "slot_top1": 27.566824694203213
+      }
+    },
+    "L2@50": {
+      "A_baseline_pair_top1": {
+        "R": 0.4829401989598921,
+        "mR": null
+      },
+      "B_oracle_slots_top1": {
+        "R": 0.6987074925074924,
+        "mR": null
+      },
+      "C_baseline_slots_predicate_topL": {
+        "R": 0.6372923687423688,
+        "mR": null
+      },
+      "D_oracle_slots_topL": {
+        "R": 0.6987074925074924,
+        "mR": null
+      },
+      "headroom_pp": {
+        "decision_factorization_coupling": -15.435216978247674,
+        "metric_used": "R",
+        "predicate_fixed_pairs": 15.435216978247674,
+        "slot_after_predicate": 6.14151237651236,
+        "slot_top1": 21.576729354760033
+      }
+    },
+    "L3@20": {
+      "A_baseline_pair_top1": {
+        "R": 0.422778376000243,
+        "mR": null
+      },
+      "B_oracle_slots_top1": {
+        "R": 0.7830403375609898,
+        "mR": null
+      },
+      "C_baseline_slots_predicate_topL": {
+        "R": 0.6072946049119962,
+        "mR": null
+      },
+      "D_oracle_slots_topL": {
+        "R": 0.7830403375609898,
+        "mR": null
+      },
+      "headroom_pp": {
+        "decision_factorization_coupling": -18.45162289117532,
+        "metric_used": "R",
+        "predicate_fixed_pairs": 18.45162289117532,
+        "slot_after_predicate": 17.574573264899364,
+        "slot_top1": 36.02619615607468
+      }
+    },
+    "L3@50": {
+      "A_baseline_pair_top1": {
+        "R": 0.4829401989598921,
+        "mR": null
+      },
+      "B_oracle_slots_top1": {
+        "R": 0.7833012071262071,
+        "mR": null
+      },
+      "C_baseline_slots_predicate_topL": {
+        "R": 0.7113413697413699,
+        "mR": null
+      },
+      "D_oracle_slots_topL": {
+        "R": 0.7833012071262071,
+        "mR": null
+      },
+      "headroom_pp": {
+        "decision_factorization_coupling": -22.840117078147777,
+        "metric_used": "R",
+        "predicate_fixed_pairs": 22.840117078147777,
+        "slot_after_predicate": 7.195983738483724,
+        "slot_top1": 30.0361008166315
+      }
+    },
+    "L5@20": {
+      "A_baseline_pair_top1": {
+        "R": 0.422778376000243,
+        "mR": null
+      },
+      "B_oracle_slots_top1": {
+        "R": 0.8812457848914371,
+        "mR": null
+      },
+      "C_baseline_slots_predicate_topL": {
+        "R": 0.6823112022035934,
+        "mR": null
+      },
+      "D_oracle_slots_topL": {
+        "R": 0.8812457848914371,
+        "mR": null
+      },
+      "headroom_pp": {
+        "decision_factorization_coupling": -25.953282620335045,
+        "metric_used": "R",
+        "predicate_fixed_pairs": 25.953282620335045,
+        "slot_after_predicate": 19.89345826878437,
+        "slot_top1": 45.84674088911942
+      }
+    },
+    "L5@50": {
+      "A_baseline_pair_top1": {
+        "R": 0.4829401989598921,
+        "mR": null
+      },
+      "B_oracle_slots_top1": {
+        "R": 0.8815066544566544,
+        "mR": null
+      },
+      "C_baseline_slots_predicate_topL": {
+        "R": 0.799571164946165,
+        "mR": null
+      },
+      "D_oracle_slots_topL": {
+        "R": 0.8815066544566544,
+        "mR": null
+      },
+      "headroom_pp": {
+        "decision_factorization_coupling": -31.663096598627288,
+        "metric_used": "R",
+        "predicate_fixed_pairs": 31.663096598627288,
+        "slot_after_predicate": 8.193548951048946,
+        "slot_top1": 39.85664554967624
+      }
+    }
+  },
+  "schema_version": 1,
+  "separability": {
+    "max_abs_epsilon_R": 0.0,
+    "max_abs_epsilon_mR": 0.0,
+    "mean_abs_epsilon_R": 0.0,
+    "mean_abs_epsilon_mR": 0.0,
+    "trials": 77
+  },
+  "split": "test",
+  "top_l_controls": {
+    "L0@20": {
+      "R": 0.422778376000243,
+      "mR": null
+    },
+    "L0@50": {
+      "R": 0.4829401989598921,
+      "mR": null
+    },
+    "L1@20": {
+      "R": 0.36876480328424066,
+      "mR": null
+    },
+    "L1@50": {
+      "R": 0.4373568376991011,
+      "mR": null
+    },
+    "L2@20": {
+      "R": 0.2761423445835211,
+      "mR": null
+    },
+    "L2@50": {
+      "R": 0.3208334950996716,
+      "mR": null
+    },
+    "L3@20": {
+      "R": 0.4137815670121297,
+      "mR": null
+    },
+    "L3@50": {
+      "R": 0.48099080946050254,
+      "mR": null
+    },
+    "L4@20": {
+      "R": 0.42243017130638616,
+      "mR": null
+    },
+    "L4@50": {
+      "R": 0.4845719866166797,
+      "mR": null
+    }
+  }
+}

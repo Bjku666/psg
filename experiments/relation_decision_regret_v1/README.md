@@ -49,3 +49,28 @@ The independent `fit500` → `dev500` transfer audit is stored under
 probe on fit labels; dev labels are evaluation-only. The positive-utility
 classifier is the current CMUD prototype candidate, while confirm/test remains
 locked.
+
+## P1.3 factorization qualification
+
+`ACTION_SPACE_LOCK.json` freezes the legal `(physical pair, predicate
+hypothesis)` action space.  Run the zero-GPU decomposition with:
+
+```bash
+python models/relation_decision_regret_v1/run_p13.py \
+  --psg /data2/liuhaoran/psg_data/openpsg/psg/psg.json \
+  --predictions /data2/liuhaoran/psg_data/relation_failure_decomp_v1/dsformer_sgdet_full_pairs.pkl \
+  --gt-seg-root /data2/liuhaoran/psg_data/openpsg/coco_panoptic_gt/annotations \
+  --output results/relation_decision_regret_v1/p1_3/full_test.json \
+  --bootstrap-replicates 100
+```
+
+The learner pilot is deliberately fit/dev-only:
+
+```bash
+python models/relation_decision_regret_v1/run_mpu_hpa_pilot.py --help
+```
+
+`P13_GATE.json` records the current gate.  The oracle evidence closes the
+set/swap utility story and motivates the exploratory MPU/HPA pilot; formal
+learner promotion remains blocked on fit-trained L0--L4 controls and a
+56-predicate fit/dev carrier.
