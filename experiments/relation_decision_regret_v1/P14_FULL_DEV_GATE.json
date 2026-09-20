@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "name": "p1.4_full_fit_dev_predicate_arbitration_gate",
+  "status": "registered_pending_carrier_export",
+  "registered_at": "2026-09-20",
+  "hypothesis": "same-pair predicate arbitration is the dominant recoverable error after pair support is frozen",
+  "carrier": {
+    "source_revision": "third_party/fair_psg@2497be40bd8bd0ca6c2ad25be1522ebf42e6623b",
+    "checkpoint": "/data2/liuhaoran/psg_data/checkpoints/dsformer_relation_decomp_v1_seed0/best_state.pth",
+    "checkpoint_epoch": 28,
+    "annotation": "/data2/liuhaoran/psg_data/openpsg/psg/psg.json",
+    "panoptic_gt": "/data2/liuhaoran/psg_data/openpsg/coco_panoptic_gt/annotations",
+    "split_manifest": "results/relation_decision_regret_v1/manifests/official_train_grouped_split_v2_seed0.json",
+    "support": "Top-50 physical pairs from the frozen dense carrier",
+    "predicate_classes": 56,
+    "single_mpo": "class-compatible mask IoU > 0.5, one-to-one GT mapping"
+  },
+  "population": {
+    "fit_images": 32590,
+    "dev_images": 6990,
+    "confirm_images": 6983,
+    "confirm_locked": true,
+    "shard_size": 500
+  },
+  "controls": {
+    "L0": "fit predicate bias added to predicate logits",
+    "L1": "fit per-class temperature",
+    "L2": "fit logit adjustment from predicate prevalence",
+    "L3": "fit joint linear pair/predicate score",
+    "L4": "fit lightweight calibration model over logits and scalar evidence only",
+    "hidden_features_allowed": false,
+    "selection": "fit only; one locked evaluation on clean dev"
+  },
+  "gate": {
+    "primary_headroom": "C-A fixed-pair Top-3 predicate oracle mR@50",
+    "simple_saturation_stop": 0.7,
+    "hpa_authorize_if_headroom_pp_at_least": 3.0,
+    "hpa_authorize_if_simple_fraction_below": 0.5,
+    "metric": "mR@50",
+    "bootstrap": "physical-file grouped, 1000 replicates, seed 0"
+  },
+  "resource_policy": {
+    "raw_shards": "external registered cache and deleted after compaction",
+    "compact_carrier": "external registered cache with SHA256 recorded in run record",
+    "new_downloads": false
+  }
+}
