@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "contract": {
+    "fit_trained_dev_evaluated": true,
+    "support": "p1.4 compact frozen physical pairs",
+    "pair_support_changed": false,
+    "gt_pair_used_at_decode": false,
+    "single_mpo": true,
+    "confirm_locked": true
+  },
+  "fit_images": 500,
+  "dev_images": 500,
+  "depth": 5,
+  "budget": 50,
+  "seed": 0,
+  "objective": "uniform_pairwise",
+  "models": {
+    "ctpa": {
+      "training_pairs": 10884,
+      "training_examples": 21768,
+      "positive_examples": 10884,
+      "feature_dim": 273,
+      "regret_aware": false
+    },
+    "hidden_mlp": {
+      "skipped": true
+    }
+  },
+  "results": {
+    "baseline": {
+      "images": 500,
+      "mR": 0.5354425574395614,
+      "R": 0.4829401989598921,
+      "positive_predicate_auc": null
+    },
+    "ctpa": {
+      "images": 500,
+      "mR": 0.3501334112781907,
+      "R": 0.5560295435879835,
+      "positive_predicate_auc": null
+    }
+  },
+  "antisymmetry_max_abs": 0.0,
+  "gates": {
+    "ctpa_minus_baseline_mR_pp": -18.530914616137068,
+    "hidden_mlp_minus_baseline_mR_pp": null,
+    "ctpa_beats_hidden_mlp": null
+  }
+}

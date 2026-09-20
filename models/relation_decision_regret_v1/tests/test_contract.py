@@ -1,5 +1,17 @@
 from __future__ import annotations
 
+import math
+
+from models.relation_decision_regret_v1.official_metric_adapter import evaluate_population
+
+
+def test_mr_ignores_predicates_absent_from_grouped_slice():
+    result = evaluate_population([
+        {"image_id": "1", "relations": [(0, 1, 0)], "selected": [
+            {"pair": (0, 1), "gt_pair": (0, 1), "pred": 0}], "budget": 1},
+    ], 3)
+    assert math.isclose(result["mR@1"], 1.0)
+
 import numpy as np
 
 from models.relation_decision_regret_v1.legal_oracle import (

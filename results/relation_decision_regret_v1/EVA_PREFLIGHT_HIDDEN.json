@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "contract": "EVA visual-evidence preflight",
+  "carriers": [
+    {
+      "path": "/data2/liuhaoran/psg_data/cache/relation_decision_regret_v1/p14/compact/hidden_fit500.pkl",
+      "images": 500,
+      "observed_candidate_keys": [
+        "gt_pair",
+        "pair",
+        "pair_features",
+        "pred_scores",
+        "row",
+        "score"
+      ],
+      "visual_evidence_keys": [],
+      "eva_ready": false,
+      "reason": "compact carrier stores logits/pair features only"
+    },
+    {
+      "path": "/data2/liuhaoran/psg_data/cache/relation_decision_regret_v1/p14/compact/hidden_dev500.pkl",
+      "images": 500,
+      "observed_candidate_keys": [
+        "gt_pair",
+        "pair",
+        "pair_features",
+        "pred_scores",
+        "row",
+        "score"
+      ],
+      "visual_evidence_keys": [],
+      "eva_ready": false,
+      "reason": "compact carrier stores logits/pair features only"
+    }
+  ],
+  "status": "blocked_missing_visual_evidence"
+}

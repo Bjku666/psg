@@ -151,7 +151,17 @@ def evaluate_population(images: Iterable[Mapping], num_predicates: int) -> dict:
     # One selected set is normally evaluated once per K.  Callers can place
     # ``k`` in the image records to make the output key explicit.
     result: dict[str, object] = {"images": len(rows), "per_image": rows}
-    result["mR"] = float(np.nanmean(recalls, axis=0).mean())
+    # Average only over predicates that occur in the evaluated population.
+    # A grouped fit/dev slice can legitimately omit one of the 56 classes;
+    # taking ``mean`` over the resulting NaN columns would make the whole
+    # mR undefined even though the pinned evaluator reports the supported
+    # predicate mean.
+    per_predicate_mean = np.asarray([
+        float(np.mean(column[np.isfinite(column)]))
+        if np.isfinite(column).any() else np.nan
+        for column in recalls.T
+    ], dtype=float)
+    result["mR"] = float(np.mean(per_predicate_mean[np.isfinite(per_predicate_mean)]))
     result["R"] = float(np.nanmean(r_values))
     # Stable aliases make one-budget runs easy to consume.
     budgets = sorted({int(row.get("budget", len(row["selected"]))) for row in rows})

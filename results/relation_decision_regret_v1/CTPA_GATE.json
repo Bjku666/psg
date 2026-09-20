@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "status": "stopped_as_promoted_method",
+  "decision_date": "2026-09-20",
+  "primary_metric": "mR@K",
+  "guardrail_metric": "R@K",
+  "population": "fit500 -> dev500 grouped compact p1.4 carrier",
+  "confirm_locked": true,
+  "evidence": {
+    "uniform_ctpa_mR_delta_pp": {
+      "L2_K20": -12.05955306251067,
+      "L2_K50": -14.538721928805575,
+      "L5_K20": -15.351019654293507,
+      "L5_K50": -18.530914616137068
+    },
+    "raha_ctpa_mR_delta_pp": {"L3_K50": -10.541745681109948},
+    "hidden_mlp_mR_delta_pp": {
+      "L2_K20": -9.912318715428913,
+      "L3_K50_score_only": -15.547265844400904,
+      "L3_K50_pair_features": -14.76324670617894
+    }
+  },
+  "reason": "all score-space and frozen-pair-feature arbitration variants regress corrected mR despite R gains",
+  "next_authorized_line": "EVA only after a new registered visual-token carrier export; no confirm and no further score-only reranker",
+  "artifacts": [
+    "experiments/relation_decision_regret_v1/CTPA_RUN_MATRIX.json",
+    "records/20260920/20260920_ctpa_raha_gate.md",
+    "results/relation_decision_regret_v1/EVA_PREFLIGHT_HIDDEN.json",
+    "results/relation_decision_regret_v1/ctpa_hidden_fit500_dev500_L3_K50.json"
+  ]
+}

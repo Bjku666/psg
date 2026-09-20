@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "name": "p14_ctpa_raha_fit500_dev500",
+  "question": "Does comparative predicate arbitration recover mR under frozen Top-50 physical-pair support?",
+  "fixed": {
+    "carrier": "p1.4 Fair PSG DSFormer compact carrier",
+    "fit_images": 500,
+    "dev_images": 500,
+    "predicate_classes": 56,
+    "pair_support": "Top-50 physical pairs, unchanged at decode",
+    "seeds": [0],
+    "gt_at_decode": false,
+    "confirm": "locked"
+  },
+  "factors": {
+    "depth": [2, 3, 5],
+    "budget": [20, 50],
+    "objective": ["uniform_pairwise", "regret_aware_pairwise"],
+    "control": ["baseline", "ctpa", "hidden_mlp"]
+  },
+  "primary_metric": "mR@K",
+  "guardrail_metric": "R@K",
+  "gates": {
+    "promotion": "CTPA must improve mR over baseline and beat Hidden-MLP on the same depth/budget",
+    "kill": "mR regression, or no stable advantage over Hidden-MLP",
+    "interpretation": "R-only improvement is insufficient evidence"
+  },
+  "outputs": "results/relation_decision_regret_v1/ctpa_*.json"
+}

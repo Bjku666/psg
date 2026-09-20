@@ -38,6 +38,19 @@ python -m pytest -q models/relation_decision_regret_v1/tests
 No output from this line authorizes a learner automatically. The gate is
 recorded after E0--E4 using `DIAGNOSTIC_PLAN.json`.
 
+## Current CTPA/RAHA status
+
+The p1.4 fit500→dev500 CTPA matrix is recorded in
+`records/20260920/20260920_ctpa_raha_gate.md` and
+`results/relation_decision_regret_v1/CTPA_GATE.json`. Uniform CTPA, RAHA
+pairwise weighting, and the strict frozen-pair-feature recheck all regress
+corrected mR despite improving ordinary R. This score-only arbitration line is
+stopped as a promoted method; confirm remains locked. EVA is only authorized
+after a new registered carrier export containing candidate-specific visual
+tokens. The current compact carrier contains logits and optional 384-D pair
+features but no visual map/token fields, as shown by
+`results/relation_decision_regret_v1/EVA_PREFLIGHT_HIDDEN.json`.
+
 The first bounded fit-only teacher smoke is stored under
 `results/relation_decision_regret_v1/smoke_fit64/`. Its CPU-only ranking audit
 improved R at K=20 on 16 held-out images but regressed at K=50, so a full CMUD

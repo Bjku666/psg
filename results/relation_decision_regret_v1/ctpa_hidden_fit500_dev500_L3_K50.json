@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "contract": {
+    "fit_trained_dev_evaluated": true,
+    "support": "p1.4 compact frozen physical pairs",
+    "pair_support_changed": false,
+    "gt_pair_used_at_decode": false,
+    "single_mpo": true,
+    "confirm_locked": true
+  },
+  "fit_images": 500,
+  "dev_images": 500,
+  "depth": 3,
+  "budget": 50,
+  "seed": 0,
+  "objective": "uniform_pairwise",
+  "models": {
+    "ctpa": {
+      "training_pairs": 4918,
+      "training_examples": 9836,
+      "positive_examples": 4918,
+      "feature_dim": 273,
+      "regret_aware": false
+    },
+    "hidden_mlp": {
+      "training_examples": 50000,
+      "positive_examples": 1701,
+      "feature_dim": 498
+    }
+  },
+  "results": {
+    "baseline": {
+      "images": 500,
+      "mR": 0.5354425574395614,
+      "R": 0.4829401989598921,
+      "positive_predicate_auc": null
+    },
+    "ctpa": {
+      "images": 500,
+      "mR": 0.3491650291825853,
+      "R": 0.532636170841094,
+      "positive_predicate_auc": null
+    },
+    "hidden_mlp": {
+      "images": 500,
+      "mR": 0.387810090377772,
+      "R": 0.5476808553765077,
+      "positive_predicate_auc": null
+    }
+  },
+  "antisymmetry_max_abs": 0.0,
+  "gates": {
+    "ctpa_minus_baseline_mR_pp": -18.62775282569761,
+    "hidden_mlp_minus_baseline_mR_pp": -14.76324670617894,
+    "ctpa_beats_hidden_mlp": false
+  }
+}
