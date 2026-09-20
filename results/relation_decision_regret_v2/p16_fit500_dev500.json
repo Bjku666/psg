@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "contract": {
+    "support": "frozen mapped physical pairs",
+    "action": "KEEP or same-pair SWAP",
+    "decode_gt": false,
+    "evaluator": "Fair PSG image-wise"
+  },
+  "fit_images": 500,
+  "dev_images": 500,
+  "missing": {
+    "fit": [],
+    "dev": []
+  },
+  "budget": 50,
+  "depth": 3,
+  "results": {
+    "baseline": {
+      "mR": 0.5354425574395614,
+      "R": 0.4829401989598921
+    },
+    "keep_vs_any_topl_oracle": {
+      "mR": 0.7695789766876872,
+      "R": 0.7113413697413699
+    },
+    "mers": {
+      "mR": 0.4930241202130109,
+      "R": 0.48257839181279083
+    }
+  },
+  "deltas_pp": {
+    "oracle_mR": 23.413641924812577,
+    "mers_mR": -4.241843722655048,
+    "mers_R": -0.03618071471012674
+  },
+  "oracle_bootstrap": {
+    "estimate_pp": 23.4136419248126,
+    "ci95_pp": [
+      18.859321763698254,
+      27.619587290680006
+    ],
+    "groups": 499,
+    "replicates": 100
+  },
+  "oracle_diagnostics": {
+    "repair_rate": 0.6241557409614621,
+    "additivity_max_abs_residual": 1.0
+  },
+  "flip_accounting": {
+    "wrong_to_wrong": 18064,
+    "correct_to_correct": 1413,
+    "wrong_to_correct": 659
+  },
+  "mers": {
+    "train_actions": 36129,
+    "dev_swaps": 3571
+  },
+  "gates": {
+    "confirm_authorized": false,
+    "next": "evaluate full population before promotion"
+  }
+}
