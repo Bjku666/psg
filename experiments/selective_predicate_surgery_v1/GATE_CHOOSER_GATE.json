@@ -1,0 +1,7 @@
+{
+  "learned_gate_oracle_chooser_min_mR_pp": 4.4706,
+  "oracle_gate_learned_chooser_min_oracle_edit_utility_fraction": 0.5,
+  "second_carrier_oracle_min_mR_pp": 3.0,
+  "status": "pending"
+}
+

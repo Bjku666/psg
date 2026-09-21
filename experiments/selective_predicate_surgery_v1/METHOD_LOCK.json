@@ -1,0 +1,13 @@
+{
+  "name": "selective_predicate_surgery_v1",
+  "method": "DASP",
+  "carrier": "p14_full_carrier",
+  "support": "frozen top-50 physical pairs",
+  "depth": 3,
+  "fit_calibration": "deterministic bootstrap_group 90/10 split",
+  "threshold_grid_edit_percent": [1, 2, 4, 6, 8, 10],
+  "dev_tuning_forbidden": true,
+  "feature_forbidden": ["relations", "gt_pair", "utilities", "edit_label"],
+  "seed0_gate": {"min_gain_vs_simple_mR_pp": 1.5, "min_oracle_capture": 0.2, "max_delta_R_loss_pp": 0.5, "max_edit_rate": 10.0}
+}
+
