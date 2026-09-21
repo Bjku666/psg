@@ -2,7 +2,9 @@
   "schema_version": 1,
   "carrier": "Fair PSG DSFormer",
   "current_qualification": "Mask2Former",
-  "strong_carrier_followup": "MaskDINO",
+  "strong_carrier_followup": "DSGG",
+  "endpoint_control_carrier": "MaskDINO",
+  "strong_carrier_followup_status": "planned cross-architecture relation carrier; no reproduction or checkpoint is authorized yet",
   "prediction_contract": {
     "pairs": "N x 2 unique directed object-query ids",
     "rel_scores": "N x (1 + num_predicates), column 0 is NONE",

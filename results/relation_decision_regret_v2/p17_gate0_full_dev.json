@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "name": "p1.7_metric_exact_surgery_gate0",
+  "carrier": "/data2/liuhaoran/project/cv/psg/results/relation_decision_regret_v1/p14_full_carrier/dev_full.pkl",
+  "images": 6868,
+  "num_predicates": 56,
+  "budget": 50,
+  "depth": 3,
+  "results": {
+    "baseline": {
+      "mR": 0.5910844829398634,
+      "R": 0.48389325971646013
+    },
+    "population_exact_oracle": {
+      "mR": 0.8146129003857396,
+      "R": 0.7240619811965665
+    },
+    "delta_mR_pp": 22.352841744587625,
+    "delta_R_pp": 24.016872148010638
+  },
+  "repair_accounting": {
+    "rows": 254538,
+    "applied_swaps": 9292,
+    "intervention_rate": 0.03650535479967627,
+    "transitions": {
+      "wrong_to_wrong": 226637,
+      "correct_to_correct": 18717,
+      "wrong_to_correct": 9184
+    }
+  },
+  "single_action_parity": {
+    "tested": 256,
+    "max_abs_mr_residual": 1.284347587592223e-16,
+    "max_abs_r_residual": 6.205532778174455e-17
+  },
+  "distinct_row_additivity": {
+    "tested": 64,
+    "set_sizes": [
+      2,
+      3,
+      5,
+      10
+    ],
+    "max_abs_mr_residual": 1.280214066809622e-16,
+    "max_abs_r_residual": 6.6773301297951e-17,
+    "by_size": {
+      "2": {
+        "tested": 16,
+        "max_abs_mr_residual": 6.827127906517023e-17
+      },
+      "3": {
+        "tested": 16,
+        "max_abs_mr_residual": 3.7382105061174037e-17
+      },
+      "5": {
+        "tested": 16,
+        "max_abs_mr_residual": 8.013312845851946e-17
+      },
+      "10": {
+        "tested": 16,
+        "max_abs_mr_residual": 1.280214066809622e-16
+      }
+    }
+  },
+  "gate0": {
+    "tolerance": 1e-10,
+    "pass": true,
+    "next": "S0-S7 action controls"
+  }
+}

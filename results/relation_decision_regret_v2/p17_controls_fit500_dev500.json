@@ -1,0 +1,260 @@
+{
+  "schema_version": 1,
+  "name": "p1.7_s0_s7_fit500_dev500",
+  "contract": {
+    "fit_only_selection": true,
+    "dev_evaluated_once": true,
+    "confirm_used": false,
+    "support": "frozen top-50 physical pairs"
+  },
+  "fit_images": 500,
+  "dev_images": 500,
+  "fit_action_groups": 24086,
+  "dev_action_groups": 20136,
+  "native": {
+    "mR": 0.5354425574395614,
+    "R": 0.4829401989598921
+  },
+  "oracle": {
+    "mR": 0.77206463431637,
+    "R": 0.7113413697413699,
+    "accounting": {
+      "rows": 20136,
+      "applied_swaps": 664,
+      "intervention_rate": 0.03297576479936432,
+      "transitions": {
+        "wrong_to_wrong": 18064,
+        "correct_to_correct": 1413,
+        "wrong_to_correct": 659
+      }
+    }
+  },
+  "controls": {
+    "S0": {
+      "mR": 0.5418003995369255,
+      "R": 0.4887561036434438,
+      "delta_mR_pp": 0.6357842097364119,
+      "delta_R_pp": 0.5815904683551698,
+      "accounting": {
+        "rows": 20136,
+        "applied_swaps": 2189,
+        "intervention_rate": 0.10871076678585617,
+        "transitions": {
+          "wrong_to_wrong": 18649,
+          "correct_to_correct": 1348,
+          "correct_to_wrong": 65,
+          "wrong_to_correct": 74
+        }
+      },
+      "fit": {
+        "type": "ThresholdControl",
+        "threshold": 0.18377514462918043
+      }
+    },
+    "S1": {
+      "mR": 0.1438648232192374,
+      "R": 0.15654113082143772,
+      "delta_mR_pp": -39.15777342203239,
+      "delta_R_pp": -32.639906813845435,
+      "accounting": {
+        "rows": 20136,
+        "applied_swaps": 20136,
+        "intervention_rate": 1.0,
+        "transitions": {
+          "wrong_to_wrong": 18269,
+          "correct_to_wrong": 1405,
+          "wrong_to_correct": 454,
+          "correct_to_correct": 8
+        }
+      },
+      "fit": {
+        "type": "ThresholdControl",
+        "threshold": -1.8770584464073181
+      }
+    },
+    "S2": {
+      "mR": 0.3904439890586629,
+      "R": 0.49763803331507933,
+      "delta_mR_pp": -14.499856838089848,
+      "delta_R_pp": 1.4697834355187234,
+      "accounting": {
+        "rows": 20136,
+        "applied_swaps": 4852,
+        "intervention_rate": 0.24096146205800556,
+        "transitions": {
+          "wrong_to_wrong": 18555,
+          "correct_to_correct": 1261,
+          "correct_to_wrong": 152,
+          "wrong_to_correct": 168
+        }
+      },
+      "fit": {
+        "type": "ThresholdControl",
+        "threshold": {
+          "42": 1.476574182510376,
+          "44": 3.0532509326934827,
+          "30": 4.327048301696777,
+          "35": 8.977005958557129,
+          "23": 0.015611045435070994,
+          "20": 0.8737753219902515,
+          "37": 2.5186233520507812,
+          "40": 8.230188369750977,
+          "22": 2.2536826133728027,
+          "38": 0.6798457562923431,
+          "14": 0.8365475535392762,
+          "3": 0.0006546974182128906,
+          "1": 6.175041198730469e-05,
+          "2": 0.030252762138843536,
+          "7": 2.9099880218505874,
+          "0": 0.0020852088928222656,
+          "5": 0.01697335243225098,
+          "21": 0.5913293272256852,
+          "54": 5.906476020812988,
+          "55": 0.47039133906364466,
+          "34": 10.09099006652832,
+          "11": 0.36348447948694235,
+          "24": 3.433027505874634,
+          "4": 0.3003565281629564,
+          "15": 2.1107763573527336,
+          "52": 7.017075061798096,
+          "16": 1.8599685430526733,
+          "26": 0.9136160314083099,
+          "6": 0.3284388601779938,
+          "27": 2.323201894760132,
+          "10": 6.950492858886719,
+          "32": 3.3910484313964844,
+          "29": 5.284068107604983,
+          "48": 0.31151237487792977,
+          "47": 0.34506863355636597,
+          "51": 0.26045751571655273,
+          "39": 0.05304363071918488,
+          "9": 3.8665932416915902,
+          "28": 5.22794246673584,
+          "12": 2.3770463347435,
+          "41": 6.005993509292603,
+          "17": 2.4446980595588683,
+          "46": 0.1998986303806305,
+          "25": 4.2696428298950195,
+          "45": 0.17513507753610613,
+          "36": 0.1913147568702698,
+          "13": 0.6227748394012451,
+          "19": 0.4313079953193665,
+          "50": 2.707737922668457,
+          "53": 5.394529533386234,
+          "49": 0.18377514462918043,
+          "33": 4.632035255432129,
+          "18": 0.18377514462918043,
+          "-1": 0.18377514462918043
+        }
+      }
+    },
+    "S3": {
+      "mR": 0.5520015218383121,
+      "R": 0.5159018817215748,
+      "delta_mR_pp": 1.6558964398750708,
+      "delta_R_pp": 3.296168276168271,
+      "accounting": {
+        "rows": 20136,
+        "applied_swaps": 1583,
+        "intervention_rate": 0.07861541517679778,
+        "transitions": {
+          "wrong_to_wrong": 18620,
+          "correct_to_correct": 1401,
+          "wrong_to_correct": 103,
+          "correct_to_wrong": 12
+        }
+      },
+      "fit": {
+        "type": "PriorAdjustedControl",
+        "alpha": -0.15000000000000002
+      }
+    },
+    "S4": {
+      "mR": 0.48999895680654504,
+      "R": 0.38531697544427723,
+      "delta_mR_pp": -4.5443600633016334,
+      "delta_R_pp": -9.762322351561487,
+      "accounting": {
+        "rows": 20136,
+        "applied_swaps": 10083,
+        "intervention_rate": 0.5007449344457687,
+        "transitions": {
+          "wrong_to_wrong": 18558,
+          "correct_to_correct": 938,
+          "correct_to_wrong": 475,
+          "wrong_to_correct": 165
+        }
+      },
+      "fit": {
+        "type": "LearnedActionControl"
+      }
+    },
+    "S5": {
+      "mR": 0.48431520168414866,
+      "R": 0.3472582718929266,
+      "delta_mR_pp": -5.112735575541272,
+      "delta_R_pp": -13.568192706696552,
+      "accounting": {
+        "rows": 20136,
+        "applied_swaps": 9693,
+        "intervention_rate": 0.4813766388557807,
+        "transitions": {
+          "wrong_to_wrong": 18556,
+          "correct_to_correct": 828,
+          "correct_to_wrong": 585,
+          "wrong_to_correct": 167
+        }
+      },
+      "fit": {
+        "type": "LearnedActionControl"
+      }
+    },
+    "S6": {
+      "mR": 0.45594199748025105,
+      "R": 0.4811492454689386,
+      "delta_mR_pp": -7.950055995931033,
+      "delta_R_pp": -0.1790953490953484,
+      "accounting": {
+        "rows": 20136,
+        "applied_swaps": 690,
+        "intervention_rate": 0.03426698450536353,
+        "transitions": {
+          "wrong_to_wrong": 18711,
+          "correct_to_correct": 1392,
+          "correct_to_wrong": 21,
+          "wrong_to_correct": 12
+        }
+      },
+      "fit": {
+        "type": "LearnedActionControl"
+      }
+    },
+    "S7": {
+      "mR": 0.40905976593775983,
+      "R": 0.30261996575462047,
+      "delta_mR_pp": -12.638279150180153,
+      "delta_R_pp": -18.032023320527163,
+      "accounting": {
+        "rows": 20136,
+        "applied_swaps": 11556,
+        "intervention_rate": 0.5738974970202623,
+        "transitions": {
+          "wrong_to_wrong": 18553,
+          "correct_to_wrong": 714,
+          "correct_to_correct": 699,
+          "wrong_to_correct": 170
+        }
+      },
+      "fit": {
+        "type": "LearnedActionControl"
+      }
+    }
+  },
+  "gate2": {
+    "strongest": "S3",
+    "oracle_headroom_pp": 23.66220768768086,
+    "simple_gain_pp": 1.6558964398750708,
+    "captured_fraction": 0.06998064008782968,
+    "decision": "full MEAR authorized"
+  }
+}

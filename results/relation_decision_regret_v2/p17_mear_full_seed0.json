@@ -1,0 +1,106 @@
+{
+  "schema_version": 1,
+  "name": "p1.7_mear_seed0",
+  "contract": {
+    "fit_only_training": true,
+    "dev_evaluated_once": true,
+    "confirm_used": false,
+    "keep_score": 0.0,
+    "loss": "metric-weighted action ranking + sign"
+  },
+  "fit_groups": 1193380,
+  "dev_groups": 254538,
+  "training": {
+    "seed": 0,
+    "epochs": 5,
+    "batch_size": 4096,
+    "learning_rate": 0.0003,
+    "history": [
+      {
+        "epoch": 1,
+        "loss": 0.742008896927311,
+        "rank_loss": 0.4819488694304473,
+        "sign_loss": 1.3003001127341023
+      },
+      {
+        "epoch": 2,
+        "loss": 0.6582037000215217,
+        "rank_loss": 0.41512763872742653,
+        "sign_loss": 1.2153802826388242
+      },
+      {
+        "epoch": 3,
+        "loss": 0.6387392448848241,
+        "rank_loss": 0.39963673973736696,
+        "sign_loss": 1.1955125037937948
+      },
+      {
+        "epoch": 4,
+        "loss": 0.6323600337929922,
+        "rank_loss": 0.397325904350983,
+        "sign_loss": 1.1751706220515787
+      },
+      {
+        "epoch": 5,
+        "loss": 0.6223735940987116,
+        "rank_loss": 0.3900730584378112,
+        "sign_loss": 1.1615026603414589
+      }
+    ],
+    "checkpoint": "/data2/liuhaoran/project/cv/psg/results/relation_decision_regret_v2/p17_mear_full_seed0.pt"
+  },
+  "native": {
+    "mR": 0.5910844829398634,
+    "R": 0.48389325971646013
+  },
+  "strongest_simple": {
+    "name": "S0",
+    "mR": 0.5910844829398634,
+    "R": 0.48389325971646013
+  },
+  "mear": {
+    "mR": 0.5764239965000748,
+    "R": 0.5054556089614326,
+    "accounting": {
+      "rows": 254538,
+      "applied_swaps": 66026,
+      "intervention_rate": 0.2593954537240019,
+      "transitions": {
+        "wrong_to_wrong": 231713,
+        "correct_to_correct": 15385,
+        "wrong_to_correct": 4108,
+        "correct_to_wrong": 3332
+      }
+    }
+  },
+  "oracle": {
+    "mR": 0.8146129003857396,
+    "R": 0.7240619811965665,
+    "accounting": {
+      "rows": 254538,
+      "applied_swaps": 9292,
+      "intervention_rate": 0.03650535479967627,
+      "transitions": {
+        "wrong_to_wrong": 226637,
+        "correct_to_correct": 18717,
+        "wrong_to_correct": 9184
+      }
+    }
+  },
+  "gate3": {
+    "gain_vs_simple_mR_pp": -1.4660486439788567,
+    "residual_oracle_capture": -0.06558667845146966,
+    "delta_R_vs_native_pp": 2.1562349244972467,
+    "pass": false,
+    "decision": "kill MEAR"
+  },
+  "bootstrap_vs_simple": {
+    "estimate_pp": -1.4660486439788567,
+    "ci95_pp": [
+      -3.9280032201200177,
+      0.7767753305845432
+    ],
+    "groups": 6830,
+    "replicates": 500
+  }
+}

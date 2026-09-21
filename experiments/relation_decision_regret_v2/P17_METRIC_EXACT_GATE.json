@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "name": "p1.7_metric_exact_surgery_gate",
+  "carrier": "Fair PSG DSFormer frozen Top-50 physical-pair support",
+  "fit": "fit500 for qualification; full fit 32590 for promoted learner",
+  "dev": "dev500 for qualification; full dev 6990 for promoted learner",
+  "budget": 50,
+  "predicate_depth": 3,
+  "gate0": {
+    "single_action_and_distinct_row_parity_tolerance": 1e-10,
+    "required": ["closed_form_vs_evaluator", "distinct_row_additivity", "actual_applied_swap_accounting"]
+  },
+  "gate2": {
+    "simple_fraction_kill": 0.7,
+    "lightweight_fraction_threshold": 0.5,
+    "fit_only_controls": ["S0_margin", "S1_entropy", "S2_class_aware_margin", "S3_prior_adjusted_gap", "S4_full_logits_identity_linear", "S5_hidden_logits_linear", "S6_hidden_logits_gbdt", "S7_hidden_logits_mlp"]
+  },
+  "gate3": {
+    "minimum_gain_vs_strongest_simple_mR_pp": 1.5,
+    "minimum_residual_oracle_capture": 0.2,
+    "minimum_delta_R_pp": -0.5,
+    "seeds": [0, 1, 2]
+  },
+  "gates_after_seed0": {
+    "DARS_only_if_tail_or_correct_to_wrong_damage": true,
+    "visual_evidence_only_if_nonlinear_full_hidden_residual_capture_below": 0.2,
+    "confirm_and_test_locked": true
+  }
+}

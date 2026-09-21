@@ -16,4 +16,17 @@
   "learned_method_development": "fit/dev only",
   "internal_confirm": "grouped train holdout",
   "official_test": "frozen final reporting only"
+  ,"effective_config": {
+    "path": "third_party/fair_psg/configs/table2/masks-loc-sem.json",
+    "sha256": "a02f873242eee6f3132c3c38d5b5f93d5fb0259f6162f92077ef002f94058aa2",
+    "checkpoint": "/data2/liuhaoran/psg_data/checkpoints/dsformer_relation_decomp_v1_seed0/best_state.pth",
+    "checkpoint_sha256": "9f32c08a1908b5dfc8c47de67fb41c259d8ffe6435186f6038667e54d8f2dc85",
+    "checkpoint_config_sha256": "333c47f2478e6891e0be17b95ad77e6768dd63e86a65fe8ce99fcd6afceab265",
+    "checkpoint_source_revision": "2497be40bd8bd0ca6c2ad25be1522ebf42e6623b",
+    "checkpoint_epoch": 28,
+    "extractor": "Faster R-CNN ResNet-50 FPN v2 ImageNet weights, feature stage 0",
+    "image_preprocessing": "ToTensor; SquarePad; Resize(640); ImageNet mean/std normalization; no inference color jitter",
+    "architecture": "DaniFormer depth=6, embed_dim=384, patch_size=8, semantics/masks/coords enabled",
+    "optimizer_schedule": "lr=3.73e-5, weight_decay=0.04, rel_weight=0.82, node_loss_weight=0.18, no lr schedule"
+  }
 }

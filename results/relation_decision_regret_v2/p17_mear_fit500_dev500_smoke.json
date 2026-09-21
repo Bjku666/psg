@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "name": "p1.7_mear_seed0",
+  "contract": {
+    "fit_only_training": true,
+    "dev_evaluated_once": true,
+    "confirm_used": false,
+    "keep_score": 0.0,
+    "loss": "metric-weighted action ranking + sign"
+  },
+  "fit_groups": 24086,
+  "dev_groups": 20136,
+  "training": {
+    "seed": 0,
+    "epochs": 1,
+    "batch_size": 4096,
+    "learning_rate": 0.0003,
+    "history": [
+      {
+        "epoch": 1,
+        "loss": 0.9109569787979126,
+        "rank_loss": 0.6495388150215149,
+        "sign_loss": 1.3070908188819885
+      }
+    ],
+    "checkpoint": "results/relation_decision_regret_v2/p17_mear_fit500_dev500_smoke.pt"
+  },
+  "native": {
+    "mR": 0.5354425574395614,
+    "R": 0.4829401989598921
+  },
+  "strongest_simple": {
+    "name": "S0",
+    "mR": 0.5418003995369255,
+    "R": 0.4887561036434438
+  },
+  "mear": {
+    "mR": 0.5353625318313667,
+    "R": 0.48269019895989207,
+    "accounting": {
+      "rows": 20136,
+      "applied_swaps": 120,
+      "intervention_rate": 0.0059594755661501785,
+      "transitions": {
+        "wrong_to_wrong": 18723,
+        "correct_to_correct": 1412,
+        "correct_to_wrong": 1
+      }
+    }
+  },
+  "oracle": {
+    "mR": 0.77206463431637,
+    "R": 0.7113413697413699,
+    "accounting": {
+      "rows": 20136,
+      "applied_swaps": 664,
+      "intervention_rate": 0.03297576479936432,
+      "transitions": {
+        "wrong_to_wrong": 18064,
+        "correct_to_correct": 1413,
+        "wrong_to_correct": 659
+      }
+    }
+  },
+  "gate3": {
+    "gain_vs_simple_mR_pp": -0.6437867705558764,
+    "residual_oracle_capture": -0.02795860899425041,
+    "delta_R_vs_native_pp": -0.025000000000002798,
+    "pass": false,
+    "decision": "kill MEAR"
+  }
+}
