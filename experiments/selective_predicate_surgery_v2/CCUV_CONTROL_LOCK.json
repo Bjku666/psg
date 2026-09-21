@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "name": "selective_predicate_surgery_v2_ccuv_controls",
+  "registered_at": "2026-09-21",
+  "research_question": "Does verifying the signed utility of the learned chooser's concrete proposal fix the failed row-level binary gate?",
+  "carrier": "results/relation_decision_regret_v1/p14_full_carrier/fit_full.pkl",
+  "support": "frozen Top-50 physical pairs",
+  "predicate_depth": 3,
+  "num_predicates": 56,
+  "split": {
+    "unit": "bootstrap_group / physical file_name",
+    "rule": "sha1(group) modulo 10: 0=select, 1=calib, 2..9=train",
+    "fractions": {"train": 0.8, "select": 0.1, "calib": 0.1},
+    "chooser_cross_fit_folds": 5,
+    "chooser_cross_fit_unit": "bootstrap_group"
+  },
+  "fixed": {
+    "seed": 0,
+    "coverage_percent": [0.1, 0.25, 0.5, 1.0, 2.0, 3.0, 4.0, 5.0],
+    "chooser": "Ridge(alpha=10), trained on positive-edit rows, maximum 100000 rows",
+    "linear_fit_cap_rows": 200000,
+    "histgbdt_fit_cap_rows": 100000,
+    "utility_scale": 100000.0,
+    "gpu_hours": 0,
+    "estimated_wall_clock": "0.5-3 CPU hours",
+    "estimated_peak_ram_gib": 32,
+    "estimated_new_storage_mib": 20
+  },
+  "matrix": [
+    {"id": "G0", "input": "row", "target": "binary any-positive edit", "model": "LogisticRegression", "factor": "p1.8 reference target"},
+    {"id": "G1", "input": "row", "target": "signed best alternative utility", "model": "Ridge", "factor": "signed target only"},
+    {"id": "G2", "input": "concrete learned-chooser proposal", "target": "signed proposal utility", "model": "Ridge", "factor": "candidate conditioning only versus G1"},
+    {"id": "G3", "input": "concrete learned-chooser proposal", "target": "signed proposal utility", "model": "HistGradientBoostingRegressor", "factor": "nonlinearity only versus G2"},
+    {"id": "G4", "input": "concrete learned-chooser proposal", "target": "rescue/neutral/harm", "model": "LogisticRegression", "factor": "explicit harm classification versus G2"},
+    {"id": "ORACLE", "input": "exact", "target": "exact utility", "model": null, "factor": "ceiling"}
+  ],
+  "selection": "For each control, select q by maximum select net delta-mR subject to delta-R >= -0.5 pp; break ties toward lower q. Apply the frozen q to calib.",
+  "fit_promote_gate": {
+    "all_required": [
+      "best signed-utility control has select delta-mR > 0",
+      "best signed-utility control has calib delta-mR > 0",
+      "best candidate-conditioned control exceeds G0 on calib",
+      "best candidate-conditioned control exceeds G1 on calib",
+      "calib delta-R >= -0.5 pp",
+      "coverage <= 10 percent"
+    ],
+    "on_fail": "kill CCUV verifier line without loading dev carrier"
+  },
+  "dev_gate_if_fit_promotes": {
+    "dev_evaluations": 1,
+    "minimum_delta_mR_pp": 4.4706,
+    "minimum_delta_R_pp": -0.5,
+    "maximum_edit_rate_percent": 10.0,
+    "on_fail": "kill CCUV verifier line; do not train CRHV",
+    "on_pass": "authorize CRHV seed0 only"
+  },
+  "dev_tuning_forbidden": true,
+  "visual_features_forbidden": true,
+  "method_training_forbidden_until_controls_promote": true
+}
