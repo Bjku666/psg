@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "name": "selective_predicate_surgery_v3_catastrophic_harm_audit",
+  "registered_at": "2026-09-21",
+  "research_question": "Can the existing p1.9 concrete proposals recover positive mR once catastrophic native-relation damage is vetoed or cost-weighted?",
+  "carrier": "results/relation_decision_regret_v1/p14_full_carrier/fit_full.pkl",
+  "support": "frozen Top-50 physical pairs",
+  "predicate_depth": 3,
+  "num_predicates": 56,
+  "split": {
+    "unit": "bootstrap_group / physical file_name",
+    "rule": "sha1(group) modulo 10: 0=select, 1=calib, 2..9=train",
+    "fractions": {"train": 0.8, "select": 0.1, "calib": 0.1},
+    "chooser_cross_fit_folds": 5,
+    "chooser_cross_fit_unit": "bootstrap_group"
+  },
+  "fixed": {
+    "seed": 0,
+    "coverage_percent": [0.1, 0.25, 0.5, 1.0, 2.0, 3.0, 4.0, 5.0],
+    "utility_scale": 100000.0,
+    "linear_fit_cap_rows": 200000,
+    "gbdt_fit_cap_rows": 100000,
+    "g5_lambda": 1.0,
+    "g6_lambda_grid": [0.25, 0.5, 1.0, 2.0, 4.0],
+    "max_edit_rate_percent": 5.0,
+    "min_delta_R_pp": -0.5,
+    "min_harm_veto_capture_percent": 20.0,
+    "gpu_hours": 0,
+    "dev_tuning_forbidden": true,
+    "second_carrier_forbidden": true,
+    "visual_evidence_forbidden": true
+  },
+  "stages": {
+    "P0": "learned proposal, oracle harm veto, oracle native-correct veto, positive-only proposal ceiling",
+    "P1": "existing G4 probabilities with analytic class-aware asymmetric cost (G5)",
+    "P2": "factorized rescue/harm logistic heads with class-aware asymmetric cost (G6)"
+  },
+  "audit_gate": {
+    "select_and_calib": [
+      "oracle harm veto capture >= 20 percent of full oracle gain",
+      "oracle harm veto delta_mR > 0"
+    ],
+    "on_fail": "kill compact-feature gate family; do not run G5/G6"
+  },
+  "fit_promote_gate": {
+    "select_and_calib": [
+      "selected G5/G6 delta_mR > 0",
+      "calib delta_R >= -0.5 pp",
+      "edit rate <= 5 percent",
+      "positive oracle capture >= 20 percent",
+      "calib gain is greater than p1.9 G4"
+    ],
+    "on_fail": "kill v3 fit line; do not load dev carrier",
+    "on_pass": "authorize one-shot dev evaluation with +4.4706 mR pp, delta_R >= -0.5 pp, edit rate <= 5 percent"
+  }
+}
