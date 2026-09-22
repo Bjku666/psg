@@ -1,0 +1,1328 @@
+{
+  "schema_version": 1,
+  "contract": "fit-only E0/E1/E2 accessibility probe",
+  "records": {
+    "train": 397,
+    "select": 45,
+    "calib": 58
+  },
+  "rows": {
+    "train": 19162,
+    "select": 2122,
+    "calib": 2802
+  },
+  "chooser": {
+    "folds": [
+      {
+        "fold": 0,
+        "fit_rows": 607,
+        "held_rows": 2262
+      },
+      {
+        "fold": 1,
+        "fit_rows": 601,
+        "held_rows": 2390
+      },
+      {
+        "fold": 2,
+        "fit_rows": 500,
+        "held_rows": 5184
+      },
+      {
+        "fold": 3,
+        "fit_rows": 516,
+        "held_rows": 4562
+      },
+      {
+        "fold": 4,
+        "fit_rows": 528,
+        "held_rows": 4764
+      }
+    ],
+    "final_positive_rows": 688
+  },
+  "feature_sets": {
+    "e0": {
+      "ridge": {
+        "select": {
+          "native": {
+            "mR": 0.4897570972089713,
+            "R": 0.4982583774250441
+          },
+          "oracle_gain_pp": 25.475835004575632,
+          "curve": [
+            {
+              "q_percent": 0.1,
+              "applied_rows": 3,
+              "applied_edit_rate_percent": 0.1413760603204524,
+              "delta_mR_pp": -0.2222222222222292,
+              "delta_R_pp": -0.15873015873016372,
+              "sum_positive_utility": 0.0,
+              "sum_negative_utility": -0.0022222222222222222,
+              "positive_utility_capture": 0.0,
+              "rescue_precision": 0.0,
+              "harm_rate": 0.3333333333333333
+            },
+            {
+              "q_percent": 0.25,
+              "applied_rows": 6,
+              "applied_edit_rate_percent": 0.2827521206409048,
+              "delta_mR_pp": -0.2222222222222292,
+              "delta_R_pp": -0.15873015873016372,
+              "sum_positive_utility": 0.0,
+              "sum_negative_utility": -0.0022222222222222222,
+              "positive_utility_capture": 0.0,
+              "rescue_precision": 0.0,
+              "harm_rate": 0.16666666666666666
+            },
+            {
+              "q_percent": 0.5,
+              "applied_rows": 11,
+              "applied_edit_rate_percent": 0.5183788878416589,
+              "delta_mR_pp": -0.3141762452107344,
+              "delta_R_pp": -0.6525573192239842,
+              "sum_positive_utility": 0.0,
+              "sum_negative_utility": -0.0031417624521072793,
+              "positive_utility_capture": 0.0,
+              "rescue_precision": 0.0,
+              "harm_rate": 0.2727272727272727
+            },
+            {
+              "q_percent": 1.0,
+              "applied_rows": 22,
+              "applied_edit_rate_percent": 1.0367577756833177,
+              "delta_mR_pp": -0.4471097784441158,
+              "delta_R_pp": -1.2477954144620829,
+              "sum_positive_utility": 0.0,
+              "sum_negative_utility": -0.004471097784441112,
+              "positive_utility_capture": 0.0,
+              "rescue_precision": 0.0,
+              "harm_rate": 0.22727272727272727
+            },
+            {
+              "q_percent": 2.0,
+              "applied_rows": 43,
+              "applied_edit_rate_percent": 2.0263901979264842,
+              "delta_mR_pp": -0.4746959853406618,
+              "delta_R_pp": -1.470017636684301,
+              "sum_positive_utility": 0.0,
+              "sum_negative_utility": -0.0047469598534066295,
+              "positive_utility_capture": 0.0,
+              "rescue_precision": 0.0,
+              "harm_rate": 0.13953488372093023
+            },
+            {
+              "q_percent": 3.0,
+              "applied_rows": 64,
+              "applied_edit_rate_percent": 3.016022620169651,
+              "delta_mR_pp": 0.49771780776278196,
+              "delta_R_pp": -1.1843033509700118,
+              "sum_positive_utility": 0.01,
+              "sum_negative_utility": -0.005022821922372147,
+              "positive_utility_capture": 0.039252884147679294,
+              "rescue_precision": 0.015625,
+              "harm_rate": 0.109375
+            },
+            {
+              "q_percent": 4.0,
+              "applied_rows": 85,
+              "applied_edit_rate_percent": 4.005655042412818,
+              "delta_mR_pp": 0.4715309012160551,
+              "delta_R_pp": -1.7134038800705353,
+              "sum_positive_utility": 0.010869565217391304,
+              "sum_negative_utility": -0.006154256205230718,
+              "positive_utility_capture": 0.04266617842139053,
+              "rescue_precision": 0.023529411764705882,
+              "harm_rate": 0.11764705882352941
+            },
+            {
+              "q_percent": 5.0,
+              "applied_rows": 107,
+              "applied_edit_rate_percent": 5.042412818096135,
+              "delta_mR_pp": 0.5175079127103133,
+              "delta_R_pp": -1.2689594356260936,
+              "sum_positive_utility": 0.011329335332333833,
+              "sum_negative_utility": -0.006154256205230718,
+              "positive_utility_capture": 0.04447090872703097,
+              "rescue_precision": 0.028037383177570093,
+              "harm_rate": 0.09345794392523364
+            }
+          ]
+        },
+        "calib": {
+          "native": {
+            "mR": 0.49946145531038577,
+            "R": 0.4355330722084845
+          },
+          "oracle_gain_pp": 27.327734097453348,
+          "curve": [
+            {
+              "q_percent": 0.1,
+              "applied_rows": 3,
+              "applied_edit_rate_percent": 0.10706638115631692,
+              "delta_mR_pp": 0.0,
+              "delta_R_pp": 0.0,
+              "sum_positive_utility": 0.0,
+              "sum_negative_utility": 0.0,
+              "positive_utility_capture": 0.0,
+              "rescue_precision": 0.0,
+              "harm_rate": 0.0
+            },
+            {
+              "q_percent": 0.25,
+              "applied_rows": 8,
+              "applied_edit_rate_percent": 0.28551034975017847,
+              "delta_mR_pp": 0.0,
+              "delta_R_pp": 0.0,
+              "sum_positive_utility": 0.0,
+              "sum_negative_utility": 0.0,
+              "positive_utility_capture": 0.0,
+              "rescue_precision": 0.0,
+              "harm_rate": 0.0
+            },
+            {
+              "q_percent": 0.5,
+              "applied_rows": 15,
+              "applied_edit_rate_percent": 0.5353319057815845,
+              "delta_mR_pp": 0.0,
+              "delta_R_pp": 0.0,
+              "sum_positive_utility": 0.0,
+              "sum_negative_utility": 0.0,
+              "positive_utility_capture": 0.0,
+              "rescue_precision": 0.0,
+              "harm_rate": 0.0
+            },
+            {
+              "q_percent": 1.0,
+              "applied_rows": 29,
+              "applied_edit_rate_percent": 1.0349750178443968,
+              "delta_mR_pp": 0.0,
+              "delta_R_pp": 0.0,
+              "sum_positive_utility": 0.0,
+              "sum_negative_utility": 0.0,
+              "positive_utility_capture": 0.0,
+              "rescue_precision": 0.0,
+              "harm_rate": 0.0
+            },
+            {
+              "q_percent": 2.0,
+              "applied_rows": 57,
+              "applied_edit_rate_percent": 2.0342612419700217,
+              "delta_mR_pp": -0.11363636363636576,
+              "delta_R_pp": -0.1436781609195359,
+              "sum_positive_utility": 0.0,
+              "sum_negative_utility": -0.0011363636363636363,
+              "positive_utility_capture": 0.0,
+              "rescue_precision": 0.0,
+              "harm_rate": 0.017543859649122806
+            },
+            {
+              "q_percent": 3.0,
+              "applied_rows": 85,
+              "applied_edit_rate_percent": 3.033547466095646,
+              "delta_mR_pp": -0.13167388167388272,
+              "delta_R_pp": -0.3004179728317624,
+              "sum_positive_utility": 0.0,
+              "sum_negative_utility": -0.0013167388167388168,
+              "positive_utility_capture": 0.0,
+              "rescue_precision": 0.0,
+              "harm_rate": 0.023529411764705882
+            },
+            {
+              "q_percent": 4.0,
+              "applied_rows": 113,
+              "applied_edit_rate_percent": 4.0328336902212705,
+              "delta_mR_pp": -0.5421702480525925,
+              "delta_R_pp": -1.1214360352291342,
+              "sum_positive_utility": 0.0,
+              "sum_negative_utility": -0.00542170248052601,
+              "positive_utility_capture": 0.0,
+              "rescue_precision": 0.0,
+              "harm_rate": 0.04424778761061947
+            },
+            {
+              "q_percent": 5.0,
+              "applied_rows": 141,
+              "applied_edit_rate_percent": 5.032119914346895,
+              "delta_mR_pp": -0.5989884298707782,
+              "delta_R_pp": -1.5114196148678871,
+              "sum_positive_utility": 0.0,
+              "sum_negative_utility": -0.0059898842987078284,
+              "positive_utility_capture": 0.0,
+              "rescue_precision": 0.0,
+              "harm_rate": 0.04964539007092199
+            }
+          ]
+        }
+      },
+      "hist_gradient": {
+        "select": {
+          "native": {
+            "mR": 0.4897570972089713,
+            "R": 0.4982583774250441
+          },
+          "oracle_gain_pp": 25.475835004575632,
+          "curve": [
+            {
+              "q_percent": 0.1,
+              "applied_rows": 3,
+              "applied_edit_rate_percent": 0.1413760603204524,
+              "delta_mR_pp": -0.7816091954022997,
+              "delta_R_pp": -0.934744268077603,
+              "sum_positive_utility": 0.0,
+              "sum_negative_utility": -0.007816091954022988,
+              "positive_utility_capture": 0.0,
+              "rescue_precision": 0.0,
+              "harm_rate": 1.0
+            },
+            {
+              "q_percent": 0.25,
+              "applied_rows": 6,
+              "applied_edit_rate_percent": 0.2827521206409048,
+              "delta_mR_pp": -0.7816091954022997,
+              "delta_R_pp": -0.934744268077603,
+              "sum_positive_utility": 0.0,
+              "sum_negative_utility": -0.007816091954022988,
+              "positive_utility_capture": 0.0,
+              "rescue_precision": 0.0,
+              "harm_rate": 0.5
+            },
+            {
+              "q_percent": 0.5,
+              "applied_rows": 11,
+              "applied_edit_rate_percent": 0.5183788878416589,
+              "delta_mR_pp": -0.7816091954022997,
+              "delta_R_pp": -0.934744268077603,
+              "sum_positive_utility": 0.0,
+              "sum_negative_utility": -0.007816091954022988,
+              "positive_utility_capture": 0.0,
+              "rescue_precision": 0.0,
+              "harm_rate": 0.2727272727272727
+            },
+            {
+              "q_percent": 1.0,
+              "applied_rows": 22,
+              "applied_edit_rate_percent": 1.0367577756833177,
+              "delta_mR_pp": 0.21839080459770122,
+              "delta_R_pp": -0.49029982363315017,
+              "sum_positive_utility": 0.01,
+              "sum_negative_utility": -0.007816091954022988,
+              "positive_utility_capture": 0.039252884147679294,
+              "rescue_precision": 0.045454545454545456,
+              "harm_rate": 0.13636363636363635
+            },
+            {
+              "q_percent": 2.0,
+              "applied_rows": 43,
+              "applied_edit_rate_percent": 2.0263901979264842,
+              "delta_mR_pp": 0.13143428285856684,
+              "delta_R_pp": -0.807760141093472,
+              "sum_positive_utility": 0.01,
+              "sum_negative_utility": -0.008685657171414292,
+              "positive_utility_capture": 0.039252884147679294,
+              "rescue_precision": 0.023255813953488372,
+              "harm_rate": 0.09302325581395349
+            },
+            {
+              "q_percent": 3.0,
+              "applied_rows": 64,
+              "applied_edit_rate_percent": 3.016022620169651,
+              "delta_mR_pp": 0.13143428285856684,
+              "delta_R_pp": -0.807760141093472,
+              "sum_positive_utility": 0.01,
+              "sum_negative_utility": -0.008685657171414292,
+              "positive_utility_capture": 0.039252884147679294,
+              "rescue_precision": 0.015625,
+              "harm_rate": 0.0625
+            },
+            {
+              "q_percent": 4.0,
+              "applied_rows": 85,
+              "applied_edit_rate_percent": 4.005655042412818,
+              "delta_mR_pp": 0.13143428285856684,
+              "delta_R_pp": -0.807760141093472,
+              "sum_positive_utility": 0.0104,
+              "sum_negative_utility": -0.009085657171414293,
+              "positive_utility_capture": 0.040822999513586464,
+              "rescue_precision": 0.023529411764705882,
+              "harm_rate": 0.058823529411764705
+            },
+            {
+              "q_percent": 5.0,
+              "applied_rows": 107,
+              "applied_edit_rate_percent": 5.042412818096135,
+              "delta_mR_pp": -0.19465267366317596,
+              "delta_R_pp": -0.5608465608465563,
+              "sum_positive_utility": 0.011269565217391305,
+              "sum_negative_utility": -0.013216091954022988,
+              "positive_utility_capture": 0.04423629378729771,
+              "rescue_precision": 0.028037383177570093,
+              "harm_rate": 0.056074766355140186
+            }
+          ]
+        },
+        "calib": {
+          "native": {
+            "mR": 0.49946145531038577,
+            "R": 0.4355330722084845
+          },
+          "oracle_gain_pp": 27.327734097453348,
+          "curve": [
+            {
+              "q_percent": 0.1,
+              "applied_rows": 3,
+              "applied_edit_rate_percent": 0.10706638115631692,
+              "delta_mR_pp": 0.0,
+              "delta_R_pp": 0.0,
+              "sum_positive_utility": 0.0,
+              "sum_negative_utility": 0.0,
+              "positive_utility_capture": 0.0,
+              "rescue_precision": 0.0,
+              "harm_rate": 0.0
+            },
+            {
+              "q_percent": 0.25,
+              "applied_rows": 8,
+              "applied_edit_rate_percent": 0.28551034975017847,
+              "delta_mR_pp": 0.0,
+              "delta_R_pp": 0.0,
+              "sum_positive_utility": 0.0,
+              "sum_negative_utility": 0.0,
+              "positive_utility_capture": 0.0,
+              "rescue_precision": 0.0,
+              "harm_rate": 0.0
+            },
+            {
+              "q_percent": 0.5,
+              "applied_rows": 15,
+              "applied_edit_rate_percent": 0.5353319057815845,
+              "delta_mR_pp": 0.0,
+              "delta_R_pp": 0.0,
+              "sum_positive_utility": 0.0,
+              "sum_negative_utility": 0.0,
+              "positive_utility_capture": 0.0,
+              "rescue_precision": 0.0,
+              "harm_rate": 0.0
+            },
+            {
+              "q_percent": 1.0,
+              "applied_rows": 29,
+              "applied_edit_rate_percent": 1.0349750178443968,
+              "delta_mR_pp": -0.5681818181818177,
+              "delta_R_pp": -0.15673981191222097,
+              "sum_positive_utility": 0.0,
+              "sum_negative_utility": -0.005681818181818182,
+              "positive_utility_capture": 0.0,
+              "rescue_precision": 0.0,
+              "harm_rate": 0.034482758620689655
+            },
+            {
+              "q_percent": 2.0,
+              "applied_rows": 57,
+              "applied_edit_rate_percent": 2.0342612419700217,
+              "delta_mR_pp": -0.7219632219632233,
+              "delta_R_pp": -0.15673981191222652,
+              "sum_positive_utility": 0.00021043771043771043,
+              "sum_negative_utility": -0.00743006993006993,
+              "positive_utility_capture": 0.0007700518077615551,
+              "rescue_precision": 0.017543859649122806,
+              "harm_rate": 0.03508771929824561
+            },
+            {
+              "q_percent": 3.0,
+              "applied_rows": 85,
+              "applied_edit_rate_percent": 3.033547466095646,
+              "delta_mR_pp": -0.532569282569284,
+              "delta_R_pp": -0.0817772931715921,
+              "sum_positive_utility": 0.0021043771043771043,
+              "sum_negative_utility": -0.00743006993006993,
+              "positive_utility_capture": 0.007700518077615552,
+              "rescue_precision": 0.023529411764705882,
+              "harm_rate": 0.023529411764705882
+            },
+            {
+              "q_percent": 4.0,
+              "applied_rows": 113,
+              "applied_edit_rate_percent": 4.0328336902212705,
+              "delta_mR_pp": 1.550764050764053,
+              "delta_R_pp": -0.013061650992685081,
+              "sum_positive_utility": 0.02483164983164983,
+              "sum_negative_utility": -0.009324009324009324,
+              "positive_utility_capture": 0.09086611331586351,
+              "rescue_precision": 0.02654867256637168,
+              "harm_rate": 0.02654867256637168
+            },
+            {
+              "q_percent": 5.0,
+              "applied_rows": 141,
+              "applied_edit_rate_percent": 5.032119914346895,
+              "delta_mR_pp": 1.283384371619667,
+              "delta_R_pp": -0.4728317659352166,
+              "sum_positive_utility": 0.02483164983164983,
+              "sum_negative_utility": -0.011997806115453175,
+              "positive_utility_capture": 0.09086611331586351,
+              "rescue_precision": 0.02127659574468085,
+              "harm_rate": 0.03546099290780142
+            }
+          ]
+        }
+      },
+      "dimensions": 445
+    },
+    "e1": {
+      "ridge": {
+        "select": {
+          "native": {
+            "mR": 0.4897570972089713,
+            "R": 0.4982583774250441
+          },
+          "oracle_gain_pp": 25.475835004575632,
+          "curve": [
+            {
+              "q_percent": 0.1,
+              "applied_rows": 3,
+              "applied_edit_rate_percent": 0.1413760603204524,
+              "delta_mR_pp": -0.2222222222222292,
+              "delta_R_pp": -0.15873015873016372,
+              "sum_positive_utility": 0.0,
+              "sum_negative_utility": -0.0022222222222222222,
+              "positive_utility_capture": 0.0,
+              "rescue_precision": 0.0,
+              "harm_rate": 0.3333333333333333
+            },
+            {
+              "q_percent": 0.25,
+              "applied_rows": 6,
+              "applied_edit_rate_percent": 0.2827521206409048,
+              "delta_mR_pp": -0.2222222222222292,
+              "delta_R_pp": -0.15873015873016372,
+              "sum_positive_utility": 0.0,
+              "sum_negative_utility": -0.0022222222222222222,
+              "positive_utility_capture": 0.0,
+              "rescue_precision": 0.0,
+              "harm_rate": 0.16666666666666666
+            },
+            {
+              "q_percent": 0.5,
+              "applied_rows": 11,
+              "applied_edit_rate_percent": 0.5183788878416589,
+              "delta_mR_pp": -0.3141762452107344,
+              "delta_R_pp": -0.6525573192239842,
+              "sum_positive_utility": 0.0,
+              "sum_negative_utility": -0.0031417624521072793,
+              "positive_utility_capture": 0.0,
+              "rescue_precision": 0.0,
+              "harm_rate": 0.2727272727272727
+            },
+            {
+              "q_percent": 1.0,
+              "applied_rows": 22,
+              "applied_edit_rate_percent": 1.0367577756833177,
+              "delta_mR_pp": -0.360153256704987,
+              "delta_R_pp": -0.9303350970017665,
+              "sum_positive_utility": 0.0,
+              "sum_negative_utility": -0.003601532567049808,
+              "positive_utility_capture": 0.0,
+              "rescue_precision": 0.0,
+              "harm_rate": 0.18181818181818182
+            },
+            {
+              "q_percent": 2.0,
+              "applied_rows": 43,
+              "applied_edit_rate_percent": 2.0263901979264842,
+              "delta_mR_pp": -0.4746959853406618,
+              "delta_R_pp": -1.470017636684301,
+              "sum_positive_utility": 0.0,
+              "sum_negative_utility": -0.0047469598534066295,
+              "positive_utility_capture": 0.0,
+              "rescue_precision": 0.0,
+              "harm_rate": 0.13953488372093023
+            },
+            {
+              "q_percent": 3.0,
+              "applied_rows": 64,
+              "applied_edit_rate_percent": 3.016022620169651,
+              "delta_mR_pp": 0.6122605363984623,
+              "delta_R_pp": -0.7786596119929434,
+              "sum_positive_utility": 0.010869565217391304,
+              "sum_negative_utility": -0.0047469598534066295,
+              "positive_utility_capture": 0.04266617842139053,
+              "rescue_precision": 0.03125,
+              "harm_rate": 0.09375
+            },
+            {
+              "q_percent": 4.0,
+              "applied_rows": 85,
+              "applied_edit_rate_percent": 4.005655042412818,
+              "delta_mR_pp": 0.5175079127103133,
+              "delta_R_pp": -1.2689594356260936,
+              "sum_positive_utility": 0.011329335332333833,
+              "sum_negative_utility": -0.006154256205230718,
+              "positive_utility_capture": 0.04447090872703097,
+              "rescue_precision": 0.03529411764705882,
+              "harm_rate": 0.11764705882352941
+            },
+            {
+              "q_percent": 5.0,
+              "applied_rows": 107,
+              "applied_edit_rate_percent": 5.042412818096135,
+              "delta_mR_pp": -0.9231217724471108,
+              "delta_R_pp": -1.7178932178932127,
+              "sum_positive_utility": 0.011329335332333833,
+              "sum_negative_utility": -0.02056055305680493,
+              "positive_utility_capture": 0.04447090872703097,
+              "rescue_precision": 0.028037383177570093,
+              "harm_rate": 0.12149532710280374
+            }
+          ]
+        },
+        "calib": {
+          "native": {
+            "mR": 0.49946145531038577,
+            "R": 0.4355330722084845
+          },
+          "oracle_gain_pp": 27.327734097453348,
+          "curve": [
+            {
+              "q_percent": 0.1,
+              "applied_rows": 3,
+              "applied_edit_rate_percent": 0.10706638115631692,
+              "delta_mR_pp": 0.0,
+              "delta_R_pp": 0.0,
+              "sum_positive_utility": 0.0,
+              "sum_negative_utility": 0.0,
+              "positive_utility_capture": 0.0,
+              "rescue_precision": 0.0,
+              "harm_rate": 0.0
+            },
+            {
+              "q_percent": 0.25,
+              "applied_rows": 8,
+              "applied_edit_rate_percent": 0.28551034975017847,
+              "delta_mR_pp": 0.0,
+              "delta_R_pp": 0.0,
+              "sum_positive_utility": 0.0,
+              "sum_negative_utility": 0.0,
+              "positive_utility_capture": 0.0,
+              "rescue_precision": 0.0,
+              "harm_rate": 0.0
+            },
+            {
+              "q_percent": 0.5,
+              "applied_rows": 15,
+              "applied_edit_rate_percent": 0.5353319057815845,
+              "delta_mR_pp": 0.0,
+              "delta_R_pp": 0.0,
+              "sum_positive_utility": 0.0,
+              "sum_negative_utility": 0.0,
+              "positive_utility_capture": 0.0,
+              "rescue_precision": 0.0,
+              "harm_rate": 0.0
+            },
+            {
+              "q_percent": 1.0,
+              "applied_rows": 29,
+              "applied_edit_rate_percent": 1.0349750178443968,
+              "delta_mR_pp": 0.0,
+              "delta_R_pp": 0.0,
+              "sum_positive_utility": 0.0,
+              "sum_negative_utility": 0.0,
+              "positive_utility_capture": 0.0,
+              "rescue_precision": 0.0,
+              "harm_rate": 0.0
+            },
+            {
+              "q_percent": 2.0,
+              "applied_rows": 57,
+              "applied_edit_rate_percent": 2.0342612419700217,
+              "delta_mR_pp": -0.11363636363636576,
+              "delta_R_pp": -0.1436781609195359,
+              "sum_positive_utility": 0.0,
+              "sum_negative_utility": -0.0011363636363636363,
+              "positive_utility_capture": 0.0,
+              "rescue_precision": 0.0,
+              "harm_rate": 0.017543859649122806
+            },
+            {
+              "q_percent": 3.0,
+              "applied_rows": 85,
+              "applied_edit_rate_percent": 3.033547466095646,
+              "delta_mR_pp": -0.13167388167388272,
+              "delta_R_pp": -0.3004179728317624,
+              "sum_positive_utility": 0.0,
+              "sum_negative_utility": -0.0013167388167388168,
+              "positive_utility_capture": 0.0,
+              "rescue_precision": 0.0,
+              "harm_rate": 0.023529411764705882
+            },
+            {
+              "q_percent": 4.0,
+              "applied_rows": 113,
+              "applied_edit_rate_percent": 4.0328336902212705,
+              "delta_mR_pp": -0.25065212565212325,
+              "delta_R_pp": -0.8340797133900568,
+              "sum_positive_utility": 0.0,
+              "sum_negative_utility": -0.0025065212565212563,
+              "positive_utility_capture": 0.0,
+              "rescue_precision": 0.0,
+              "harm_rate": 0.035398230088495575
+            },
+            {
+              "q_percent": 5.0,
+              "applied_rows": 141,
+              "applied_edit_rate_percent": 5.032119914346895,
+              "delta_mR_pp": -0.27590465090465144,
+              "delta_R_pp": -0.9777578743095927,
+              "sum_positive_utility": 0.0,
+              "sum_negative_utility": -0.0027590465090465087,
+              "positive_utility_capture": 0.0,
+              "rescue_precision": 0.0,
+              "harm_rate": 0.03546099290780142
+            }
+          ]
+        }
+      },
+      "hist_gradient": {
+        "select": {
+          "native": {
+            "mR": 0.4897570972089713,
+            "R": 0.4982583774250441
+          },
+          "oracle_gain_pp": 25.475835004575632,
+          "curve": [
+            {
+              "q_percent": 0.1,
+              "applied_rows": 3,
+              "applied_edit_rate_percent": 0.1413760603204524,
+              "delta_mR_pp": -0.7816091954022997,
+              "delta_R_pp": -0.934744268077603,
+              "sum_positive_utility": 0.0,
+              "sum_negative_utility": -0.007816091954022988,
+              "positive_utility_capture": 0.0,
+              "rescue_precision": 0.0,
+              "harm_rate": 1.0
+            },
+            {
+              "q_percent": 0.25,
+              "applied_rows": 6,
+              "applied_edit_rate_percent": 0.2827521206409048,
+              "delta_mR_pp": -0.7816091954022997,
+              "delta_R_pp": -0.934744268077603,
+              "sum_positive_utility": 0.0,
+              "sum_negative_utility": -0.007816091954022988,
+              "positive_utility_capture": 0.0,
+              "rescue_precision": 0.0,
+              "harm_rate": 0.5
+            },
+            {
+              "q_percent": 0.5,
+              "applied_rows": 11,
+              "applied_edit_rate_percent": 0.5183788878416589,
+              "delta_mR_pp": -0.7816091954022997,
+              "delta_R_pp": -0.934744268077603,
+              "sum_positive_utility": 0.0,
+              "sum_negative_utility": -0.007816091954022988,
+              "positive_utility_capture": 0.0,
+              "rescue_precision": 0.0,
+              "harm_rate": 0.2727272727272727
+            },
+            {
+              "q_percent": 1.0,
+              "applied_rows": 22,
+              "applied_edit_rate_percent": 1.0367577756833177,
+              "delta_mR_pp": 0.21839080459770122,
+              "delta_R_pp": -0.49029982363315017,
+              "sum_positive_utility": 0.01,
+              "sum_negative_utility": -0.007816091954022988,
+              "positive_utility_capture": 0.039252884147679294,
+              "rescue_precision": 0.045454545454545456,
+              "harm_rate": 0.13636363636363635
+            },
+            {
+              "q_percent": 2.0,
+              "applied_rows": 43,
+              "applied_edit_rate_percent": 2.0263901979264842,
+              "delta_mR_pp": -0.05038389895961615,
+              "delta_R_pp": -1.1781305114638374,
+              "sum_positive_utility": 0.01,
+              "sum_negative_utility": -0.010503838989596111,
+              "positive_utility_capture": 0.039252884147679294,
+              "rescue_precision": 0.023255813953488372,
+              "harm_rate": 0.11627906976744186
+            },
+            {
+              "q_percent": 3.0,
+              "applied_rows": 64,
+              "applied_edit_rate_percent": 3.016022620169651,
+              "delta_mR_pp": -0.05038389895961615,
+              "delta_R_pp": -1.1781305114638374,
+              "sum_positive_utility": 0.01,
+              "sum_negative_utility": -0.010503838989596111,
+              "positive_utility_capture": 0.039252884147679294,
+              "rescue_precision": 0.015625,
+              "harm_rate": 0.078125
+            },
+            {
+              "q_percent": 4.0,
+              "applied_rows": 85,
+              "applied_edit_rate_percent": 4.005655042412818,
+              "delta_mR_pp": -0.05038389895961615,
+              "delta_R_pp": -1.1781305114638374,
+              "sum_positive_utility": 0.0104,
+              "sum_negative_utility": -0.01090383898959611,
+              "positive_utility_capture": 0.040822999513586464,
+              "rescue_precision": 0.023529411764705882,
+              "harm_rate": 0.07058823529411765
+            },
+            {
+              "q_percent": 5.0,
+              "applied_rows": 107,
+              "applied_edit_rate_percent": 5.042412818096135,
+              "delta_mR_pp": -0.46342737722048777,
+              "delta_R_pp": -1.1781305114638374,
+              "sum_positive_utility": 0.0104,
+              "sum_negative_utility": -0.015034273772204806,
+              "positive_utility_capture": 0.040822999513586464,
+              "rescue_precision": 0.018691588785046728,
+              "harm_rate": 0.06542056074766354
+            }
+          ]
+        },
+        "calib": {
+          "native": {
+            "mR": 0.49946145531038577,
+            "R": 0.4355330722084845
+          },
+          "oracle_gain_pp": 27.327734097453348,
+          "curve": [
+            {
+              "q_percent": 0.1,
+              "applied_rows": 3,
+              "applied_edit_rate_percent": 0.10706638115631692,
+              "delta_mR_pp": 0.0,
+              "delta_R_pp": 0.0,
+              "sum_positive_utility": 0.0,
+              "sum_negative_utility": 0.0,
+              "positive_utility_capture": 0.0,
+              "rescue_precision": 0.0,
+              "harm_rate": 0.0
+            },
+            {
+              "q_percent": 0.25,
+              "applied_rows": 8,
+              "applied_edit_rate_percent": 0.28551034975017847,
+              "delta_mR_pp": 0.0,
+              "delta_R_pp": 0.0,
+              "sum_positive_utility": 0.0,
+              "sum_negative_utility": 0.0,
+              "positive_utility_capture": 0.0,
+              "rescue_precision": 0.0,
+              "harm_rate": 0.0
+            },
+            {
+              "q_percent": 0.5,
+              "applied_rows": 15,
+              "applied_edit_rate_percent": 0.5353319057815845,
+              "delta_mR_pp": 0.0,
+              "delta_R_pp": 0.0,
+              "sum_positive_utility": 0.0,
+              "sum_negative_utility": 0.0,
+              "positive_utility_capture": 0.0,
+              "rescue_precision": 0.0,
+              "harm_rate": 0.0
+            },
+            {
+              "q_percent": 1.0,
+              "applied_rows": 29,
+              "applied_edit_rate_percent": 1.0349750178443968,
+              "delta_mR_pp": 0.0,
+              "delta_R_pp": 0.0,
+              "sum_positive_utility": 0.0,
+              "sum_negative_utility": 0.0,
+              "positive_utility_capture": 0.0,
+              "rescue_precision": 0.0,
+              "harm_rate": 0.0
+            },
+            {
+              "q_percent": 2.0,
+              "applied_rows": 57,
+              "applied_edit_rate_percent": 2.0342612419700217,
+              "delta_mR_pp": -0.17482517482517723,
+              "delta_R_pp": -0.28735632183907733,
+              "sum_positive_utility": 0.0,
+              "sum_negative_utility": -0.0017482517482517483,
+              "positive_utility_capture": 0.0,
+              "rescue_precision": 0.0,
+              "harm_rate": 0.017543859649122806
+            },
+            {
+              "q_percent": 3.0,
+              "applied_rows": 85,
+              "applied_edit_rate_percent": 3.033547466095646,
+              "delta_mR_pp": 1.3403263403263366,
+              "delta_R_pp": -0.3753804915723913,
+              "sum_positive_utility": 0.022727272727272728,
+              "sum_negative_utility": -0.009324009324009324,
+              "positive_utility_capture": 0.08316559523824797,
+              "rescue_precision": 0.011764705882352941,
+              "harm_rate": 0.03529411764705882
+            },
+            {
+              "q_percent": 4.0,
+              "applied_rows": 113,
+              "applied_edit_rate_percent": 4.0328336902212705,
+              "delta_mR_pp": 1.0729466611819616,
+              "delta_R_pp": -0.8351506065149172,
+              "sum_positive_utility": 0.022727272727272728,
+              "sum_negative_utility": -0.011997806115453175,
+              "positive_utility_capture": 0.08316559523824797,
+              "rescue_precision": 0.008849557522123894,
+              "harm_rate": 0.04424778761061947
+            },
+            {
+              "q_percent": 5.0,
+              "applied_rows": 141,
+              "applied_edit_rate_percent": 5.032119914346895,
+              "delta_mR_pp": 1.2127133116437983,
+              "delta_R_pp": -0.7366284390272315,
+              "sum_positive_utility": 0.024793388429752067,
+              "sum_negative_utility": -0.012666255313314136,
+              "positive_utility_capture": 0.0907261038962705,
+              "rescue_precision": 0.02127659574468085,
+              "harm_rate": 0.0425531914893617
+            }
+          ]
+        }
+      },
+      "dimensions": 462
+    },
+    "e2": {
+      "ridge": {
+        "select": {
+          "native": {
+            "mR": 0.4897570972089713,
+            "R": 0.4982583774250441
+          },
+          "oracle_gain_pp": 25.475835004575632,
+          "curve": [
+            {
+              "q_percent": 0.1,
+              "applied_rows": 3,
+              "applied_edit_rate_percent": 0.1413760603204524,
+              "delta_mR_pp": -0.2222222222222292,
+              "delta_R_pp": -0.15873015873016372,
+              "sum_positive_utility": 0.0,
+              "sum_negative_utility": -0.0022222222222222222,
+              "positive_utility_capture": 0.0,
+              "rescue_precision": 0.0,
+              "harm_rate": 0.3333333333333333
+            },
+            {
+              "q_percent": 0.25,
+              "applied_rows": 6,
+              "applied_edit_rate_percent": 0.2827521206409048,
+              "delta_mR_pp": -0.2222222222222292,
+              "delta_R_pp": -0.15873015873016372,
+              "sum_positive_utility": 0.0,
+              "sum_negative_utility": -0.0022222222222222222,
+              "positive_utility_capture": 0.0,
+              "rescue_precision": 0.0,
+              "harm_rate": 0.16666666666666666
+            },
+            {
+              "q_percent": 0.5,
+              "applied_rows": 11,
+              "applied_edit_rate_percent": 0.5183788878416589,
+              "delta_mR_pp": -0.3141762452107344,
+              "delta_R_pp": -0.6525573192239842,
+              "sum_positive_utility": 0.0,
+              "sum_negative_utility": -0.0031417624521072793,
+              "positive_utility_capture": 0.0,
+              "rescue_precision": 0.0,
+              "harm_rate": 0.2727272727272727
+            },
+            {
+              "q_percent": 1.0,
+              "applied_rows": 22,
+              "applied_edit_rate_percent": 1.0367577756833177,
+              "delta_mR_pp": -0.360153256704987,
+              "delta_R_pp": -0.9303350970017665,
+              "sum_positive_utility": 0.0,
+              "sum_negative_utility": -0.003601532567049808,
+              "positive_utility_capture": 0.0,
+              "rescue_precision": 0.0,
+              "harm_rate": 0.18181818181818182
+            },
+            {
+              "q_percent": 2.0,
+              "applied_rows": 43,
+              "applied_edit_rate_percent": 2.0263901979264842,
+              "delta_mR_pp": -0.4746959853406618,
+              "delta_R_pp": -1.470017636684301,
+              "sum_positive_utility": 0.0,
+              "sum_negative_utility": -0.0047469598534066295,
+              "positive_utility_capture": 0.0,
+              "rescue_precision": 0.0,
+              "harm_rate": 0.13953488372093023
+            },
+            {
+              "q_percent": 3.0,
+              "applied_rows": 64,
+              "applied_edit_rate_percent": 3.016022620169651,
+              "delta_mR_pp": 0.6122605363984623,
+              "delta_R_pp": -0.7786596119929434,
+              "sum_positive_utility": 0.010869565217391304,
+              "sum_negative_utility": -0.0047469598534066295,
+              "positive_utility_capture": 0.04266617842139053,
+              "rescue_precision": 0.03125,
+              "harm_rate": 0.09375
+            },
+            {
+              "q_percent": 4.0,
+              "applied_rows": 85,
+              "applied_edit_rate_percent": 4.005655042412818,
+              "delta_mR_pp": 0.6002665333999568,
+              "delta_R_pp": -0.704585537918867,
+              "sum_positive_utility": 0.011329335332333833,
+              "sum_negative_utility": -0.005326669998334166,
+              "positive_utility_capture": 0.04447090872703097,
+              "rescue_precision": 0.03529411764705882,
+              "harm_rate": 0.08235294117647059
+            },
+            {
+              "q_percent": 5.0,
+              "applied_rows": 107,
+              "applied_edit_rate_percent": 5.042412818096135,
+              "delta_mR_pp": -0.9231217724471108,
+              "delta_R_pp": -1.7178932178932127,
+              "sum_positive_utility": 0.011329335332333833,
+              "sum_negative_utility": -0.02056055305680493,
+              "positive_utility_capture": 0.04447090872703097,
+              "rescue_precision": 0.028037383177570093,
+              "harm_rate": 0.12149532710280374
+            }
+          ]
+        },
+        "calib": {
+          "native": {
+            "mR": 0.49946145531038577,
+            "R": 0.4355330722084845
+          },
+          "oracle_gain_pp": 27.327734097453348,
+          "curve": [
+            {
+              "q_percent": 0.1,
+              "applied_rows": 3,
+              "applied_edit_rate_percent": 0.10706638115631692,
+              "delta_mR_pp": 0.0,
+              "delta_R_pp": 0.0,
+              "sum_positive_utility": 0.0,
+              "sum_negative_utility": 0.0,
+              "positive_utility_capture": 0.0,
+              "rescue_precision": 0.0,
+              "harm_rate": 0.0
+            },
+            {
+              "q_percent": 0.25,
+              "applied_rows": 8,
+              "applied_edit_rate_percent": 0.28551034975017847,
+              "delta_mR_pp": 0.0,
+              "delta_R_pp": 0.0,
+              "sum_positive_utility": 0.0,
+              "sum_negative_utility": 0.0,
+              "positive_utility_capture": 0.0,
+              "rescue_precision": 0.0,
+              "harm_rate": 0.0
+            },
+            {
+              "q_percent": 0.5,
+              "applied_rows": 15,
+              "applied_edit_rate_percent": 0.5353319057815845,
+              "delta_mR_pp": 0.0,
+              "delta_R_pp": 0.0,
+              "sum_positive_utility": 0.0,
+              "sum_negative_utility": 0.0,
+              "positive_utility_capture": 0.0,
+              "rescue_precision": 0.0,
+              "harm_rate": 0.0
+            },
+            {
+              "q_percent": 1.0,
+              "applied_rows": 29,
+              "applied_edit_rate_percent": 1.0349750178443968,
+              "delta_mR_pp": 0.0,
+              "delta_R_pp": 0.0,
+              "sum_positive_utility": 0.0,
+              "sum_negative_utility": 0.0,
+              "positive_utility_capture": 0.0,
+              "rescue_precision": 0.0,
+              "harm_rate": 0.0
+            },
+            {
+              "q_percent": 2.0,
+              "applied_rows": 57,
+              "applied_edit_rate_percent": 2.0342612419700217,
+              "delta_mR_pp": -0.11363636363636576,
+              "delta_R_pp": -0.1436781609195359,
+              "sum_positive_utility": 0.0,
+              "sum_negative_utility": -0.0011363636363636363,
+              "positive_utility_capture": 0.0,
+              "rescue_precision": 0.0,
+              "harm_rate": 0.017543859649122806
+            },
+            {
+              "q_percent": 3.0,
+              "applied_rows": 85,
+              "applied_edit_rate_percent": 3.033547466095646,
+              "delta_mR_pp": -0.21908646908646578,
+              "delta_R_pp": -0.5877742946708397,
+              "sum_positive_utility": 0.0,
+              "sum_negative_utility": -0.002190864690864691,
+              "positive_utility_capture": 0.0,
+              "rescue_precision": 0.0,
+              "harm_rate": 0.03529411764705882
+            },
+            {
+              "q_percent": 4.0,
+              "applied_rows": 113,
+              "applied_edit_rate_percent": 4.0328336902212705,
+              "delta_mR_pp": -0.25065212565212325,
+              "delta_R_pp": -0.8340797133900568,
+              "sum_positive_utility": 0.0,
+              "sum_negative_utility": -0.0025065212565212563,
+              "positive_utility_capture": 0.0,
+              "rescue_precision": 0.0,
+              "harm_rate": 0.035398230088495575
+            },
+            {
+              "q_percent": 5.0,
+              "applied_rows": 141,
+              "applied_edit_rate_percent": 5.032119914346895,
+              "delta_mR_pp": -0.25065212565212325,
+              "delta_R_pp": -0.8340797133900568,
+              "sum_positive_utility": 0.0,
+              "sum_negative_utility": -0.0025065212565212563,
+              "positive_utility_capture": 0.0,
+              "rescue_precision": 0.0,
+              "harm_rate": 0.028368794326241134
+            }
+          ]
+        }
+      },
+      "hist_gradient": {
+        "select": {
+          "native": {
+            "mR": 0.4897570972089713,
+            "R": 0.4982583774250441
+          },
+          "oracle_gain_pp": 25.475835004575632,
+          "curve": [
+            {
+              "q_percent": 0.1,
+              "applied_rows": 3,
+              "applied_edit_rate_percent": 0.1413760603204524,
+              "delta_mR_pp": -0.11494252873563426,
+              "delta_R_pp": -0.6172839506172867,
+              "sum_positive_utility": 0.0,
+              "sum_negative_utility": -0.0011494252873563218,
+              "positive_utility_capture": 0.0,
+              "rescue_precision": 0.0,
+              "harm_rate": 0.6666666666666666
+            },
+            {
+              "q_percent": 0.25,
+              "applied_rows": 6,
+              "applied_edit_rate_percent": 0.2827521206409048,
+              "delta_mR_pp": -0.7816091954022997,
+              "delta_R_pp": -0.934744268077603,
+              "sum_positive_utility": 0.0,
+              "sum_negative_utility": -0.007816091954022988,
+              "positive_utility_capture": 0.0,
+              "rescue_precision": 0.0,
+              "harm_rate": 0.5
+            },
+            {
+              "q_percent": 0.5,
+              "applied_rows": 11,
+              "applied_edit_rate_percent": 0.5183788878416589,
+              "delta_mR_pp": -0.7816091954022997,
+              "delta_R_pp": -0.934744268077603,
+              "sum_positive_utility": 0.0,
+              "sum_negative_utility": -0.007816091954022988,
+              "positive_utility_capture": 0.0,
+              "rescue_precision": 0.0,
+              "harm_rate": 0.2727272727272727
+            },
+            {
+              "q_percent": 1.0,
+              "applied_rows": 22,
+              "applied_edit_rate_percent": 1.0367577756833177,
+              "delta_mR_pp": -1.1452455590386657,
+              "delta_R_pp": -1.305114638447974,
+              "sum_positive_utility": 0.0,
+              "sum_negative_utility": -0.011452455590386625,
+              "positive_utility_capture": 0.0,
+              "rescue_precision": 0.0,
+              "harm_rate": 0.18181818181818182
+            },
+            {
+              "q_percent": 2.0,
+              "applied_rows": 43,
+              "applied_edit_rate_percent": 2.0263901979264842,
+              "delta_mR_pp": -1.2322020807778,
+              "delta_R_pp": -1.6225749559082903,
+              "sum_positive_utility": 0.0,
+              "sum_negative_utility": -0.012322020807777927,
+              "positive_utility_capture": 0.0,
+              "rescue_precision": 0.0,
+              "harm_rate": 0.11627906976744186
+            },
+            {
+              "q_percent": 3.0,
+              "applied_rows": 64,
+              "applied_edit_rate_percent": 3.016022620169651,
+              "delta_mR_pp": -1.2322020807778,
+              "delta_R_pp": -1.6225749559082903,
+              "sum_positive_utility": 0.0,
+              "sum_negative_utility": -0.012322020807777927,
+              "positive_utility_capture": 0.0,
+              "rescue_precision": 0.0,
+              "harm_rate": 0.078125
+            },
+            {
+              "q_percent": 4.0,
+              "applied_rows": 85,
+              "applied_edit_rate_percent": 4.005655042412818,
+              "delta_mR_pp": -2.3988687474444603,
+              "delta_R_pp": -2.548500881834209,
+              "sum_positive_utility": 0.0004,
+              "sum_negative_utility": -0.024388687474444594,
+              "positive_utility_capture": 0.0015701153659071717,
+              "rescue_precision": 0.011764705882352941,
+              "harm_rate": 0.10588235294117647
+            },
+            {
+              "q_percent": 5.0,
+              "applied_rows": 107,
+              "applied_edit_rate_percent": 5.042412818096135,
+              "delta_mR_pp": -1.883717232292953,
+              "delta_R_pp": -2.4295334295334206,
+              "sum_positive_utility": 0.014036363636363637,
+              "sum_negative_utility": -0.03287353595929308,
+              "positive_utility_capture": 0.05509677556728803,
+              "rescue_precision": 0.028037383177570093,
+              "harm_rate": 0.102803738317757
+            }
+          ]
+        },
+        "calib": {
+          "native": {
+            "mR": 0.49946145531038577,
+            "R": 0.4355330722084845
+          },
+          "oracle_gain_pp": 27.327734097453348,
+          "curve": [
+            {
+              "q_percent": 0.1,
+              "applied_rows": 3,
+              "applied_edit_rate_percent": 0.10706638115631692,
+              "delta_mR_pp": 0.0,
+              "delta_R_pp": 0.0,
+              "sum_positive_utility": 0.0,
+              "sum_negative_utility": 0.0,
+              "positive_utility_capture": 0.0,
+              "rescue_precision": 0.0,
+              "harm_rate": 0.0
+            },
+            {
+              "q_percent": 0.25,
+              "applied_rows": 8,
+              "applied_edit_rate_percent": 0.28551034975017847,
+              "delta_mR_pp": 0.0,
+              "delta_R_pp": 0.0,
+              "sum_positive_utility": 0.0,
+              "sum_negative_utility": 0.0,
+              "positive_utility_capture": 0.0,
+              "rescue_precision": 0.0,
+              "harm_rate": 0.0
+            },
+            {
+              "q_percent": 0.5,
+              "applied_rows": 15,
+              "applied_edit_rate_percent": 0.5353319057815845,
+              "delta_mR_pp": 0.0,
+              "delta_R_pp": 0.0,
+              "sum_positive_utility": 0.0,
+              "sum_negative_utility": 0.0,
+              "positive_utility_capture": 0.0,
+              "rescue_precision": 0.0,
+              "harm_rate": 0.0
+            },
+            {
+              "q_percent": 1.0,
+              "applied_rows": 29,
+              "applied_edit_rate_percent": 1.0349750178443968,
+              "delta_mR_pp": 0.0,
+              "delta_R_pp": 0.0,
+              "sum_positive_utility": 0.0,
+              "sum_negative_utility": 0.0,
+              "positive_utility_capture": 0.0,
+              "rescue_precision": 0.0,
+              "harm_rate": 0.0
+            },
+            {
+              "q_percent": 2.0,
+              "applied_rows": 57,
+              "applied_edit_rate_percent": 2.0342612419700217,
+              "delta_mR_pp": -0.17482517482517723,
+              "delta_R_pp": -0.28735632183907733,
+              "sum_positive_utility": 0.0,
+              "sum_negative_utility": -0.0017482517482517483,
+              "positive_utility_capture": 0.0,
+              "rescue_precision": 0.0,
+              "harm_rate": 0.017543859649122806
+            },
+            {
+              "q_percent": 3.0,
+              "applied_rows": 85,
+              "applied_edit_rate_percent": 3.033547466095646,
+              "delta_mR_pp": 0.23839796567070026,
+              "delta_R_pp": 0.5747126436781658,
+              "sum_positive_utility": 0.004132231404958678,
+              "sum_negative_utility": -0.0017482517482517483,
+              "positive_utility_capture": 0.015121017316045085,
+              "rescue_precision": 0.023529411764705882,
+              "harm_rate": 0.011764705882352941
+            },
+            {
+              "q_percent": 4.0,
+              "applied_rows": 113,
+              "applied_edit_rate_percent": 4.0328336902212705,
+              "delta_mR_pp": 0.23839796567070026,
+              "delta_R_pp": 0.5747126436781658,
+              "sum_positive_utility": 0.006026170798898072,
+              "sum_negative_utility": -0.003642191142191142,
+              "positive_utility_capture": 0.022051483585899083,
+              "rescue_precision": 0.02654867256637168,
+              "harm_rate": 0.017699115044247787
+            },
+            {
+              "q_percent": 5.0,
+              "applied_rows": 141,
+              "applied_edit_rate_percent": 5.032119914346895,
+              "delta_mR_pp": 2.511125238397971,
+              "delta_R_pp": 0.7183908045977072,
+              "sum_positive_utility": 0.028753443526170798,
+              "sum_negative_utility": -0.003642191142191142,
+              "positive_utility_capture": 0.10521707882414703,
+              "rescue_precision": 0.028368794326241134,
+              "harm_rate": 0.014184397163120567
+            }
+          ]
+        }
+      },
+      "dimensions": 472
+    }
+  },
+  "status": "completed"
+}

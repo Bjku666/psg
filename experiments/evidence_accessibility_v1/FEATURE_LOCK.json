@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "name": "evidence_accessibility_v1",
+  "status": "registered",
+  "hypothesis": "recoverable proposal utility is present but inaccessible to the compact carrier",
+  "support": "fixed p2 concrete native-to-candidate proposals",
+  "teacher": "exact insertion/removal delta_mR and transition labels",
+  "feature_sets": {
+    "e0": "score/statistics only",
+    "e1": "e0 + frozen 384-D pair_features",
+    "e2": "e1 + endpoint class and normalized box geometry"
+  },
+  "models": ["ridge", "hist_gradient"],
+  "coverages_percent": [0.1, 0.25, 0.5, 1, 2, 3, 4, 5],
+  "gates": {
+    "select_delta_mR_pp": ">0",
+    "calib_delta_mR_pp": ">0",
+    "select_positive_utility_capture": ">=0.20",
+    "calib_positive_utility_capture": ">=0.20",
+    "delta_R_pp": ">=-0.5",
+    "edit_rate_percent": "<=5",
+    "e1_or_e2_beats_e0": true
+  },
+  "forbidden": ["transformer", "visual-token-training", "dev-tuning", "test-tuning", "new-candidate-support"]
+}
