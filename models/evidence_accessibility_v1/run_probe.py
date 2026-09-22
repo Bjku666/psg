@@ -197,10 +197,18 @@ def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--carrier", required=True, type=Path)
     ap.add_argument("--raw-predictions", required=True, type=Path)
+    ap.add_argument("--visual-predictions", type=Path)
     ap.add_argument("--output", required=True, type=Path)
     args = ap.parse_args()
     document = pickle.loads(args.carrier.read_bytes())
     raw = pickle.loads(args.raw_predictions.read_bytes())
+    if args.visual_predictions:
+        visual = pickle.loads(args.visual_predictions.read_bytes())
+        visual_by_id = {str(item["img_id"]): item for item in visual}
+        for item in raw:
+            extra = visual_by_id[str(item["img_id"])]
+            for key in ("subject_features", "object_features", "union_features"):
+                item[key] = extra[key]
     records = compact_records(document, 50)
     raw_by_id = {str(item["img_id"]): item for item in raw}
     partitions = split_records(records)
@@ -215,9 +223,22 @@ def main() -> None:
               "records": {key: len(value) for key, value in partitions.items()},
               "rows": {key: len(value) for key, value in rows_by.items()},
               "chooser": chooser_meta, "feature_sets": {}, "status": "running"}
-    for level in ("e0", "e1", "e2"):
+    levels = ("e0", "e1", "e2")
+    if args.visual_predictions:
+        levels = levels + ("e3_visual",)
+    for level in levels:
         result["feature_sets"][level] = {}
-        x_by = {key: _feature_rows(rows_by[key], partitions[key], raw_by_id, level) for key in partitions}
+        if level == "e3_visual":
+            x_by = {}
+            for key in partitions:
+                feats = []
+                for row in rows_by[key]:
+                    raw_item = raw_by_id[str(partitions[key][int(row["image_index"])]["image_id"])]
+                    rid = int(row["row_id"])
+                    feats.append(np.concatenate([raw_item["subject_features"][rid], raw_item["object_features"][rid], raw_item["union_features"][rid]]))
+                x_by[key] = np.asarray(feats, dtype=np.float32)
+        else:
+            x_by = {key: _feature_rows(rows_by[key], partitions[key], raw_by_id, level) for key in partitions}
         for kind in ("ridge", "hist_gradient"):
             train_targets = proposal_targets(train_rows, slots["train"])
             y = np.asarray(train_targets["utility"], dtype=np.float64) * 100000.0
