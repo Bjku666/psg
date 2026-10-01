@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "name": "reference_ambiguity_audit_v1",
+  "status": "registered_cpu_only",
+  "source": "/data1/liuhaoran/psg/datasets/psg.json",
+  "collision_groups": 241,
+  "gates": {
+    "A0_pixel_identity": "hash all duplicate image files; unavailable is not pass",
+    "A1_cross_split_leakage": "report any same physical file across logical split",
+    "A2_entity_mapping": "class-compatible one-to-one panoptic IoU > 0.5",
+    "A3_relation_difference": "canonical triple intersection/union and symmetric delta",
+    "A4_action_sign_stability": "u_A/u_B signs from immutable action artifact"
+  },
+  "kill": {"sign_instability": "<2% after valid mapping"},
+  "promote": {"sign_instability": ">=10%", "robust_oracle_delta_mR_pp": ">=5"},
+  "forbidden": ["row_deletion", "silent_dedup", "gpu_method_training_before_audit"]
+}

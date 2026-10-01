@@ -1,0 +1,10256 @@
+{
+  "schema_version": 1,
+  "name": "reference_ambiguity_audit_v1",
+  "status": "cpu_audit_complete",
+  "dataset_sha256": "d4a8c6df10198fa2a22f56d4c2039aa2b20bdc002db5c0be8ee34a36a06817c1",
+  "physical_collision_groups": 241,
+  "A0_pixel_identity": {
+    "same_hash_groups": 241,
+    "different_or_unavailable_groups": 0,
+    "pass": true
+  },
+  "A1_cross_split": {
+    "leakage_groups": 0,
+    "leakage": [],
+    "pass": true
+  },
+  "A2_entity_mapping_bbox_proxy": {
+    "fully_mapped_groups": 241,
+    "groups": 241,
+    "coverage": 1.0,
+    "panoptic_mask_matching": "unavailable"
+  },
+  "A3_relation_difference": {
+    "mapped_relation_intersection": 522,
+    "mapped_relation_union": 2646,
+    "symmetric_delta": 2124,
+    "jaccard": 0.19727891156462585
+  },
+  "A4_action_sign_stability": {
+    "status": "unavailable_carrier_artifact_missing",
+    "carrier": null
+  },
+  "decision": "hold_reference_robust_promotion_until_panoptic_mapping_and_action_sign_audit",
+  "groups": [
+    {
+      "file_name": "train2017/000000006263.jpg",
+      "image_ids": [
+        "2351977",
+        "61559"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 6,
+      "entity_counts": [
+        6,
+        6
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        5,
+        8
+      ],
+      "relation_intersection": 3,
+      "relation_union": 10,
+      "relation_symmetric_delta": 7
+    },
+    {
+      "file_name": "train2017/000000017751.jpg",
+      "image_ids": [
+        "1591963",
+        "2386604"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 11,
+      "entity_counts": [
+        11,
+        11
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        9,
+        3
+      ],
+      "relation_intersection": 1,
+      "relation_union": 11,
+      "relation_symmetric_delta": 10
+    },
+    {
+      "file_name": "train2017/000000022008.jpg",
+      "image_ids": [
+        "2399363",
+        "285738"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 28,
+      "entity_counts": [
+        28,
+        28
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        9,
+        7
+      ],
+      "relation_intersection": 4,
+      "relation_union": 12,
+      "relation_symmetric_delta": 8
+    },
+    {
+      "file_name": "train2017/000000025105.jpg",
+      "image_ids": [
+        "1159529",
+        "2315379"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 16,
+      "entity_counts": [
+        16,
+        16
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        7,
+        5
+      ],
+      "relation_intersection": 0,
+      "relation_union": 12,
+      "relation_symmetric_delta": 12
+    },
+    {
+      "file_name": "train2017/000000029189.jpg",
+      "image_ids": [
+        "1592176",
+        "2408366"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 22,
+      "entity_counts": [
+        22,
+        22
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        6,
+        7
+      ],
+      "relation_intersection": 3,
+      "relation_union": 10,
+      "relation_symmetric_delta": 7
+    },
+    {
+      "file_name": "train2017/000000030187.jpg",
+      "image_ids": [
+        "2413718",
+        "285709"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 3,
+      "entity_counts": [
+        3,
+        3
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        0,
+        2
+      ],
+      "relation_intersection": 0,
+      "relation_union": 2,
+      "relation_symmetric_delta": 2
+    },
+    {
+      "file_name": "train2017/000000030357.jpg",
+      "image_ids": [
+        "2417735",
+        "285834"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 8,
+      "entity_counts": [
+        8,
+        8
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        4,
+        9
+      ],
+      "relation_intersection": 4,
+      "relation_union": 9,
+      "relation_symmetric_delta": 5
+    },
+    {
+      "file_name": "train2017/000000031235.jpg",
+      "image_ids": [
+        "1592691",
+        "2376902"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 15,
+      "entity_counts": [
+        15,
+        15
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        7,
+        11
+      ],
+      "relation_intersection": 5,
+      "relation_union": 13,
+      "relation_symmetric_delta": 8
+    },
+    {
+      "file_name": "train2017/000000031273.jpg",
+      "image_ids": [
+        "150453",
+        "2342592"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 25,
+      "entity_counts": [
+        25,
+        25
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        6,
+        6
+      ],
+      "relation_intersection": 4,
+      "relation_union": 8,
+      "relation_symmetric_delta": 4
+    },
+    {
+      "file_name": "train2017/000000037624.jpg",
+      "image_ids": [
+        "1591782",
+        "2400443"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 34,
+      "entity_counts": [
+        34,
+        34
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        10,
+        6
+      ],
+      "relation_intersection": 3,
+      "relation_union": 13,
+      "relation_symmetric_delta": 10
+    },
+    {
+      "file_name": "train2017/000000041728.jpg",
+      "image_ids": [
+        "150522",
+        "2336834"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 17,
+      "entity_counts": [
+        17,
+        17
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        5,
+        4
+      ],
+      "relation_intersection": 2,
+      "relation_union": 7,
+      "relation_symmetric_delta": 5
+    },
+    {
+      "file_name": "train2017/000000042161.jpg",
+      "image_ids": [
+        "2331794",
+        "713602"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 13,
+      "entity_counts": [
+        13,
+        13
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        7,
+        6
+      ],
+      "relation_intersection": 0,
+      "relation_union": 13,
+      "relation_symmetric_delta": 13
+    },
+    {
+      "file_name": "train2017/000000043739.jpg",
+      "image_ids": [
+        "1159776",
+        "2362281"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 13,
+      "entity_counts": [
+        13,
+        13
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        9,
+        13
+      ],
+      "relation_intersection": 3,
+      "relation_union": 19,
+      "relation_symmetric_delta": 16
+    },
+    {
+      "file_name": "train2017/000000044483.jpg",
+      "image_ids": [
+        "1591903",
+        "2368881"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 58,
+      "entity_counts": [
+        58,
+        58
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.5404699738903395,
+        0.5404699738903395
+      ],
+      "relation_counts": [
+        10,
+        5
+      ],
+      "relation_intersection": 0,
+      "relation_union": 15,
+      "relation_symmetric_delta": 15
+    },
+    {
+      "file_name": "train2017/000000044594.jpg",
+      "image_ids": [
+        "1159993",
+        "2378613"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 21,
+      "entity_counts": [
+        21,
+        21
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        8,
+        5
+      ],
+      "relation_intersection": 2,
+      "relation_union": 11,
+      "relation_symmetric_delta": 9
+    },
+    {
+      "file_name": "train2017/000000045148.jpg",
+      "image_ids": [
+        "1159929",
+        "2355074"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 16,
+      "entity_counts": [
+        16,
+        16
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        5,
+        5
+      ],
+      "relation_intersection": 2,
+      "relation_union": 8,
+      "relation_symmetric_delta": 6
+    },
+    {
+      "file_name": "train2017/000000045463.jpg",
+      "image_ids": [
+        "1592607",
+        "2383567"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 12,
+      "entity_counts": [
+        12,
+        12
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        7,
+        6
+      ],
+      "relation_intersection": 5,
+      "relation_union": 8,
+      "relation_symmetric_delta": 3
+    },
+    {
+      "file_name": "train2017/000000047458.jpg",
+      "image_ids": [
+        "2399371",
+        "61519"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 12,
+      "entity_counts": [
+        12,
+        12
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        4,
+        5
+      ],
+      "relation_intersection": 1,
+      "relation_union": 8,
+      "relation_symmetric_delta": 7
+    },
+    {
+      "file_name": "train2017/000000058633.jpg",
+      "image_ids": [
+        "1593194",
+        "2367039"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 17,
+      "entity_counts": [
+        17,
+        17
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.513124783061437,
+        0.513124783061437
+      ],
+      "relation_counts": [
+        5,
+        9
+      ],
+      "relation_intersection": 1,
+      "relation_union": 13,
+      "relation_symmetric_delta": 12
+    },
+    {
+      "file_name": "train2017/000000068287.jpg",
+      "image_ids": [
+        "2343513",
+        "285997"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 22,
+      "entity_counts": [
+        22,
+        22
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        9,
+        9
+      ],
+      "relation_intersection": 1,
+      "relation_union": 17,
+      "relation_symmetric_delta": 16
+    },
+    {
+      "file_name": "train2017/000000070809.jpg",
+      "image_ids": [
+        "1592569",
+        "2386161"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 7,
+      "entity_counts": [
+        7,
+        7
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        4,
+        9
+      ],
+      "relation_intersection": 1,
+      "relation_union": 11,
+      "relation_symmetric_delta": 10
+    },
+    {
+      "file_name": "train2017/000000072397.jpg",
+      "image_ids": [
+        "2396470",
+        "713117"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 24,
+      "entity_counts": [
+        24,
+        24
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        7,
+        8
+      ],
+      "relation_intersection": 3,
+      "relation_union": 12,
+      "relation_symmetric_delta": 9
+    },
+    {
+      "file_name": "train2017/000000074430.jpg",
+      "image_ids": [
+        "1591966",
+        "2379141"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 30,
+      "entity_counts": [
+        30,
+        30
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.6012195121951219,
+        0.6012195121951219
+      ],
+      "relation_counts": [
+        9,
+        7
+      ],
+      "relation_intersection": 2,
+      "relation_union": 14,
+      "relation_symmetric_delta": 12
+    },
+    {
+      "file_name": "train2017/000000075668.jpg",
+      "image_ids": [
+        "1159444",
+        "2365256"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 25,
+      "entity_counts": [
+        25,
+        25
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        9,
+        6
+      ],
+      "relation_intersection": 0,
+      "relation_union": 15,
+      "relation_symmetric_delta": 15
+    },
+    {
+      "file_name": "train2017/000000079106.jpg",
+      "image_ids": [
+        "2380356",
+        "713366"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 11,
+      "entity_counts": [
+        11,
+        11
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        7,
+        6
+      ],
+      "relation_intersection": 1,
+      "relation_union": 12,
+      "relation_symmetric_delta": 11
+    },
+    {
+      "file_name": "train2017/000000081768.jpg",
+      "image_ids": [
+        "2329449",
+        "498265"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 25,
+      "entity_counts": [
+        25,
+        25
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        4,
+        7
+      ],
+      "relation_intersection": 0,
+      "relation_union": 11,
+      "relation_symmetric_delta": 11
+    },
+    {
+      "file_name": "train2017/000000086239.jpg",
+      "image_ids": [
+        "1593104",
+        "2387368"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 8,
+      "entity_counts": [
+        8,
+        8
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        5,
+        4
+      ],
+      "relation_intersection": 3,
+      "relation_union": 6,
+      "relation_symmetric_delta": 3
+    },
+    {
+      "file_name": "train2017/000000089238.jpg",
+      "image_ids": [
+        "2360935",
+        "713896"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 15,
+      "entity_counts": [
+        15,
+        15
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        8,
+        4
+      ],
+      "relation_intersection": 2,
+      "relation_union": 10,
+      "relation_symmetric_delta": 8
+    },
+    {
+      "file_name": "train2017/000000090801.jpg",
+      "image_ids": [
+        "2323091",
+        "713779"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 17,
+      "entity_counts": [
+        17,
+        17
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        5,
+        12
+      ],
+      "relation_intersection": 2,
+      "relation_union": 15,
+      "relation_symmetric_delta": 13
+    },
+    {
+      "file_name": "train2017/000000093329.jpg",
+      "image_ids": [
+        "2408327",
+        "713191"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 23,
+      "entity_counts": [
+        23,
+        23
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        9,
+        8
+      ],
+      "relation_intersection": 3,
+      "relation_union": 13,
+      "relation_symmetric_delta": 10
+    },
+    {
+      "file_name": "train2017/000000094223.jpg",
+      "image_ids": [
+        "2325701",
+        "713829"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 12,
+      "entity_counts": [
+        12,
+        12
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        6,
+        3
+      ],
+      "relation_intersection": 3,
+      "relation_union": 6,
+      "relation_symmetric_delta": 3
+    },
+    {
+      "file_name": "train2017/000000097660.jpg",
+      "image_ids": [
+        "1591813",
+        "2320496"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 43,
+      "entity_counts": [
+        43,
+        43
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.6376518218623481,
+        0.6376518218623481
+      ],
+      "relation_counts": [
+        9,
+        6
+      ],
+      "relation_intersection": 1,
+      "relation_union": 14,
+      "relation_symmetric_delta": 13
+    },
+    {
+      "file_name": "train2017/000000097722.jpg",
+      "image_ids": [
+        "2317628",
+        "713456"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 20,
+      "entity_counts": [
+        20,
+        20
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        12,
+        6
+      ],
+      "relation_intersection": 1,
+      "relation_union": 17,
+      "relation_symmetric_delta": 16
+    },
+    {
+      "file_name": "train2017/000000099681.jpg",
+      "image_ids": [
+        "1160149",
+        "2399796"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 29,
+      "entity_counts": [
+        29,
+        29
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.5824175824175825,
+        0.5824175824175825,
+        0.5418741511996379,
+        0.5418741511996379,
+        0.5328596802841918,
+        0.5328596802841918
+      ],
+      "relation_counts": [
+        8,
+        5
+      ],
+      "relation_intersection": 0,
+      "relation_union": 13,
+      "relation_symmetric_delta": 13
+    },
+    {
+      "file_name": "train2017/000000100711.jpg",
+      "image_ids": [
+        "2408655",
+        "713071"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 15,
+      "entity_counts": [
+        15,
+        15
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        6,
+        10
+      ],
+      "relation_intersection": 4,
+      "relation_union": 12,
+      "relation_symmetric_delta": 8
+    },
+    {
+      "file_name": "train2017/000000101140.jpg",
+      "image_ids": [
+        "1592126",
+        "2344500"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 14,
+      "entity_counts": [
+        14,
+        14
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        11,
+        8
+      ],
+      "relation_intersection": 6,
+      "relation_union": 13,
+      "relation_symmetric_delta": 7
+    },
+    {
+      "file_name": "train2017/000000105349.jpg",
+      "image_ids": [
+        "1592605",
+        "2383016"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 10,
+      "entity_counts": [
+        10,
+        10
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        4,
+        6
+      ],
+      "relation_intersection": 3,
+      "relation_union": 7,
+      "relation_symmetric_delta": 4
+    },
+    {
+      "file_name": "train2017/000000112040.jpg",
+      "image_ids": [
+        "2340703",
+        "286037"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 7,
+      "entity_counts": [
+        7,
+        7
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        6,
+        9
+      ],
+      "relation_intersection": 5,
+      "relation_union": 10,
+      "relation_symmetric_delta": 5
+    },
+    {
+      "file_name": "train2017/000000114703.jpg",
+      "image_ids": [
+        "2338277",
+        "713582"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 6,
+      "entity_counts": [
+        6,
+        6
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        6,
+        4
+      ],
+      "relation_intersection": 1,
+      "relation_union": 9,
+      "relation_symmetric_delta": 8
+    },
+    {
+      "file_name": "train2017/000000118964.jpg",
+      "image_ids": [
+        "1592469",
+        "2399395"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 5,
+      "entity_counts": [
+        5,
+        5
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        4,
+        4
+      ],
+      "relation_intersection": 4,
+      "relation_union": 4,
+      "relation_symmetric_delta": 0
+    },
+    {
+      "file_name": "train2017/000000120721.jpg",
+      "image_ids": [
+        "2413442",
+        "285818"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 5,
+      "entity_counts": [
+        5,
+        5
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        3,
+        4
+      ],
+      "relation_intersection": 2,
+      "relation_union": 5,
+      "relation_symmetric_delta": 3
+    },
+    {
+      "file_name": "train2017/000000128377.jpg",
+      "image_ids": [
+        "2322447",
+        "713708"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 39,
+      "entity_counts": [
+        39,
+        39
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        11,
+        8
+      ],
+      "relation_intersection": 2,
+      "relation_union": 17,
+      "relation_symmetric_delta": 15
+    },
+    {
+      "file_name": "train2017/000000132908.jpg",
+      "image_ids": [
+        "2358033",
+        "497918"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 7,
+      "entity_counts": [
+        7,
+        7
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        7,
+        8
+      ],
+      "relation_intersection": 4,
+      "relation_union": 11,
+      "relation_symmetric_delta": 7
+    },
+    {
+      "file_name": "train2017/000000133166.jpg",
+      "image_ids": [
+        "2365713",
+        "285920"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 30,
+      "entity_counts": [
+        30,
+        30
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        17,
+        13
+      ],
+      "relation_intersection": 5,
+      "relation_union": 24,
+      "relation_symmetric_delta": 19
+    },
+    {
+      "file_name": "train2017/000000136565.jpg",
+      "image_ids": [
+        "1159687",
+        "2372590"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 21,
+      "entity_counts": [
+        21,
+        21
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        6,
+        5
+      ],
+      "relation_intersection": 2,
+      "relation_union": 9,
+      "relation_symmetric_delta": 7
+    },
+    {
+      "file_name": "train2017/000000139781.jpg",
+      "image_ids": [
+        "1592608",
+        "2382515"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 10,
+      "entity_counts": [
+        10,
+        10
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        7,
+        5
+      ],
+      "relation_intersection": 1,
+      "relation_union": 11,
+      "relation_symmetric_delta": 10
+    },
+    {
+      "file_name": "train2017/000000140244.jpg",
+      "image_ids": [
+        "2389777",
+        "61571"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 8,
+      "entity_counts": [
+        8,
+        8
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        6,
+        5
+      ],
+      "relation_intersection": 2,
+      "relation_union": 9,
+      "relation_symmetric_delta": 7
+    },
+    {
+      "file_name": "train2017/000000140500.jpg",
+      "image_ids": [
+        "2361536",
+        "61543"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 6,
+      "entity_counts": [
+        6,
+        6
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        14,
+        7
+      ],
+      "relation_intersection": 4,
+      "relation_union": 17,
+      "relation_symmetric_delta": 13
+    },
+    {
+      "file_name": "train2017/000000141382.jpg",
+      "image_ids": [
+        "1592524",
+        "2388067"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 25,
+      "entity_counts": [
+        25,
+        25
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        6,
+        11
+      ],
+      "relation_intersection": 4,
+      "relation_union": 13,
+      "relation_symmetric_delta": 9
+    },
+    {
+      "file_name": "train2017/000000144907.jpg",
+      "image_ids": [
+        "2324214",
+        "713066"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 19,
+      "entity_counts": [
+        19,
+        19
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        8,
+        13
+      ],
+      "relation_intersection": 0,
+      "relation_union": 21,
+      "relation_symmetric_delta": 21
+    },
+    {
+      "file_name": "train2017/000000145426.jpg",
+      "image_ids": [
+        "2330908",
+        "285928"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 5,
+      "entity_counts": [
+        5,
+        5
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        2,
+        2
+      ],
+      "relation_intersection": 2,
+      "relation_union": 2,
+      "relation_symmetric_delta": 0
+    },
+    {
+      "file_name": "train2017/000000148909.jpg",
+      "image_ids": [
+        "1592978",
+        "2399680"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 7,
+      "entity_counts": [
+        7,
+        7
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        3,
+        2
+      ],
+      "relation_intersection": 2,
+      "relation_union": 3,
+      "relation_symmetric_delta": 1
+    },
+    {
+      "file_name": "train2017/000000159465.jpg",
+      "image_ids": [
+        "2391499",
+        "498015"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 9,
+      "entity_counts": [
+        9,
+        9
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        5,
+        13
+      ],
+      "relation_intersection": 0,
+      "relation_union": 18,
+      "relation_symmetric_delta": 18
+    },
+    {
+      "file_name": "train2017/000000162530.jpg",
+      "image_ids": [
+        "2384114",
+        "285878"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 10,
+      "entity_counts": [
+        10,
+        10
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        11,
+        3
+      ],
+      "relation_intersection": 1,
+      "relation_union": 13,
+      "relation_symmetric_delta": 12
+    },
+    {
+      "file_name": "train2017/000000166386.jpg",
+      "image_ids": [
+        "2382237",
+        "713595"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 10,
+      "entity_counts": [
+        10,
+        10
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        9,
+        5
+      ],
+      "relation_intersection": 2,
+      "relation_union": 12,
+      "relation_symmetric_delta": 10
+    },
+    {
+      "file_name": "train2017/000000166840.jpg",
+      "image_ids": [
+        "2414219",
+        "713130"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 11,
+      "entity_counts": [
+        11,
+        11
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        4,
+        4
+      ],
+      "relation_intersection": 0,
+      "relation_union": 8,
+      "relation_symmetric_delta": 8
+    },
+    {
+      "file_name": "train2017/000000167397.jpg",
+      "image_ids": [
+        "1159637",
+        "2396738"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 30,
+      "entity_counts": [
+        30,
+        30
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        6,
+        7
+      ],
+      "relation_intersection": 3,
+      "relation_union": 10,
+      "relation_symmetric_delta": 7
+    },
+    {
+      "file_name": "train2017/000000167713.jpg",
+      "image_ids": [
+        "150262",
+        "2412825"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 11,
+      "entity_counts": [
+        11,
+        11
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        7,
+        5
+      ],
+      "relation_intersection": 4,
+      "relation_union": 8,
+      "relation_symmetric_delta": 4
+    },
+    {
+      "file_name": "train2017/000000175126.jpg",
+      "image_ids": [
+        "2342580",
+        "497925"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 7,
+      "entity_counts": [
+        7,
+        7
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        5,
+        11
+      ],
+      "relation_intersection": 2,
+      "relation_union": 14,
+      "relation_symmetric_delta": 12
+    },
+    {
+      "file_name": "train2017/000000176038.jpg",
+      "image_ids": [
+        "1593065",
+        "2382974"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 31,
+      "entity_counts": [
+        31,
+        31
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        7,
+        7
+      ],
+      "relation_intersection": 2,
+      "relation_union": 12,
+      "relation_symmetric_delta": 10
+    },
+    {
+      "file_name": "train2017/000000180869.jpg",
+      "image_ids": [
+        "1593256",
+        "2417674"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 43,
+      "entity_counts": [
+        43,
+        43
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        7,
+        36
+      ],
+      "relation_intersection": 5,
+      "relation_union": 38,
+      "relation_symmetric_delta": 33
+    },
+    {
+      "file_name": "train2017/000000182050.jpg",
+      "image_ids": [
+        "1591816",
+        "2354533"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 17,
+      "entity_counts": [
+        17,
+        17
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        3,
+        11
+      ],
+      "relation_intersection": 2,
+      "relation_union": 12,
+      "relation_symmetric_delta": 10
+    },
+    {
+      "file_name": "train2017/000000184184.jpg",
+      "image_ids": [
+        "2338056",
+        "285930"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 6,
+      "entity_counts": [
+        6,
+        6
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        2,
+        7
+      ],
+      "relation_intersection": 2,
+      "relation_union": 7,
+      "relation_symmetric_delta": 5
+    },
+    {
+      "file_name": "train2017/000000185291.jpg",
+      "image_ids": [
+        "2349215",
+        "286032"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 18,
+      "entity_counts": [
+        18,
+        18
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        7,
+        8
+      ],
+      "relation_intersection": 2,
+      "relation_union": 13,
+      "relation_symmetric_delta": 11
+    },
+    {
+      "file_name": "train2017/000000185986.jpg",
+      "image_ids": [
+        "2364283",
+        "713349"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 16,
+      "entity_counts": [
+        16,
+        16
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        9,
+        7
+      ],
+      "relation_intersection": 3,
+      "relation_union": 13,
+      "relation_symmetric_delta": 10
+    },
+    {
+      "file_name": "train2017/000000186730.jpg",
+      "image_ids": [
+        "1592109",
+        "2342205"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 13,
+      "entity_counts": [
+        13,
+        13
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        6,
+        5
+      ],
+      "relation_intersection": 1,
+      "relation_union": 10,
+      "relation_symmetric_delta": 9
+    },
+    {
+      "file_name": "train2017/000000193271.jpg",
+      "image_ids": [
+        "1159640",
+        "2370010"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 26,
+      "entity_counts": [
+        26,
+        26
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        13,
+        7
+      ],
+      "relation_intersection": 1,
+      "relation_union": 19,
+      "relation_symmetric_delta": 18
+    },
+    {
+      "file_name": "train2017/000000194685.jpg",
+      "image_ids": [
+        "2405388",
+        "498143"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 13,
+      "entity_counts": [
+        13,
+        13
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        8,
+        6
+      ],
+      "relation_intersection": 2,
+      "relation_union": 12,
+      "relation_symmetric_delta": 10
+    },
+    {
+      "file_name": "train2017/000000198798.jpg",
+      "image_ids": [
+        "1592982",
+        "2337262"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 21,
+      "entity_counts": [
+        21,
+        21
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        2,
+        1
+      ],
+      "relation_intersection": 0,
+      "relation_union": 3,
+      "relation_symmetric_delta": 3
+    },
+    {
+      "file_name": "train2017/000000201141.jpg",
+      "image_ids": [
+        "2400990",
+        "497934"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 21,
+      "entity_counts": [
+        21,
+        21
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        6,
+        5
+      ],
+      "relation_intersection": 0,
+      "relation_union": 11,
+      "relation_symmetric_delta": 11
+    },
+    {
+      "file_name": "train2017/000000203102.jpg",
+      "image_ids": [
+        "107946",
+        "2354710"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 29,
+      "entity_counts": [
+        29,
+        29
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        7,
+        5
+      ],
+      "relation_intersection": 2,
+      "relation_union": 10,
+      "relation_symmetric_delta": 8
+    },
+    {
+      "file_name": "train2017/000000205916.jpg",
+      "image_ids": [
+        "2414482",
+        "285668"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 11,
+      "entity_counts": [
+        11,
+        11
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        12,
+        5
+      ],
+      "relation_intersection": 4,
+      "relation_union": 13,
+      "relation_symmetric_delta": 9
+    },
+    {
+      "file_name": "train2017/000000207454.jpg",
+      "image_ids": [
+        "1159382",
+        "2393018"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 28,
+      "entity_counts": [
+        28,
+        28
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        6,
+        4
+      ],
+      "relation_intersection": 0,
+      "relation_union": 10,
+      "relation_symmetric_delta": 10
+    },
+    {
+      "file_name": "train2017/000000214871.jpg",
+      "image_ids": [
+        "2372439",
+        "498269"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 7,
+      "entity_counts": [
+        7,
+        7
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        2,
+        2
+      ],
+      "relation_intersection": 2,
+      "relation_union": 2,
+      "relation_symmetric_delta": 0
+    },
+    {
+      "file_name": "train2017/000000215443.jpg",
+      "image_ids": [
+        "1591937",
+        "2365737"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 15,
+      "entity_counts": [
+        15,
+        15
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        11,
+        9
+      ],
+      "relation_intersection": 2,
+      "relation_union": 18,
+      "relation_symmetric_delta": 16
+    },
+    {
+      "file_name": "train2017/000000221869.jpg",
+      "image_ids": [
+        "1592774",
+        "2320259"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 13,
+      "entity_counts": [
+        13,
+        13
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        3,
+        5
+      ],
+      "relation_intersection": 2,
+      "relation_union": 6,
+      "relation_symmetric_delta": 4
+    },
+    {
+      "file_name": "train2017/000000228175.jpg",
+      "image_ids": [
+        "2376296",
+        "713095"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 5,
+      "entity_counts": [
+        5,
+        5
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        3,
+        5
+      ],
+      "relation_intersection": 3,
+      "relation_union": 5,
+      "relation_symmetric_delta": 2
+    },
+    {
+      "file_name": "train2017/000000228876.jpg",
+      "image_ids": [
+        "1592838",
+        "2369327"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 22,
+      "entity_counts": [
+        22,
+        22
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        9,
+        9
+      ],
+      "relation_intersection": 4,
+      "relation_union": 14,
+      "relation_symmetric_delta": 10
+    },
+    {
+      "file_name": "train2017/000000237848.jpg",
+      "image_ids": [
+        "2378057",
+        "713173"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 17,
+      "entity_counts": [
+        17,
+        17
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        6,
+        6
+      ],
+      "relation_intersection": 3,
+      "relation_union": 9,
+      "relation_symmetric_delta": 6
+    },
+    {
+      "file_name": "train2017/000000238427.jpg",
+      "image_ids": [
+        "1159933",
+        "2410673"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 20,
+      "entity_counts": [
+        20,
+        20
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        7,
+        5
+      ],
+      "relation_intersection": 0,
+      "relation_union": 11,
+      "relation_symmetric_delta": 11
+    },
+    {
+      "file_name": "train2017/000000240820.jpg",
+      "image_ids": [
+        "2319479",
+        "713464"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 9,
+      "entity_counts": [
+        9,
+        9
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        5,
+        8
+      ],
+      "relation_intersection": 1,
+      "relation_union": 12,
+      "relation_symmetric_delta": 11
+    },
+    {
+      "file_name": "train2017/000000241955.jpg",
+      "image_ids": [
+        "1592682",
+        "2337398"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 10,
+      "entity_counts": [
+        10,
+        10
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        6,
+        2
+      ],
+      "relation_intersection": 0,
+      "relation_union": 8,
+      "relation_symmetric_delta": 8
+    },
+    {
+      "file_name": "train2017/000000243569.jpg",
+      "image_ids": [
+        "1592447",
+        "2367023"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 8,
+      "entity_counts": [
+        8,
+        8
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        4,
+        8
+      ],
+      "relation_intersection": 1,
+      "relation_union": 11,
+      "relation_symmetric_delta": 10
+    },
+    {
+      "file_name": "train2017/000000245227.jpg",
+      "image_ids": [
+        "1592311",
+        "2401598"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 19,
+      "entity_counts": [
+        19,
+        19
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        11,
+        9
+      ],
+      "relation_intersection": 2,
+      "relation_union": 18,
+      "relation_symmetric_delta": 16
+    },
+    {
+      "file_name": "train2017/000000245265.jpg",
+      "image_ids": [
+        "1592307",
+        "2344367"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 26,
+      "entity_counts": [
+        26,
+        26
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        13,
+        10
+      ],
+      "relation_intersection": 2,
+      "relation_union": 21,
+      "relation_symmetric_delta": 19
+    },
+    {
+      "file_name": "train2017/000000249810.jpg",
+      "image_ids": [
+        "2380042",
+        "713230"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 32,
+      "entity_counts": [
+        32,
+        32
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        7,
+        11
+      ],
+      "relation_intersection": 1,
+      "relation_union": 17,
+      "relation_symmetric_delta": 16
+    },
+    {
+      "file_name": "train2017/000000251344.jpg",
+      "image_ids": [
+        "2377833",
+        "61536"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 11,
+      "entity_counts": [
+        11,
+        11
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        7,
+        6
+      ],
+      "relation_intersection": 0,
+      "relation_union": 13,
+      "relation_symmetric_delta": 13
+    },
+    {
+      "file_name": "train2017/000000254096.jpg",
+      "image_ids": [
+        "2345232",
+        "285768"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 5,
+      "entity_counts": [
+        5,
+        5
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        2,
+        2
+      ],
+      "relation_intersection": 2,
+      "relation_union": 2,
+      "relation_symmetric_delta": 0
+    },
+    {
+      "file_name": "train2017/000000255614.jpg",
+      "image_ids": [
+        "2392022",
+        "713209"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 7,
+      "entity_counts": [
+        7,
+        7
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        5,
+        3
+      ],
+      "relation_intersection": 3,
+      "relation_union": 5,
+      "relation_symmetric_delta": 2
+    },
+    {
+      "file_name": "train2017/000000261185.jpg",
+      "image_ids": [
+        "2394646",
+        "713533"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 15,
+      "entity_counts": [
+        15,
+        15
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        7,
+        11
+      ],
+      "relation_intersection": 5,
+      "relation_union": 12,
+      "relation_symmetric_delta": 7
+    },
+    {
+      "file_name": "train2017/000000265532.jpg",
+      "image_ids": [
+        "2336955",
+        "713873"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 26,
+      "entity_counts": [
+        26,
+        26
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        5,
+        7
+      ],
+      "relation_intersection": 2,
+      "relation_union": 10,
+      "relation_symmetric_delta": 8
+    },
+    {
+      "file_name": "train2017/000000268396.jpg",
+      "image_ids": [
+        "1592779",
+        "2376393"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 5,
+      "entity_counts": [
+        5,
+        5
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        4,
+        3
+      ],
+      "relation_intersection": 1,
+      "relation_union": 6,
+      "relation_symmetric_delta": 5
+    },
+    {
+      "file_name": "train2017/000000271729.jpg",
+      "image_ids": [
+        "2384592",
+        "285617"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 14,
+      "entity_counts": [
+        14,
+        14
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        5,
+        4
+      ],
+      "relation_intersection": 1,
+      "relation_union": 8,
+      "relation_symmetric_delta": 7
+    },
+    {
+      "file_name": "train2017/000000271759.jpg",
+      "image_ids": [
+        "1593045",
+        "2357826"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 14,
+      "entity_counts": [
+        14,
+        14
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        9,
+        6
+      ],
+      "relation_intersection": 4,
+      "relation_union": 11,
+      "relation_symmetric_delta": 7
+    },
+    {
+      "file_name": "train2017/000000272026.jpg",
+      "image_ids": [
+        "107955",
+        "2367725"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 13,
+      "entity_counts": [
+        13,
+        13
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        6,
+        10
+      ],
+      "relation_intersection": 1,
+      "relation_union": 15,
+      "relation_symmetric_delta": 14
+    },
+    {
+      "file_name": "train2017/000000272832.jpg",
+      "image_ids": [
+        "2387830",
+        "713060"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 10,
+      "entity_counts": [
+        10,
+        10
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        6,
+        5
+      ],
+      "relation_intersection": 3,
+      "relation_union": 8,
+      "relation_symmetric_delta": 5
+    },
+    {
+      "file_name": "train2017/000000281027.jpg",
+      "image_ids": [
+        "2336044",
+        "497931"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 7,
+      "entity_counts": [
+        7,
+        7
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        0,
+        1
+      ],
+      "relation_intersection": 0,
+      "relation_union": 1,
+      "relation_symmetric_delta": 1
+    },
+    {
+      "file_name": "train2017/000000282444.jpg",
+      "image_ids": [
+        "2358537",
+        "713601"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 33,
+      "entity_counts": [
+        33,
+        33
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        7,
+        9
+      ],
+      "relation_intersection": 1,
+      "relation_union": 15,
+      "relation_symmetric_delta": 14
+    },
+    {
+      "file_name": "train2017/000000282599.jpg",
+      "image_ids": [
+        "1592223",
+        "2343487"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 10,
+      "entity_counts": [
+        10,
+        10
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        7,
+        6
+      ],
+      "relation_intersection": 5,
+      "relation_union": 8,
+      "relation_symmetric_delta": 3
+    },
+    {
+      "file_name": "train2017/000000284925.jpg",
+      "image_ids": [
+        "2409715",
+        "498093"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 7,
+      "entity_counts": [
+        7,
+        7
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        7,
+        3
+      ],
+      "relation_intersection": 2,
+      "relation_union": 8,
+      "relation_symmetric_delta": 6
+    },
+    {
+      "file_name": "train2017/000000285388.jpg",
+      "image_ids": [
+        "107914",
+        "2415718"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 4,
+      "entity_counts": [
+        4,
+        4
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        3,
+        1
+      ],
+      "relation_intersection": 0,
+      "relation_union": 4,
+      "relation_symmetric_delta": 4
+    },
+    {
+      "file_name": "train2017/000000289767.jpg",
+      "image_ids": [
+        "1159812",
+        "2412558"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 15,
+      "entity_counts": [
+        15,
+        15
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        4,
+        6
+      ],
+      "relation_intersection": 1,
+      "relation_union": 9,
+      "relation_symmetric_delta": 8
+    },
+    {
+      "file_name": "train2017/000000293576.jpg",
+      "image_ids": [
+        "1160002",
+        "2411795"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 29,
+      "entity_counts": [
+        29,
+        29
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        4,
+        14
+      ],
+      "relation_intersection": 1,
+      "relation_union": 17,
+      "relation_symmetric_delta": 16
+    },
+    {
+      "file_name": "train2017/000000294416.jpg",
+      "image_ids": [
+        "2324056",
+        "712993"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 37,
+      "entity_counts": [
+        37,
+        37
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        8,
+        9
+      ],
+      "relation_intersection": 2,
+      "relation_union": 15,
+      "relation_symmetric_delta": 13
+    },
+    {
+      "file_name": "train2017/000000294437.jpg",
+      "image_ids": [
+        "1593267",
+        "2397749"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 16,
+      "entity_counts": [
+        16,
+        16
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        4,
+        10
+      ],
+      "relation_intersection": 1,
+      "relation_union": 13,
+      "relation_symmetric_delta": 12
+    },
+    {
+      "file_name": "train2017/000000298527.jpg",
+      "image_ids": [
+        "1591950",
+        "2400309"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 13,
+      "entity_counts": [
+        13,
+        13
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        6,
+        4
+      ],
+      "relation_intersection": 1,
+      "relation_union": 9,
+      "relation_symmetric_delta": 8
+    },
+    {
+      "file_name": "train2017/000000301998.jpg",
+      "image_ids": [
+        "2398661",
+        "713012"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 24,
+      "entity_counts": [
+        24,
+        24
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        12,
+        12
+      ],
+      "relation_intersection": 3,
+      "relation_union": 21,
+      "relation_symmetric_delta": 18
+    },
+    {
+      "file_name": "train2017/000000303956.jpg",
+      "image_ids": [
+        "1593251",
+        "2354994"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 6,
+      "entity_counts": [
+        6,
+        6
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        4,
+        5
+      ],
+      "relation_intersection": 2,
+      "relation_union": 7,
+      "relation_symmetric_delta": 5
+    },
+    {
+      "file_name": "train2017/000000304332.jpg",
+      "image_ids": [
+        "1159576",
+        "2333362"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 13,
+      "entity_counts": [
+        13,
+        13
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        7,
+        7
+      ],
+      "relation_intersection": 3,
+      "relation_union": 10,
+      "relation_symmetric_delta": 7
+    },
+    {
+      "file_name": "train2017/000000311240.jpg",
+      "image_ids": [
+        "2322116",
+        "498027"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 22,
+      "entity_counts": [
+        22,
+        22
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        5,
+        6
+      ],
+      "relation_intersection": 0,
+      "relation_union": 11,
+      "relation_symmetric_delta": 11
+    },
+    {
+      "file_name": "train2017/000000312937.jpg",
+      "image_ids": [
+        "1592959",
+        "2402490"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 33,
+      "entity_counts": [
+        33,
+        33
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        10,
+        5
+      ],
+      "relation_intersection": 2,
+      "relation_union": 13,
+      "relation_symmetric_delta": 11
+    },
+    {
+      "file_name": "train2017/000000317848.jpg",
+      "image_ids": [
+        "1592076",
+        "2345399"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 9,
+      "entity_counts": [
+        9,
+        9
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        4,
+        8
+      ],
+      "relation_intersection": 2,
+      "relation_union": 10,
+      "relation_symmetric_delta": 8
+    },
+    {
+      "file_name": "train2017/000000320350.jpg",
+      "image_ids": [
+        "2330481",
+        "713655"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 10,
+      "entity_counts": [
+        10,
+        10
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        5,
+        14
+      ],
+      "relation_intersection": 0,
+      "relation_union": 19,
+      "relation_symmetric_delta": 19
+    },
+    {
+      "file_name": "train2017/000000320436.jpg",
+      "image_ids": [
+        "1592478",
+        "2341356"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 28,
+      "entity_counts": [
+        28,
+        28
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        7,
+        10
+      ],
+      "relation_intersection": 3,
+      "relation_union": 14,
+      "relation_symmetric_delta": 11
+    },
+    {
+      "file_name": "train2017/000000322194.jpg",
+      "image_ids": [
+        "2322189",
+        "286065"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 16,
+      "entity_counts": [
+        16,
+        16
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        4,
+        7
+      ],
+      "relation_intersection": 2,
+      "relation_union": 9,
+      "relation_symmetric_delta": 7
+    },
+    {
+      "file_name": "train2017/000000322507.jpg",
+      "image_ids": [
+        "1159926",
+        "2342407"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 22,
+      "entity_counts": [
+        22,
+        22
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        13,
+        8
+      ],
+      "relation_intersection": 4,
+      "relation_union": 17,
+      "relation_symmetric_delta": 13
+    },
+    {
+      "file_name": "train2017/000000324513.jpg",
+      "image_ids": [
+        "2326622",
+        "498119"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 5,
+      "entity_counts": [
+        5,
+        5
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        1,
+        2
+      ],
+      "relation_intersection": 1,
+      "relation_union": 2,
+      "relation_symmetric_delta": 1
+    },
+    {
+      "file_name": "train2017/000000335037.jpg",
+      "image_ids": [
+        "2319890",
+        "713433"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 5,
+      "entity_counts": [
+        5,
+        5
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        4,
+        7
+      ],
+      "relation_intersection": 2,
+      "relation_union": 9,
+      "relation_symmetric_delta": 7
+    },
+    {
+      "file_name": "train2017/000000335216.jpg",
+      "image_ids": [
+        "1159996",
+        "2371685"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 24,
+      "entity_counts": [
+        24,
+        24
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        5,
+        9
+      ],
+      "relation_intersection": 2,
+      "relation_union": 12,
+      "relation_symmetric_delta": 10
+    },
+    {
+      "file_name": "train2017/000000340218.jpg",
+      "image_ids": [
+        "2327698",
+        "285838"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 9,
+      "entity_counts": [
+        9,
+        9
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        6,
+        8
+      ],
+      "relation_intersection": 3,
+      "relation_union": 11,
+      "relation_symmetric_delta": 8
+    },
+    {
+      "file_name": "train2017/000000344765.jpg",
+      "image_ids": [
+        "2357744",
+        "285799"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 16,
+      "entity_counts": [
+        16,
+        16
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        13,
+        10
+      ],
+      "relation_intersection": 3,
+      "relation_union": 20,
+      "relation_symmetric_delta": 17
+    },
+    {
+      "file_name": "train2017/000000349932.jpg",
+      "image_ids": [
+        "2334656",
+        "713169"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 16,
+      "entity_counts": [
+        16,
+        16
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        7,
+        8
+      ],
+      "relation_intersection": 1,
+      "relation_union": 14,
+      "relation_symmetric_delta": 13
+    },
+    {
+      "file_name": "train2017/000000351705.jpg",
+      "image_ids": [
+        "1593073",
+        "2383415"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 8,
+      "entity_counts": [
+        8,
+        8
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        5,
+        9
+      ],
+      "relation_intersection": 3,
+      "relation_union": 11,
+      "relation_symmetric_delta": 8
+    },
+    {
+      "file_name": "train2017/000000355304.jpg",
+      "image_ids": [
+        "1159692",
+        "2381512"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 31,
+      "entity_counts": [
+        31,
+        31
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        12,
+        10
+      ],
+      "relation_intersection": 4,
+      "relation_union": 18,
+      "relation_symmetric_delta": 14
+    },
+    {
+      "file_name": "train2017/000000366109.jpg",
+      "image_ids": [
+        "1159964",
+        "2379622"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 9,
+      "entity_counts": [
+        9,
+        9
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        6,
+        1
+      ],
+      "relation_intersection": 1,
+      "relation_union": 6,
+      "relation_symmetric_delta": 5
+    },
+    {
+      "file_name": "train2017/000000371364.jpg",
+      "image_ids": [
+        "1592391",
+        "2322557"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 18,
+      "entity_counts": [
+        18,
+        18
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        4,
+        13
+      ],
+      "relation_intersection": 3,
+      "relation_union": 14,
+      "relation_symmetric_delta": 11
+    },
+    {
+      "file_name": "train2017/000000373487.jpg",
+      "image_ids": [
+        "1159942",
+        "2389078"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 8,
+      "entity_counts": [
+        8,
+        8
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        5,
+        3
+      ],
+      "relation_intersection": 0,
+      "relation_union": 8,
+      "relation_symmetric_delta": 8
+    },
+    {
+      "file_name": "train2017/000000380280.jpg",
+      "image_ids": [
+        "1159792",
+        "2319090"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 23,
+      "entity_counts": [
+        23,
+        23
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        5,
+        6
+      ],
+      "relation_intersection": 2,
+      "relation_union": 9,
+      "relation_symmetric_delta": 7
+    },
+    {
+      "file_name": "train2017/000000380499.jpg",
+      "image_ids": [
+        "1592092",
+        "2319432"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 8,
+      "entity_counts": [
+        8,
+        8
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        6,
+        13
+      ],
+      "relation_intersection": 3,
+      "relation_union": 16,
+      "relation_symmetric_delta": 13
+    },
+    {
+      "file_name": "train2017/000000381988.jpg",
+      "image_ids": [
+        "2361509",
+        "713486"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 10,
+      "entity_counts": [
+        10,
+        10
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        8,
+        5
+      ],
+      "relation_intersection": 1,
+      "relation_union": 12,
+      "relation_symmetric_delta": 11
+    },
+    {
+      "file_name": "train2017/000000387352.jpg",
+      "image_ids": [
+        "2382112",
+        "285661"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 11,
+      "entity_counts": [
+        11,
+        11
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        11,
+        7
+      ],
+      "relation_intersection": 2,
+      "relation_union": 15,
+      "relation_symmetric_delta": 13
+    },
+    {
+      "file_name": "train2017/000000391235.jpg",
+      "image_ids": [
+        "2355814",
+        "713902"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 30,
+      "entity_counts": [
+        30,
+        30
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        9,
+        8
+      ],
+      "relation_intersection": 4,
+      "relation_union": 13,
+      "relation_symmetric_delta": 9
+    },
+    {
+      "file_name": "train2017/000000392170.jpg",
+      "image_ids": [
+        "2417967",
+        "498158"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 13,
+      "entity_counts": [
+        13,
+        13
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        6,
+        8
+      ],
+      "relation_intersection": 2,
+      "relation_union": 12,
+      "relation_symmetric_delta": 10
+    },
+    {
+      "file_name": "train2017/000000393489.jpg",
+      "image_ids": [
+        "107908",
+        "2400078"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 4,
+      "entity_counts": [
+        4,
+        4
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        1,
+        1
+      ],
+      "relation_intersection": 1,
+      "relation_union": 1,
+      "relation_symmetric_delta": 0
+    },
+    {
+      "file_name": "train2017/000000393896.jpg",
+      "image_ids": [
+        "2390084",
+        "713581"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 13,
+      "entity_counts": [
+        13,
+        13
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        9,
+        13
+      ],
+      "relation_intersection": 4,
+      "relation_union": 18,
+      "relation_symmetric_delta": 14
+    },
+    {
+      "file_name": "train2017/000000397664.jpg",
+      "image_ids": [
+        "2408515",
+        "498010"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 20,
+      "entity_counts": [
+        20,
+        20
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        10,
+        3
+      ],
+      "relation_intersection": 2,
+      "relation_union": 11,
+      "relation_symmetric_delta": 9
+    },
+    {
+      "file_name": "train2017/000000399922.jpg",
+      "image_ids": [
+        "1159781",
+        "2347396"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 35,
+      "entity_counts": [
+        35,
+        35
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        6,
+        8
+      ],
+      "relation_intersection": 2,
+      "relation_union": 12,
+      "relation_symmetric_delta": 10
+    },
+    {
+      "file_name": "train2017/000000402228.jpg",
+      "image_ids": [
+        "2415726",
+        "713302"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 34,
+      "entity_counts": [
+        34,
+        34
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        9,
+        14
+      ],
+      "relation_intersection": 6,
+      "relation_union": 17,
+      "relation_symmetric_delta": 11
+    },
+    {
+      "file_name": "train2017/000000402255.jpg",
+      "image_ids": [
+        "2413709",
+        "286020"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 12,
+      "entity_counts": [
+        12,
+        12
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        2,
+        15
+      ],
+      "relation_intersection": 2,
+      "relation_union": 15,
+      "relation_symmetric_delta": 13
+    },
+    {
+      "file_name": "train2017/000000402531.jpg",
+      "image_ids": [
+        "1159623",
+        "2399671"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 10,
+      "entity_counts": [
+        10,
+        10
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        6,
+        6
+      ],
+      "relation_intersection": 2,
+      "relation_union": 10,
+      "relation_symmetric_delta": 8
+    },
+    {
+      "file_name": "train2017/000000404254.jpg",
+      "image_ids": [
+        "2414494",
+        "713555"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 10,
+      "entity_counts": [
+        10,
+        10
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.585480093676815,
+        0.585480093676815
+      ],
+      "relation_counts": [
+        3,
+        3
+      ],
+      "relation_intersection": 2,
+      "relation_union": 4,
+      "relation_symmetric_delta": 2
+    },
+    {
+      "file_name": "train2017/000000405004.jpg",
+      "image_ids": [
+        "2383811",
+        "61606"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 26,
+      "entity_counts": [
+        26,
+        26
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.5098684210526315,
+        0.5098684210526315
+      ],
+      "relation_counts": [
+        7,
+        11
+      ],
+      "relation_intersection": 4,
+      "relation_union": 14,
+      "relation_symmetric_delta": 10
+    },
+    {
+      "file_name": "train2017/000000410715.jpg",
+      "image_ids": [
+        "1592873",
+        "2375864"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 19,
+      "entity_counts": [
+        19,
+        19
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        0,
+        3
+      ],
+      "relation_intersection": 0,
+      "relation_union": 3,
+      "relation_symmetric_delta": 3
+    },
+    {
+      "file_name": "train2017/000000412916.jpg",
+      "image_ids": [
+        "2317316",
+        "713494"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 19,
+      "entity_counts": [
+        19,
+        19
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        9,
+        7
+      ],
+      "relation_intersection": 1,
+      "relation_union": 15,
+      "relation_symmetric_delta": 14
+    },
+    {
+      "file_name": "train2017/000000413277.jpg",
+      "image_ids": [
+        "1591887",
+        "2401997"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 8,
+      "entity_counts": [
+        8,
+        8
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        6,
+        6
+      ],
+      "relation_intersection": 3,
+      "relation_union": 9,
+      "relation_symmetric_delta": 6
+    },
+    {
+      "file_name": "train2017/000000416098.jpg",
+      "image_ids": [
+        "1592833",
+        "2368322"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 25,
+      "entity_counts": [
+        25,
+        25
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        7,
+        10
+      ],
+      "relation_intersection": 3,
+      "relation_union": 14,
+      "relation_symmetric_delta": 11
+    },
+    {
+      "file_name": "train2017/000000420231.jpg",
+      "image_ids": [
+        "1592888",
+        "2366287"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 18,
+      "entity_counts": [
+        18,
+        18
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        8,
+        3
+      ],
+      "relation_intersection": 3,
+      "relation_union": 8,
+      "relation_symmetric_delta": 5
+    },
+    {
+      "file_name": "train2017/000000420490.jpg",
+      "image_ids": [
+        "2417582",
+        "285984"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 22,
+      "entity_counts": [
+        22,
+        22
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        8,
+        7
+      ],
+      "relation_intersection": 5,
+      "relation_union": 10,
+      "relation_symmetric_delta": 5
+    },
+    {
+      "file_name": "train2017/000000421902.jpg",
+      "image_ids": [
+        "2333590",
+        "286099"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 13,
+      "entity_counts": [
+        13,
+        13
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        8,
+        11
+      ],
+      "relation_intersection": 3,
+      "relation_union": 16,
+      "relation_symmetric_delta": 13
+    },
+    {
+      "file_name": "train2017/000000427060.jpg",
+      "image_ids": [
+        "150487",
+        "2362408"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 11,
+      "entity_counts": [
+        11,
+        11
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        3,
+        11
+      ],
+      "relation_intersection": 2,
+      "relation_union": 12,
+      "relation_symmetric_delta": 10
+    },
+    {
+      "file_name": "train2017/000000427756.jpg",
+      "image_ids": [
+        "2362559",
+        "713809"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 9,
+      "entity_counts": [
+        9,
+        9
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        9,
+        7
+      ],
+      "relation_intersection": 6,
+      "relation_union": 10,
+      "relation_symmetric_delta": 4
+    },
+    {
+      "file_name": "train2017/000000435005.jpg",
+      "image_ids": [
+        "2344987",
+        "713534"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 8,
+      "entity_counts": [
+        8,
+        8
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        6,
+        4
+      ],
+      "relation_intersection": 2,
+      "relation_union": 7,
+      "relation_symmetric_delta": 5
+    },
+    {
+      "file_name": "train2017/000000441504.jpg",
+      "image_ids": [
+        "1592689",
+        "2397606"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 24,
+      "entity_counts": [
+        24,
+        24
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        8,
+        6
+      ],
+      "relation_intersection": 3,
+      "relation_union": 11,
+      "relation_symmetric_delta": 8
+    },
+    {
+      "file_name": "train2017/000000444214.jpg",
+      "image_ids": [
+        "2357779",
+        "498077"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 25,
+      "entity_counts": [
+        25,
+        25
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        7,
+        6
+      ],
+      "relation_intersection": 2,
+      "relation_union": 10,
+      "relation_symmetric_delta": 8
+    },
+    {
+      "file_name": "train2017/000000447084.jpg",
+      "image_ids": [
+        "1593053",
+        "2368402"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 10,
+      "entity_counts": [
+        10,
+        10
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        6,
+        7
+      ],
+      "relation_intersection": 4,
+      "relation_union": 9,
+      "relation_symmetric_delta": 5
+    },
+    {
+      "file_name": "train2017/000000451154.jpg",
+      "image_ids": [
+        "2411622",
+        "497936"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 22,
+      "entity_counts": [
+        22,
+        22
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        8,
+        4
+      ],
+      "relation_intersection": 0,
+      "relation_union": 12,
+      "relation_symmetric_delta": 12
+    },
+    {
+      "file_name": "train2017/000000453496.jpg",
+      "image_ids": [
+        "2338231",
+        "498384"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 25,
+      "entity_counts": [
+        25,
+        25
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        12,
+        6
+      ],
+      "relation_intersection": 2,
+      "relation_union": 16,
+      "relation_symmetric_delta": 14
+    },
+    {
+      "file_name": "train2017/000000457754.jpg",
+      "image_ids": [
+        "1160217",
+        "2417374"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 17,
+      "entity_counts": [
+        17,
+        17
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        10,
+        11
+      ],
+      "relation_intersection": 6,
+      "relation_union": 15,
+      "relation_symmetric_delta": 9
+    },
+    {
+      "file_name": "train2017/000000460094.jpg",
+      "image_ids": [
+        "1592476",
+        "2329894"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 8,
+      "entity_counts": [
+        8,
+        8
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        8,
+        4
+      ],
+      "relation_intersection": 2,
+      "relation_union": 10,
+      "relation_symmetric_delta": 8
+    },
+    {
+      "file_name": "train2017/000000460353.jpg",
+      "image_ids": [
+        "1592539",
+        "2329595"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 33,
+      "entity_counts": [
+        33,
+        33
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        6,
+        12
+      ],
+      "relation_intersection": 0,
+      "relation_union": 18,
+      "relation_symmetric_delta": 18
+    },
+    {
+      "file_name": "train2017/000000460628.jpg",
+      "image_ids": [
+        "2391553",
+        "498337"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 9,
+      "entity_counts": [
+        9,
+        9
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        7,
+        6
+      ],
+      "relation_intersection": 3,
+      "relation_union": 10,
+      "relation_symmetric_delta": 7
+    },
+    {
+      "file_name": "train2017/000000461183.jpg",
+      "image_ids": [
+        "2368895",
+        "498344"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 7,
+      "entity_counts": [
+        7,
+        7
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        4,
+        4
+      ],
+      "relation_intersection": 3,
+      "relation_union": 5,
+      "relation_symmetric_delta": 2
+    },
+    {
+      "file_name": "train2017/000000462327.jpg",
+      "image_ids": [
+        "2325665",
+        "498163"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 7,
+      "entity_counts": [
+        7,
+        7
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        4,
+        2
+      ],
+      "relation_intersection": 0,
+      "relation_union": 6,
+      "relation_symmetric_delta": 6
+    },
+    {
+      "file_name": "train2017/000000465057.jpg",
+      "image_ids": [
+        "2392559",
+        "713262"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 5,
+      "entity_counts": [
+        5,
+        5
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        1,
+        2
+      ],
+      "relation_intersection": 0,
+      "relation_union": 3,
+      "relation_symmetric_delta": 3
+    },
+    {
+      "file_name": "train2017/000000466005.jpg",
+      "image_ids": [
+        "2351460",
+        "61601"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 2,
+      "entity_counts": [
+        2,
+        2
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        1,
+        2
+      ],
+      "relation_intersection": 1,
+      "relation_union": 2,
+      "relation_symmetric_delta": 1
+    },
+    {
+      "file_name": "train2017/000000467973.jpg",
+      "image_ids": [
+        "2386471",
+        "286070"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 5,
+      "entity_counts": [
+        5,
+        5
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        3,
+        2
+      ],
+      "relation_intersection": 1,
+      "relation_union": 4,
+      "relation_symmetric_delta": 3
+    },
+    {
+      "file_name": "train2017/000000469599.jpg",
+      "image_ids": [
+        "150400",
+        "2382093"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 24,
+      "entity_counts": [
+        24,
+        24
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        7,
+        7
+      ],
+      "relation_intersection": 2,
+      "relation_union": 12,
+      "relation_symmetric_delta": 10
+    },
+    {
+      "file_name": "train2017/000000470288.jpg",
+      "image_ids": [
+        "1592809",
+        "2355274"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 14,
+      "entity_counts": [
+        14,
+        14
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        4,
+        5
+      ],
+      "relation_intersection": 2,
+      "relation_union": 7,
+      "relation_symmetric_delta": 5
+    },
+    {
+      "file_name": "train2017/000000481452.jpg",
+      "image_ids": [
+        "2322741",
+        "713711"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 21,
+      "entity_counts": [
+        21,
+        21
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        5,
+        12
+      ],
+      "relation_intersection": 3,
+      "relation_union": 13,
+      "relation_symmetric_delta": 10
+    },
+    {
+      "file_name": "train2017/000000482187.jpg",
+      "image_ids": [
+        "2355886",
+        "285694"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 11,
+      "entity_counts": [
+        11,
+        11
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        8,
+        6
+      ],
+      "relation_intersection": 5,
+      "relation_union": 9,
+      "relation_symmetric_delta": 4
+    },
+    {
+      "file_name": "train2017/000000483306.jpg",
+      "image_ids": [
+        "2381519",
+        "713424"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 15,
+      "entity_counts": [
+        15,
+        15
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        8,
+        4
+      ],
+      "relation_intersection": 3,
+      "relation_union": 9,
+      "relation_symmetric_delta": 6
+    },
+    {
+      "file_name": "train2017/000000484674.jpg",
+      "image_ids": [
+        "1592067",
+        "2373866"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 10,
+      "entity_counts": [
+        10,
+        10
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        9,
+        6
+      ],
+      "relation_intersection": 1,
+      "relation_union": 14,
+      "relation_symmetric_delta": 13
+    },
+    {
+      "file_name": "train2017/000000486232.jpg",
+      "image_ids": [
+        "2396263",
+        "285720"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 4,
+      "entity_counts": [
+        4,
+        4
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        1,
+        3
+      ],
+      "relation_intersection": 1,
+      "relation_union": 3,
+      "relation_symmetric_delta": 2
+    },
+    {
+      "file_name": "train2017/000000489415.jpg",
+      "image_ids": [
+        "1159599",
+        "2394765"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 11,
+      "entity_counts": [
+        11,
+        11
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        6,
+        5
+      ],
+      "relation_intersection": 3,
+      "relation_union": 8,
+      "relation_symmetric_delta": 5
+    },
+    {
+      "file_name": "train2017/000000489983.jpg",
+      "image_ids": [
+        "1159616",
+        "2391446"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 19,
+      "entity_counts": [
+        19,
+        19
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        5,
+        5
+      ],
+      "relation_intersection": 1,
+      "relation_union": 9,
+      "relation_symmetric_delta": 8
+    },
+    {
+      "file_name": "train2017/000000492376.jpg",
+      "image_ids": [
+        "2400935",
+        "285739"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 9,
+      "entity_counts": [
+        9,
+        9
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        4,
+        5
+      ],
+      "relation_intersection": 0,
+      "relation_union": 9,
+      "relation_symmetric_delta": 9
+    },
+    {
+      "file_name": "train2017/000000494090.jpg",
+      "image_ids": [
+        "2340042",
+        "285931"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 24,
+      "entity_counts": [
+        24,
+        24
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        8,
+        7
+      ],
+      "relation_intersection": 2,
+      "relation_union": 13,
+      "relation_symmetric_delta": 11
+    },
+    {
+      "file_name": "train2017/000000495013.jpg",
+      "image_ids": [
+        "1592449",
+        "2341227"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 13,
+      "entity_counts": [
+        13,
+        13
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        9,
+        8
+      ],
+      "relation_intersection": 5,
+      "relation_union": 12,
+      "relation_symmetric_delta": 7
+    },
+    {
+      "file_name": "train2017/000000496198.jpg",
+      "image_ids": [
+        "2320177",
+        "713854"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 24,
+      "entity_counts": [
+        24,
+        24
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        5,
+        9
+      ],
+      "relation_intersection": 1,
+      "relation_union": 13,
+      "relation_symmetric_delta": 12
+    },
+    {
+      "file_name": "train2017/000000503424.jpg",
+      "image_ids": [
+        "2339844",
+        "713434"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 31,
+      "entity_counts": [
+        31,
+        31
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        19,
+        9
+      ],
+      "relation_intersection": 0,
+      "relation_union": 28,
+      "relation_symmetric_delta": 28
+    },
+    {
+      "file_name": "train2017/000000504325.jpg",
+      "image_ids": [
+        "1591866",
+        "2417276"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 15,
+      "entity_counts": [
+        15,
+        15
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        6,
+        5
+      ],
+      "relation_intersection": 0,
+      "relation_union": 11,
+      "relation_symmetric_delta": 11
+    },
+    {
+      "file_name": "train2017/000000505243.jpg",
+      "image_ids": [
+        "2334627",
+        "498241"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 20,
+      "entity_counts": [
+        20,
+        20
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        6,
+        6
+      ],
+      "relation_intersection": 2,
+      "relation_union": 10,
+      "relation_symmetric_delta": 8
+    },
+    {
+      "file_name": "train2017/000000514016.jpg",
+      "image_ids": [
+        "2332392",
+        "713607"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 10,
+      "entity_counts": [
+        10,
+        10
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        6,
+        15
+      ],
+      "relation_intersection": 2,
+      "relation_union": 19,
+      "relation_symmetric_delta": 17
+    },
+    {
+      "file_name": "train2017/000000516834.jpg",
+      "image_ids": [
+        "2343212",
+        "713518"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 13,
+      "entity_counts": [
+        13,
+        13
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        8,
+        6
+      ],
+      "relation_intersection": 2,
+      "relation_union": 11,
+      "relation_symmetric_delta": 9
+    },
+    {
+      "file_name": "train2017/000000517807.jpg",
+      "image_ids": [
+        "107941",
+        "2319818"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 5,
+      "entity_counts": [
+        5,
+        5
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        5,
+        3
+      ],
+      "relation_intersection": 2,
+      "relation_union": 5,
+      "relation_symmetric_delta": 3
+    },
+    {
+      "file_name": "train2017/000000518157.jpg",
+      "image_ids": [
+        "150337",
+        "2414504"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 17,
+      "entity_counts": [
+        17,
+        17
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        6,
+        7
+      ],
+      "relation_intersection": 0,
+      "relation_union": 13,
+      "relation_symmetric_delta": 13
+    },
+    {
+      "file_name": "train2017/000000518524.jpg",
+      "image_ids": [
+        "1592574",
+        "2385945"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 10,
+      "entity_counts": [
+        10,
+        10
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        6,
+        4
+      ],
+      "relation_intersection": 1,
+      "relation_union": 9,
+      "relation_symmetric_delta": 8
+    },
+    {
+      "file_name": "train2017/000000520147.jpg",
+      "image_ids": [
+        "2325115",
+        "713144"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 9,
+      "entity_counts": [
+        9,
+        9
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        2,
+        3
+      ],
+      "relation_intersection": 1,
+      "relation_union": 4,
+      "relation_symmetric_delta": 3
+    },
+    {
+      "file_name": "train2017/000000521005.jpg",
+      "image_ids": [
+        "1592319",
+        "2411344"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 25,
+      "entity_counts": [
+        25,
+        25
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.5390505359877489,
+        0.5390505359877489
+      ],
+      "relation_counts": [
+        8,
+        10
+      ],
+      "relation_intersection": 2,
+      "relation_union": 16,
+      "relation_symmetric_delta": 14
+    },
+    {
+      "file_name": "train2017/000000522330.jpg",
+      "image_ids": [
+        "2403695",
+        "285908"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 11,
+      "entity_counts": [
+        11,
+        11
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        6,
+        5
+      ],
+      "relation_intersection": 3,
+      "relation_union": 8,
+      "relation_symmetric_delta": 5
+    },
+    {
+      "file_name": "train2017/000000522461.jpg",
+      "image_ids": [
+        "1159441",
+        "2390968"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 27,
+      "entity_counts": [
+        27,
+        27
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        16,
+        6
+      ],
+      "relation_intersection": 0,
+      "relation_union": 21,
+      "relation_symmetric_delta": 21
+    },
+    {
+      "file_name": "train2017/000000522990.jpg",
+      "image_ids": [
+        "1592680",
+        "2335977"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 24,
+      "entity_counts": [
+        24,
+        24
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        5,
+        7
+      ],
+      "relation_intersection": 1,
+      "relation_union": 11,
+      "relation_symmetric_delta": 10
+    },
+    {
+      "file_name": "train2017/000000523490.jpg",
+      "image_ids": [
+        "1593195",
+        "2416523"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 12,
+      "entity_counts": [
+        12,
+        12
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        5,
+        4
+      ],
+      "relation_intersection": 3,
+      "relation_union": 6,
+      "relation_symmetric_delta": 3
+    },
+    {
+      "file_name": "train2017/000000523492.jpg",
+      "image_ids": [
+        "2341321",
+        "498042"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 5,
+      "entity_counts": [
+        5,
+        5
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        4,
+        3
+      ],
+      "relation_intersection": 2,
+      "relation_union": 5,
+      "relation_symmetric_delta": 3
+    },
+    {
+      "file_name": "train2017/000000523560.jpg",
+      "image_ids": [
+        "2322399",
+        "285815"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 12,
+      "entity_counts": [
+        12,
+        12
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        7,
+        8
+      ],
+      "relation_intersection": 2,
+      "relation_union": 13,
+      "relation_symmetric_delta": 11
+    },
+    {
+      "file_name": "train2017/000000524325.jpg",
+      "image_ids": [
+        "2411077",
+        "713762"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 25,
+      "entity_counts": [
+        25,
+        25
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        7,
+        9
+      ],
+      "relation_intersection": 1,
+      "relation_union": 14,
+      "relation_symmetric_delta": 13
+    },
+    {
+      "file_name": "train2017/000000525559.jpg",
+      "image_ids": [
+        "2352563",
+        "285663"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 5,
+      "entity_counts": [
+        5,
+        5
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        5,
+        2
+      ],
+      "relation_intersection": 2,
+      "relation_union": 5,
+      "relation_symmetric_delta": 3
+    },
+    {
+      "file_name": "train2017/000000527183.jpg",
+      "image_ids": [
+        "2348462",
+        "285809"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 4,
+      "entity_counts": [
+        4,
+        4
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        5,
+        4
+      ],
+      "relation_intersection": 1,
+      "relation_union": 8,
+      "relation_symmetric_delta": 7
+    },
+    {
+      "file_name": "train2017/000000527379.jpg",
+      "image_ids": [
+        "1592855",
+        "2334516"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 22,
+      "entity_counts": [
+        22,
+        22
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        8,
+        2
+      ],
+      "relation_intersection": 0,
+      "relation_union": 10,
+      "relation_symmetric_delta": 10
+    },
+    {
+      "file_name": "train2017/000000531979.jpg",
+      "image_ids": [
+        "1592054",
+        "2349040"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 15,
+      "entity_counts": [
+        15,
+        15
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        5,
+        6
+      ],
+      "relation_intersection": 3,
+      "relation_union": 8,
+      "relation_symmetric_delta": 5
+    },
+    {
+      "file_name": "train2017/000000533197.jpg",
+      "image_ids": [
+        "150543",
+        "2326020"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 30,
+      "entity_counts": [
+        30,
+        30
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        7,
+        7
+      ],
+      "relation_intersection": 2,
+      "relation_union": 12,
+      "relation_symmetric_delta": 10
+    },
+    {
+      "file_name": "train2017/000000534000.jpg",
+      "image_ids": [
+        "150272",
+        "2380366"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 25,
+      "entity_counts": [
+        25,
+        25
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        10,
+        13
+      ],
+      "relation_intersection": 7,
+      "relation_union": 16,
+      "relation_symmetric_delta": 9
+    },
+    {
+      "file_name": "train2017/000000534428.jpg",
+      "image_ids": [
+        "1159370",
+        "2328116"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 49,
+      "entity_counts": [
+        49,
+        49
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        7,
+        16
+      ],
+      "relation_intersection": 4,
+      "relation_union": 19,
+      "relation_symmetric_delta": 15
+    },
+    {
+      "file_name": "train2017/000000536720.jpg",
+      "image_ids": [
+        "1593126",
+        "2348092"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 14,
+      "entity_counts": [
+        14,
+        14
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        10,
+        10
+      ],
+      "relation_intersection": 3,
+      "relation_union": 17,
+      "relation_symmetric_delta": 14
+    },
+    {
+      "file_name": "train2017/000000537456.jpg",
+      "image_ids": [
+        "2329122",
+        "285628"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 40,
+      "entity_counts": [
+        40,
+        40
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        6,
+        5
+      ],
+      "relation_intersection": 1,
+      "relation_union": 10,
+      "relation_symmetric_delta": 9
+    },
+    {
+      "file_name": "train2017/000000540428.jpg",
+      "image_ids": [
+        "1592003",
+        "2407374"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 11,
+      "entity_counts": [
+        11,
+        11
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        7,
+        6
+      ],
+      "relation_intersection": 3,
+      "relation_union": 10,
+      "relation_symmetric_delta": 7
+    },
+    {
+      "file_name": "train2017/000000541744.jpg",
+      "image_ids": [
+        "2337933",
+        "713287"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 21,
+      "entity_counts": [
+        21,
+        21
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        6,
+        11
+      ],
+      "relation_intersection": 5,
+      "relation_union": 12,
+      "relation_symmetric_delta": 7
+    },
+    {
+      "file_name": "train2017/000000542231.jpg",
+      "image_ids": [
+        "1591805",
+        "2410754"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 21,
+      "entity_counts": [
+        21,
+        21
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        4,
+        1
+      ],
+      "relation_intersection": 1,
+      "relation_union": 4,
+      "relation_symmetric_delta": 3
+    },
+    {
+      "file_name": "train2017/000000544638.jpg",
+      "image_ids": [
+        "2345351",
+        "713516"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 11,
+      "entity_counts": [
+        11,
+        11
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        9,
+        6
+      ],
+      "relation_intersection": 4,
+      "relation_union": 10,
+      "relation_symmetric_delta": 6
+    },
+    {
+      "file_name": "train2017/000000546097.jpg",
+      "image_ids": [
+        "1592850",
+        "2375599"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 23,
+      "entity_counts": [
+        23,
+        23
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        7,
+        11
+      ],
+      "relation_intersection": 4,
+      "relation_union": 14,
+      "relation_symmetric_delta": 10
+    },
+    {
+      "file_name": "train2017/000000547229.jpg",
+      "image_ids": [
+        "2373409",
+        "285693"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 4,
+      "entity_counts": [
+        4,
+        4
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        3,
+        1
+      ],
+      "relation_intersection": 1,
+      "relation_union": 3,
+      "relation_symmetric_delta": 2
+    },
+    {
+      "file_name": "train2017/000000549386.jpg",
+      "image_ids": [
+        "2328435",
+        "498229"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 10,
+      "entity_counts": [
+        10,
+        10
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        6,
+        2
+      ],
+      "relation_intersection": 1,
+      "relation_union": 7,
+      "relation_symmetric_delta": 6
+    },
+    {
+      "file_name": "train2017/000000554636.jpg",
+      "image_ids": [
+        "2327297",
+        "713725"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 18,
+      "entity_counts": [
+        18,
+        18
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        8,
+        12
+      ],
+      "relation_intersection": 2,
+      "relation_union": 18,
+      "relation_symmetric_delta": 16
+    },
+    {
+      "file_name": "train2017/000000554982.jpg",
+      "image_ids": [
+        "1592346",
+        "2348229"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 12,
+      "entity_counts": [
+        12,
+        12
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        6,
+        5
+      ],
+      "relation_intersection": 3,
+      "relation_union": 8,
+      "relation_symmetric_delta": 5
+    },
+    {
+      "file_name": "train2017/000000558011.jpg",
+      "image_ids": [
+        "1159848",
+        "2345081"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 11,
+      "entity_counts": [
+        11,
+        11
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        4,
+        10
+      ],
+      "relation_intersection": 3,
+      "relation_union": 11,
+      "relation_symmetric_delta": 8
+    },
+    {
+      "file_name": "train2017/000000561121.jpg",
+      "image_ids": [
+        "1592026",
+        "2344181"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 21,
+      "entity_counts": [
+        21,
+        21
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        4,
+        8
+      ],
+      "relation_intersection": 2,
+      "relation_union": 10,
+      "relation_symmetric_delta": 8
+    },
+    {
+      "file_name": "train2017/000000561814.jpg",
+      "image_ids": [
+        "2395592",
+        "713368"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 3,
+      "entity_counts": [
+        3,
+        3
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        2,
+        2
+      ],
+      "relation_intersection": 1,
+      "relation_union": 3,
+      "relation_symmetric_delta": 2
+    },
+    {
+      "file_name": "train2017/000000565767.jpg",
+      "image_ids": [
+        "1592062",
+        "2321662"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 14,
+      "entity_counts": [
+        14,
+        14
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        5,
+        4
+      ],
+      "relation_intersection": 1,
+      "relation_union": 8,
+      "relation_symmetric_delta": 7
+    },
+    {
+      "file_name": "train2017/000000566757.jpg",
+      "image_ids": [
+        "1591962",
+        "2324977"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 7,
+      "entity_counts": [
+        7,
+        7
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        5,
+        5
+      ],
+      "relation_intersection": 2,
+      "relation_union": 8,
+      "relation_symmetric_delta": 6
+    },
+    {
+      "file_name": "train2017/000000568880.jpg",
+      "image_ids": [
+        "1160097",
+        "2392147"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 56,
+      "entity_counts": [
+        56,
+        56
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        5,
+        8
+      ],
+      "relation_intersection": 0,
+      "relation_union": 13,
+      "relation_symmetric_delta": 13
+    },
+    {
+      "file_name": "train2017/000000569037.jpg",
+      "image_ids": [
+        "2364269",
+        "498026"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 21,
+      "entity_counts": [
+        21,
+        21
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        8,
+        13
+      ],
+      "relation_intersection": 2,
+      "relation_union": 19,
+      "relation_symmetric_delta": 17
+    },
+    {
+      "file_name": "train2017/000000572565.jpg",
+      "image_ids": [
+        "2357568",
+        "498159"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 8,
+      "entity_counts": [
+        8,
+        8
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        3,
+        4
+      ],
+      "relation_intersection": 2,
+      "relation_union": 5,
+      "relation_symmetric_delta": 3
+    },
+    {
+      "file_name": "train2017/000000575349.jpg",
+      "image_ids": [
+        "2389280",
+        "285995"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 9,
+      "entity_counts": [
+        9,
+        9
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        4,
+        5
+      ],
+      "relation_intersection": 3,
+      "relation_union": 6,
+      "relation_symmetric_delta": 3
+    },
+    {
+      "file_name": "train2017/000000575649.jpg",
+      "image_ids": [
+        "2381199",
+        "498223"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 10,
+      "entity_counts": [
+        10,
+        10
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        5,
+        7
+      ],
+      "relation_intersection": 4,
+      "relation_union": 8,
+      "relation_symmetric_delta": 4
+    },
+    {
+      "file_name": "train2017/000000578570.jpg",
+      "image_ids": [
+        "2378042",
+        "285774"
+      ],
+      "split": [
+        "train",
+        "train"
+      ],
+      "image_available": true,
+      "entity_mapping": 5,
+      "entity_counts": [
+        5,
+        5
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        4,
+        2
+      ],
+      "relation_intersection": 1,
+      "relation_union": 5,
+      "relation_symmetric_delta": 4
+    },
+    {
+      "file_name": "val2017/000000042276.jpg",
+      "image_ids": [
+        "150323",
+        "2327041"
+      ],
+      "split": [
+        "test",
+        "test"
+      ],
+      "image_available": true,
+      "entity_mapping": 7,
+      "entity_counts": [
+        7,
+        7
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        6,
+        7
+      ],
+      "relation_intersection": 3,
+      "relation_union": 10,
+      "relation_symmetric_delta": 7
+    },
+    {
+      "file_name": "val2017/000000047819.jpg",
+      "image_ids": [
+        "1593095",
+        "2408184"
+      ],
+      "split": [
+        "test",
+        "test"
+      ],
+      "image_available": true,
+      "entity_mapping": 6,
+      "entity_counts": [
+        6,
+        6
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        8,
+        6
+      ],
+      "relation_intersection": 3,
+      "relation_union": 11,
+      "relation_symmetric_delta": 8
+    },
+    {
+      "file_name": "val2017/000000051738.jpg",
+      "image_ids": [
+        "1159785",
+        "2401635"
+      ],
+      "split": [
+        "test",
+        "test"
+      ],
+      "image_available": true,
+      "entity_mapping": 9,
+      "entity_counts": [
+        9,
+        9
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        5,
+        6
+      ],
+      "relation_intersection": 3,
+      "relation_union": 8,
+      "relation_symmetric_delta": 5
+    },
+    {
+      "file_name": "val2017/000000222299.jpg",
+      "image_ids": [
+        "2411362",
+        "498089"
+      ],
+      "split": [
+        "test",
+        "test"
+      ],
+      "image_available": true,
+      "entity_mapping": 9,
+      "entity_counts": [
+        9,
+        9
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        6,
+        8
+      ],
+      "relation_intersection": 4,
+      "relation_union": 10,
+      "relation_symmetric_delta": 6
+    },
+    {
+      "file_name": "val2017/000000234607.jpg",
+      "image_ids": [
+        "2356680",
+        "498117"
+      ],
+      "split": [
+        "test",
+        "test"
+      ],
+      "image_available": true,
+      "entity_mapping": 7,
+      "entity_counts": [
+        7,
+        7
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        6,
+        5
+      ],
+      "relation_intersection": 4,
+      "relation_union": 7,
+      "relation_symmetric_delta": 3
+    },
+    {
+      "file_name": "val2017/000000293071.jpg",
+      "image_ids": [
+        "1591847",
+        "2320355"
+      ],
+      "split": [
+        "test",
+        "test"
+      ],
+      "image_available": true,
+      "entity_mapping": 6,
+      "entity_counts": [
+        6,
+        6
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        9,
+        7
+      ],
+      "relation_intersection": 5,
+      "relation_union": 10,
+      "relation_symmetric_delta": 5
+    },
+    {
+      "file_name": "val2017/000000319935.jpg",
+      "image_ids": [
+        "1593263",
+        "2388061"
+      ],
+      "split": [
+        "test",
+        "test"
+      ],
+      "image_available": true,
+      "entity_mapping": 28,
+      "entity_counts": [
+        28,
+        28
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        5,
+        7
+      ],
+      "relation_intersection": 1,
+      "relation_union": 11,
+      "relation_symmetric_delta": 10
+    },
+    {
+      "file_name": "val2017/000000343561.jpg",
+      "image_ids": [
+        "1159713",
+        "2400390"
+      ],
+      "split": [
+        "test",
+        "test"
+      ],
+      "image_available": true,
+      "entity_mapping": 35,
+      "entity_counts": [
+        35,
+        35
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        5,
+        5
+      ],
+      "relation_intersection": 2,
+      "relation_union": 8,
+      "relation_symmetric_delta": 6
+    },
+    {
+      "file_name": "val2017/000000384661.jpg",
+      "image_ids": [
+        "1592722",
+        "2376560"
+      ],
+      "split": [
+        "test",
+        "test"
+      ],
+      "image_available": true,
+      "entity_mapping": 13,
+      "entity_counts": [
+        13,
+        13
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        7,
+        6
+      ],
+      "relation_intersection": 3,
+      "relation_union": 9,
+      "relation_symmetric_delta": 6
+    },
+    {
+      "file_name": "val2017/000000404484.jpg",
+      "image_ids": [
+        "1592560",
+        "2397343"
+      ],
+      "split": [
+        "test",
+        "test"
+      ],
+      "image_available": true,
+      "entity_mapping": 11,
+      "entity_counts": [
+        11,
+        11
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        8,
+        13
+      ],
+      "relation_intersection": 2,
+      "relation_union": 17,
+      "relation_symmetric_delta": 15
+    },
+    {
+      "file_name": "val2017/000000405249.jpg",
+      "image_ids": [
+        "2334350",
+        "712981"
+      ],
+      "split": [
+        "test",
+        "test"
+      ],
+      "image_available": true,
+      "entity_mapping": 19,
+      "entity_counts": [
+        19,
+        19
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        7,
+        7
+      ],
+      "relation_intersection": 2,
+      "relation_union": 12,
+      "relation_symmetric_delta": 10
+    },
+    {
+      "file_name": "val2017/000000447088.jpg",
+      "image_ids": [
+        "2340476",
+        "285732"
+      ],
+      "split": [
+        "test",
+        "test"
+      ],
+      "image_available": true,
+      "entity_mapping": 7,
+      "entity_counts": [
+        7,
+        7
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.5702317503022459,
+        0.5702317503022459
+      ],
+      "relation_counts": [
+        8,
+        10
+      ],
+      "relation_intersection": 7,
+      "relation_union": 11,
+      "relation_symmetric_delta": 4
+    },
+    {
+      "file_name": "val2017/000000454067.jpg",
+      "image_ids": [
+        "1592952",
+        "2402632"
+      ],
+      "split": [
+        "test",
+        "test"
+      ],
+      "image_available": true,
+      "entity_mapping": 14,
+      "entity_counts": [
+        14,
+        14
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        6,
+        6
+      ],
+      "relation_intersection": 3,
+      "relation_union": 8,
+      "relation_symmetric_delta": 5
+    },
+    {
+      "file_name": "val2017/000000459195.jpg",
+      "image_ids": [
+        "2398229",
+        "713567"
+      ],
+      "split": [
+        "test",
+        "test"
+      ],
+      "image_available": true,
+      "entity_mapping": 9,
+      "entity_counts": [
+        9,
+        9
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        5,
+        5
+      ],
+      "relation_intersection": 2,
+      "relation_union": 8,
+      "relation_symmetric_delta": 6
+    },
+    {
+      "file_name": "val2017/000000524850.jpg",
+      "image_ids": [
+        "2392983",
+        "712970"
+      ],
+      "split": [
+        "test",
+        "test"
+      ],
+      "image_available": true,
+      "entity_mapping": 41,
+      "entity_counts": [
+        41,
+        41
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        7,
+        8
+      ],
+      "relation_intersection": 2,
+      "relation_union": 13,
+      "relation_symmetric_delta": 11
+    },
+    {
+      "file_name": "val2017/000000539962.jpg",
+      "image_ids": [
+        "1593185",
+        "2365990"
+      ],
+      "split": [
+        "test",
+        "test"
+      ],
+      "image_available": true,
+      "entity_mapping": 27,
+      "entity_counts": [
+        27,
+        27
+      ],
+      "candidate_bbox_ious": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "relation_counts": [
+        5,
+        5
+      ],
+      "relation_intersection": 1,
+      "relation_union": 9,
+      "relation_symmetric_delta": 8
+    }
+  ]
+}

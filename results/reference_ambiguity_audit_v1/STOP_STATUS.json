@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "experiment": "reference_ambiguity_audit_v1",
+  "status": "stopped_at_A4",
+  "stop_reason": "immutable action carrier artifact is unavailable; GPU method training is forbidden before action-sign audit",
+  "source": {
+    "psg": "/data1/liuhaoran/psg/datasets/psg.json",
+    "dataset_sha256": "d4a8c6df10198fa2a22f56d4c2039aa2b20bdc002db5c0be8ee34a36a06817c1",
+    "image_root": "/data1/liuhaoran/psg/datasets/openpsg/coco",
+    "panoptic_root": "/data1/liuhaoran/psg/datasets/openpsg/coco_panoptic_gt/annotations"
+  },
+  "completed": {
+    "A0_pixel_identity": {"same_hash_groups": 241, "different_or_unavailable_groups": 0, "pass": true},
+    "A1_cross_split": {"leakage_groups": 0, "pass": true},
+    "A2_entity_mapping": {"groups": 241, "fully_mapped_groups": 241, "coverage": 1.0, "mapping_mode": "panoptic_mask"},
+    "A3_relation_difference": {"mapped_relation_intersection": 522, "mapped_relation_union": 2646, "symmetric_delta": 2124, "jaccard": 0.19727891156462585}
+  },
+  "blocked": {
+    "A4_action_sign_stability": {"status": "unavailable_carrier_artifact_missing", "carrier": null}
+  },
+  "policy": {
+    "row_deletion": false,
+    "silent_deduplication": false,
+    "gpu_training_started": false,
+    "other_projects_modified": false
+  },
+  "audit_output": "results/reference_ambiguity_audit_v1/audit_mask.json"
+}
