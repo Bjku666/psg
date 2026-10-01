@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-01",
+  "launch_skill": {
+    "config_diff": "passed for registered DSFormer config; no new knobs",
+    "run_name": "counterfactual-relation-verification-v1",
+    "paths": {
+      "psg_annotation": {"path": "/data1/liuhaoran/psg/datasets/psg.json", "exists": true, "sha256": "d4a8c6df10198fa2a22f56d4c2039aa2b20bdc002db5c0be8ee34a36a06817c1"},
+      "carrier_source": {"path": "/data1/liuhaoran/psg/third_party/fair_psg_git_retry", "exists": true, "revision": "2497be40bd8bd0ca6c2ad25be1522ebf42e6623b"},
+      "checkpoint": {"path": "/data1/liuhaoran/psg/checkpoints/dsformer_relation_decomp_v1_seed0/best_state.pth", "exists": false},
+      "images": {"path": "/data1/liuhaoran/psg/datasets/openpsg/coco", "exists": false},
+      "panoptic": {"path": "/data1/liuhaoran/psg/datasets/openpsg/coco_panoptic_gt/annotations", "exists": false}
+    },
+    "monitoring": "local JSON logs and process/GPU polling; no tracker configured",
+    "eta": "not estimated: launch blocked before GPU allocation"
+  },
+  "status": "aborted_at_B0_source_identity_gate",
+  "blockers": [
+    "registered DSFormer checkpoint is absent",
+    "COCO image and panoptic assets are absent",
+    "historical carrier pickles are absent; only SHA256SUMS remain",
+    "registered OpenPSG source has 241 physical file_name collision groups (482 rows); dedup=fail"
+  ],
+  "completed": [
+    "source revision downloaded and verified",
+    "psg.json downloaded and verified",
+    "B0 action schema implemented",
+    "27 repository tests passed",
+    "retrospective D0/O0/S0-S7 diagnostic generated"
+  ],
+  "source_identity_audit": "results/counterfactual_relation_verification_v1/source_identity_audit.json",
+  "partial_downloads": {
+    "status": "stopped_after_B0_failure",
+    "location": "/data1/liuhaoran/psg/datasets/openpsg",
+    "recoverable": true
+  },
+  "next_safe_action": "resolve the 241 source-level physical-file collisions and re-register the dataset contract; do not launch CERV method"
+}

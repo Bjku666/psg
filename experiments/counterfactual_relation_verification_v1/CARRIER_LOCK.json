@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "status": "blocked_until_checkpoint_and_data_verified",
+  "action_record": {
+    "required_fields": [
+      "dataset_sha", "carrier_commit", "checkpoint_sha", "file_name",
+      "image_id", "subject_mask_uid", "object_mask_uid", "mask_pair_hash",
+      "pair_rank", "native_predicate", "candidate_predicate",
+      "predicate_logits", "subject_feature", "object_feature",
+      "union_feature", "geometry", "bootstrap_group", "action_id"
+    ],
+    "key": "sha256(dataset_sha, checkpoint_sha, file_name, subject_mask_uid, object_mask_uid, mask_pair_hash, native_predicate, candidate_predicate)",
+    "coverage_gate": 1.0
+  },
+  "teacher": {
+    "fields": ["exact_delta_mR", "exact_delta_R", "transition"],
+    "transitions": ["rescue", "neutral", "harm"],
+    "source": "immutable action records only"
+  },
+  "artifact_root": "/data1/liuhaoran/psg/cache/counterfactual_relation_verification_v1"
+}

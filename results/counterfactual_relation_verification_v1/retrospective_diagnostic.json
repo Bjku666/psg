@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "name": "counterfactual_relation_verification_v1_retrospective_diagnostic",
+  "status": "retrospective_only_blocked_new_carrier",
+  "sources": {
+    "results/selective_predicate_surgery_v1/gate_chooser_full_dev.json": {
+      "sha256": "56766d6b865c0b23b4cb2bd575ad6a51933c827956c927908bef6699c3c2c7a7"
+    },
+    "results/relation_decision_regret_v2/p17_gate0_full_dev.json": {
+      "sha256": "08f5dd572d3ddfc67dea112fe8c8adf6432d9a74b2914df763d72e45b3078a25"
+    },
+    "results/relation_decision_regret_v2/p17_controls_full_fit_dev.json": {
+      "sha256": "7c45bb1430f9ba1b8bdd5a388b13431f05e302238ac8bd37adcb8c6c96e054da"
+    },
+    "results/relation_decision_regret_v2/p17_mear_full_seed0.json": {
+      "sha256": "f98fd73031f42e0fa6d2fbac7bb635d7bcfde1288b91f6637c1c7b6d7be40244"
+    }
+  },
+  "D0_gate_chooser": {
+    "baseline_mR": 0.5910844829398634,
+    "exact_oracle_delta_mR_pp": 22.352841744587625,
+    "learned_gate_exact_chooser_delta_mR_pp": -6.329707265974383,
+    "exact_gate_learned_chooser_delta_mR_pp": 14.8956868652395,
+    "gate_is_bottleneck": true
+  },
+  "O0_actionable_oracle": {
+    "delta_mR_pp": 22.352841744587625,
+    "delta_R_pp": 24.016872148010638,
+    "pass_headroom": true
+  },
+  "S0_S7_simple_controls": {
+    "strongest": "S0",
+    "simple_gain_pp": 0.0,
+    "captured_fraction": 0.0,
+    "complex_method_allowed_by_retrospective_gate": true
+  },
+  "M0_historical_mear": {
+    "gain_vs_simple_mR_pp": -1.4660486439788567,
+    "residual_oracle_capture": -0.06558667845146966,
+    "pass": false,
+    "decision": "do_not_resurrect_historical_method"
+  },
+  "next": "obtain_registered_DSFormer_checkpoint_and_images_then_run_single_source_B0_export"
+}

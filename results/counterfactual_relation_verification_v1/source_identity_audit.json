@@ -1,0 +1,3869 @@
+{
+  "schema_version": 1,
+  "contract": "physical file identity audit",
+  "dataset_sha": "d4a8c6df10198fa2a22f56d4c2039aa2b20bdc002db5c0be8ee34a36a06817c1",
+  "rows": 48749,
+  "unique_file_names": 48508,
+  "collision_groups": 241,
+  "collision_rows": 482,
+  "dedup_policy": "fail",
+  "pass": false,
+  "collisions": [
+    {
+      "file_name": "train2017/000000006263.jpg",
+      "rows": 2,
+      "image_ids": [
+        "2351977",
+        "61559"
+      ],
+      "coco_image_ids": [
+        "6263",
+        "6263"
+      ],
+      "relation_counts": [
+        5,
+        8
+      ]
+    },
+    {
+      "file_name": "train2017/000000017751.jpg",
+      "rows": 2,
+      "image_ids": [
+        "1591963",
+        "2386604"
+      ],
+      "coco_image_ids": [
+        "17751",
+        "17751"
+      ],
+      "relation_counts": [
+        9,
+        3
+      ]
+    },
+    {
+      "file_name": "train2017/000000022008.jpg",
+      "rows": 2,
+      "image_ids": [
+        "2399363",
+        "285738"
+      ],
+      "coco_image_ids": [
+        "22008",
+        "22008"
+      ],
+      "relation_counts": [
+        9,
+        7
+      ]
+    },
+    {
+      "file_name": "train2017/000000025105.jpg",
+      "rows": 2,
+      "image_ids": [
+        "1159529",
+        "2315379"
+      ],
+      "coco_image_ids": [
+        "25105",
+        "25105"
+      ],
+      "relation_counts": [
+        7,
+        5
+      ]
+    },
+    {
+      "file_name": "train2017/000000029189.jpg",
+      "rows": 2,
+      "image_ids": [
+        "1592176",
+        "2408366"
+      ],
+      "coco_image_ids": [
+        "29189",
+        "29189"
+      ],
+      "relation_counts": [
+        6,
+        7
+      ]
+    },
+    {
+      "file_name": "train2017/000000030187.jpg",
+      "rows": 2,
+      "image_ids": [
+        "2413718",
+        "285709"
+      ],
+      "coco_image_ids": [
+        "30187",
+        "30187"
+      ],
+      "relation_counts": [
+        0,
+        2
+      ]
+    },
+    {
+      "file_name": "train2017/000000030357.jpg",
+      "rows": 2,
+      "image_ids": [
+        "2417735",
+        "285834"
+      ],
+      "coco_image_ids": [
+        "30357",
+        "30357"
+      ],
+      "relation_counts": [
+        4,
+        9
+      ]
+    },
+    {
+      "file_name": "train2017/000000031235.jpg",
+      "rows": 2,
+      "image_ids": [
+        "1592691",
+        "2376902"
+      ],
+      "coco_image_ids": [
+        "31235",
+        "31235"
+      ],
+      "relation_counts": [
+        7,
+        11
+      ]
+    },
+    {
+      "file_name": "train2017/000000031273.jpg",
+      "rows": 2,
+      "image_ids": [
+        "150453",
+        "2342592"
+      ],
+      "coco_image_ids": [
+        "31273",
+        "31273"
+      ],
+      "relation_counts": [
+        6,
+        6
+      ]
+    },
+    {
+      "file_name": "train2017/000000037624.jpg",
+      "rows": 2,
+      "image_ids": [
+        "1591782",
+        "2400443"
+      ],
+      "coco_image_ids": [
+        "37624",
+        "37624"
+      ],
+      "relation_counts": [
+        10,
+        6
+      ]
+    },
+    {
+      "file_name": "train2017/000000041728.jpg",
+      "rows": 2,
+      "image_ids": [
+        "150522",
+        "2336834"
+      ],
+      "coco_image_ids": [
+        "41728",
+        "41728"
+      ],
+      "relation_counts": [
+        5,
+        4
+      ]
+    },
+    {
+      "file_name": "train2017/000000042161.jpg",
+      "rows": 2,
+      "image_ids": [
+        "2331794",
+        "713602"
+      ],
+      "coco_image_ids": [
+        "42161",
+        "42161"
+      ],
+      "relation_counts": [
+        7,
+        6
+      ]
+    },
+    {
+      "file_name": "train2017/000000043739.jpg",
+      "rows": 2,
+      "image_ids": [
+        "1159776",
+        "2362281"
+      ],
+      "coco_image_ids": [
+        "43739",
+        "43739"
+      ],
+      "relation_counts": [
+        9,
+        13
+      ]
+    },
+    {
+      "file_name": "train2017/000000044483.jpg",
+      "rows": 2,
+      "image_ids": [
+        "1591903",
+        "2368881"
+      ],
+      "coco_image_ids": [
+        "44483",
+        "44483"
+      ],
+      "relation_counts": [
+        10,
+        5
+      ]
+    },
+    {
+      "file_name": "train2017/000000044594.jpg",
+      "rows": 2,
+      "image_ids": [
+        "1159993",
+        "2378613"
+      ],
+      "coco_image_ids": [
+        "44594",
+        "44594"
+      ],
+      "relation_counts": [
+        8,
+        5
+      ]
+    },
+    {
+      "file_name": "train2017/000000045148.jpg",
+      "rows": 2,
+      "image_ids": [
+        "1159929",
+        "2355074"
+      ],
+      "coco_image_ids": [
+        "45148",
+        "45148"
+      ],
+      "relation_counts": [
+        5,
+        5
+      ]
+    },
+    {
+      "file_name": "train2017/000000045463.jpg",
+      "rows": 2,
+      "image_ids": [
+        "1592607",
+        "2383567"
+      ],
+      "coco_image_ids": [
+        "45463",
+        "45463"
+      ],
+      "relation_counts": [
+        7,
+        6
+      ]
+    },
+    {
+      "file_name": "train2017/000000047458.jpg",
+      "rows": 2,
+      "image_ids": [
+        "2399371",
+        "61519"
+      ],
+      "coco_image_ids": [
+        "47458",
+        "47458"
+      ],
+      "relation_counts": [
+        4,
+        5
+      ]
+    },
+    {
+      "file_name": "train2017/000000058633.jpg",
+      "rows": 2,
+      "image_ids": [
+        "1593194",
+        "2367039"
+      ],
+      "coco_image_ids": [
+        "58633",
+        "58633"
+      ],
+      "relation_counts": [
+        5,
+        9
+      ]
+    },
+    {
+      "file_name": "train2017/000000068287.jpg",
+      "rows": 2,
+      "image_ids": [
+        "2343513",
+        "285997"
+      ],
+      "coco_image_ids": [
+        "68287",
+        "68287"
+      ],
+      "relation_counts": [
+        9,
+        9
+      ]
+    },
+    {
+      "file_name": "train2017/000000070809.jpg",
+      "rows": 2,
+      "image_ids": [
+        "1592569",
+        "2386161"
+      ],
+      "coco_image_ids": [
+        "70809",
+        "70809"
+      ],
+      "relation_counts": [
+        4,
+        9
+      ]
+    },
+    {
+      "file_name": "train2017/000000072397.jpg",
+      "rows": 2,
+      "image_ids": [
+        "2396470",
+        "713117"
+      ],
+      "coco_image_ids": [
+        "72397",
+        "72397"
+      ],
+      "relation_counts": [
+        7,
+        8
+      ]
+    },
+    {
+      "file_name": "train2017/000000074430.jpg",
+      "rows": 2,
+      "image_ids": [
+        "1591966",
+        "2379141"
+      ],
+      "coco_image_ids": [
+        "74430",
+        "74430"
+      ],
+      "relation_counts": [
+        9,
+        7
+      ]
+    },
+    {
+      "file_name": "train2017/000000075668.jpg",
+      "rows": 2,
+      "image_ids": [
+        "1159444",
+        "2365256"
+      ],
+      "coco_image_ids": [
+        "75668",
+        "75668"
+      ],
+      "relation_counts": [
+        9,
+        6
+      ]
+    },
+    {
+      "file_name": "train2017/000000079106.jpg",
+      "rows": 2,
+      "image_ids": [
+        "2380356",
+        "713366"
+      ],
+      "coco_image_ids": [
+        "79106",
+        "79106"
+      ],
+      "relation_counts": [
+        7,
+        6
+      ]
+    },
+    {
+      "file_name": "train2017/000000081768.jpg",
+      "rows": 2,
+      "image_ids": [
+        "2329449",
+        "498265"
+      ],
+      "coco_image_ids": [
+        "81768",
+        "81768"
+      ],
+      "relation_counts": [
+        4,
+        7
+      ]
+    },
+    {
+      "file_name": "train2017/000000086239.jpg",
+      "rows": 2,
+      "image_ids": [
+        "1593104",
+        "2387368"
+      ],
+      "coco_image_ids": [
+        "86239",
+        "86239"
+      ],
+      "relation_counts": [
+        5,
+        4
+      ]
+    },
+    {
+      "file_name": "train2017/000000089238.jpg",
+      "rows": 2,
+      "image_ids": [
+        "2360935",
+        "713896"
+      ],
+      "coco_image_ids": [
+        "89238",
+        "89238"
+      ],
+      "relation_counts": [
+        8,
+        4
+      ]
+    },
+    {
+      "file_name": "train2017/000000090801.jpg",
+      "rows": 2,
+      "image_ids": [
+        "2323091",
+        "713779"
+      ],
+      "coco_image_ids": [
+        "90801",
+        "90801"
+      ],
+      "relation_counts": [
+        5,
+        12
+      ]
+    },
+    {
+      "file_name": "train2017/000000093329.jpg",
+      "rows": 2,
+      "image_ids": [
+        "2408327",
+        "713191"
+      ],
+      "coco_image_ids": [
+        "93329",
+        "93329"
+      ],
+      "relation_counts": [
+        9,
+        8
+      ]
+    },
+    {
+      "file_name": "train2017/000000094223.jpg",
+      "rows": 2,
+      "image_ids": [
+        "2325701",
+        "713829"
+      ],
+      "coco_image_ids": [
+        "94223",
+        "94223"
+      ],
+      "relation_counts": [
+        6,
+        3
+      ]
+    },
+    {
+      "file_name": "train2017/000000097660.jpg",
+      "rows": 2,
+      "image_ids": [
+        "1591813",
+        "2320496"
+      ],
+      "coco_image_ids": [
+        "97660",
+        "97660"
+      ],
+      "relation_counts": [
+        9,
+        6
+      ]
+    },
+    {
+      "file_name": "train2017/000000097722.jpg",
+      "rows": 2,
+      "image_ids": [
+        "2317628",
+        "713456"
+      ],
+      "coco_image_ids": [
+        "97722",
+        "97722"
+      ],
+      "relation_counts": [
+        12,
+        6
+      ]
+    },
+    {
+      "file_name": "train2017/000000099681.jpg",
+      "rows": 2,
+      "image_ids": [
+        "1160149",
+        "2399796"
+      ],
+      "coco_image_ids": [
+        "99681",
+        "99681"
+      ],
+      "relation_counts": [
+        8,
+        5
+      ]
+    },
+    {
+      "file_name": "train2017/000000100711.jpg",
+      "rows": 2,
+      "image_ids": [
+        "2408655",
+        "713071"
+      ],
+      "coco_image_ids": [
+        "100711",
+        "100711"
+      ],
+      "relation_counts": [
+        6,
+        10
+      ]
+    },
+    {
+      "file_name": "train2017/000000101140.jpg",
+      "rows": 2,
+      "image_ids": [
+        "1592126",
+        "2344500"
+      ],
+      "coco_image_ids": [
+        "101140",
+        "101140"
+      ],
+      "relation_counts": [
+        11,
+        8
+      ]
+    },
+    {
+      "file_name": "train2017/000000105349.jpg",
+      "rows": 2,
+      "image_ids": [
+        "1592605",
+        "2383016"
+      ],
+      "coco_image_ids": [
+        "105349",
+        "105349"
+      ],
+      "relation_counts": [
+        4,
+        6
+      ]
+    },
+    {
+      "file_name": "train2017/000000112040.jpg",
+      "rows": 2,
+      "image_ids": [
+        "2340703",
+        "286037"
+      ],
+      "coco_image_ids": [
+        "112040",
+        "112040"
+      ],
+      "relation_counts": [
+        6,
+        9
+      ]
+    },
+    {
+      "file_name": "train2017/000000114703.jpg",
+      "rows": 2,
+      "image_ids": [
+        "2338277",
+        "713582"
+      ],
+      "coco_image_ids": [
+        "114703",
+        "114703"
+      ],
+      "relation_counts": [
+        6,
+        4
+      ]
+    },
+    {
+      "file_name": "train2017/000000118964.jpg",
+      "rows": 2,
+      "image_ids": [
+        "1592469",
+        "2399395"
+      ],
+      "coco_image_ids": [
+        "118964",
+        "118964"
+      ],
+      "relation_counts": [
+        4,
+        4
+      ]
+    },
+    {
+      "file_name": "train2017/000000120721.jpg",
+      "rows": 2,
+      "image_ids": [
+        "2413442",
+        "285818"
+      ],
+      "coco_image_ids": [
+        "120721",
+        "120721"
+      ],
+      "relation_counts": [
+        3,
+        4
+      ]
+    },
+    {
+      "file_name": "train2017/000000128377.jpg",
+      "rows": 2,
+      "image_ids": [
+        "2322447",
+        "713708"
+      ],
+      "coco_image_ids": [
+        "128377",
+        "128377"
+      ],
+      "relation_counts": [
+        11,
+        8
+      ]
+    },
+    {
+      "file_name": "train2017/000000132908.jpg",
+      "rows": 2,
+      "image_ids": [
+        "2358033",
+        "497918"
+      ],
+      "coco_image_ids": [
+        "132908",
+        "132908"
+      ],
+      "relation_counts": [
+        7,
+        8
+      ]
+    },
+    {
+      "file_name": "train2017/000000133166.jpg",
+      "rows": 2,
+      "image_ids": [
+        "2365713",
+        "285920"
+      ],
+      "coco_image_ids": [
+        "133166",
+        "133166"
+      ],
+      "relation_counts": [
+        17,
+        13
+      ]
+    },
+    {
+      "file_name": "train2017/000000136565.jpg",
+      "rows": 2,
+      "image_ids": [
+        "1159687",
+        "2372590"
+      ],
+      "coco_image_ids": [
+        "136565",
+        "136565"
+      ],
+      "relation_counts": [
+        6,
+        5
+      ]
+    },
+    {
+      "file_name": "train2017/000000139781.jpg",
+      "rows": 2,
+      "image_ids": [
+        "1592608",
+        "2382515"
+      ],
+      "coco_image_ids": [
+        "139781",
+        "139781"
+      ],
+      "relation_counts": [
+        7,
+        5
+      ]
+    },
+    {
+      "file_name": "train2017/000000140244.jpg",
+      "rows": 2,
+      "image_ids": [
+        "2389777",
+        "61571"
+      ],
+      "coco_image_ids": [
+        "140244",
+        "140244"
+      ],
+      "relation_counts": [
+        6,
+        5
+      ]
+    },
+    {
+      "file_name": "train2017/000000140500.jpg",
+      "rows": 2,
+      "image_ids": [
+        "2361536",
+        "61543"
+      ],
+      "coco_image_ids": [
+        "140500",
+        "140500"
+      ],
+      "relation_counts": [
+        14,
+        7
+      ]
+    },
+    {
+      "file_name": "train2017/000000141382.jpg",
+      "rows": 2,
+      "image_ids": [
+        "1592524",
+        "2388067"
+      ],
+      "coco_image_ids": [
+        "141382",
+        "141382"
+      ],
+      "relation_counts": [
+        6,
+        11
+      ]
+    },
+    {
+      "file_name": "train2017/000000144907.jpg",
+      "rows": 2,
+      "image_ids": [
+        "2324214",
+        "713066"
+      ],
+      "coco_image_ids": [
+        "144907",
+        "144907"
+      ],
+      "relation_counts": [
+        8,
+        13
+      ]
+    },
+    {
+      "file_name": "train2017/000000145426.jpg",
+      "rows": 2,
+      "image_ids": [
+        "2330908",
+        "285928"
+      ],
+      "coco_image_ids": [
+        "145426",
+        "145426"
+      ],
+      "relation_counts": [
+        2,
+        2
+      ]
+    },
+    {
+      "file_name": "train2017/000000148909.jpg",
+      "rows": 2,
+      "image_ids": [
+        "1592978",
+        "2399680"
+      ],
+      "coco_image_ids": [
+        "148909",
+        "148909"
+      ],
+      "relation_counts": [
+        3,
+        2
+      ]
+    },
+    {
+      "file_name": "train2017/000000159465.jpg",
+      "rows": 2,
+      "image_ids": [
+        "2391499",
+        "498015"
+      ],
+      "coco_image_ids": [
+        "159465",
+        "159465"
+      ],
+      "relation_counts": [
+        5,
+        13
+      ]
+    },
+    {
+      "file_name": "train2017/000000162530.jpg",
+      "rows": 2,
+      "image_ids": [
+        "2384114",
+        "285878"
+      ],
+      "coco_image_ids": [
+        "162530",
+        "162530"
+      ],
+      "relation_counts": [
+        11,
+        3
+      ]
+    },
+    {
+      "file_name": "train2017/000000166386.jpg",
+      "rows": 2,
+      "image_ids": [
+        "2382237",
+        "713595"
+      ],
+      "coco_image_ids": [
+        "166386",
+        "166386"
+      ],
+      "relation_counts": [
+        9,
+        5
+      ]
+    },
+    {
+      "file_name": "train2017/000000166840.jpg",
+      "rows": 2,
+      "image_ids": [
+        "2414219",
+        "713130"
+      ],
+      "coco_image_ids": [
+        "166840",
+        "166840"
+      ],
+      "relation_counts": [
+        4,
+        4
+      ]
+    },
+    {
+      "file_name": "train2017/000000167397.jpg",
+      "rows": 2,
+      "image_ids": [
+        "1159637",
+        "2396738"
+      ],
+      "coco_image_ids": [
+        "167397",
+        "167397"
+      ],
+      "relation_counts": [
+        6,
+        7
+      ]
+    },
+    {
+      "file_name": "train2017/000000167713.jpg",
+      "rows": 2,
+      "image_ids": [
+        "150262",
+        "2412825"
+      ],
+      "coco_image_ids": [
+        "167713",
+        "167713"
+      ],
+      "relation_counts": [
+        7,
+        5
+      ]
+    },
+    {
+      "file_name": "train2017/000000175126.jpg",
+      "rows": 2,
+      "image_ids": [
+        "2342580",
+        "497925"
+      ],
+      "coco_image_ids": [
+        "175126",
+        "175126"
+      ],
+      "relation_counts": [
+        5,
+        11
+      ]
+    },
+    {
+      "file_name": "train2017/000000176038.jpg",
+      "rows": 2,
+      "image_ids": [
+        "1593065",
+        "2382974"
+      ],
+      "coco_image_ids": [
+        "176038",
+        "176038"
+      ],
+      "relation_counts": [
+        7,
+        7
+      ]
+    },
+    {
+      "file_name": "train2017/000000180869.jpg",
+      "rows": 2,
+      "image_ids": [
+        "1593256",
+        "2417674"
+      ],
+      "coco_image_ids": [
+        "180869",
+        "180869"
+      ],
+      "relation_counts": [
+        7,
+        36
+      ]
+    },
+    {
+      "file_name": "train2017/000000182050.jpg",
+      "rows": 2,
+      "image_ids": [
+        "1591816",
+        "2354533"
+      ],
+      "coco_image_ids": [
+        "182050",
+        "182050"
+      ],
+      "relation_counts": [
+        3,
+        11
+      ]
+    },
+    {
+      "file_name": "train2017/000000184184.jpg",
+      "rows": 2,
+      "image_ids": [
+        "2338056",
+        "285930"
+      ],
+      "coco_image_ids": [
+        "184184",
+        "184184"
+      ],
+      "relation_counts": [
+        2,
+        7
+      ]
+    },
+    {
+      "file_name": "train2017/000000185291.jpg",
+      "rows": 2,
+      "image_ids": [
+        "2349215",
+        "286032"
+      ],
+      "coco_image_ids": [
+        "185291",
+        "185291"
+      ],
+      "relation_counts": [
+        7,
+        8
+      ]
+    },
+    {
+      "file_name": "train2017/000000185986.jpg",
+      "rows": 2,
+      "image_ids": [
+        "2364283",
+        "713349"
+      ],
+      "coco_image_ids": [
+        "185986",
+        "185986"
+      ],
+      "relation_counts": [
+        9,
+        7
+      ]
+    },
+    {
+      "file_name": "train2017/000000186730.jpg",
+      "rows": 2,
+      "image_ids": [
+        "1592109",
+        "2342205"
+      ],
+      "coco_image_ids": [
+        "186730",
+        "186730"
+      ],
+      "relation_counts": [
+        6,
+        5
+      ]
+    },
+    {
+      "file_name": "train2017/000000193271.jpg",
+      "rows": 2,
+      "image_ids": [
+        "1159640",
+        "2370010"
+      ],
+      "coco_image_ids": [
+        "193271",
+        "193271"
+      ],
+      "relation_counts": [
+        13,
+        7
+      ]
+    },
+    {
+      "file_name": "train2017/000000194685.jpg",
+      "rows": 2,
+      "image_ids": [
+        "2405388",
+        "498143"
+      ],
+      "coco_image_ids": [
+        "194685",
+        "194685"
+      ],
+      "relation_counts": [
+        8,
+        6
+      ]
+    },
+    {
+      "file_name": "train2017/000000198798.jpg",
+      "rows": 2,
+      "image_ids": [
+        "1592982",
+        "2337262"
+      ],
+      "coco_image_ids": [
+        "198798",
+        "198798"
+      ],
+      "relation_counts": [
+        2,
+        1
+      ]
+    },
+    {
+      "file_name": "train2017/000000201141.jpg",
+      "rows": 2,
+      "image_ids": [
+        "2400990",
+        "497934"
+      ],
+      "coco_image_ids": [
+        "201141",
+        "201141"
+      ],
+      "relation_counts": [
+        6,
+        5
+      ]
+    },
+    {
+      "file_name": "train2017/000000203102.jpg",
+      "rows": 2,
+      "image_ids": [
+        "107946",
+        "2354710"
+      ],
+      "coco_image_ids": [
+        "203102",
+        "203102"
+      ],
+      "relation_counts": [
+        7,
+        5
+      ]
+    },
+    {
+      "file_name": "train2017/000000205916.jpg",
+      "rows": 2,
+      "image_ids": [
+        "2414482",
+        "285668"
+      ],
+      "coco_image_ids": [
+        "205916",
+        "205916"
+      ],
+      "relation_counts": [
+        12,
+        5
+      ]
+    },
+    {
+      "file_name": "train2017/000000207454.jpg",
+      "rows": 2,
+      "image_ids": [
+        "1159382",
+        "2393018"
+      ],
+      "coco_image_ids": [
+        "207454",
+        "207454"
+      ],
+      "relation_counts": [
+        6,
+        4
+      ]
+    },
+    {
+      "file_name": "train2017/000000214871.jpg",
+      "rows": 2,
+      "image_ids": [
+        "2372439",
+        "498269"
+      ],
+      "coco_image_ids": [
+        "214871",
+        "214871"
+      ],
+      "relation_counts": [
+        2,
+        2
+      ]
+    },
+    {
+      "file_name": "train2017/000000215443.jpg",
+      "rows": 2,
+      "image_ids": [
+        "1591937",
+        "2365737"
+      ],
+      "coco_image_ids": [
+        "215443",
+        "215443"
+      ],
+      "relation_counts": [
+        11,
+        9
+      ]
+    },
+    {
+      "file_name": "train2017/000000221869.jpg",
+      "rows": 2,
+      "image_ids": [
+        "1592774",
+        "2320259"
+      ],
+      "coco_image_ids": [
+        "221869",
+        "221869"
+      ],
+      "relation_counts": [
+        3,
+        5
+      ]
+    },
+    {
+      "file_name": "train2017/000000228175.jpg",
+      "rows": 2,
+      "image_ids": [
+        "2376296",
+        "713095"
+      ],
+      "coco_image_ids": [
+        "228175",
+        "228175"
+      ],
+      "relation_counts": [
+        3,
+        5
+      ]
+    },
+    {
+      "file_name": "train2017/000000228876.jpg",
+      "rows": 2,
+      "image_ids": [
+        "1592838",
+        "2369327"
+      ],
+      "coco_image_ids": [
+        "228876",
+        "228876"
+      ],
+      "relation_counts": [
+        9,
+        9
+      ]
+    },
+    {
+      "file_name": "train2017/000000237848.jpg",
+      "rows": 2,
+      "image_ids": [
+        "2378057",
+        "713173"
+      ],
+      "coco_image_ids": [
+        "237848",
+        "237848"
+      ],
+      "relation_counts": [
+        6,
+        6
+      ]
+    },
+    {
+      "file_name": "train2017/000000238427.jpg",
+      "rows": 2,
+      "image_ids": [
+        "1159933",
+        "2410673"
+      ],
+      "coco_image_ids": [
+        "238427",
+        "238427"
+      ],
+      "relation_counts": [
+        7,
+        5
+      ]
+    },
+    {
+      "file_name": "train2017/000000240820.jpg",
+      "rows": 2,
+      "image_ids": [
+        "2319479",
+        "713464"
+      ],
+      "coco_image_ids": [
+        "240820",
+        "240820"
+      ],
+      "relation_counts": [
+        5,
+        8
+      ]
+    },
+    {
+      "file_name": "train2017/000000241955.jpg",
+      "rows": 2,
+      "image_ids": [
+        "1592682",
+        "2337398"
+      ],
+      "coco_image_ids": [
+        "241955",
+        "241955"
+      ],
+      "relation_counts": [
+        6,
+        2
+      ]
+    },
+    {
+      "file_name": "train2017/000000243569.jpg",
+      "rows": 2,
+      "image_ids": [
+        "1592447",
+        "2367023"
+      ],
+      "coco_image_ids": [
+        "243569",
+        "243569"
+      ],
+      "relation_counts": [
+        4,
+        8
+      ]
+    },
+    {
+      "file_name": "train2017/000000245227.jpg",
+      "rows": 2,
+      "image_ids": [
+        "1592311",
+        "2401598"
+      ],
+      "coco_image_ids": [
+        "245227",
+        "245227"
+      ],
+      "relation_counts": [
+        11,
+        9
+      ]
+    },
+    {
+      "file_name": "train2017/000000245265.jpg",
+      "rows": 2,
+      "image_ids": [
+        "1592307",
+        "2344367"
+      ],
+      "coco_image_ids": [
+        "245265",
+        "245265"
+      ],
+      "relation_counts": [
+        13,
+        10
+      ]
+    },
+    {
+      "file_name": "train2017/000000249810.jpg",
+      "rows": 2,
+      "image_ids": [
+        "2380042",
+        "713230"
+      ],
+      "coco_image_ids": [
+        "249810",
+        "249810"
+      ],
+      "relation_counts": [
+        7,
+        11
+      ]
+    },
+    {
+      "file_name": "train2017/000000251344.jpg",
+      "rows": 2,
+      "image_ids": [
+        "2377833",
+        "61536"
+      ],
+      "coco_image_ids": [
+        "251344",
+        "251344"
+      ],
+      "relation_counts": [
+        7,
+        6
+      ]
+    },
+    {
+      "file_name": "train2017/000000254096.jpg",
+      "rows": 2,
+      "image_ids": [
+        "2345232",
+        "285768"
+      ],
+      "coco_image_ids": [
+        "254096",
+        "254096"
+      ],
+      "relation_counts": [
+        2,
+        2
+      ]
+    },
+    {
+      "file_name": "train2017/000000255614.jpg",
+      "rows": 2,
+      "image_ids": [
+        "2392022",
+        "713209"
+      ],
+      "coco_image_ids": [
+        "255614",
+        "255614"
+      ],
+      "relation_counts": [
+        5,
+        3
+      ]
+    },
+    {
+      "file_name": "train2017/000000261185.jpg",
+      "rows": 2,
+      "image_ids": [
+        "2394646",
+        "713533"
+      ],
+      "coco_image_ids": [
+        "261185",
+        "261185"
+      ],
+      "relation_counts": [
+        7,
+        11
+      ]
+    },
+    {
+      "file_name": "train2017/000000265532.jpg",
+      "rows": 2,
+      "image_ids": [
+        "2336955",
+        "713873"
+      ],
+      "coco_image_ids": [
+        "265532",
+        "265532"
+      ],
+      "relation_counts": [
+        5,
+        7
+      ]
+    },
+    {
+      "file_name": "train2017/000000268396.jpg",
+      "rows": 2,
+      "image_ids": [
+        "1592779",
+        "2376393"
+      ],
+      "coco_image_ids": [
+        "268396",
+        "268396"
+      ],
+      "relation_counts": [
+        4,
+        3
+      ]
+    },
+    {
+      "file_name": "train2017/000000271729.jpg",
+      "rows": 2,
+      "image_ids": [
+        "2384592",
+        "285617"
+      ],
+      "coco_image_ids": [
+        "271729",
+        "271729"
+      ],
+      "relation_counts": [
+        5,
+        4
+      ]
+    },
+    {
+      "file_name": "train2017/000000271759.jpg",
+      "rows": 2,
+      "image_ids": [
+        "1593045",
+        "2357826"
+      ],
+      "coco_image_ids": [
+        "271759",
+        "271759"
+      ],
+      "relation_counts": [
+        9,
+        6
+      ]
+    },
+    {
+      "file_name": "train2017/000000272026.jpg",
+      "rows": 2,
+      "image_ids": [
+        "107955",
+        "2367725"
+      ],
+      "coco_image_ids": [
+        "272026",
+        "272026"
+      ],
+      "relation_counts": [
+        6,
+        10
+      ]
+    },
+    {
+      "file_name": "train2017/000000272832.jpg",
+      "rows": 2,
+      "image_ids": [
+        "2387830",
+        "713060"
+      ],
+      "coco_image_ids": [
+        "272832",
+        "272832"
+      ],
+      "relation_counts": [
+        6,
+        5
+      ]
+    },
+    {
+      "file_name": "train2017/000000281027.jpg",
+      "rows": 2,
+      "image_ids": [
+        "2336044",
+        "497931"
+      ],
+      "coco_image_ids": [
+        "281027",
+        "281027"
+      ],
+      "relation_counts": [
+        0,
+        1
+      ]
+    },
+    {
+      "file_name": "train2017/000000282444.jpg",
+      "rows": 2,
+      "image_ids": [
+        "2358537",
+        "713601"
+      ],
+      "coco_image_ids": [
+        "282444",
+        "282444"
+      ],
+      "relation_counts": [
+        7,
+        9
+      ]
+    },
+    {
+      "file_name": "train2017/000000282599.jpg",
+      "rows": 2,
+      "image_ids": [
+        "1592223",
+        "2343487"
+      ],
+      "coco_image_ids": [
+        "282599",
+        "282599"
+      ],
+      "relation_counts": [
+        7,
+        6
+      ]
+    },
+    {
+      "file_name": "train2017/000000284925.jpg",
+      "rows": 2,
+      "image_ids": [
+        "2409715",
+        "498093"
+      ],
+      "coco_image_ids": [
+        "284925",
+        "284925"
+      ],
+      "relation_counts": [
+        7,
+        3
+      ]
+    },
+    {
+      "file_name": "train2017/000000285388.jpg",
+      "rows": 2,
+      "image_ids": [
+        "107914",
+        "2415718"
+      ],
+      "coco_image_ids": [
+        "285388",
+        "285388"
+      ],
+      "relation_counts": [
+        3,
+        1
+      ]
+    },
+    {
+      "file_name": "train2017/000000289767.jpg",
+      "rows": 2,
+      "image_ids": [
+        "1159812",
+        "2412558"
+      ],
+      "coco_image_ids": [
+        "289767",
+        "289767"
+      ],
+      "relation_counts": [
+        4,
+        6
+      ]
+    },
+    {
+      "file_name": "train2017/000000293576.jpg",
+      "rows": 2,
+      "image_ids": [
+        "1160002",
+        "2411795"
+      ],
+      "coco_image_ids": [
+        "293576",
+        "293576"
+      ],
+      "relation_counts": [
+        4,
+        14
+      ]
+    },
+    {
+      "file_name": "train2017/000000294416.jpg",
+      "rows": 2,
+      "image_ids": [
+        "2324056",
+        "712993"
+      ],
+      "coco_image_ids": [
+        "294416",
+        "294416"
+      ],
+      "relation_counts": [
+        8,
+        9
+      ]
+    },
+    {
+      "file_name": "train2017/000000294437.jpg",
+      "rows": 2,
+      "image_ids": [
+        "1593267",
+        "2397749"
+      ],
+      "coco_image_ids": [
+        "294437",
+        "294437"
+      ],
+      "relation_counts": [
+        4,
+        10
+      ]
+    },
+    {
+      "file_name": "train2017/000000298527.jpg",
+      "rows": 2,
+      "image_ids": [
+        "1591950",
+        "2400309"
+      ],
+      "coco_image_ids": [
+        "298527",
+        "298527"
+      ],
+      "relation_counts": [
+        6,
+        4
+      ]
+    },
+    {
+      "file_name": "train2017/000000301998.jpg",
+      "rows": 2,
+      "image_ids": [
+        "2398661",
+        "713012"
+      ],
+      "coco_image_ids": [
+        "301998",
+        "301998"
+      ],
+      "relation_counts": [
+        12,
+        12
+      ]
+    },
+    {
+      "file_name": "train2017/000000303956.jpg",
+      "rows": 2,
+      "image_ids": [
+        "1593251",
+        "2354994"
+      ],
+      "coco_image_ids": [
+        "303956",
+        "303956"
+      ],
+      "relation_counts": [
+        4,
+        5
+      ]
+    },
+    {
+      "file_name": "train2017/000000304332.jpg",
+      "rows": 2,
+      "image_ids": [
+        "1159576",
+        "2333362"
+      ],
+      "coco_image_ids": [
+        "304332",
+        "304332"
+      ],
+      "relation_counts": [
+        7,
+        7
+      ]
+    },
+    {
+      "file_name": "train2017/000000311240.jpg",
+      "rows": 2,
+      "image_ids": [
+        "2322116",
+        "498027"
+      ],
+      "coco_image_ids": [
+        "311240",
+        "311240"
+      ],
+      "relation_counts": [
+        5,
+        6
+      ]
+    },
+    {
+      "file_name": "train2017/000000312937.jpg",
+      "rows": 2,
+      "image_ids": [
+        "1592959",
+        "2402490"
+      ],
+      "coco_image_ids": [
+        "312937",
+        "312937"
+      ],
+      "relation_counts": [
+        10,
+        5
+      ]
+    },
+    {
+      "file_name": "train2017/000000317848.jpg",
+      "rows": 2,
+      "image_ids": [
+        "1592076",
+        "2345399"
+      ],
+      "coco_image_ids": [
+        "317848",
+        "317848"
+      ],
+      "relation_counts": [
+        4,
+        8
+      ]
+    },
+    {
+      "file_name": "train2017/000000320350.jpg",
+      "rows": 2,
+      "image_ids": [
+        "2330481",
+        "713655"
+      ],
+      "coco_image_ids": [
+        "320350",
+        "320350"
+      ],
+      "relation_counts": [
+        5,
+        14
+      ]
+    },
+    {
+      "file_name": "train2017/000000320436.jpg",
+      "rows": 2,
+      "image_ids": [
+        "1592478",
+        "2341356"
+      ],
+      "coco_image_ids": [
+        "320436",
+        "320436"
+      ],
+      "relation_counts": [
+        7,
+        10
+      ]
+    },
+    {
+      "file_name": "train2017/000000322194.jpg",
+      "rows": 2,
+      "image_ids": [
+        "2322189",
+        "286065"
+      ],
+      "coco_image_ids": [
+        "322194",
+        "322194"
+      ],
+      "relation_counts": [
+        4,
+        7
+      ]
+    },
+    {
+      "file_name": "train2017/000000322507.jpg",
+      "rows": 2,
+      "image_ids": [
+        "1159926",
+        "2342407"
+      ],
+      "coco_image_ids": [
+        "322507",
+        "322507"
+      ],
+      "relation_counts": [
+        13,
+        8
+      ]
+    },
+    {
+      "file_name": "train2017/000000324513.jpg",
+      "rows": 2,
+      "image_ids": [
+        "2326622",
+        "498119"
+      ],
+      "coco_image_ids": [
+        "324513",
+        "324513"
+      ],
+      "relation_counts": [
+        1,
+        2
+      ]
+    },
+    {
+      "file_name": "train2017/000000335037.jpg",
+      "rows": 2,
+      "image_ids": [
+        "2319890",
+        "713433"
+      ],
+      "coco_image_ids": [
+        "335037",
+        "335037"
+      ],
+      "relation_counts": [
+        4,
+        7
+      ]
+    },
+    {
+      "file_name": "train2017/000000335216.jpg",
+      "rows": 2,
+      "image_ids": [
+        "1159996",
+        "2371685"
+      ],
+      "coco_image_ids": [
+        "335216",
+        "335216"
+      ],
+      "relation_counts": [
+        5,
+        9
+      ]
+    },
+    {
+      "file_name": "train2017/000000340218.jpg",
+      "rows": 2,
+      "image_ids": [
+        "2327698",
+        "285838"
+      ],
+      "coco_image_ids": [
+        "340218",
+        "340218"
+      ],
+      "relation_counts": [
+        6,
+        8
+      ]
+    },
+    {
+      "file_name": "train2017/000000344765.jpg",
+      "rows": 2,
+      "image_ids": [
+        "2357744",
+        "285799"
+      ],
+      "coco_image_ids": [
+        "344765",
+        "344765"
+      ],
+      "relation_counts": [
+        13,
+        10
+      ]
+    },
+    {
+      "file_name": "train2017/000000349932.jpg",
+      "rows": 2,
+      "image_ids": [
+        "2334656",
+        "713169"
+      ],
+      "coco_image_ids": [
+        "349932",
+        "349932"
+      ],
+      "relation_counts": [
+        7,
+        8
+      ]
+    },
+    {
+      "file_name": "train2017/000000351705.jpg",
+      "rows": 2,
+      "image_ids": [
+        "1593073",
+        "2383415"
+      ],
+      "coco_image_ids": [
+        "351705",
+        "351705"
+      ],
+      "relation_counts": [
+        5,
+        9
+      ]
+    },
+    {
+      "file_name": "train2017/000000355304.jpg",
+      "rows": 2,
+      "image_ids": [
+        "1159692",
+        "2381512"
+      ],
+      "coco_image_ids": [
+        "355304",
+        "355304"
+      ],
+      "relation_counts": [
+        12,
+        10
+      ]
+    },
+    {
+      "file_name": "train2017/000000366109.jpg",
+      "rows": 2,
+      "image_ids": [
+        "1159964",
+        "2379622"
+      ],
+      "coco_image_ids": [
+        "366109",
+        "366109"
+      ],
+      "relation_counts": [
+        6,
+        1
+      ]
+    },
+    {
+      "file_name": "train2017/000000371364.jpg",
+      "rows": 2,
+      "image_ids": [
+        "1592391",
+        "2322557"
+      ],
+      "coco_image_ids": [
+        "371364",
+        "371364"
+      ],
+      "relation_counts": [
+        4,
+        13
+      ]
+    },
+    {
+      "file_name": "train2017/000000373487.jpg",
+      "rows": 2,
+      "image_ids": [
+        "1159942",
+        "2389078"
+      ],
+      "coco_image_ids": [
+        "373487",
+        "373487"
+      ],
+      "relation_counts": [
+        5,
+        3
+      ]
+    },
+    {
+      "file_name": "train2017/000000380280.jpg",
+      "rows": 2,
+      "image_ids": [
+        "1159792",
+        "2319090"
+      ],
+      "coco_image_ids": [
+        "380280",
+        "380280"
+      ],
+      "relation_counts": [
+        5,
+        6
+      ]
+    },
+    {
+      "file_name": "train2017/000000380499.jpg",
+      "rows": 2,
+      "image_ids": [
+        "1592092",
+        "2319432"
+      ],
+      "coco_image_ids": [
+        "380499",
+        "380499"
+      ],
+      "relation_counts": [
+        6,
+        13
+      ]
+    },
+    {
+      "file_name": "train2017/000000381988.jpg",
+      "rows": 2,
+      "image_ids": [
+        "2361509",
+        "713486"
+      ],
+      "coco_image_ids": [
+        "381988",
+        "381988"
+      ],
+      "relation_counts": [
+        8,
+        5
+      ]
+    },
+    {
+      "file_name": "train2017/000000387352.jpg",
+      "rows": 2,
+      "image_ids": [
+        "2382112",
+        "285661"
+      ],
+      "coco_image_ids": [
+        "387352",
+        "387352"
+      ],
+      "relation_counts": [
+        11,
+        7
+      ]
+    },
+    {
+      "file_name": "train2017/000000391235.jpg",
+      "rows": 2,
+      "image_ids": [
+        "2355814",
+        "713902"
+      ],
+      "coco_image_ids": [
+        "391235",
+        "391235"
+      ],
+      "relation_counts": [
+        9,
+        8
+      ]
+    },
+    {
+      "file_name": "train2017/000000392170.jpg",
+      "rows": 2,
+      "image_ids": [
+        "2417967",
+        "498158"
+      ],
+      "coco_image_ids": [
+        "392170",
+        "392170"
+      ],
+      "relation_counts": [
+        6,
+        8
+      ]
+    },
+    {
+      "file_name": "train2017/000000393489.jpg",
+      "rows": 2,
+      "image_ids": [
+        "107908",
+        "2400078"
+      ],
+      "coco_image_ids": [
+        "393489",
+        "393489"
+      ],
+      "relation_counts": [
+        1,
+        1
+      ]
+    },
+    {
+      "file_name": "train2017/000000393896.jpg",
+      "rows": 2,
+      "image_ids": [
+        "2390084",
+        "713581"
+      ],
+      "coco_image_ids": [
+        "393896",
+        "393896"
+      ],
+      "relation_counts": [
+        9,
+        13
+      ]
+    },
+    {
+      "file_name": "train2017/000000397664.jpg",
+      "rows": 2,
+      "image_ids": [
+        "2408515",
+        "498010"
+      ],
+      "coco_image_ids": [
+        "397664",
+        "397664"
+      ],
+      "relation_counts": [
+        10,
+        3
+      ]
+    },
+    {
+      "file_name": "train2017/000000399922.jpg",
+      "rows": 2,
+      "image_ids": [
+        "1159781",
+        "2347396"
+      ],
+      "coco_image_ids": [
+        "399922",
+        "399922"
+      ],
+      "relation_counts": [
+        6,
+        8
+      ]
+    },
+    {
+      "file_name": "train2017/000000402228.jpg",
+      "rows": 2,
+      "image_ids": [
+        "2415726",
+        "713302"
+      ],
+      "coco_image_ids": [
+        "402228",
+        "402228"
+      ],
+      "relation_counts": [
+        9,
+        14
+      ]
+    },
+    {
+      "file_name": "train2017/000000402255.jpg",
+      "rows": 2,
+      "image_ids": [
+        "2413709",
+        "286020"
+      ],
+      "coco_image_ids": [
+        "402255",
+        "402255"
+      ],
+      "relation_counts": [
+        2,
+        15
+      ]
+    },
+    {
+      "file_name": "train2017/000000402531.jpg",
+      "rows": 2,
+      "image_ids": [
+        "1159623",
+        "2399671"
+      ],
+      "coco_image_ids": [
+        "402531",
+        "402531"
+      ],
+      "relation_counts": [
+        6,
+        6
+      ]
+    },
+    {
+      "file_name": "train2017/000000404254.jpg",
+      "rows": 2,
+      "image_ids": [
+        "2414494",
+        "713555"
+      ],
+      "coco_image_ids": [
+        "404254",
+        "404254"
+      ],
+      "relation_counts": [
+        3,
+        3
+      ]
+    },
+    {
+      "file_name": "train2017/000000405004.jpg",
+      "rows": 2,
+      "image_ids": [
+        "2383811",
+        "61606"
+      ],
+      "coco_image_ids": [
+        "405004",
+        "405004"
+      ],
+      "relation_counts": [
+        7,
+        11
+      ]
+    },
+    {
+      "file_name": "train2017/000000410715.jpg",
+      "rows": 2,
+      "image_ids": [
+        "1592873",
+        "2375864"
+      ],
+      "coco_image_ids": [
+        "410715",
+        "410715"
+      ],
+      "relation_counts": [
+        0,
+        3
+      ]
+    },
+    {
+      "file_name": "train2017/000000412916.jpg",
+      "rows": 2,
+      "image_ids": [
+        "2317316",
+        "713494"
+      ],
+      "coco_image_ids": [
+        "412916",
+        "412916"
+      ],
+      "relation_counts": [
+        9,
+        7
+      ]
+    },
+    {
+      "file_name": "train2017/000000413277.jpg",
+      "rows": 2,
+      "image_ids": [
+        "1591887",
+        "2401997"
+      ],
+      "coco_image_ids": [
+        "413277",
+        "413277"
+      ],
+      "relation_counts": [
+        6,
+        6
+      ]
+    },
+    {
+      "file_name": "train2017/000000416098.jpg",
+      "rows": 2,
+      "image_ids": [
+        "1592833",
+        "2368322"
+      ],
+      "coco_image_ids": [
+        "416098",
+        "416098"
+      ],
+      "relation_counts": [
+        7,
+        10
+      ]
+    },
+    {
+      "file_name": "train2017/000000420231.jpg",
+      "rows": 2,
+      "image_ids": [
+        "1592888",
+        "2366287"
+      ],
+      "coco_image_ids": [
+        "420231",
+        "420231"
+      ],
+      "relation_counts": [
+        8,
+        3
+      ]
+    },
+    {
+      "file_name": "train2017/000000420490.jpg",
+      "rows": 2,
+      "image_ids": [
+        "2417582",
+        "285984"
+      ],
+      "coco_image_ids": [
+        "420490",
+        "420490"
+      ],
+      "relation_counts": [
+        8,
+        7
+      ]
+    },
+    {
+      "file_name": "train2017/000000421902.jpg",
+      "rows": 2,
+      "image_ids": [
+        "2333590",
+        "286099"
+      ],
+      "coco_image_ids": [
+        "421902",
+        "421902"
+      ],
+      "relation_counts": [
+        8,
+        11
+      ]
+    },
+    {
+      "file_name": "train2017/000000427060.jpg",
+      "rows": 2,
+      "image_ids": [
+        "150487",
+        "2362408"
+      ],
+      "coco_image_ids": [
+        "427060",
+        "427060"
+      ],
+      "relation_counts": [
+        3,
+        11
+      ]
+    },
+    {
+      "file_name": "train2017/000000427756.jpg",
+      "rows": 2,
+      "image_ids": [
+        "2362559",
+        "713809"
+      ],
+      "coco_image_ids": [
+        "427756",
+        "427756"
+      ],
+      "relation_counts": [
+        9,
+        7
+      ]
+    },
+    {
+      "file_name": "train2017/000000435005.jpg",
+      "rows": 2,
+      "image_ids": [
+        "2344987",
+        "713534"
+      ],
+      "coco_image_ids": [
+        "435005",
+        "435005"
+      ],
+      "relation_counts": [
+        6,
+        4
+      ]
+    },
+    {
+      "file_name": "train2017/000000441504.jpg",
+      "rows": 2,
+      "image_ids": [
+        "1592689",
+        "2397606"
+      ],
+      "coco_image_ids": [
+        "441504",
+        "441504"
+      ],
+      "relation_counts": [
+        8,
+        6
+      ]
+    },
+    {
+      "file_name": "train2017/000000444214.jpg",
+      "rows": 2,
+      "image_ids": [
+        "2357779",
+        "498077"
+      ],
+      "coco_image_ids": [
+        "444214",
+        "444214"
+      ],
+      "relation_counts": [
+        7,
+        6
+      ]
+    },
+    {
+      "file_name": "train2017/000000447084.jpg",
+      "rows": 2,
+      "image_ids": [
+        "1593053",
+        "2368402"
+      ],
+      "coco_image_ids": [
+        "447084",
+        "447084"
+      ],
+      "relation_counts": [
+        6,
+        7
+      ]
+    },
+    {
+      "file_name": "train2017/000000451154.jpg",
+      "rows": 2,
+      "image_ids": [
+        "2411622",
+        "497936"
+      ],
+      "coco_image_ids": [
+        "451154",
+        "451154"
+      ],
+      "relation_counts": [
+        8,
+        4
+      ]
+    },
+    {
+      "file_name": "train2017/000000453496.jpg",
+      "rows": 2,
+      "image_ids": [
+        "2338231",
+        "498384"
+      ],
+      "coco_image_ids": [
+        "453496",
+        "453496"
+      ],
+      "relation_counts": [
+        12,
+        6
+      ]
+    },
+    {
+      "file_name": "train2017/000000457754.jpg",
+      "rows": 2,
+      "image_ids": [
+        "1160217",
+        "2417374"
+      ],
+      "coco_image_ids": [
+        "457754",
+        "457754"
+      ],
+      "relation_counts": [
+        10,
+        11
+      ]
+    },
+    {
+      "file_name": "train2017/000000460094.jpg",
+      "rows": 2,
+      "image_ids": [
+        "1592476",
+        "2329894"
+      ],
+      "coco_image_ids": [
+        "460094",
+        "460094"
+      ],
+      "relation_counts": [
+        8,
+        4
+      ]
+    },
+    {
+      "file_name": "train2017/000000460353.jpg",
+      "rows": 2,
+      "image_ids": [
+        "1592539",
+        "2329595"
+      ],
+      "coco_image_ids": [
+        "460353",
+        "460353"
+      ],
+      "relation_counts": [
+        6,
+        12
+      ]
+    },
+    {
+      "file_name": "train2017/000000460628.jpg",
+      "rows": 2,
+      "image_ids": [
+        "2391553",
+        "498337"
+      ],
+      "coco_image_ids": [
+        "460628",
+        "460628"
+      ],
+      "relation_counts": [
+        7,
+        6
+      ]
+    },
+    {
+      "file_name": "train2017/000000461183.jpg",
+      "rows": 2,
+      "image_ids": [
+        "2368895",
+        "498344"
+      ],
+      "coco_image_ids": [
+        "461183",
+        "461183"
+      ],
+      "relation_counts": [
+        4,
+        4
+      ]
+    },
+    {
+      "file_name": "train2017/000000462327.jpg",
+      "rows": 2,
+      "image_ids": [
+        "2325665",
+        "498163"
+      ],
+      "coco_image_ids": [
+        "462327",
+        "462327"
+      ],
+      "relation_counts": [
+        4,
+        2
+      ]
+    },
+    {
+      "file_name": "train2017/000000465057.jpg",
+      "rows": 2,
+      "image_ids": [
+        "2392559",
+        "713262"
+      ],
+      "coco_image_ids": [
+        "465057",
+        "465057"
+      ],
+      "relation_counts": [
+        1,
+        2
+      ]
+    },
+    {
+      "file_name": "train2017/000000466005.jpg",
+      "rows": 2,
+      "image_ids": [
+        "2351460",
+        "61601"
+      ],
+      "coco_image_ids": [
+        "466005",
+        "466005"
+      ],
+      "relation_counts": [
+        1,
+        2
+      ]
+    },
+    {
+      "file_name": "train2017/000000467973.jpg",
+      "rows": 2,
+      "image_ids": [
+        "2386471",
+        "286070"
+      ],
+      "coco_image_ids": [
+        "467973",
+        "467973"
+      ],
+      "relation_counts": [
+        3,
+        2
+      ]
+    },
+    {
+      "file_name": "train2017/000000469599.jpg",
+      "rows": 2,
+      "image_ids": [
+        "150400",
+        "2382093"
+      ],
+      "coco_image_ids": [
+        "469599",
+        "469599"
+      ],
+      "relation_counts": [
+        7,
+        7
+      ]
+    },
+    {
+      "file_name": "train2017/000000470288.jpg",
+      "rows": 2,
+      "image_ids": [
+        "1592809",
+        "2355274"
+      ],
+      "coco_image_ids": [
+        "470288",
+        "470288"
+      ],
+      "relation_counts": [
+        4,
+        5
+      ]
+    },
+    {
+      "file_name": "train2017/000000481452.jpg",
+      "rows": 2,
+      "image_ids": [
+        "2322741",
+        "713711"
+      ],
+      "coco_image_ids": [
+        "481452",
+        "481452"
+      ],
+      "relation_counts": [
+        5,
+        12
+      ]
+    },
+    {
+      "file_name": "train2017/000000482187.jpg",
+      "rows": 2,
+      "image_ids": [
+        "2355886",
+        "285694"
+      ],
+      "coco_image_ids": [
+        "482187",
+        "482187"
+      ],
+      "relation_counts": [
+        8,
+        6
+      ]
+    },
+    {
+      "file_name": "train2017/000000483306.jpg",
+      "rows": 2,
+      "image_ids": [
+        "2381519",
+        "713424"
+      ],
+      "coco_image_ids": [
+        "483306",
+        "483306"
+      ],
+      "relation_counts": [
+        8,
+        4
+      ]
+    },
+    {
+      "file_name": "train2017/000000484674.jpg",
+      "rows": 2,
+      "image_ids": [
+        "1592067",
+        "2373866"
+      ],
+      "coco_image_ids": [
+        "484674",
+        "484674"
+      ],
+      "relation_counts": [
+        9,
+        6
+      ]
+    },
+    {
+      "file_name": "train2017/000000486232.jpg",
+      "rows": 2,
+      "image_ids": [
+        "2396263",
+        "285720"
+      ],
+      "coco_image_ids": [
+        "486232",
+        "486232"
+      ],
+      "relation_counts": [
+        1,
+        3
+      ]
+    },
+    {
+      "file_name": "train2017/000000489415.jpg",
+      "rows": 2,
+      "image_ids": [
+        "1159599",
+        "2394765"
+      ],
+      "coco_image_ids": [
+        "489415",
+        "489415"
+      ],
+      "relation_counts": [
+        6,
+        5
+      ]
+    },
+    {
+      "file_name": "train2017/000000489983.jpg",
+      "rows": 2,
+      "image_ids": [
+        "1159616",
+        "2391446"
+      ],
+      "coco_image_ids": [
+        "489983",
+        "489983"
+      ],
+      "relation_counts": [
+        5,
+        5
+      ]
+    },
+    {
+      "file_name": "train2017/000000492376.jpg",
+      "rows": 2,
+      "image_ids": [
+        "2400935",
+        "285739"
+      ],
+      "coco_image_ids": [
+        "492376",
+        "492376"
+      ],
+      "relation_counts": [
+        4,
+        5
+      ]
+    },
+    {
+      "file_name": "train2017/000000494090.jpg",
+      "rows": 2,
+      "image_ids": [
+        "2340042",
+        "285931"
+      ],
+      "coco_image_ids": [
+        "494090",
+        "494090"
+      ],
+      "relation_counts": [
+        8,
+        7
+      ]
+    },
+    {
+      "file_name": "train2017/000000495013.jpg",
+      "rows": 2,
+      "image_ids": [
+        "1592449",
+        "2341227"
+      ],
+      "coco_image_ids": [
+        "495013",
+        "495013"
+      ],
+      "relation_counts": [
+        9,
+        8
+      ]
+    },
+    {
+      "file_name": "train2017/000000496198.jpg",
+      "rows": 2,
+      "image_ids": [
+        "2320177",
+        "713854"
+      ],
+      "coco_image_ids": [
+        "496198",
+        "496198"
+      ],
+      "relation_counts": [
+        5,
+        9
+      ]
+    },
+    {
+      "file_name": "train2017/000000503424.jpg",
+      "rows": 2,
+      "image_ids": [
+        "2339844",
+        "713434"
+      ],
+      "coco_image_ids": [
+        "503424",
+        "503424"
+      ],
+      "relation_counts": [
+        19,
+        9
+      ]
+    },
+    {
+      "file_name": "train2017/000000504325.jpg",
+      "rows": 2,
+      "image_ids": [
+        "1591866",
+        "2417276"
+      ],
+      "coco_image_ids": [
+        "504325",
+        "504325"
+      ],
+      "relation_counts": [
+        6,
+        5
+      ]
+    },
+    {
+      "file_name": "train2017/000000505243.jpg",
+      "rows": 2,
+      "image_ids": [
+        "2334627",
+        "498241"
+      ],
+      "coco_image_ids": [
+        "505243",
+        "505243"
+      ],
+      "relation_counts": [
+        6,
+        6
+      ]
+    },
+    {
+      "file_name": "train2017/000000514016.jpg",
+      "rows": 2,
+      "image_ids": [
+        "2332392",
+        "713607"
+      ],
+      "coco_image_ids": [
+        "514016",
+        "514016"
+      ],
+      "relation_counts": [
+        6,
+        15
+      ]
+    },
+    {
+      "file_name": "train2017/000000516834.jpg",
+      "rows": 2,
+      "image_ids": [
+        "2343212",
+        "713518"
+      ],
+      "coco_image_ids": [
+        "516834",
+        "516834"
+      ],
+      "relation_counts": [
+        8,
+        6
+      ]
+    },
+    {
+      "file_name": "train2017/000000517807.jpg",
+      "rows": 2,
+      "image_ids": [
+        "107941",
+        "2319818"
+      ],
+      "coco_image_ids": [
+        "517807",
+        "517807"
+      ],
+      "relation_counts": [
+        5,
+        3
+      ]
+    },
+    {
+      "file_name": "train2017/000000518157.jpg",
+      "rows": 2,
+      "image_ids": [
+        "150337",
+        "2414504"
+      ],
+      "coco_image_ids": [
+        "518157",
+        "518157"
+      ],
+      "relation_counts": [
+        6,
+        7
+      ]
+    },
+    {
+      "file_name": "train2017/000000518524.jpg",
+      "rows": 2,
+      "image_ids": [
+        "1592574",
+        "2385945"
+      ],
+      "coco_image_ids": [
+        "518524",
+        "518524"
+      ],
+      "relation_counts": [
+        6,
+        4
+      ]
+    },
+    {
+      "file_name": "train2017/000000520147.jpg",
+      "rows": 2,
+      "image_ids": [
+        "2325115",
+        "713144"
+      ],
+      "coco_image_ids": [
+        "520147",
+        "520147"
+      ],
+      "relation_counts": [
+        2,
+        3
+      ]
+    },
+    {
+      "file_name": "train2017/000000521005.jpg",
+      "rows": 2,
+      "image_ids": [
+        "1592319",
+        "2411344"
+      ],
+      "coco_image_ids": [
+        "521005",
+        "521005"
+      ],
+      "relation_counts": [
+        8,
+        10
+      ]
+    },
+    {
+      "file_name": "train2017/000000522330.jpg",
+      "rows": 2,
+      "image_ids": [
+        "2403695",
+        "285908"
+      ],
+      "coco_image_ids": [
+        "522330",
+        "522330"
+      ],
+      "relation_counts": [
+        6,
+        5
+      ]
+    },
+    {
+      "file_name": "train2017/000000522461.jpg",
+      "rows": 2,
+      "image_ids": [
+        "1159441",
+        "2390968"
+      ],
+      "coco_image_ids": [
+        "522461",
+        "522461"
+      ],
+      "relation_counts": [
+        16,
+        6
+      ]
+    },
+    {
+      "file_name": "train2017/000000522990.jpg",
+      "rows": 2,
+      "image_ids": [
+        "1592680",
+        "2335977"
+      ],
+      "coco_image_ids": [
+        "522990",
+        "522990"
+      ],
+      "relation_counts": [
+        5,
+        7
+      ]
+    },
+    {
+      "file_name": "train2017/000000523490.jpg",
+      "rows": 2,
+      "image_ids": [
+        "1593195",
+        "2416523"
+      ],
+      "coco_image_ids": [
+        "523490",
+        "523490"
+      ],
+      "relation_counts": [
+        5,
+        4
+      ]
+    },
+    {
+      "file_name": "train2017/000000523492.jpg",
+      "rows": 2,
+      "image_ids": [
+        "2341321",
+        "498042"
+      ],
+      "coco_image_ids": [
+        "523492",
+        "523492"
+      ],
+      "relation_counts": [
+        4,
+        3
+      ]
+    },
+    {
+      "file_name": "train2017/000000523560.jpg",
+      "rows": 2,
+      "image_ids": [
+        "2322399",
+        "285815"
+      ],
+      "coco_image_ids": [
+        "523560",
+        "523560"
+      ],
+      "relation_counts": [
+        7,
+        8
+      ]
+    },
+    {
+      "file_name": "train2017/000000524325.jpg",
+      "rows": 2,
+      "image_ids": [
+        "2411077",
+        "713762"
+      ],
+      "coco_image_ids": [
+        "524325",
+        "524325"
+      ],
+      "relation_counts": [
+        7,
+        9
+      ]
+    },
+    {
+      "file_name": "train2017/000000525559.jpg",
+      "rows": 2,
+      "image_ids": [
+        "2352563",
+        "285663"
+      ],
+      "coco_image_ids": [
+        "525559",
+        "525559"
+      ],
+      "relation_counts": [
+        5,
+        2
+      ]
+    },
+    {
+      "file_name": "train2017/000000527183.jpg",
+      "rows": 2,
+      "image_ids": [
+        "2348462",
+        "285809"
+      ],
+      "coco_image_ids": [
+        "527183",
+        "527183"
+      ],
+      "relation_counts": [
+        5,
+        4
+      ]
+    },
+    {
+      "file_name": "train2017/000000527379.jpg",
+      "rows": 2,
+      "image_ids": [
+        "1592855",
+        "2334516"
+      ],
+      "coco_image_ids": [
+        "527379",
+        "527379"
+      ],
+      "relation_counts": [
+        8,
+        2
+      ]
+    },
+    {
+      "file_name": "train2017/000000531979.jpg",
+      "rows": 2,
+      "image_ids": [
+        "1592054",
+        "2349040"
+      ],
+      "coco_image_ids": [
+        "531979",
+        "531979"
+      ],
+      "relation_counts": [
+        5,
+        6
+      ]
+    },
+    {
+      "file_name": "train2017/000000533197.jpg",
+      "rows": 2,
+      "image_ids": [
+        "150543",
+        "2326020"
+      ],
+      "coco_image_ids": [
+        "533197",
+        "533197"
+      ],
+      "relation_counts": [
+        7,
+        7
+      ]
+    },
+    {
+      "file_name": "train2017/000000534000.jpg",
+      "rows": 2,
+      "image_ids": [
+        "150272",
+        "2380366"
+      ],
+      "coco_image_ids": [
+        "534000",
+        "534000"
+      ],
+      "relation_counts": [
+        10,
+        13
+      ]
+    },
+    {
+      "file_name": "train2017/000000534428.jpg",
+      "rows": 2,
+      "image_ids": [
+        "1159370",
+        "2328116"
+      ],
+      "coco_image_ids": [
+        "534428",
+        "534428"
+      ],
+      "relation_counts": [
+        7,
+        16
+      ]
+    },
+    {
+      "file_name": "train2017/000000536720.jpg",
+      "rows": 2,
+      "image_ids": [
+        "1593126",
+        "2348092"
+      ],
+      "coco_image_ids": [
+        "536720",
+        "536720"
+      ],
+      "relation_counts": [
+        10,
+        10
+      ]
+    },
+    {
+      "file_name": "train2017/000000537456.jpg",
+      "rows": 2,
+      "image_ids": [
+        "2329122",
+        "285628"
+      ],
+      "coco_image_ids": [
+        "537456",
+        "537456"
+      ],
+      "relation_counts": [
+        6,
+        5
+      ]
+    },
+    {
+      "file_name": "train2017/000000540428.jpg",
+      "rows": 2,
+      "image_ids": [
+        "1592003",
+        "2407374"
+      ],
+      "coco_image_ids": [
+        "540428",
+        "540428"
+      ],
+      "relation_counts": [
+        7,
+        6
+      ]
+    },
+    {
+      "file_name": "train2017/000000541744.jpg",
+      "rows": 2,
+      "image_ids": [
+        "2337933",
+        "713287"
+      ],
+      "coco_image_ids": [
+        "541744",
+        "541744"
+      ],
+      "relation_counts": [
+        6,
+        11
+      ]
+    },
+    {
+      "file_name": "train2017/000000542231.jpg",
+      "rows": 2,
+      "image_ids": [
+        "1591805",
+        "2410754"
+      ],
+      "coco_image_ids": [
+        "542231",
+        "542231"
+      ],
+      "relation_counts": [
+        4,
+        1
+      ]
+    },
+    {
+      "file_name": "train2017/000000544638.jpg",
+      "rows": 2,
+      "image_ids": [
+        "2345351",
+        "713516"
+      ],
+      "coco_image_ids": [
+        "544638",
+        "544638"
+      ],
+      "relation_counts": [
+        9,
+        6
+      ]
+    },
+    {
+      "file_name": "train2017/000000546097.jpg",
+      "rows": 2,
+      "image_ids": [
+        "1592850",
+        "2375599"
+      ],
+      "coco_image_ids": [
+        "546097",
+        "546097"
+      ],
+      "relation_counts": [
+        7,
+        11
+      ]
+    },
+    {
+      "file_name": "train2017/000000547229.jpg",
+      "rows": 2,
+      "image_ids": [
+        "2373409",
+        "285693"
+      ],
+      "coco_image_ids": [
+        "547229",
+        "547229"
+      ],
+      "relation_counts": [
+        3,
+        1
+      ]
+    },
+    {
+      "file_name": "train2017/000000549386.jpg",
+      "rows": 2,
+      "image_ids": [
+        "2328435",
+        "498229"
+      ],
+      "coco_image_ids": [
+        "549386",
+        "549386"
+      ],
+      "relation_counts": [
+        6,
+        2
+      ]
+    },
+    {
+      "file_name": "train2017/000000554636.jpg",
+      "rows": 2,
+      "image_ids": [
+        "2327297",
+        "713725"
+      ],
+      "coco_image_ids": [
+        "554636",
+        "554636"
+      ],
+      "relation_counts": [
+        8,
+        12
+      ]
+    },
+    {
+      "file_name": "train2017/000000554982.jpg",
+      "rows": 2,
+      "image_ids": [
+        "1592346",
+        "2348229"
+      ],
+      "coco_image_ids": [
+        "554982",
+        "554982"
+      ],
+      "relation_counts": [
+        6,
+        5
+      ]
+    },
+    {
+      "file_name": "train2017/000000558011.jpg",
+      "rows": 2,
+      "image_ids": [
+        "1159848",
+        "2345081"
+      ],
+      "coco_image_ids": [
+        "558011",
+        "558011"
+      ],
+      "relation_counts": [
+        4,
+        10
+      ]
+    },
+    {
+      "file_name": "train2017/000000561121.jpg",
+      "rows": 2,
+      "image_ids": [
+        "1592026",
+        "2344181"
+      ],
+      "coco_image_ids": [
+        "561121",
+        "561121"
+      ],
+      "relation_counts": [
+        4,
+        8
+      ]
+    },
+    {
+      "file_name": "train2017/000000561814.jpg",
+      "rows": 2,
+      "image_ids": [
+        "2395592",
+        "713368"
+      ],
+      "coco_image_ids": [
+        "561814",
+        "561814"
+      ],
+      "relation_counts": [
+        2,
+        2
+      ]
+    },
+    {
+      "file_name": "train2017/000000565767.jpg",
+      "rows": 2,
+      "image_ids": [
+        "1592062",
+        "2321662"
+      ],
+      "coco_image_ids": [
+        "565767",
+        "565767"
+      ],
+      "relation_counts": [
+        5,
+        4
+      ]
+    },
+    {
+      "file_name": "train2017/000000566757.jpg",
+      "rows": 2,
+      "image_ids": [
+        "1591962",
+        "2324977"
+      ],
+      "coco_image_ids": [
+        "566757",
+        "566757"
+      ],
+      "relation_counts": [
+        5,
+        5
+      ]
+    },
+    {
+      "file_name": "train2017/000000568880.jpg",
+      "rows": 2,
+      "image_ids": [
+        "1160097",
+        "2392147"
+      ],
+      "coco_image_ids": [
+        "568880",
+        "568880"
+      ],
+      "relation_counts": [
+        5,
+        8
+      ]
+    },
+    {
+      "file_name": "train2017/000000569037.jpg",
+      "rows": 2,
+      "image_ids": [
+        "2364269",
+        "498026"
+      ],
+      "coco_image_ids": [
+        "569037",
+        "569037"
+      ],
+      "relation_counts": [
+        8,
+        13
+      ]
+    },
+    {
+      "file_name": "train2017/000000572565.jpg",
+      "rows": 2,
+      "image_ids": [
+        "2357568",
+        "498159"
+      ],
+      "coco_image_ids": [
+        "572565",
+        "572565"
+      ],
+      "relation_counts": [
+        3,
+        4
+      ]
+    },
+    {
+      "file_name": "train2017/000000575349.jpg",
+      "rows": 2,
+      "image_ids": [
+        "2389280",
+        "285995"
+      ],
+      "coco_image_ids": [
+        "575349",
+        "575349"
+      ],
+      "relation_counts": [
+        4,
+        5
+      ]
+    },
+    {
+      "file_name": "train2017/000000575649.jpg",
+      "rows": 2,
+      "image_ids": [
+        "2381199",
+        "498223"
+      ],
+      "coco_image_ids": [
+        "575649",
+        "575649"
+      ],
+      "relation_counts": [
+        5,
+        7
+      ]
+    },
+    {
+      "file_name": "train2017/000000578570.jpg",
+      "rows": 2,
+      "image_ids": [
+        "2378042",
+        "285774"
+      ],
+      "coco_image_ids": [
+        "578570",
+        "578570"
+      ],
+      "relation_counts": [
+        4,
+        2
+      ]
+    },
+    {
+      "file_name": "val2017/000000042276.jpg",
+      "rows": 2,
+      "image_ids": [
+        "150323",
+        "2327041"
+      ],
+      "coco_image_ids": [
+        "42276",
+        "42276"
+      ],
+      "relation_counts": [
+        6,
+        7
+      ]
+    },
+    {
+      "file_name": "val2017/000000047819.jpg",
+      "rows": 2,
+      "image_ids": [
+        "1593095",
+        "2408184"
+      ],
+      "coco_image_ids": [
+        "47819",
+        "47819"
+      ],
+      "relation_counts": [
+        8,
+        6
+      ]
+    },
+    {
+      "file_name": "val2017/000000051738.jpg",
+      "rows": 2,
+      "image_ids": [
+        "1159785",
+        "2401635"
+      ],
+      "coco_image_ids": [
+        "51738",
+        "51738"
+      ],
+      "relation_counts": [
+        5,
+        6
+      ]
+    },
+    {
+      "file_name": "val2017/000000222299.jpg",
+      "rows": 2,
+      "image_ids": [
+        "2411362",
+        "498089"
+      ],
+      "coco_image_ids": [
+        "222299",
+        "222299"
+      ],
+      "relation_counts": [
+        6,
+        8
+      ]
+    },
+    {
+      "file_name": "val2017/000000234607.jpg",
+      "rows": 2,
+      "image_ids": [
+        "2356680",
+        "498117"
+      ],
+      "coco_image_ids": [
+        "234607",
+        "234607"
+      ],
+      "relation_counts": [
+        6,
+        5
+      ]
+    },
+    {
+      "file_name": "val2017/000000293071.jpg",
+      "rows": 2,
+      "image_ids": [
+        "1591847",
+        "2320355"
+      ],
+      "coco_image_ids": [
+        "293071",
+        "293071"
+      ],
+      "relation_counts": [
+        9,
+        7
+      ]
+    },
+    {
+      "file_name": "val2017/000000319935.jpg",
+      "rows": 2,
+      "image_ids": [
+        "1593263",
+        "2388061"
+      ],
+      "coco_image_ids": [
+        "319935",
+        "319935"
+      ],
+      "relation_counts": [
+        5,
+        7
+      ]
+    },
+    {
+      "file_name": "val2017/000000343561.jpg",
+      "rows": 2,
+      "image_ids": [
+        "1159713",
+        "2400390"
+      ],
+      "coco_image_ids": [
+        "343561",
+        "343561"
+      ],
+      "relation_counts": [
+        5,
+        5
+      ]
+    },
+    {
+      "file_name": "val2017/000000384661.jpg",
+      "rows": 2,
+      "image_ids": [
+        "1592722",
+        "2376560"
+      ],
+      "coco_image_ids": [
+        "384661",
+        "384661"
+      ],
+      "relation_counts": [
+        7,
+        6
+      ]
+    },
+    {
+      "file_name": "val2017/000000404484.jpg",
+      "rows": 2,
+      "image_ids": [
+        "1592560",
+        "2397343"
+      ],
+      "coco_image_ids": [
+        "404484",
+        "404484"
+      ],
+      "relation_counts": [
+        8,
+        13
+      ]
+    },
+    {
+      "file_name": "val2017/000000405249.jpg",
+      "rows": 2,
+      "image_ids": [
+        "2334350",
+        "712981"
+      ],
+      "coco_image_ids": [
+        "405249",
+        "405249"
+      ],
+      "relation_counts": [
+        7,
+        7
+      ]
+    },
+    {
+      "file_name": "val2017/000000447088.jpg",
+      "rows": 2,
+      "image_ids": [
+        "2340476",
+        "285732"
+      ],
+      "coco_image_ids": [
+        "447088",
+        "447088"
+      ],
+      "relation_counts": [
+        8,
+        10
+      ]
+    },
+    {
+      "file_name": "val2017/000000454067.jpg",
+      "rows": 2,
+      "image_ids": [
+        "1592952",
+        "2402632"
+      ],
+      "coco_image_ids": [
+        "454067",
+        "454067"
+      ],
+      "relation_counts": [
+        6,
+        6
+      ]
+    },
+    {
+      "file_name": "val2017/000000459195.jpg",
+      "rows": 2,
+      "image_ids": [
+        "2398229",
+        "713567"
+      ],
+      "coco_image_ids": [
+        "459195",
+        "459195"
+      ],
+      "relation_counts": [
+        5,
+        5
+      ]
+    },
+    {
+      "file_name": "val2017/000000524850.jpg",
+      "rows": 2,
+      "image_ids": [
+        "2392983",
+        "712970"
+      ],
+      "coco_image_ids": [
+        "524850",
+        "524850"
+      ],
+      "relation_counts": [
+        7,
+        8
+      ]
+    },
+    {
+      "file_name": "val2017/000000539962.jpg",
+      "rows": 2,
+      "image_ids": [
+        "1593185",
+        "2365990"
+      ],
+      "coco_image_ids": [
+        "539962",
+        "539962"
+      ],
+      "relation_counts": [
+        5,
+        5
+      ]
+    }
+  ]
+}

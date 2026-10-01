@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "name": "counterfactual_relation_verification_v1",
+  "status": "registered_preflight",
+  "dataset": {
+    "name": "OpenPSG",
+    "annotation": "/data1/liuhaoran/psg/datasets/psg.json",
+    "annotation_sha256": "d4a8c6df10198fa2a22f56d4c2039aa2b20bdc002db5c0be8ee34a36a06817c1",
+    "sha256_required_before_gpu": true,
+    "image_root": "/data1/liuhaoran/psg/datasets/openpsg/coco",
+    "panoptic_root": "/data1/liuhaoran/psg/datasets/openpsg/coco_panoptic_gt/annotations"
+  },
+  "identity": {
+    "matching": "class-compatible IoU > 0.5, one-to-one",
+    "dedup": "fail",
+    "group_key": "physical_file_name"
+  },
+  "carrier": {
+    "name": "Fair PSG DSFormer",
+    "source_revision": "2497be40bd8bd0ca6c2ad25be1522ebf42e6623b",
+    "source_root": "/data1/liuhaoran/psg/third_party/fair_psg_git_retry",
+    "config": "configs/table2/masks-loc-sem.json",
+    "checkpoint": "/data1/liuhaoran/psg/checkpoints/dsformer_relation_decomp_v1_seed0/best_state.pth",
+    "checkpoint_sha256": null,
+    "pair_support": "frozen Top-50 physical directed pairs",
+    "predicate_count": 56
+  },
+  "metric": {
+    "primary": ["mR@50"],
+    "guardrail": ["R@50"],
+    "secondary": ["mR@20", "mR@100", "mNgR@50"],
+    "teacher": "exact signed delta under corrected SingleMPO evaluator"
+  },
+  "splits": {
+    "historical_dev": "retrospective only",
+    "fit": "grouped file_name hash split",
+    "select": "grouped file_name hash split",
+    "calibration": "grouped file_name hash split",
+    "inner_holdout": "grouped file_name hash split",
+    "confirm": "one-shot clean population",
+    "test": "one-shot after complete freeze"
+  },
+  "forbidden": [
+    "image_id_plus_row_position_join",
+    "new_candidate_support",
+    "dev_or_test_threshold_tuning",
+    "backbone_training_before_diagnostic_gate"
+  ]
+}

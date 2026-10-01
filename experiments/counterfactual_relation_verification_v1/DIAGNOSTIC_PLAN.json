@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "status": "preflight",
+  "stages": [
+    {"id": "B0", "name": "benchmark/action schema lock", "gpu": 0, "gate": "100% required fields and unique action_id"},
+    {"id": "C0", "name": "DSFormer metric parity", "gpu": 0, "gate": "official evaluator parity"},
+    {"id": "D0", "name": "exact Gate x Chooser decomposition", "gpu": 0, "gate": "learned gate remains bottleneck"},
+    {"id": "O0", "name": "actionable exact oracle", "gpu": 0, "gate": "delta_mR >= 8 pp"},
+    {"id": "O1", "name": "harm veto and proposal ceiling", "gpu": 0, "gate": "harm veto >= 3 pp and positive ceiling >= 30%"},
+    {"id": "S0-S7", "name": "simple controls", "gpu": 0, "gate": "stop complex method if >=70% actionable headroom"},
+    {"id": "E0-E4", "name": "aligned evidence accessibility", "gpu": 0, "gate": "visual capture >=20%, positive mR/R and <=5% edits"},
+    {"id": "M0", "name": "CERV-Lite seed0", "gpu": "small", "gate": "method promote gate"}
+  ],
+  "promotion": {
+    "method_delta_mR_pp_vs_simple": ">=1.5",
+    "residual_oracle_capture": ">=0.20",
+    "delta_R_pp": ">=-0.5",
+    "edit_rate_percent": "<=5",
+    "seeds": "3/3 positive before HiLo"
+  }
+}
