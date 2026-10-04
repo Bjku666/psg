@@ -10,6 +10,9 @@ results/**/*.pth
 results/**/*.pt
 results/**/*.png
 results/**/*.jsonl
+# Rerun logs and derived probe outputs are reproducible from the registered
+# carrier/export command and are kept outside the tracked result summaries.
+results/evidence_accessibility_v1/rerun_*/
 # Exact marginal-utility teachers are local reproducibility artifacts and can
 # exceed GitHub's file-size limit; keep the compact summaries tracked.
 results/relation_decision_regret_v1/fit500/utility_teacher.json
