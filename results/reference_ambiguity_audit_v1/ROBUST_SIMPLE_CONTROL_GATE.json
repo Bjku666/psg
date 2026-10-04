@@ -1,0 +1,105 @@
+{
+  "schema_version": 1,
+  "name": "reference_ambiguity_audit_v1_robust_simple_controls",
+  "status": "complete",
+  "contract": {
+    "unit": "physical file_name group",
+    "fit_groups": 119,
+    "dev_groups": 119,
+    "target": "min(u_A,u_B)",
+    "support": "common mapped top-50 directed pairs",
+    "selection": "fit-only thresholds/models; dev evaluated once",
+    "budget": 50
+  },
+  "dataset_sha256": "d4a8c6df10198fa2a22f56d4c2039aa2b20bdc002db5c0be8ee34a36a06817c1",
+  "checkpoint_sha256": "80479c5a84a207b71c682cd40523492d0b70c033790cdac376ca9bd85664a65e",
+  "prediction_sha256": "73b5dd1150d89763dcb8883668f256779b0ffa1d9765d9d695c3863495c516aa",
+  "groups": {
+    "mapped": 238,
+    "fit": 119,
+    "dev": 119
+  },
+  "baseline": {
+    "mR": 0.4802457116375971,
+    "R": 0.47126517426992887,
+    "delta_mR_pp": null,
+    "delta_R_pp": null,
+    "applied_actions": 0,
+    "intervention_rate": 0.0
+  },
+  "robust_oracle": {
+    "mR": 0.5630720635616435,
+    "R": 0.562813087141371,
+    "delta_mR_pp": 8.28263519240464,
+    "delta_R_pp": 9.154791287144215,
+    "applied_actions": 58,
+    "intervention_rate": 0.005332842956969474
+  },
+  "controls": {
+    "margin": {
+      "mR": 0.4802457116375971,
+      "R": 0.47126517426992887,
+      "delta_mR_pp": 0.0,
+      "delta_R_pp": 0.0,
+      "applied_actions": 0,
+      "intervention_rate": 0.0,
+      "fit_threshold": Infinity,
+      "deployable": true,
+      "role": "heuristic_control"
+    },
+    "entropy": {
+      "mR": 0.4802457116375971,
+      "R": 0.47126517426992887,
+      "delta_mR_pp": 0.0,
+      "delta_R_pp": 0.0,
+      "applied_actions": 0,
+      "intervention_rate": 0.0,
+      "fit_threshold": Infinity,
+      "deployable": true,
+      "role": "heuristic_control"
+    },
+    "robust_target": {
+      "mR": 0.5630720635616435,
+      "R": 0.562813087141371,
+      "delta_mR_pp": 8.28263519240464,
+      "delta_R_pp": 9.154791287144215,
+      "applied_actions": 58,
+      "intervention_rate": 0.005332842956969474,
+      "fit_threshold": 0.0,
+      "deployable": false,
+      "role": "gt_target_sanity_check"
+    },
+    "ridge": {
+      "mR": 0.49225447876532574,
+      "R": 0.475390006020811,
+      "delta_mR_pp": 1.2008767127728637,
+      "delta_R_pp": 0.41248317508821297,
+      "applied_actions": 674,
+      "intervention_rate": 0.06197131298271423,
+      "deployable": true,
+      "role": "learned_simple_control"
+    },
+    "histgbdt": {
+      "mR": 0.4623287738220046,
+      "R": 0.4952445562325041,
+      "delta_mR_pp": -1.7916937815592504,
+      "delta_R_pp": 2.397938196257521,
+      "applied_actions": 1275,
+      "intervention_rate": 0.11723059948510482,
+      "deployable": true,
+      "role": "learned_simple_control"
+    }
+  },
+  "gate": {
+    "robust_oracle_delta_mR_pp": 8.28263519240464,
+    "strongest_deployable_simple": "ridge",
+    "strongest_deployable_delta_mR_pp": 1.2008767127728637,
+    "headroom_pp": 8.28263519240464,
+    "captured_fraction_pct": 14.498727577354778,
+    "thresholds": {
+      "no_complex_if_fraction_pct_gte": 70.0,
+      "authorize_complex_if_fraction_pct_lt": 30.0
+    },
+    "decision": "AUTHORIZE_METHOD_DESIGN"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "name": "reference_ambiguity_audit_v1_method_authorization",
+  "status": "qualification_only",
+  "method_training_authorized": false,
+  "simple_control_gate": {
+    "artifact": "results/reference_ambiguity_audit_v1/ROBUST_SIMPLE_CONTROL_GATE.json",
+    "strongest_deployable": "ridge",
+    "robust_headroom_mR_pp": 8.28263519240464,
+    "strongest_simple_gain_mR_pp": 1.2008767127728637,
+    "captured_fraction_pct": 14.498727577354778,
+    "decision": "AUTHORIZE_METHOD_DESIGN"
+  },
+  "remaining_required_gates": [
+    "annotation_process_fidelity",
+    "visual_evidence_accessibility",
+    "locked RMUD/R-CERV seed0 protocol"
+  ],
+  "next_allowed_action": "implement qualification probes only; do not train RMUD or R-CERV"
+}

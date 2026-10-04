@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "name": "reference_ambiguity_audit_v1_robust_simple_control_gate",
+  "status": "locked_and_complete",
+  "population": {
+    "unit": "physical file_name group",
+    "mapped_groups": 238,
+    "fit_groups": 119,
+    "dev_groups": 119,
+    "support": "common panoptic-mapped top-50 directed pairs",
+    "budget": 50,
+    "metric": "strict SingleMPO mR@50 and R@50"
+  },
+  "target": "min(u_A, u_B)",
+  "selection": "fit-only thresholds/models; dev evaluated once; no confirm/test claim",
+  "forbidden": [
+    "using robust_target as a deployable baseline",
+    "training a deep method before annotation-process and evidence gates",
+    "changing the 70 percent / 30 percent gate after seeing results"
+  ],
+  "artifact": "results/reference_ambiguity_audit_v1/ROBUST_SIMPLE_CONTROL_GATE.json"
+}
