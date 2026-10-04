@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "name": "reference_stable_editing_v1_benchmark_lock_v2",
+  "status": "blocked_at_B0",
+  "gates": {
+    "B0_logical_test_contamination": "paired action population must contain zero official logical-test groups",
+    "B1_metric_parity": "not reached"
+  },
+  "policy": {
+    "method_training_authorized": false,
+    "paired_test_groups_are_clean_confirmation": false,
+    "threshold_tuning_on_official_test": false
+  },
+  "artifact": "results/reference_stable_editing_v1/PAIRED_LOGICAL_SPLIT_AUDIT.json"
+}
