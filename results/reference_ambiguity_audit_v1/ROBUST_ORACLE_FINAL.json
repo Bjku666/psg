@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "name": "reference_ambiguity_audit_v1_robust_oracle",
+  "status": "complete",
+  "checkpoint": "/data1/liuhaoran/psg/checkpoints/dsformer_relation_decomp_v1_seed0/best_state.pth",
+  "checkpoint_sha256": "80479c5a84a207b71c682cd40523492d0b70c033790cdac376ca9bd85664a65e",
+  "prediction_sha256": "73b5dd1150d89763dcb8883668f256779b0ffa1d9765d9d695c3863495c516aa",
+  "groups_evaluated": 238,
+  "stats": {
+    "stable_positive_actions": 117,
+    "missing_prediction_groups": 3
+  },
+  "baseline": {
+    "mR": 0.48942099259153954,
+    "R": 0.4742127295306036,
+    "rows": 476
+  },
+  "robust_oracle": {
+    "mR": 0.6052479081915114,
+    "R": 0.5573718765707442,
+    "rows": 476
+  },
+  "exact_paired_oracle": {
+    "mR": 0.7532767375586867,
+    "R": 0.7046513598745985,
+    "rows": 476
+  },
+  "gains_pp": {
+    "robust_mR": 11.582691559997189,
+    "robust_R": 8.315914704014055,
+    "exact_mR": 26.38557449671472
+  },
+  "gate": "PROMOTE_ORACLE"
+}

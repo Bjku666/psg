@@ -1,0 +1,518 @@
+{
+  "schema_version": 1,
+  "name": "reference_ambiguity_audit_v1_A3b",
+  "status": "cpu_complete",
+  "source": {
+    "psg": "/data1/liuhaoran/psg/datasets/psg.json",
+    "dataset_sha256": "d4a8c6df10198fa2a22f56d4c2039aa2b20bdc002db5c0be8ee34a36a06817c1"
+  },
+  "population": {
+    "paired_groups": 241,
+    "fully_mapped_groups": 241
+  },
+  "totals": {
+    "symmetric_delta_triples": 2124,
+    "affected_pairs": 1962
+  },
+  "taxonomy": {
+    "T1_missing_edge_pairs": 1785,
+    "T1_missing_edge_triples": 1798,
+    "T3_multilabel_subset_pairs": 36,
+    "T3_multilabel_subset_triples": 37,
+    "T2_same_pair_different_predicate_pairs": 141,
+    "T2_same_pair_different_predicate_triples": 289,
+    "T4_semantic_conflict_pairs": 6,
+    "T4_semantic_conflict_triples": 12
+  },
+  "examples": {
+    "T1_missing_edge": [
+      {
+        "file_name": "train2017/000000006263.jpg",
+        "pair": [
+          0,
+          1
+        ],
+        "ref_a": [],
+        "ref_b": [
+          2
+        ]
+      },
+      {
+        "file_name": "train2017/000000006263.jpg",
+        "pair": [
+          2,
+          0
+        ],
+        "ref_a": [],
+        "ref_b": [
+          2
+        ]
+      },
+      {
+        "file_name": "train2017/000000006263.jpg",
+        "pair": [
+          1,
+          4
+        ],
+        "ref_a": [
+          3
+        ],
+        "ref_b": []
+      },
+      {
+        "file_name": "train2017/000000006263.jpg",
+        "pair": [
+          0,
+          2
+        ],
+        "ref_a": [],
+        "ref_b": [
+          2
+        ]
+      },
+      {
+        "file_name": "train2017/000000017751.jpg",
+        "pair": [
+          3,
+          4
+        ],
+        "ref_a": [
+          0
+        ],
+        "ref_b": []
+      },
+      {
+        "file_name": "train2017/000000017751.jpg",
+        "pair": [
+          7,
+          10
+        ],
+        "ref_a": [
+          0
+        ],
+        "ref_b": []
+      },
+      {
+        "file_name": "train2017/000000017751.jpg",
+        "pair": [
+          10,
+          4
+        ],
+        "ref_a": [
+          0
+        ],
+        "ref_b": []
+      },
+      {
+        "file_name": "train2017/000000017751.jpg",
+        "pair": [
+          2,
+          9
+        ],
+        "ref_a": [
+          3
+        ],
+        "ref_b": []
+      },
+      {
+        "file_name": "train2017/000000017751.jpg",
+        "pair": [
+          5,
+          10
+        ],
+        "ref_a": [],
+        "ref_b": [
+          4
+        ]
+      },
+      {
+        "file_name": "train2017/000000017751.jpg",
+        "pair": [
+          7,
+          6
+        ],
+        "ref_a": [],
+        "ref_b": [
+          0
+        ]
+      }
+    ],
+    "T3_multilabel_subset": [
+      {
+        "file_name": "train2017/000000006263.jpg",
+        "pair": [
+          0,
+          5
+        ],
+        "ref_a": [
+          1
+        ],
+        "ref_b": [
+          1,
+          2
+        ]
+      },
+      {
+        "file_name": "train2017/000000037624.jpg",
+        "pair": [
+          12,
+          16
+        ],
+        "ref_a": [
+          21,
+          51
+        ],
+        "ref_b": [
+          21
+        ]
+      },
+      {
+        "file_name": "train2017/000000072397.jpg",
+        "pair": [
+          2,
+          20
+        ],
+        "ref_a": [
+          3,
+          11
+        ],
+        "ref_b": [
+          11
+        ]
+      },
+      {
+        "file_name": "train2017/000000072397.jpg",
+        "pair": [
+          10,
+          16
+        ],
+        "ref_a": [
+          3,
+          47
+        ],
+        "ref_b": [
+          3
+        ]
+      },
+      {
+        "file_name": "train2017/000000079106.jpg",
+        "pair": [
+          3,
+          5
+        ],
+        "ref_a": [
+          3,
+          47
+        ],
+        "ref_b": [
+          3
+        ]
+      },
+      {
+        "file_name": "train2017/000000101140.jpg",
+        "pair": [
+          3,
+          9
+        ],
+        "ref_a": [
+          3,
+          48
+        ],
+        "ref_b": [
+          48
+        ]
+      },
+      {
+        "file_name": "train2017/000000101140.jpg",
+        "pair": [
+          5,
+          12
+        ],
+        "ref_a": [
+          3,
+          47
+        ],
+        "ref_b": [
+          47
+        ]
+      },
+      {
+        "file_name": "train2017/000000140500.jpg",
+        "pair": [
+          0,
+          5
+        ],
+        "ref_a": [
+          3
+        ],
+        "ref_b": [
+          3,
+          4
+        ]
+      },
+      {
+        "file_name": "train2017/000000140500.jpg",
+        "pair": [
+          2,
+          5
+        ],
+        "ref_a": [
+          15
+        ],
+        "ref_b": [
+          3,
+          15
+        ]
+      },
+      {
+        "file_name": "train2017/000000162530.jpg",
+        "pair": [
+          0,
+          2
+        ],
+        "ref_a": [
+          21,
+          42
+        ],
+        "ref_b": [
+          21
+        ]
+      }
+    ],
+    "T2_same_pair_different_predicate": [
+      {
+        "file_name": "train2017/000000006263.jpg",
+        "pair": [
+          1,
+          0
+        ],
+        "ref_a": [
+          1
+        ],
+        "ref_b": [
+          2
+        ]
+      },
+      {
+        "file_name": "train2017/000000029189.jpg",
+        "pair": [
+          1,
+          20
+        ],
+        "ref_a": [
+          14
+        ],
+        "ref_b": [
+          11
+        ]
+      },
+      {
+        "file_name": "train2017/000000031235.jpg",
+        "pair": [
+          13,
+          8
+        ],
+        "ref_a": [
+          2
+        ],
+        "ref_b": [
+          3
+        ]
+      },
+      {
+        "file_name": "train2017/000000031273.jpg",
+        "pair": [
+          5,
+          19
+        ],
+        "ref_a": [
+          3
+        ],
+        "ref_b": [
+          14
+        ]
+      },
+      {
+        "file_name": "train2017/000000042161.jpg",
+        "pair": [
+          10,
+          1
+        ],
+        "ref_a": [
+          0
+        ],
+        "ref_b": [
+          3
+        ]
+      },
+      {
+        "file_name": "train2017/000000043739.jpg",
+        "pair": [
+          7,
+          10
+        ],
+        "ref_a": [
+          1
+        ],
+        "ref_b": [
+          6
+        ]
+      },
+      {
+        "file_name": "train2017/000000044483.jpg",
+        "pair": [
+          14,
+          50
+        ],
+        "ref_a": [
+          48
+        ],
+        "ref_b": [
+          3
+        ]
+      },
+      {
+        "file_name": "train2017/000000044594.jpg",
+        "pair": [
+          1,
+          17
+        ],
+        "ref_a": [
+          14
+        ],
+        "ref_b": [
+          11
+        ]
+      },
+      {
+        "file_name": "train2017/000000047458.jpg",
+        "pair": [
+          1,
+          9
+        ],
+        "ref_a": [
+          14
+        ],
+        "ref_b": [
+          12
+        ]
+      },
+      {
+        "file_name": "train2017/000000068287.jpg",
+        "pair": [
+          14,
+          11
+        ],
+        "ref_a": [
+          5
+        ],
+        "ref_b": [
+          3
+        ]
+      }
+    ],
+    "T4_semantic_conflict": [
+      {
+        "file_name": "train2017/000000387352.jpg",
+        "pair": [
+          2,
+          3
+        ],
+        "ref_a": [
+          3
+        ],
+        "ref_b": [
+          4
+        ]
+      },
+      {
+        "file_name": "train2017/000000481452.jpg",
+        "pair": [
+          9,
+          13
+        ],
+        "ref_a": [
+          4
+        ],
+        "ref_b": [
+          3
+        ]
+      },
+      {
+        "file_name": "train2017/000000503424.jpg",
+        "pair": [
+          14,
+          19
+        ],
+        "ref_a": [
+          4
+        ],
+        "ref_b": [
+          3
+        ]
+      },
+      {
+        "file_name": "train2017/000000503424.jpg",
+        "pair": [
+          15,
+          19
+        ],
+        "ref_a": [
+          4
+        ],
+        "ref_b": [
+          3
+        ]
+      },
+      {
+        "file_name": "train2017/000000518157.jpg",
+        "pair": [
+          0,
+          5
+        ],
+        "ref_a": [
+          4
+        ],
+        "ref_b": [
+          3
+        ]
+      },
+      {
+        "file_name": "val2017/000000047819.jpg",
+        "pair": [
+          3,
+          1
+        ],
+        "ref_a": [
+          3
+        ],
+        "ref_b": [
+          7
+        ]
+      }
+    ]
+  },
+  "conflict_pairs": [
+    [
+      3,
+      4
+    ],
+    [
+      3,
+      7
+    ],
+    [
+      14,
+      15
+    ],
+    [
+      45,
+      46
+    ],
+    [
+      52,
+      53
+    ]
+  ],
+  "decision": "A4_required_before_method_training"
+}

@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "experiment": "reference_ambiguity_audit_v1",
+  "stage": "A4_action_sign_stability",
+  "status": "aborted_blocked",
+  "reason": "immutable DSFormer action carrier artifact is unavailable",
+  "prerequisites": {
+    "dataset_sha256": "d4a8c6df10198fa2a22f56d4c2039aa2b20bdc002db5c0be8ee34a36a06817c1",
+    "carrier_revision": "2497be40bd8bd0ca6c2ad25be1522ebf42e6623b",
+    "checkpoint": "/data1/liuhaoran/psg/checkpoints/dsformer_relation_decomp_v1_seed0/best_state.pth",
+    "checkpoint_exists": false,
+    "action_artifact_root": "/data1/liuhaoran/psg/cache/counterfactual_relation_verification_v1",
+    "action_artifact_exists": false
+  },
+  "A3b": {
+    "report": "results/reference_ambiguity_audit_v1/A3B_REPORT.json",
+    "paired_groups": 241,
+    "fully_mapped_groups": 241,
+    "symmetric_delta_triples": 2124,
+    "taxonomy": {
+      "T1_missing_edge_triples": 1798,
+      "T2_same_pair_different_predicate_triples": 289,
+      "T3_multilabel_subset_triples": 37,
+      "T4_semantic_conflict_triples": 12
+    }
+  },
+  "gate": {
+    "sign_instability": null,
+    "decision": "STOP_BEFORE_GPU_METHOD_TRAINING",
+    "next_required_action": "restore_or_retrain_pinned_DSFormer_and_export_immutable_action_records"
+  }
+}

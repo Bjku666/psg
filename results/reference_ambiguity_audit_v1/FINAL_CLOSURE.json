@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "experiment": "reference_ambiguity_audit_v1",
+  "status": "closed_at_frozen_diagnostic_and_control_gate",
+  "decision": "PROMISING_DIAGNOSTIC_CONTINUE_METHOD_DESIGN_BUT_NO_METHOD_TRAINING",
+  "source": {
+    "psg": "/data1/liuhaoran/psg/datasets/psg.json",
+    "dataset_sha256": "d4a8c6df10198fa2a22f56d4c2039aa2b20bdc002db5c0be8ee34a36a06817c1",
+    "carrier_revision": "2497be40bd8bd0ca6c2ad25be1522ebf42e6623b",
+    "checkpoint": "/data1/liuhaoran/psg/checkpoints/dsformer_relation_decomp_v1_seed0/best_state.pth",
+    "checkpoint_sha256": "80479c5a84a207b71c682cd40523492d0b70c033790cdac376ca9bd85664a65e",
+    "prediction_artifact": "/data1/liuhaoran/psg/cache/counterfactual_relation_verification_v1/paired_final.pkl",
+    "prediction_sha256": "73b5dd1150d89763dcb8883668f256779b0ffa1d9765d9d695c3863495c516aa"
+  },
+  "gates": {
+    "A3b": {"paired_groups": 241, "fully_mapped_groups": 241, "symmetric_delta": 2124, "jaccard": 0.19727891156462585, "pass": true},
+    "A4_action_sign": {"groups_evaluated": 238, "nonneutral_actions": 827, "sign_unstable": 55, "sign_instability": 0.06650544135429262, "decision": "EXPAND_VALIDATION", "pass": true},
+    "robust_oracle": {"baseline_mR": 0.48942099259153954, "robust_mR": 0.6052479081915114, "gain_mR_pp": 11.582691559997189, "stable_positive_actions": 117, "threshold_pp": 5.0, "decision": "PROMOTE_ORACLE", "pass": true},
+    "simple_controls": {"strongest": "S1", "native_mR": 0.48092344857867386, "oracle_mR": 0.7027544962896558, "simple_gain_mR_pp": 1.2117305200152528, "oracle_headroom_pp": 22.183104771098115, "captured_fraction": 0.0546240272729537, "threshold_fraction": 0.70, "decision": "FULL_MEAR_AUTHORIZED", "pass": true}
+  },
+  "artifacts": {
+    "a3b": "results/reference_ambiguity_audit_v1/A3B_REPORT.json",
+    "a4_final": "results/reference_ambiguity_audit_v1/A4_ACTION_SIGN_FINAL.json",
+    "robust_oracle_final": "results/reference_ambiguity_audit_v1/ROBUST_ORACLE_FINAL.json",
+    "simple_controls_final": "results/reference_ambiguity_audit_v1/SIMPLE_ACTION_CONTROLS_FINAL.json"
+  },
+  "next_gate": "freeze_protocol_and_design_R-CERV-Lite; run only after method spec and seed plan are locked"
+}
