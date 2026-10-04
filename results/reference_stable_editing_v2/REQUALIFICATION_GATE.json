@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "name": "reference_stable_editing_v2_train_only_requalification",
+  "status": "complete_diagnostic",
+  "source": {
+    "psg": "/data1/liuhaoran/psg/datasets/psg.json",
+    "predictions": "/data1/liuhaoran/psg/cache/counterfactual_relation_verification_v1/paired_final.pkl",
+    "checkpoint": "/data1/liuhaoran/psg/checkpoints/dsformer_relation_decomp_v1_seed0/best_state.pth"
+  },
+  "population": {
+    "paired_groups_available": 238,
+    "official_test_quarantined": 16,
+    "train_groups": 222,
+    "folds": 5,
+    "fold_rule": "int(sha256(file_name),16) % 5"
+  },
+  "a4_train_oof": {
+    "counts": {
+      "nonneutral_actions": 763,
+      "sign_agree": 711,
+      "sign_unstable": 52,
+      "one_neutral": 1840,
+      "actions_total": 20420
+    },
+    "sign_instability": 0.06815203145478375,
+    "gate": "EXPAND"
+  },
+  "robust_oracle_train_oof": {
+    "baseline": {
+      "mR": 0.5400686819620776,
+      "R": 0.4784447561053598,
+      "delta_mR_pp": null,
+      "delta_R_pp": null,
+      "applied_actions": 0,
+      "intervention_rate": 0.0
+    },
+    "robust_oracle": {
+      "mR": 0.6521616903897178,
+      "R": 0.5572092885463629,
+      "delta_mR_pp": 11.209300842764025,
+      "delta_R_pp": 7.876453244100307,
+      "applied_actions": 102,
+      "intervention_rate": 0.004995102840352595
+    },
+    "delta_mR_pp": 11.209300842764025,
+    "gate": "PASS"
+  },
+  "simple_controls_train_oof": {
+    "controls": {
+      "margin": {
+        "mR": 0.5400686819620776,
+        "R": 0.4784447561053598,
+        "delta_mR_pp": 0.0,
+        "delta_R_pp": 0.0,
+        "applied_actions": 0,
+        "intervention_rate": 0.0
+      },
+      "entropy": {
+        "mR": 0.5396979683383518,
+        "R": 0.4776940053546091,
+        "delta_mR_pp": -0.03707136237257602,
+        "delta_R_pp": -0.07507507507507061,
+        "applied_actions": 58,
+        "intervention_rate": 0.0028403525954946132
+      },
+      "frequency": {
+        "mR": 0.5400686819620776,
+        "R": 0.4784447561053598,
+        "delta_mR_pp": 0.0,
+        "delta_R_pp": 0.0,
+        "applied_actions": 0,
+        "intervention_rate": 0.0
+      },
+      "ridge": {
+        "mR": 0.5238745851412239,
+        "R": 0.48705296471356846,
+        "delta_mR_pp": -1.619409682085371,
+        "delta_R_pp": 0.8608208608208656,
+        "applied_actions": 1055,
+        "intervention_rate": 0.05166503428011753
+      },
+      "histgbdt": {
+        "mR": 0.5377612456307391,
+        "R": 0.5033169818967032,
+        "delta_mR_pp": -0.23074363313384527,
+        "delta_R_pp": 2.487222579134335,
+        "applied_actions": 2579,
+        "intervention_rate": 0.12629774730656218
+      },
+      "logistic": {
+        "mR": 0.5173337685318738,
+        "R": 0.49440521581581953,
+        "delta_mR_pp": -2.273491343020373,
+        "delta_R_pp": 1.596045971045973,
+        "applied_actions": 258,
+        "intervention_rate": 0.012634671890303624
+      }
+    },
+    "strongest_deployable": "margin",
+    "captured_fraction_pct": 0.0,
+    "decision": "AUTHORIZE_METHOD_DESIGN",
+    "unavailable": [
+      "pair_hidden: absent from immutable paired_final.pkl"
+    ]
+  },
+  "method_training_authorized": false,
+  "note": "Diagnostics are train-only requalification, not pristine confirmation; source provenance is a separate hard gate."
+}

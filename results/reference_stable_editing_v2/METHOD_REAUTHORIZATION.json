@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "name": "reference_stable_editing_v2_method_reauthorization",
+  "status": "stopped_at_P0",
+  "decision": "STOP_NO_METHOD_TRAINING",
+  "p0_source_provenance": {
+    "status": "unresolved_provenance",
+    "decision": "HOLD_REFERENCE_STORY",
+    "duplicate_groups": 241,
+    "row_lineage_fields_present": false,
+    "reason": "PSG exposes no annotator, annotation-version, source-record, or other lineage field; paired rows cannot be promoted to independent valid references."
+  },
+  "b0_quarantine": {
+    "paired_groups": 238,
+    "logical_train_groups": 222,
+    "official_test_groups": 16,
+    "official_test_used": false
+  },
+  "train_only_requalification": {
+    "a4_sign_instability": 0.06815203145478375,
+    "a4_gate": "EXPAND",
+    "robust_oracle_delta_mR_pp": 11.209300842764025,
+    "robust_oracle_gate": "PASS",
+    "strongest_simple_control": "margin",
+    "strongest_simple_delta_mR_pp": 0.0,
+    "simple_capture_fraction_pct": 0.0,
+    "simple_gate": "AUTHORIZE_METHOD_DESIGN",
+    "note": "Train-only diagnostics reproduce the historical phenomenon; they do not repair unresolved source provenance."
+  },
+  "next_allowed_action": "obtain authoritative source-provenance evidence or reframe to single-reference CVC-only route",
+  "forbidden_until_p0": ["fit_censoring_process", "visual_probe_as_method_authorization", "CAUD_training", "CVC_training", "CRAVE_training"]
+}

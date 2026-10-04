@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "name": "reference_stable_editing_v2_train_only_protocol",
+  "status": "complete_at_provenance_gate",
+  "population": "222 logical-train paired physical groups",
+  "official_test_policy": "16 groups quarantined; never used for fitting, thresholding, or authorization",
+  "cross_fit": {
+    "folds": 5,
+    "group_key": "file_name",
+    "rule": "int(sha256(file_name),16) % 5",
+    "fit": "four folds",
+    "evaluation": "held physical fold"
+  },
+  "fixed_gates": {
+    "a4_sign_instability": {"kill_below": 0.02, "expand_at_or_above": 0.02, "strong_promote_at_or_above": 0.10},
+    "robust_oracle_delta_mR_pp": {"kill_below": 2.0, "weaken_below": 5.0, "pass_at_or_above": 5.0},
+    "simple_capture_fraction_pct": {"no_complex_at_or_above": 70.0, "conditional": [30.0, 70.0], "authorize_below": 30.0}
+  },
+  "method_policy": {"caud": "design_only", "cvc": "design_only", "crave": "design_only", "training_authorized": false}
+}
