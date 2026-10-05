@@ -84,17 +84,26 @@ def prepare_crop(entry: dict, pair: tuple[int, int], img_root: Path, seg_root: P
     boxes = np.asarray([a["bbox"] for a in entry["annotations"]], dtype=np.float32)
     x1, y1, x2, y2 = crop_box(boxes, pair, (height, width), mode)
     image = image.crop((x1, y1, x2, y2))
+    # torchvision's NumPy bridge is ABI-incompatible in this environment.
+    # Materialize the PIL crop directly as a torch CHW float tensor and skip
+    # the standard ToTensor transform below.
+    image = torch.tensor(np.array(image, dtype=np.uint8, copy=True)).permute(2, 0, 1).float().div(255.0)
     panoptic = open_segmask(seg_root / entry["pan_seg_file_name"])
     masks = []
     for index in pair:
         segment_id = int(entry["segments_info"][index]["id"])
         masks.append(panoptic[y1:y2, x1:x2] == segment_id)
-    seg = torch.from_numpy(np.stack(masks, axis=0)).bool()
-    pair_boxes = torch.from_numpy(boxes[list(pair)].copy())
+    # Torch/NumPy ABI in this environment can reject the ndarray subclass
+    # returned by the panoptic decoder even though it prints as ndarray.
+    # Canonicalize through an owning copy before crossing the boundary.
+    seg = torch.tensor(np.array(np.stack(masks, axis=0), dtype=np.bool_, copy=True)).bool()
+    pair_boxes = torch.tensor(boxes[list(pair)].copy())
     pair_boxes[:, (0, 2)] -= x1
     pair_boxes[:, (1, 3)] -= y1
     img, seg, pair_boxes = image, seg, pair_boxes
     for transform in transforms:
+        if transform.__class__.__name__ == "ToTensor":
+            continue
         img, seg, pair_boxes = transform(img, seg, pair_boxes)
     return img, seg, pair_boxes
 

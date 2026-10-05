@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "name": "bap_psg_v2_relation_perception_qualification",
+  "status": "aborted_at_G3_simple_control_gate",
+  "official_test_used_for_selection": false,
+  "training": {
+    "router": false,
+    "verifier": false,
+    "method_training": false
+  },
+  "population": {
+    "source": "ordinary_openpsg_train_sample_from_frozen_evidence_accessibility_carrier",
+    "scene_rows": 462,
+    "physical_files": 462,
+    "group_key": "file_name",
+    "registered_target": "1000-2000 physical images",
+    "qualification_limit": "462-image probe is below the target population and is not a general-population claim"
+  },
+  "carrier": {
+    "checkpoint": "/data1/liuhaoran/psg/checkpoints/dsformer_relation_decomp_v1_seed0",
+    "compact": "/data1/liuhaoran/psg/cache/evidence_accessibility_v1/fit500/compact.pkl",
+    "endpoint_mode": "GT endpoint diagnostic only",
+    "official_test_used": false
+  },
+  "G0_tight_oracle": {
+    "delta_mR_pp": {"20": 3.86626737046139, "50": 4.492929046964589},
+    "status": "passes_probe_threshold_but_population_underpowered"
+  },
+  "G0_context_oracle": {
+    "delta_mR_pp": {"20": 1.8865577640343412, "50": 2.741859135351965}
+  },
+  "G3_controls_tight": {
+    "always_local_delta_mR_pp": {"20": -5.918925169974992, "50": -6.811874218738234},
+    "random_half_delta_mR_pp": {"20": -3.947110397418757, "50": -5.571177005835404},
+    "fixed_trigger_delta_mR_pp": {
+      "20": {"0.05": -2.9988248858522137, "0.1": -2.9471623941856206, "0.2": -1.4898528490060292},
+      "50": {"0.05": -3.346771250185375, "0.1": -2.4151108440817417, "0.2": -1.0001392741846415}
+    },
+    "status": "fail",
+    "reason": "simple controls do not beat native or random; no deployable no-learning policy"
+  },
+  "forbidden_next": [
+    "matched_resolution_factorization",
+    "SGDet_endpoint_run",
+    "cross_view_verifier_training",
+    "formal_method_training"
+  ],
+  "artifacts": {
+    "tight": "results/bap_psg_v2_generalization_probe/fit462_tight.json",
+    "context": "results/bap_psg_v2_generalization_probe/fit462_context.json",
+    "controls": "results/bap_psg_v2_generalization_probe/fit462_controls_tight.json"
+  }
+}

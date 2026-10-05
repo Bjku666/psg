@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "name": "bap_psg_v1_b0_controls",
+  "source": "results/bap_psg_v2_generalization_probe/fit462_tight.json",
+  "budgets": {
+    "20": {
+      "native_mR": 0.38223001933390427,
+      "local_argmax_mR": 0.32304076763415435,
+      "random_half_mR": 0.3427589153597167,
+      "local_delta_mR_pp": -5.918925169974992,
+      "random_delta_mR_pp": -3.947110397418757,
+      "trigger_delta_mR_pp": {
+        "0.05": -2.9988248858522137,
+        "0.1": -2.9471623941856206,
+        "0.2": -1.4898528490060292
+      }
+    },
+    "50": {
+      "native_mR": 0.4794922414337084,
+      "local_argmax_mR": 0.41137349924632605,
+      "random_half_mR": 0.42378047137535435,
+      "local_delta_mR_pp": -6.811874218738234,
+      "random_delta_mR_pp": -5.571177005835404,
+      "trigger_delta_mR_pp": {
+        "0.05": -3.346771250555375,
+        "0.1": -2.4151108440817417,
+        "0.2": -1.0001392741846415
+      }
+    }
+  }
+}

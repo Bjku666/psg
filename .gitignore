@@ -18,3 +18,10 @@ results/evidence_accessibility_v1/rerun_*/
 results/relation_decision_regret_v1/fit500/utility_teacher.json
 results/relation_decision_regret_v1/dev500/utility_teacher.json
 third_party/fair_psg/.venv/
+
+# Local logs and generated qualification outputs from exploratory runs.
+logs/
+# Large per-pair score dumps; keep the small closure/control summaries tracked.
+results/bap_psg_v2_generalization_probe/fit462_tight.json
+results/bap_psg_v2_generalization_probe/fit462_context.json
+results/bap_psg_v2_generalization_probe/smoke5_tight.json
