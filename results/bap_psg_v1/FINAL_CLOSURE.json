@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "name": "bap_psg_v1",
+  "status": "aborted_at_B1_actionability_gate",
+  "official_test_used_for_selection": false,
+  "p3_1": {
+    "identity": "scene_row_point_estimate_physical_file_name_grouping",
+    "fit_scene_rows": 37245,
+    "fit_physical_groups": 37070,
+    "group_overlap": 0
+  },
+  "b0": {
+    "fit_evaluated_scene_rows": 186,
+    "fit_evaluated_physical_files": 93,
+    "tight_oracle_delta_mR_pp": {"20": 8.293838342961891, "50": 8.783210257686664},
+    "context_oracle_delta_mR_pp": {"20": 0.9188248745826022, "50": 1.290228800879345},
+    "tight_local_argmax_delta_mR_pp": {"20": 2.2332512723943045, "50": 2.44175840907338},
+    "tight_best_fixed_trigger_delta_mR_pp": {"20": 0.42108853532597523, "50": 0.5130484530698753},
+    "actionability_ratio": {"20": 0.269282, "50": 0.278255}
+  },
+  "gates": {
+    "acquisition_headroom_min_pp": 3.0,
+    "actionability_ratio_min": 0.35,
+    "formal_method_authorized": false,
+    "router_training": false,
+    "confirm_opened": false
+  },
+  "artifacts": {
+    "identity_audit": "results/bap_psg_v1/p3_1_identity_audit/summary.json",
+    "grouped_split": "results/bap_psg_v1/p3_1_grouped_split_seed0.json",
+    "tight_b0": "results/bap_psg_v1/b0_fit_tight.json",
+    "context_b0": "results/bap_psg_v1/b0_fit_context.json",
+    "controls": "results/bap_psg_v1/b0_controls_tight.json"
+  }
+}

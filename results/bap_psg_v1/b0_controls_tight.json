@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "name": "bap_psg_v1_b0_controls",
+  "source": "results/bap_psg_v1/b0_fit_tight.json",
+  "budgets": {
+    "20": {
+      "native_mR": 0.39380327155219996,
+      "local_argmax_mR": 0.416135784276143,
+      "random_half_mR": 0.38421918332600125,
+      "local_delta_mR_pp": 2.2332512723943045,
+      "random_delta_mR_pp": -0.9584088226198717,
+      "trigger_delta_mR_pp": {
+        "0.05": -2.1783780512828423,
+        "0.1": -0.662494831771826,
+        "0.2": 0.42108853532597523
+      }
+    },
+    "50": {
+      "native_mR": 0.4727159457666082,
+      "local_argmax_mR": 0.497133529857342,
+      "random_half_mR": 0.4922237102318393,
+      "local_delta_mR_pp": 2.44175840907338,
+      "random_delta_mR_pp": 1.9507764465231114,
+      "trigger_delta_mR_pp": {
+        "0.05": -1.877305212561614,
+        "0.1": -0.5096563253043085,
+        "0.2": 0.5130484530698753
+      }
+    }
+  }
+}

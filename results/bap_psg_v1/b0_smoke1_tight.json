@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "name": "bap_psg_v1_b0_crop_oracle",
+  "status": "complete",
+  "mode": "tight",
+  "population": {
+    "scene_rows": 2,
+    "physical_files": 1,
+    "group_key": "file_name",
+    "official_test_used": false
+  },
+  "carrier": {
+    "model": "/data1/liuhaoran/psg/checkpoints/dsformer_relation_decomp_v1_seed0",
+    "checkpoint_sha256": "80479c5a84a207b71c682cd40523492d0b70c033790cdac376ca9bd85664a65e",
+    "compact": "/data1/liuhaoran/psg/cache/counterfactual_relation_verification_v1/paired_final_fit.pkl",
+    "compact_contract": {
+      "support": "frozen carrier top-50 physical pairs",
+      "mapping": "class-compatible mask IoU > 0.5; SingleMPO one-to-one",
+      "predicate_scores_dtype": "float32",
+      "pair_features_dtype": "float16",
+      "confirm_locked": true
+    }
+  },
+  "local_jobs": 30,
+  "budgets": {
+    "20": {
+      "native_mR": 0.5,
+      "native_R": 0.425,
+      "acquisition_oracle_mR": 0.55,
+      "acquisition_oracle_R": 0.4875,
+      "delta_mR_pp": 5.000000000000004,
+      "delta_R_pp": 6.25,
+      "positive_actions": 1,
+      "baseline_slots": 40
+    },
+    "50": {
+      "native_mR": 0.5,
+      "native_R": 0.425,
+      "acquisition_oracle_mR": 0.55,
+      "acquisition_oracle_R": 0.4875,
+      "delta_mR_pp": 5.000000000000004,
+      "delta_R_pp": 6.25,
+      "positive_actions": 1,
+      "baseline_slots": 60
+    }
+  }
+}
