@@ -1,0 +1,537 @@
+{
+  "schema_version": 1,
+  "name": "p3.3_cross_view_actionability_probe",
+  "status": "complete",
+  "population": {
+    "scene_rows": 462,
+    "physical_files": 462,
+    "group_key": "file_name",
+    "official_test_used": false
+  },
+  "models": [
+    "logistic",
+    "ridge",
+    "hgb"
+  ],
+  "groups": [
+    "F0",
+    "F1",
+    "F2",
+    "F3"
+  ],
+  "budgets": {
+    "20": {
+      "oracle_headroom_mR_pp": 3.86626737046139,
+      "models": {
+        "logistic": {
+          "F0": {
+            "native_mR": 0.38223001933390427,
+            "selected_mR": 0.3656418971895287,
+            "delta_mR_pp": -1.658812214437555,
+            "native_R": 0.358210539581009,
+            "selected_R": 0.36148324691215794,
+            "delta_R_pp": 0.32727073311489274,
+            "selected_pairs": 334,
+            "positive_actions": 18,
+            "harmful_actions": 13,
+            "thresholds": [
+              0.6715953755139868,
+              0.9183795118548403,
+              0.9104643367745641,
+              0.9018804059192362,
+              0.9011479211221376
+            ],
+            "threshold_median": 0.9018804059192362,
+            "actionability_ratio": -0.4290474650333344
+          },
+          "F1": {
+            "native_mR": 0.38223001933390427,
+            "selected_mR": 0.38209746366052144,
+            "delta_mR_pp": -0.013255567338282814,
+            "native_R": 0.358210539581009,
+            "selected_R": 0.3580440394145088,
+            "delta_R_pp": -0.016650016650021637,
+            "selected_pairs": 1,
+            "positive_actions": 0,
+            "harmful_actions": 1,
+            "thresholds": [
+              0.8292944240870823,
+              Infinity,
+              Infinity,
+              Infinity,
+              Infinity
+            ],
+            "threshold_median": Infinity,
+            "actionability_ratio": -0.0034285180170301904
+          },
+          "F2": {
+            "native_mR": 0.38223001933390427,
+            "selected_mR": 0.36627295186849274,
+            "delta_mR_pp": -1.5957067465411534,
+            "native_R": 0.358210539581009,
+            "selected_R": 0.35990354354674026,
+            "delta_R_pp": 0.16930039657312435,
+            "selected_pairs": 47,
+            "positive_actions": 5,
+            "harmful_actions": 3,
+            "thresholds": [
+              0.938499607058934,
+              0.9925160402310321,
+              0.997873664108285,
+              0.9881906055073628,
+              0.9964246916176296
+            ],
+            "threshold_median": 0.9925160402310321,
+            "actionability_ratio": -0.4127253998863317
+          },
+          "F3": {
+            "native_mR": 0.38223001933390427,
+            "selected_mR": 0.33944838804776356,
+            "delta_mR_pp": -4.278163128614071,
+            "native_R": 0.358210539581009,
+            "selected_R": 0.36305753241501487,
+            "delta_R_pp": 0.4846992834005859,
+            "selected_pairs": 209,
+            "positive_actions": 27,
+            "harmful_actions": 18,
+            "thresholds": [
+              0.9145993874671025,
+              0.9892077456204095,
+              0.9982146944472309,
+              0.7401385783675354,
+              0.9964466551631664
+            ],
+            "threshold_median": 0.9892077456204095,
+            "actionability_ratio": -1.1065357665896567
+          }
+        },
+        "ridge": {
+          "F0": {
+            "native_mR": 0.38223001933390427,
+            "selected_mR": 0.3658439159749753,
+            "delta_mR_pp": -1.6386103358928983,
+            "native_R": 0.358210539581009,
+            "selected_R": 0.3613399378402774,
+            "delta_R_pp": 0.312939825926839,
+            "selected_pairs": 2446,
+            "positive_actions": 28,
+            "harmful_actions": 25,
+            "thresholds": [
+              -3.919144306823615e-05,
+              8.442521213787069e-06,
+              4.900479698562667e-06,
+              6.910915563758998e-06,
+              3.7006337178017726e-06
+            ],
+            "threshold_median": 4.900479698562667e-06,
+            "actionability_ratio": -0.4238223016887088
+          },
+          "F1": {
+            "native_mR": 0.38223001933390427,
+            "selected_mR": 0.36597823768941307,
+            "delta_mR_pp": -1.6251781644491203,
+            "native_R": 0.358210539581009,
+            "selected_R": 0.3617770007773403,
+            "delta_R_pp": 0.35664611963313053,
+            "selected_pairs": 3906,
+            "positive_actions": 32,
+            "harmful_actions": 27,
+            "thresholds": [
+              -2.9018685342993808e-05,
+              2.2533757887580353e-06,
+              1.429990668595727e-06,
+              -2.0234155210866835e-06,
+              2.5701305776969222e-06
+            ],
+            "threshold_median": 1.429990668595727e-06,
+            "actionability_ratio": -0.42034810547910345
+          },
+          "F2": {
+            "native_mR": 0.38223001933390427,
+            "selected_mR": 0.34258821271158085,
+            "delta_mR_pp": -3.9641806622323417,
+            "native_R": 0.358210539581009,
+            "selected_R": 0.3610587255460781,
+            "delta_R_pp": 0.28481859650690833,
+            "selected_pairs": 1852,
+            "positive_actions": 16,
+            "harmful_actions": 12,
+            "thresholds": [
+              -2.1844687986950317e-05,
+              1.889765243066977e-05,
+              1.0589836481122368e-05,
+              4.100361323774019e-05,
+              2.4261741118844395e-05
+            ],
+            "threshold_median": 1.889765243066977e-05,
+            "actionability_ratio": -1.0253250182641318
+          },
+          "F3": {
+            "native_mR": 0.38223001933390427,
+            "selected_mR": 0.34805189116154933,
+            "delta_mR_pp": -3.417812817235494,
+            "native_R": 0.358210539581009,
+            "selected_R": 0.3596146999949097,
+            "delta_R_pp": 0.1404160413900679,
+            "selected_pairs": 3765,
+            "positive_actions": 33,
+            "harmful_actions": 35,
+            "thresholds": [
+              -2.2232851020287223e-05,
+              1.8801356564119005e-05,
+              1.0837674982575402e-05,
+              4.3040888434013174e-05,
+              -4.753033737093903e-05
+            ],
+            "threshold_median": 1.0837674982575402e-05,
+            "actionability_ratio": -0.8840083961465969
+          }
+        },
+        "hgb": {
+          "F0": {
+            "native_mR": 0.38223001933390427,
+            "selected_mR": 0.3389102248495651,
+            "delta_mR_pp": -4.3319794484339145,
+            "native_R": 0.358210539581009,
+            "selected_R": 0.35636245981085135,
+            "delta_R_pp": -0.18480797701576623,
+            "selected_pairs": 4121,
+            "positive_actions": 50,
+            "harmful_actions": 64,
+            "thresholds": [
+              -3.4814071859479334e-05,
+              2.8338453762792737e-06,
+              5.359876543676666e-06,
+              -8.378536674742336e-05,
+              4.182225980791297e-08
+            ],
+            "threshold_median": 4.182225980791297e-08,
+            "actionability_ratio": -1.12045521774583
+          },
+          "F1": {
+            "native_mR": 0.38223001933390427,
+            "selected_mR": 0.32548091621606173,
+            "delta_mR_pp": -5.674910311784254,
+            "native_R": 0.358210539581009,
+            "selected_R": 0.35766611947490057,
+            "delta_R_pp": -0.05444201061084453,
+            "selected_pairs": 882,
+            "positive_actions": 20,
+            "harmful_actions": 24,
+            "thresholds": [
+              6.400168108249242e-05,
+              5.559776691960563e-05,
+              7.970044072491869e-05,
+              2.251272900281111e-06,
+              -3.296038656942668e-07
+            ],
+            "threshold_median": 5.559776691960563e-05,
+            "actionability_ratio": -1.4678007928631758
+          },
+          "F2": {
+            "native_mR": 0.38223001933390427,
+            "selected_mR": 0.3633368956490919,
+            "delta_mR_pp": -1.8893123684812385,
+            "native_R": 0.358210539581009,
+            "selected_R": 0.35678211591232567,
+            "delta_R_pp": -0.1428423668683343,
+            "selected_pairs": 1691,
+            "positive_actions": 25,
+            "harmful_actions": 28,
+            "thresholds": [
+              1.5255937168253717e-05,
+              1.1206717873715724e-05,
+              3.828161424971292e-06,
+              1.2908112146726714e-06,
+              5.258387253940563e-06
+            ],
+            "threshold_median": 5.258387253940563e-06,
+            "actionability_ratio": -0.4886657303930258
+          },
+          "F3": {
+            "native_mR": 0.38223001933390427,
+            "selected_mR": 0.3597339768613077,
+            "delta_mR_pp": -2.249604247259657,
+            "native_R": 0.358210539581009,
+            "selected_R": 0.3586610150314845,
+            "delta_R_pp": 0.0450475450475496,
+            "selected_pairs": 4096,
+            "positive_actions": 35,
+            "harmful_actions": 36,
+            "thresholds": [
+              7.88244564274824e-06,
+              1.60452252207698e-05,
+              4.716610982006387e-06,
+              1.3742147438483422e-06,
+              2.544247052821565e-06
+            ],
+            "threshold_median": 4.716610982006387e-06,
+            "actionability_ratio": -0.5818542877936543
+          }
+        }
+      },
+      "label": {
+        "rows": 9164,
+        "positive": 111,
+        "negative": 124
+      }
+    },
+    "50": {
+      "oracle_headroom_mR_pp": 4.492929046964589,
+      "models": {
+        "logistic": {
+          "F0": {
+            "native_mR": 0.4794922414337084,
+            "selected_mR": 0.4791768002560171,
+            "delta_mR_pp": -0.0315441177691278,
+            "native_R": 0.4441233499196392,
+            "selected_R": 0.44421353750982684,
+            "delta_R_pp": 0.009018759018764033,
+            "selected_pairs": 22,
+            "positive_actions": 1,
+            "harmful_actions": 1,
+            "thresholds": [
+              0.9250213221240359,
+              0.9209980668367862,
+              0.9363246708488047,
+              0.9293853003264588,
+              0.9333260841968861
+            ],
+            "threshold_median": 0.9293853003264588,
+            "actionability_ratio": -0.007020835948976074
+          },
+          "F1": {
+            "native_mR": 0.4794922414337084,
+            "selected_mR": 0.4793596857603256,
+            "delta_mR_pp": -0.013255567338277263,
+            "native_R": 0.4441233499196392,
+            "selected_R": 0.443956849753139,
+            "delta_R_pp": -0.016650016650021637,
+            "selected_pairs": 6,
+            "positive_actions": 0,
+            "harmful_actions": 1,
+            "thresholds": [
+              Infinity,
+              0.8695553115897543,
+              Infinity,
+              Infinity,
+              Infinity
+            ],
+            "threshold_median": Infinity,
+            "actionability_ratio": -0.0029503175322193637
+          },
+          "F2": {
+            "native_mR": 0.4794922414337084,
+            "selected_mR": 0.4715226222638325,
+            "delta_mR_pp": -0.7969619169875874,
+            "native_R": 0.4441233499196392,
+            "selected_R": 0.44407087713989374,
+            "delta_R_pp": -0.00524727797454605,
+            "selected_pairs": 10,
+            "positive_actions": 1,
+            "harmful_actions": 1,
+            "thresholds": [
+              0.969701812959765,
+              0.9652727377052551,
+              0.9835560731777423,
+              0.9780716352386902,
+              0.9855764812542133
+            ],
+            "threshold_median": 0.9780716352386902,
+            "actionability_ratio": -0.1773813716301647
+          },
+          "F3": {
+            "native_mR": 0.4794922414337084,
+            "selected_mR": 0.4656674289824051,
+            "delta_mR_pp": -1.3824812451303292,
+            "native_R": 0.4441233499196392,
+            "selected_R": 0.44435968765597694,
+            "delta_R_pp": 0.02363377363377439,
+            "selected_pairs": 57,
+            "positive_actions": 8,
+            "harmful_actions": 9,
+            "thresholds": [
+              0.9762545085879933,
+              0.9737300375467736,
+              0.9946903051827238,
+              0.9851249861355058,
+              0.9566987145111854
+            ],
+            "threshold_median": 0.9762545085879933,
+            "actionability_ratio": -0.30770155296895463
+          }
+        },
+        "ridge": {
+          "F0": {
+            "native_mR": 0.4794922414337084,
+            "selected_mR": 0.4524726570557861,
+            "delta_mR_pp": -2.701958437792229,
+            "native_R": 0.4441233499196392,
+            "selected_R": 0.43800138446325815,
+            "delta_R_pp": -0.6121965456381051,
+            "selected_pairs": 6835,
+            "positive_actions": 13,
+            "harmful_actions": 37,
+            "thresholds": [
+              -8.545648192339762e-06,
+              5.2650866743464495e-06,
+              4.2809377861334615e-07,
+              3.408479458924559e-08,
+              4.056382024847031e-06
+            ],
+            "threshold_median": 4.2809377861334615e-07,
+            "actionability_ratio": -0.6013801708303551
+          },
+          "F1": {
+            "native_mR": 0.4794922414337084,
+            "selected_mR": 0.47485537461070126,
+            "delta_mR_pp": -0.4636866823007124,
+            "native_R": 0.4441233499196392,
+            "selected_R": 0.4413381150727161,
+            "delta_R_pp": -0.27852348469231125,
+            "selected_pairs": 12246,
+            "positive_actions": 33,
+            "harmful_actions": 42,
+            "thresholds": [
+              -3.5754466693525977e-06,
+              -1.1359039614713007e-05,
+              -9.50827727296396e-08,
+              -2.442358175096338e-07,
+              5.604227527616441e-07
+            ],
+            "threshold_median": -2.442358175096338e-07,
+            "actionability_ratio": -0.10320365121589845
+          },
+          "F2": {
+            "native_mR": 0.4794922414337084,
+            "selected_mR": 0.4446703154902414,
+            "delta_mR_pp": -3.4821925943467003,
+            "native_R": 0.4441233499196392,
+            "selected_R": 0.44320923877825535,
+            "delta_R_pp": -0.09141111413838443,
+            "selected_pairs": 13040,
+            "positive_actions": 57,
+            "harmful_actions": 63,
+            "thresholds": [
+              -2.0587659287674605e-05,
+              -1.7179069113121794e-05,
+              5.241541315910682e-06,
+              1.2202605159158993e-05,
+              -1.7807200927498073e-05
+            ],
+            "threshold_median": -1.7179069113121794e-05,
+            "actionability_ratio": -0.7750384121243269
+          },
+          "F3": {
+            "native_mR": 0.4794922414337084,
+            "selected_mR": 0.43486707818401377,
+            "delta_mR_pp": -4.462516324969462,
+            "native_R": 0.4441233499196392,
+            "selected_R": 0.44170753281226366,
+            "delta_R_pp": -0.24158171073755397,
+            "selected_pairs": 9237,
+            "positive_actions": 24,
+            "harmful_actions": 35,
+            "thresholds": [
+              -2.0043165556990756e-05,
+              1.0362741488711228e-05,
+              5.187033543593224e-06,
+              8.75433020331422e-06,
+              -1.2130161223205748e-05
+            ],
+            "threshold_median": 5.187033543593224e-06,
+            "actionability_ratio": -0.9932309810199043
+          }
+        },
+        "hgb": {
+          "F0": {
+            "native_mR": 0.4794922414337084,
+            "selected_mR": 0.4713993496841039,
+            "delta_mR_pp": -0.809289174960448,
+            "native_R": 0.4441233499196392,
+            "selected_R": 0.44069324827525186,
+            "delta_R_pp": -0.343010164438734,
+            "selected_pairs": 13277,
+            "positive_actions": 74,
+            "harmful_actions": 84,
+            "thresholds": [
+              -1.6363623475695056e-06,
+              -3.854213303479111e-06,
+              -1.9711474084834907e-06,
+              1.3235836594891459e-06,
+              -8.689890982048747e-07
+            ],
+            "threshold_median": -1.6363623475695056e-06,
+            "actionability_ratio": -0.1801250735324213
+          },
+          "F1": {
+            "native_mR": 0.4794922414337084,
+            "selected_mR": 0.4573217270112544,
+            "delta_mR_pp": -2.217051442245399,
+            "native_R": 0.4441233499196392,
+            "selected_R": 0.4409835634194631,
+            "delta_R_pp": -0.31397865001761005,
+            "selected_pairs": 5883,
+            "positive_actions": 25,
+            "harmful_actions": 38,
+            "thresholds": [
+              -4.739974089240329e-07,
+              3.608356336375202e-08,
+              -2.3090900773857557e-06,
+              -2.0089368845406543e-06,
+              2.8599896115246978e-06
+            ],
+            "threshold_median": -4.739974089240329e-07,
+            "actionability_ratio": -0.49345347301739234
+          },
+          "F2": {
+            "native_mR": 0.4794922414337084,
+            "selected_mR": 0.46536045067774456,
+            "delta_mR_pp": -1.4131790755963825,
+            "native_R": 0.4441233499196392,
+            "selected_R": 0.44645507903708265,
+            "delta_R_pp": 0.23317291174434485,
+            "selected_pairs": 952,
+            "positive_actions": 14,
+            "harmful_actions": 5,
+            "thresholds": [
+              -1.216420794347841e-06,
+              2.3338793488734856e-06,
+              1.2311563438169486e-06,
+              -8.9430525048947e-07,
+              1.3245359975720577e-05
+            ],
+            "threshold_median": 1.2311563438169486e-06,
+            "actionability_ratio": -0.31453402909870626
+          },
+          "F3": {
+            "native_mR": 0.4794922414337084,
+            "selected_mR": 0.4546944166388205,
+            "delta_mR_pp": -2.47978247948879,
+            "native_R": 0.4441233499196392,
+            "selected_R": 0.44213589533478204,
+            "delta_R_pp": -0.19874545848571623,
+            "selected_pairs": 5304,
+            "positive_actions": 30,
+            "harmful_actions": 38,
+            "thresholds": [
+              -1.5513217346472837e-06,
+              -1.677575914989602e-06,
+              1.1039937348652216e-05,
+              -1.0953642266198396e-06,
+              -9.274549876404554e-07
+            ],
+            "threshold_median": -1.0953642266198396e-06,
+            "actionability_ratio": -0.5519300335188077
+          }
+        }
+      },
+      "label": {
+        "rows": 22364,
+        "positive": 134,
+        "negative": 156
+      }
+    }
+  },
+  "stratification": {}
+}
