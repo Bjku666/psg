@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "carrier": "Fair PSG DSFormer",
+  "dataset": "OpenPSG/PSG psg.json",
+  "split": "test",
+  "metric": "corrected SingleMPO mR@50, R@50",
+  "seed": 0,
+  "epochs": 40,
+  "resource_note": "Official rels_per_batch=128 OOMs for both controls on currently available GPUs; pilot uses rels_per_batch=32 and is not metric-gate comparable to the pinned carrier.",
+  "fixed": {
+    "batch_size": 32,
+    "rels_per_batch": 128,
+    "lr": 3.73e-05,
+    "weight_decay": 0.04,
+    "neg_ratio": 1.0,
+    "transformer_depth": 6,
+    "embed_dim": 384,
+    "use_semantics": true,
+    "use_masks": true,
+    "bg_ratio_strategy": "sum",
+    "encode_coords": true,
+    "backbone": "resnet50"
+  },
+  "runs": [
+    {
+      "id": "C0_feature_all",
+      "factor": "extractor.stage",
+      "value": "all",
+      "expected": "Tests whether a fixed FPN multi-scale control explains the frozen headroom."
+    },
+    {
+      "id": "C1_patch4",
+      "factor": "architecture.patch_size",
+      "value": 4,
+      "expected": "Tests whether uniform finer tokenization explains the frozen headroom."
+    }
+  ],
+  "gates": {
+    "simple_control_ratio_max": 0.7,
+    "proposed_seed0_delta_mR50_min_pp": 1.5,
+    "proposed_seed0_delta_R50_min_pp": -0.3
+  },
+  "execution_status": {
+    "C0_feature_all": "performance smoke stopped before full 40 epochs; no metric gate",
+    "C1_patch4": "official and accelerated larger-microbatch launches OOM; no metric gate",
+    "network_training_authorized": false
+  }
+}

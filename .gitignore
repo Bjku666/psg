@@ -21,6 +21,13 @@ third_party/fair_psg/.venv/
 
 # Local logs and generated qualification outputs from exploratory runs.
 logs/
+
+# Experiment launch logs/PIDs and per-run console captures. Keep experiment
+# configs, scripts, matrices, and status notes tracked.
+experiments/**/logs/
+experiments/**/*.log
+experiments/**/*.pid
+
 # Large per-pair score dumps; keep the small closure/control summaries tracked.
 results/bap_psg_v2_generalization_probe/fit462_tight.json
 results/bap_psg_v2_generalization_probe/fit462_context.json
