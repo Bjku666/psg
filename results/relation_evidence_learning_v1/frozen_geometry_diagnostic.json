@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "contract": "frozen grouped geometry/interface diagnostic",
+  "seed": 0,
+  "status": "completed",
+  "result": {
+    "n_rows": 3732,
+    "n_groups": 500,
+    "train_rows": 2770,
+    "test_rows": 962,
+    "features": {
+      "geometry": {
+        "dimensions": 17,
+        "balanced_accuracy": 0.2483570413189885,
+        "macro_f1": 0.24756981934167502,
+        "delta_balanced_accuracy_pp": 0.0
+      },
+      "geometry_interface": {
+        "dimensions": 27,
+        "balanced_accuracy": 0.2312901521442562,
+        "macro_f1": 0.23377309443703975,
+        "delta_balanced_accuracy_pp": -1.7066889174732314
+      },
+      "geometry_interface_2x": {
+        "dimensions": 27,
+        "balanced_accuracy": 0.24144631876822537,
+        "macro_f1": 0.24121610620179545,
+        "delta_balanced_accuracy_pp": -0.6910722550763138
+      },
+      "geometry_interface_4x": {
+        "dimensions": 27,
+        "balanced_accuracy": 0.22863760750535178,
+        "macro_f1": 0.22739401434424109,
+        "delta_balanced_accuracy_pp": -1.9719433813636722
+      },
+      "geometry_context": {
+        "dimensions": 22,
+        "balanced_accuracy": 0.21511421764663563,
+        "macro_f1": 0.21415595852493904,
+        "delta_balanced_accuracy_pp": -3.3242823672352872
+      }
+    }
+  }
+}

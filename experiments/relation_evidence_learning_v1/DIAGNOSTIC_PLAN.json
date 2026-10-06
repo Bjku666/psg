@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "carrier": "frozen Fair-PSG DSFormer fit500 raw pair cache",
+  "annotation": "/data1/liuhaoran/psg/datasets/psg.json",
+  "diagnostic_only": true,
+  "groups": "image_id",
+  "features": {
+    "geometry": "endpoint classes, normalized boxes, relative displacement and overlap",
+    "interface": "mask overlap, boundary contact, boundary distance and centroid displacement",
+    "resolution": "interface features after 2x and 4x nearest-neighbor mask downsampling",
+    "context": "frozen scene-level object count, area and class-count statistics"
+  },
+  "models": ["hist_gradient"],
+  "gate": {
+    "interface_gain_balanced_accuracy_pp": 1.0,
+    "resolution_drop_balanced_accuracy_pp": 1.0,
+    "context_gain_balanced_accuracy_pp": 1.0
+  },
+  "forbidden": ["official-test tuning", "new candidate support", "PSG network training"]
+}
