@@ -15,7 +15,7 @@
   "controls": [
     {
       "id": "C0_feature_all",
-      "status": "running",
+      "status": "killed_by_user",
       "output": "/data1/liuhaoran/psg/checkpoints/relation_resolved_tokenization_v1/C0_feature_all_ddp_bs16_rel32_ga2_40ep",
       "gpus": [4, 5],
       "per_rank_batch": 16,
@@ -24,14 +24,14 @@
     },
     {
       "id": "C1_patch4",
-      "status": "running",
+      "status": "killed_by_user",
       "run_name": "C1_patch4_ddp_3gpu_bs2_rel8_ga11_40ep_retry2",
       "output": "/data1/liuhaoran/psg/checkpoints/relation_resolved_tokenization_v1/C1_patch4_ddp_3gpu_bs2_rel8_ga11_40ep_retry2",
       "gpus": [3, 6, 7],
       "per_rank_batch": 2,
       "rels_per_batch": 8,
       "grad_accumulate": 11,
-      "tmux": "psg_c1_patch4_retry2",
+      "tmux": "psg_c1_patch4_retry2 (killed)",
       "parity": "resource-adapted; not official parity"
     }
   ],

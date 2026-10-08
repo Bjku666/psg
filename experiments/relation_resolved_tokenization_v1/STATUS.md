@@ -10,8 +10,8 @@ are enabled for the accelerated runs.
 
 | Run | GPUs | Per-rank batch | Relation chunk | Accumulation | State |
 |---|---|---:|---:|---:|---|
-| `C0_feature_all_ddp_bs16_rel32_ga2_40ep` | 4,5 | 16 | 32 | 2 | running |
-| `C1_patch4_ddp_3gpu_bs2_rel8_ga11_40ep_retry2` | 3,6,7 | 2 | 8 | 11 | running (tmux `psg_c1_patch4_retry2`) |
+| `C0_feature_all_ddp_bs16_rel32_ga2_40ep` | 4,5 | 16 | 32 | 2 | killed on user request |
+| `C1_patch4_ddp_3gpu_bs2_rel8_ga11_40ep_retry2` | 3,6,7 | 2 | 8 | 11 | killed on user request |
 
 The C0 run has effective global batch 64. The C1 run has effective global
 batch 66, the closest practical integer configuration to 64 with three GPUs.
@@ -35,3 +35,10 @@ geometry changed this by -1.71 pp; 2x and 4x downsampled interface changed it
 by -0.69 pp and -1.97 pp; scene-context proxy changed it by -3.32 pp.  These
 are mechanism diagnostics, not PSG mR/R gates, and no proposed architecture is
 authorized by them.
+
+## 2026-10-06: C1 killed
+
+The user requested termination.  The tmux session and all C1 distributed
+workers were terminated; the partial checkpoint directory and log were kept
+for audit only.  C0 was subsequently terminated as well; both control runs
+are now stopped and their artifacts are preserved.

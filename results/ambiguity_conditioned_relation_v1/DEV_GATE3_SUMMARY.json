@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "protocol": {
+    "split": "development",
+    "image_id_source": "/data1/liuhaoran/psg/cache/counterfactual_relation_verification_v1/paired_final_dev.pkl",
+    "num_images": 242,
+    "official_test_used": false,
+    "batch_size": 112,
+    "rels_per_batch": 224,
+    "top_k": 16,
+    "num_candidates": 3,
+    "seed": 0
+  },
+  "metrics": {
+    "uniform": {
+      "mR@50": 0.19567567110061646,
+      "R@50": 0.092319056391716
+    },
+    "mask": {
+      "mR@50": 0.1778992861509323,
+      "R@50": 0.14106351137161255
+    },
+    "predicate": {
+      "mR@50": 0.35359805822372437,
+      "R@50": 0.3013294041156769
+    }
+  },
+  "strongest_simple_control": {
+    "mR@50": "uniform",
+    "R@50": "mask"
+  },
+  "deltas_vs_strongest_simple_control": {
+    "mR@50": 0.1579223871231079,
+    "R@50": 0.16026589274406433
+  },
+  "gate": {
+    "name": "Gate 3",
+    "criteria": {
+      "mR@50_delta_at_least_0.005": true,
+      "R@50_degradation_at_most_0.005": true,
+      "simple_control_explains_at_least_70_percent": false
+    },
+    "status": "passed"
+  },
+  "raw_results": [
+    "dev_uniform_epoch1.json",
+    "dev_mask_epoch1.json",
+    "dev_predicate_seed0_5ep.json"
+  ]
+}

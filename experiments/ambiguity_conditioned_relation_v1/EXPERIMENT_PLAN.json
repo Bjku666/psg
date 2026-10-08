@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "name": "ambiguity_conditioned_relation_v1",
+  "status": "gate3_passed_e8_corrected_running",
+  "carrier": "Fair PSG DSFormer data/evaluator protocol",
+  "split_policy": "existing train/val loader; official test locked",
+  "modes": ["uniform", "mask", "predicate"],
+  "fixed": {
+    "seed": 0,
+    "patch_size": 8,
+    "embed_dim": 384,
+    "top_k": 16,
+    "num_candidates": 3,
+    "batch_size": 112,
+    "rels_per_batch": 224,
+    "grad_accumulate": 1
+  },
+  "gates": {
+    "smoke": "all modes complete two train batches without OOM/NaN",
+    "resource": "peak allocated VRAM < 48GB and relation throughput >= 5x C1 patch4 reference",
+    "mechanism": "predicate mode must beat uniform and mask at matched K/FLOPs before long training",
+    "promotion": "no 20/40 epoch run before one-epoch profiling passes",
+    "dev_gate3": "predicate mR@50 and R@50 must beat strongest matched simple control; official test locked"
+  },
+  "artifacts": {
+    "source": "models/ambiguity_conditioned_relation_v1",
+    "results": "results/ambiguity_conditioned_relation_v1",
+    "checkpoints": "/data1/liuhaoran/psg/checkpoints/ambiguity_conditioned_relation_v1"
+  }
+}
