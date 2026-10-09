@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "name": "ambiguity_conditioned_relation_v1",
-  "status": "gate3_passed_e8_corrected_running",
+  "status": "gate5_passed_seed1_running",
   "carrier": "Fair PSG DSFormer data/evaluator protocol",
   "split_policy": "existing train/val loader; official test locked",
   "modes": ["uniform", "mask", "predicate"],

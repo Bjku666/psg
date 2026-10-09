@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "gate": "Gate 5",
+  "protocol": {
+    "split": "development",
+    "num_images": 242,
+    "official_test_used": false,
+    "seed": 0,
+    "effective_training_epochs": 20,
+    "batch_size": 112,
+    "rels_per_batch": 224,
+    "peak_vram_gb_observed": 41.3
+  },
+  "final_checkpoint": "/data1/liuhaoran/psg/checkpoints/ambiguity_conditioned_relation_v1/predicate_seed0_full20ep_resume_epoch3/last_state.pth",
+  "metrics": {
+    "mR@20": 0.4151269495487213,
+    "mR@50": 0.5769050717353821,
+    "R@20": 0.3271787166595459,
+    "R@50": 0.42540621757507324
+  },
+  "fast_carrier_reference": {
+    "mR@20": 0.13590937852859497,
+    "mR@50": 0.19567567110061646,
+    "R@50": 0.14106351137161255,
+    "reference_rows": ["dev_uniform_epoch1.json", "dev_mask_epoch1.json"]
+  },
+  "deltas_vs_reference": {
+    "mR@20": 0.27921757102012634,
+    "mR@50": 0.3812294006347656,
+    "R@50": 0.2843427062034607
+  },
+  "criteria": {
+    "mR@50_delta_at_least_0.01": true,
+    "R@50_degradation_at_most_0.005": true,
+    "mR@20_no_decline": true,
+    "peak_vram_below_48gb": true,
+    "projected_single_a100_run_below_36_gpu_hours": true,
+    "throughput_gate_from_registered_profile": true
+  },
+  "status": "passed_with_recovery_note",
+  "recovery_note": "The 20 effective epochs were completed across three persisted segments after external session exits; each segment wrote a valid checkpoint. Optimizer state was reinitialized at segment boundaries, so this is a development Gate 5 result rather than a claim of bitwise-continuous optimization."
+}
